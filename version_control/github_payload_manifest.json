@@ -3,8 +3,8 @@
   "policy": "scripts/github_payload_policy.json",
   "manifest_self_excluded_from_hash_list": "version_control/github_payload_manifest.json",
   "file_count_excluding_this_manifest": 1076,
-  "bytes_excluding_this_manifest": 89906011,
-  "mib_excluding_this_manifest": 85.741054,
+  "bytes_excluding_this_manifest": 89906653,
+  "mib_excluding_this_manifest": 85.741666,
   "readme_linked_directory_targets": [
     "figures/qwen36_27b_simplemc_corrected",
     "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/semantic_clustering"
@@ -5048,8 +5048,8 @@
     },
     {
       "path": "scripts/audit_github_payload.py",
-      "bytes": 20758,
-      "sha256": "cbb18ae9829763febae48ee8e92081182777fbaaeb43dc4b5d396b9e2796d06f"
+      "bytes": 21184,
+      "sha256": "25c36d03004a6310708edf79ff05883bc73165e09bb48e3a379da561e2fefa89"
     },
     {
       "path": "scripts/bootstrap_mechinterp_host.sh",
@@ -5383,8 +5383,8 @@
     },
     {
       "path": "version_control/README.md",
-      "bytes": 1495,
-      "sha256": "901e1b02cb49ec4c8668a6e70e78f9c8d4394070a21fc4e6997c500cc616885f"
+      "bytes": 1711,
+      "sha256": "c5985dbb3c32e34a005d08717f68a84fddf96c1f45ca3122931b6832def8ac7e"
     },
     {
       "path": "version_control/excluded_artifacts.json",

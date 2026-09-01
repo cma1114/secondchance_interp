@@ -473,18 +473,31 @@ def stage_payload(root: Path, candidates: set[Path]) -> None:
         input=payload,
         check=True,
     )
+    tracked = git_paths(root, ["ls-files", "-z"])
+    extras = sorted(tracked - candidates)
+    for start in range(0, len(extras), 200):
+        chunk = extras[start : start + 200]
+        subprocess.run(
+            [
+                "git",
+                "rm",
+                "--cached",
+                "--ignore-unmatch",
+                "--",
+                *(path.as_posix() for path in chunk),
+            ],
+            cwd=root,
+            check=True,
+        )
 
 
-def validate_initial_staging(root: Path, candidates: set[Path]) -> None:
-    staged = git_paths(
-        root,
-        ["diff", "--cached", "--name-only", "--diff-filter=ACMR", "-z"],
-    )
-    if staged != candidates:
-        missing = sorted(path.as_posix() for path in candidates - staged)
-        extra = sorted(path.as_posix() for path in staged - candidates)
+def validate_index(root: Path, candidates: set[Path]) -> None:
+    indexed = git_paths(root, ["ls-files", "-z"])
+    if indexed != candidates:
+        missing = sorted(path.as_posix() for path in candidates - indexed)
+        extra = sorted(path.as_posix() for path in indexed - candidates)
         raise PayloadError(
-            f"Staged payload differs from audited payload; missing={missing}, extra={extra}"
+            f"Git index differs from audited payload; missing={missing}, extra={extra}"
         )
 
 
@@ -529,9 +542,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Stage exactly the audited payload (requires an initialized Git repository)",
     )
     parser.add_argument(
+        "--check-index",
         "--check-initial-staging",
+        dest="check_index",
         action="store_true",
-        help="Require the initial staged path set to equal the audited payload exactly",
+        help="Require all paths in Git's index to equal the audited payload exactly",
     )
     return parser.parse_args(argv)
 
@@ -551,8 +566,8 @@ def main(argv: list[str] | None = None) -> int:
             validate_payload_manifest(REPO_ROOT, candidates)
         if args.stage:
             stage_payload(REPO_ROOT, candidates)
-        if args.check_initial_staging:
-            validate_initial_staging(REPO_ROOT, candidates)
+        if args.check_index:
+            validate_index(REPO_ROOT, candidates)
         print_report(REPO_ROOT, candidates, selection)
     except (OSError, PayloadError, subprocess.CalledProcessError, json.JSONDecodeError) as exc:
         print(f"AUDIT FAIL: {exc}", file=sys.stderr)

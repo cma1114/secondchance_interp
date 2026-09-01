@@ -12,7 +12,7 @@ The intended initial-publication workflow is:
 ```bash
 python scripts/audit_github_payload.py --write-manifests
 git init
-python scripts/audit_github_payload.py --stage --check-initial-staging
+python scripts/audit_github_payload.py --stage --check-index
 git status --short
 ```
 
@@ -31,3 +31,7 @@ in Git LFS merely to make an initial GitHub push possible.
 
 After staging, inspect the audit output and `git status` before committing.
 Creating a remote and pushing are deliberately separate actions.
+
+For later updates, rerun the same audit with `--write-manifests --stage
+--check-index`. The staging step adds newly eligible paths and removes paths
+that no longer qualify from Git's index without deleting their local files.
