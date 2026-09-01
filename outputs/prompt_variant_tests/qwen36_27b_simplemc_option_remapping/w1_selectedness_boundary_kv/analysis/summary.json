@@ -1,0 +1,352 @@
+{
+  "confirmation": {
+    "descriptive_centered_interaction_fraction": 0.030700896775978665,
+    "metrics": {
+      "causal_target_centered": {
+        "game": {
+          "ci": [
+            -0.03898560479283333,
+            0.06776706017553803
+          ],
+          "mean": 0.014849334955215454,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            -0.023062696680426598,
+            0.06241870187222957
+          ],
+          "mean": 0.019449040293693542,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.029447880759835243,
+            0.03794670999050132
+          ],
+          "mean": 0.004599705338478088,
+          "n": 32
+        }
+      },
+      "causal_target_choice": {
+        "game": {
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n": 32
+        }
+      },
+      "causal_target_vs_recipient_margin": {
+        "game": {
+          "ci": [
+            0.015819987654685973,
+            0.1326122373342514
+          ],
+          "mean": 0.07299190759658813,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            0.03346139192581177,
+            0.13510186672210692
+          ],
+          "mean": 0.08459550142288208,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.04601612687110901,
+            0.06904794126749036
+          ],
+          "mean": 0.011603593826293945,
+          "n": 32
+        }
+      },
+      "natural_target_centered": {
+        "game": {
+          "ci": [
+            -0.12352265790104866,
+            0.33342160470783705
+          ],
+          "mean": 0.11439141631126404,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            -0.03682618029415607,
+            0.5427723228931427
+          ],
+          "mean": 0.26421457529067993,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.012722207605838778,
+            0.2830035120248793
+          ],
+          "mean": 0.1498231589794159,
+          "n": 32
+        }
+      },
+      "natural_target_choice": {
+        "game": {
+          "ci": [
+            -0.1875,
+            0.0625
+          ],
+          "mean": -0.0625,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            -0.21875,
+            0.03125
+          ],
+          "mean": -0.09375,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.1875,
+            0.125
+          ],
+          "mean": -0.03125,
+          "n": 32
+        }
+      },
+      "natural_target_vs_recipient_margin": {
+        "game": {
+          "ci": [
+            -0.0030177876353263784,
+            0.798748916387558
+          ],
+          "mean": 0.38783735036849976,
+          "n": 32
+        },
+        "neutral": {
+          "ci": [
+            0.2530750468373299,
+            1.188788442313671
+          ],
+          "mean": 0.7131720185279846,
+          "n": 32
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.09896591603755951,
+            0.5544032767415044
+          ],
+          "mean": 0.32533466815948486,
+          "n": 32
+        }
+      }
+    },
+    "n_exact_eligible": 32,
+    "n_frozen": 36,
+    "n_screened_out": 4,
+    "strict_selectedness_signature": false,
+    "validation": {
+      "boundary_donor_control_max_abs_error": 0.0,
+      "cached_identity_vs_unsplit_natural_answer_differences": 10,
+      "cached_identity_vs_unsplit_natural_max_abs_error": 0.6251201629638672,
+      "cached_identity_vs_unsplit_natural_mean_abs_error": 0.15880835056304932,
+      "complete_cache_donor_max_abs_error": 0.0,
+      "mean_boundary_kv_delta_l2": 28.602691650390625,
+      "mean_boundary_kv_delta_relative": 0.07288866490125656
+    }
+  },
+  "definition": "Recipient semantic A is fixed at the same first-presentation letter and position but is not selected. Ordinary-attention K/V at only the empty first-answer decision boundary is imported from the matched A-selected donor history.",
+  "discovery": {
+    "descriptive_centered_interaction_fraction": -0.20244259712472173,
+    "metrics": {
+      "causal_target_centered": {
+        "game": {
+          "ci": [
+            -0.08004389938555266,
+            0.0175825796629253
+          ],
+          "mean": -0.03281627203288831,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.09110738854659231,
+            0.00724794049012033
+          ],
+          "mean": -0.043292685558921414,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.03892927797217118,
+            0.01716449135228204
+          ],
+          "mean": -0.010476413526033101,
+          "n": 38
+        }
+      },
+      "causal_target_choice": {
+        "game": {
+          "ci": [
+            -0.07894736842105263,
+            0.0
+          ],
+          "mean": -0.02631578947368421,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.07894736842105263,
+            0.07894736842105263
+          ],
+          "mean": 0.0,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.05263157894736842,
+            0.13157894736842105
+          ],
+          "mean": 0.02631578947368421,
+          "n": 38
+        }
+      },
+      "causal_target_vs_recipient_margin": {
+        "game": {
+          "ci": [
+            -0.022457142880088404,
+            0.0842375680019981
+          ],
+          "mean": 0.0298272685000771,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.09029218899576287,
+            0.022119102979961152
+          ],
+          "mean": -0.029896685951634458,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.11139237629739862,
+            -0.014712238311767658
+          ],
+          "mean": -0.05972395445171155,
+          "n": 38
+        }
+      },
+      "natural_target_centered": {
+        "game": {
+          "ci": [
+            -0.3691783616417333,
+            0.1879674952281148
+          ],
+          "mean": -0.07930465748435572,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.36379955630553396,
+            0.2874110548119794
+          ],
+          "mean": -0.027554612410695928,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.08360790265233893,
+            0.17628995682063836
+          ],
+          "mean": 0.051750045073659795,
+          "n": 38
+        }
+      },
+      "natural_target_choice": {
+        "game": {
+          "ci": [
+            -0.02631578947368421,
+            0.18421052631578946
+          ],
+          "mean": 0.07894736842105263,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.15789473684210525,
+            0.10526315789473684
+          ],
+          "mean": -0.02631578947368421,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.2631578947368421,
+            0.07894736842105263
+          ],
+          "mean": -0.10526315789473684,
+          "n": 38
+        }
+      },
+      "natural_target_vs_recipient_margin": {
+        "game": {
+          "ci": [
+            -0.17845362613075658,
+            0.5178483285401994
+          ],
+          "mean": 0.15898062053479647,
+          "n": 38
+        },
+        "neutral": {
+          "ci": [
+            -0.03249634316093043,
+            0.7869595063360112
+          ],
+          "mean": 0.3920625887419048,
+          "n": 38
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.0033616229107505404,
+            0.44459737602033106
+          ],
+          "mean": 0.23308196820710836,
+          "n": 38
+        }
+      }
+    },
+    "n_exact_eligible": 38,
+    "n_frozen": 41,
+    "n_screened_out": 3,
+    "strict_selectedness_signature": false,
+    "validation": {
+      "boundary_donor_control_max_abs_error": 0.0,
+      "cached_identity_vs_unsplit_natural_answer_differences": 7,
+      "cached_identity_vs_unsplit_natural_max_abs_error": 0.8740081787109375,
+      "cached_identity_vs_unsplit_natural_mean_abs_error": 0.13157794036363302,
+      "complete_cache_donor_max_abs_error": 0.0,
+      "mean_boundary_kv_delta_l2": 31.285226821899414,
+      "mean_boundary_kv_delta_relative": 0.07970962673425674
+    }
+  },
+  "joint_gate_passed": false
+}

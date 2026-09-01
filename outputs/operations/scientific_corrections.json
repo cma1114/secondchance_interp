@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "corrections": [
+    {
+      "date": "2026-08-20",
+      "topic": "option-newline semantic versus candidate-value interventions",
+      "incorrect_claim": "The candidate-value probe chose the option-closing newline even though prior semantic work had not used that position, and the all-four newline intervention removed semantic content.",
+      "corrected_claim": "Prior work did use option-closing-newline residuals to construct content-aligned directions. The corrected cross-mapping analysis found only modest mapping-invariant content geometry around layers 32--43 and strong late letter/position structure. The later all-four intervention removed a fitted one-dimensional candidate-value coordinate from ordinary-attention K/V, not semantic content from the live newline residual.",
+      "cause": "The answer relied on recent report shorthand and failed to trace representation construction, intervention site, carrier type, and cross-mapping validation through the primary runner and metadata.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/final_decision_semantic_ablation/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/decision_semantic_ablation/PLAN.md",
+        "mechanistic/run_option_newline_all_four_projection.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_all_four_centered_projection/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "AGENTS.md",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "mechanistic/analyze_option_newline_choice_probe.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_choice_probe/PLAN.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_choice_probe/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_choice_probe/fresh_host_analysis/REPORT.md"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "topic": "fixed-A donor transfer versus repeated-option receiver path",
+      "incorrect_claim": "The semantically matching second-presentation option line is the demonstrated downstream route responsible for the fixed-A donor-bias effect, and the all-candidate matching-edge intervention covered the full layer range later shown in the attention plots.",
+      "corrected_claim": "The fixed-A donor transplant and the repeated-option edge blockade are separate causal experiments. They have not been combined in a serial-mediation test, so the repeated line is a demonstrated reader but is not proven to mediate the fixed-A donor-transfer effect. The all-candidate causal blockade covered layers 4--48; the later extension through layer 64 measured unmodified attention only. Separate fixed-A band and selected late-edge nulls do not substitute for a full all-candidate 52--64 causal blockade.",
+      "cause": "The answer joined two compatible causal findings into an unperformed serial mediation and did not distinguish the corrected descriptive layer range from the unchanged intervention range.",
+      "verification_evidence": [
+        "mechanistic/run_fixed_a_kv_source_transplant.py",
+        "mechanistic/run_all_candidate_matched_relay.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_kv_source_transplant/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/receiver_path_search/validation/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/all_candidate_matched_relay/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by the two missing causal experiments",
+      "resolution_date": "2026-08-20",
+      "resolved_claim": "The fixed-A serial-mediation test now demonstrates that the semantically matching repeated option carries part of the first selected-option donor effect in both Game and Neutral. The complete all-candidate causal extension shows that layers 52--64 alone are practically null and that extending 4--48 through layer 64 changes held-out R1--R4 effects by at most 0.010 logits.",
+      "resolution_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fixed_a_donor_receiver_mediation/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/all_candidate_matched_relay_full_range/analysis/REPORT.md",
+        "figures/qwen36_fixed_a_donor_receiver_mediation.png",
+        "figures/qwen36_all_candidate_matched_relay_full_range.png"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "topic": "rank-dependent matching effects versus demonstrated semantic-rank binding",
+      "incorrect_claim": "The rank-dependent matching-edge effects demonstrated that categorical W1 status had already been bound to candidate semantics upstream.",
+      "corrected_claim": "The matching first-presentation to second-presentation connection has causal effects that vary with first-pass evidence and externally assigned rank, but those effects do not locate or identify a categorical rank representation in the source line. Existing-data analysis supports a viable alternative in which old candidate evidence and fresh second-presentation evidence are integrated under a feedback-dependent computation; whether the model uses a stored global rank state, distributed scores, or both remains unresolved.",
+      "cause": "Effect heterogeneity indexed by externally computed rank was conflated with localization of the model's internal rank code, and a linear score control was treated as sufficient evidence for a categorical remainder.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/all_candidate_matched_relay/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/nonmatching_lines_rank_mediation/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/old_current_score_integration/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/analysis/REPORT.md",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "topic": "D-line score-transfer semantic versus displayed-letter alignment",
+      "incorrect_claim": "The preliminary compact analysis reported approximately 0.13--0.19-logit held-out D-line K/V transfer by indexing the displayed A-D logit with the target's original semantic A-D identity.",
+      "corrected_claim": "The frozen design places the varying semantic target at displayed D in both second-presentation strata. The corrected analysis explicitly verifies that mapping from the cohort and indexes displayed D; the causal outputs and intervention controls were unaffected.",
+      "cause": "The compact analyzer confused original semantic identity labels with the displayed answer-letter coordinate after remapping.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/d_line_score_transfer/cohort_plan.json",
+        "mechanistic/analyze_d_line_score_transfer.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/d_line_score_transfer/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_d_line_score_transfer.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/d_line_score_transfer/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/d_line_score_transfer/analysis/global_vector_summary.json",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "topic": "linear W1 remainder versus nonlinear graded-rank dependence",
+      "incorrect_claim": "The all-candidate causal effects established an additional categorical W1 increment beyond graded first-pass evidence.",
+      "corrected_claim": "The apparent W1 increment is strong only under a linear score control. With frozen flexible controls for both candidate score and the gap to the best competing candidate, the R1 term includes zero on discovery and confirmation and slightly worsens held-out prediction. Near-tie R1-minus-R2 contrasts are also uncertain. The data establish a graded nonlinear rank effect, not a separate categorical winner state.",
+      "cause": "A linear nuisance model was treated as if it had exhausted the graded-score alternative, even though winner status is itself a thresholded nonlinear function of relative scores.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/categorical_winner_audit/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/categorical_winner_audit/categorical_winner_nonlinearity.json",
+        "figures/qwen36_categorical_winner_nonlinearity_audit.png"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "topic": "raw full-vocabulary feedback alignment versus policy-token transport",
+      "incorrect_claim": "The larger early Neutral within-task full-vocabulary cosine could be described as stronger early policy alignment, or directly compared with the Game-minus-Neutral contrast cosine as if both figures estimated the same quantity.",
+      "corrected_claim": "The raw cosine compares each task's 2P vocabulary profile with its own feedback-word profile and is dominated by shared prompt and option-processing vocabulary. The contrast cosine instead compares the condition-induced 2P change with the condition-induced source change. A discovery-frozen top-token analysis shows readable incorrect/correct versus lost/transmission source geometry, but the raw held-out Game and Neutral 2P token profiles remain nearly identical (cosines above 0.99 at the main middle and late layers). The lens evidence therefore does not establish distinct policy content copied into 2P.",
+      "cause": "A broad raw vocabulary similarity was given a policy interpretation, and raw within-task and derivative cross-task cosines were verbally compared without preserving their different definitions.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_transport_raw/policy_residual_trajectory.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_top_tokens/policy_top_tokens.json",
+        "figures/qwen36_second_presentation_policy_top_tokens.png",
+        "figures/qwen36_second_presentation_policy_top_token_scores.png"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/REPORT.md",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "topic": "complete 2P residual readout versus evaluation-source write semantics",
+      "incorrect_claim": "A top-token lens of the complete 2P residual could determine which policy semantics were transported from particular evaluation tokens into 2P.",
+      "corrected_claim": "The complete 2P residual is dominated by shared multiple-choice and correctness processing and cannot attribute its vocabulary geometry to a particular source. The corrected analysis reconstructs and lenses each exact evaluation-token ordinary-attention write separately. It finds Game error/correction content from the literal incorrect token, the evaluation-closing period, and contextualized the across L28--52; Neutral lost/loss content from the literal lost token at L56--60 and a smaller period-sourced recovery signal around L28--36.",
+      "cause": "The semantic readout was applied to the receiver's whole residual rather than to the source-specific attention contribution, so shared receiver computation swamped the quantity of interest.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_write_semantics/policy_write_semantics.json",
+        "figures/qwen36_second_presentation_policy_write_semantics.png",
+        "mechanistic/analyze_second_presentation_policy_write_semantics.py"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/REPORT.md",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "topic": "requested policy-word trajectories versus invented semantic-family expansion",
+      "incorrect_claim": "The requested lost/again/resend/repeat trajectory could be estimated with a broader loss/retry family that added missing, forgotten, retry, recover, and related semantic neighbors.",
+      "corrected_claim": "The canonical trajectory now uses only capitalization and ordinary morphological variants of the eight requested anchors: incorrect, failed, mistake, wrong; lost, again, resend, repeat. The corrected lost/again/resend/repeat set does not form a clean Neutral-specific trajectory, so the superseded expanded-family interpretation is withdrawn.",
+      "cause": "The analysis silently expanded user-supplied lexical anchors into additional semantic concepts instead of limiting preprocessing to capitalization and morphology.",
+      "verification_evidence": [
+        "mechanistic/analyze_second_presentation_policy_family_trajectories.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_family_trajectories/policy_family_trajectories.json",
+        "figures/qwen36_second_presentation_policy_family_trajectories.png"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/REPORT.md",
+        "outputs/operations/scientific_corrections.json",
+        "mechanistic/build_policy_family_trajectory_explorer.py",
+        "mechanistic/plot_policy_family_trajectories.py"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "Boolean SDPA mask no-op in downstream source ablation",
+      "incorrect_claim": "The action-ending period's ordinary-attention route had exactly zero effect, and complete cue-memory ablation established that the cue was not a necessary bottleneck.",
+      "corrected_claim": "The stored ordinary-attention component did not fire because assigning -inf into a Boolean SDPA mask cast to True. The action-period attention/joint results and the cue/colon complete-ablation interpretation are withdrawn pending corrected reruns. The action-period GLA-write lesion and reciprocal cue-memory swap used independent live mechanisms and remain valid.",
+      "cause": "One downstream SDPA ablator lacked the Boolean-versus-additive mask branch already present in sibling intervention classes.",
+      "verification_evidence": [
+        "mechanistic/downstream_source_intervention.py",
+        "tests/test_final_query_attention_ablation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/action_period_source_lesion/run/results.npz"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/downstream_source_intervention.py",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/action_period_source_lesion/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/cue_memory_causality/analysis/REPORT.md"
+      ],
+      "resolution_status": "resolved by corrected 500-question GPU reruns",
+      "resolution_date": "2026-08-24",
+      "resolution_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/action_period_source_lesion/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/cue_memory_causality/analysis/REPORT.md",
+        "figures/qwen36_action_period_source_lesion.png",
+        "figures/qwen36_cue_memory_causality.png"
+      ],
+      "resolved_claim": "The action-period ordinary-attention route is live but modest. Corrected complete cue-route ablation changes individual rankings but does not materially reduce the main Game-minus-Neutral switching difference on either frozen split; reciprocal cue-memory swaps do reduce preferential Game switching. The cue is causal and policy-bearing, but is not a necessary bottleneck for the main behavioral contrast."
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "displayed-order argmax tie convention",
+      "incorrect_claim": "Current remapped analyzers could reorder logits into semantic or rank coordinates before resolving argmax without changing the estimand.",
+      "corrected_claim": "Exact float32 ties must be resolved in displayed A-D order first and mapped to semantic content second. The central helper and current analyzers now enforce that convention; affected discrete metrics must be regenerated.",
+      "cause": "The documented tie rule had been implemented only in several earlier analyzers rather than centralized and reused.",
+      "verification_evidence": [
+        "mechanistic/semantic_mapping.py",
+        "tests/test_semantic_mapping.py",
+                "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/REMAPPED_ARGMAX_TIE_AUDIT.md"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/semantic_mapping.py",
+        "tests/test_semantic_mapping.py",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved: code centralized, audited analyzers regenerated, and corrected GPU analyses use displayed-order tie resolution"
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "canonical W1 and W2 comparator fields",
+      "incorrect_claim": "The imported phase-1 subject_answer or baseline_answer fields and the canonical local answer field were interchangeable definitions of W1; the imported aggregated remapped field was interchangeable with answer_original_content for W2.",
+      "corrected_claim": "Canonical empty-history analyses define W1 from baseline[qid].answer and W2 from remapped[qid].answer_original_content. Historical imported comparators disagree on nontrivial subsets and their percentages are not commensurable without annotation.",
+      "cause": "Related experiment families inherited different comparator fields from their original runners and were later juxtaposed as if they shared an estimand.",
+      "verification_evidence": [
+        "mechanistic/analyze_cue_memory_causality.py",
+        "mechanistic/analyze_action_period_mediation.py",
+        "mechanistic/analyze_action_period_source_lesion.py",
+        "mechanistic/analyze_existing_period_transmission.py",
+        "mechanistic/analyze_evaluation_targeting_vs_compression.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_cue_memory_causality.py",
+        "mechanistic/analyze_action_period_mediation.py",
+        "mechanistic/analyze_action_period_source_lesion.py",
+        "mechanistic/analyze_existing_period_transmission.py",
+        "mechanistic/analyze_evaluation_targeting_vs_compression.py",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved: canonical answer-based W1 and answer_original_content-based W2 are used in current analyses; historical estimands are explicitly annotated"
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "feedback token-state swap left-padding supersession",
+      "incorrect_claim": "The original token-state feedback swap was a valid direct test of the feedback keyword state under left-padded batching.",
+      "corrected_claim": "The original runner applied unpadded token indices to left-padded batches and is superseded. A corrected source-contribution/state-swap rerun confirms the token-state-swap null. The historical Mixer 52/56 result used final-position indices and is unaffected.",
+      "cause": "Per-row left-padding offsets were omitted when applying keyword positions.",
+      "verification_evidence": [
+        "mechanistic/run_remapped_feedback_state_swap.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/source_contributions_and_swaps/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_state_swap/analysis/REPORT.md",
+        "README.md",
+        "outputs/operations/scientific_corrections.json"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "fixed-A matching-receiver mediation reversal",
+      "incorrect_claim": "The initial fixed-A serial-mediation result established that the matching repeated-option receiver mediated the donor-line semantic transfer.",
+      "corrected_claim": "The exact full24 fixed-A recalibration reversed that result, and the B/C/D generalization also failed to support matching-specific mediation. Selected-line semantic transfer remains real, but mediation through the matching repeated-option line is not established.",
+      "cause": "The earlier resolution relied on a restricted fixed-A cohort and did not survive the later exact balanced permutation recalibration or letter-generalization tests.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fixed_a_full24_calibration/PLAN.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fixed_bcd_line_generalization/mediation_analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "outputs/operations/scientific_corrections.json",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md"
+      ],
+      "resolution_status": "earlier ledger resolution superseded"
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "evaluation-period GLA update source-output scope",
+      "incorrect_claim": "The historical evaluation-period GLA update transplant isolated only persistent recurrent memory and explained most of the policy-dependent answer revision.",
+      "corrected_claim": "The historical intervention also changed the evaluation-closing token's own downstream-visible output. The canonical output-preserved rerun isolates the recurrent-memory route and transfers 0.097 logits Evaluation-to-Neutral and 0.091 logits Neutral-to-Evaluation, about one fifth of the natural 0.469-logit margin gap. Blocks 25–32 carry 58.4% of that corrected route, with no single indispensable GLA.",
+      "cause": "The original patcher used preserve_source_output=False, allowing donor information to propagate through the source residual, ordinary-attention K/V, MLP, and short convolutional paths as well as recurrent memory.",
+      "verification_evidence": [
+        "mechanistic/run_evaluation_update_transplant.py",
+        "mechanistic/downstream_source_intervention.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/evaluation_update_transplant/output_preserved/analysis/REPORT.md",
+        "figures/qwen36_evaluation_update_transplant.png"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/evaluation_update_transplant/PLAN.md",
+        "mechanistic/consolidate_evaluation_update_transplant.py",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by the output-preserved transplant, complete gated localization, and corrected 500-question output-preserved source trace",
+      "resolution_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/evaluation_period_source_trace/output_preserved_analysis/REPORT.md",
+        "figures/qwen36_evaluation_period_source_trace.png"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "topic": "relay cache-restoration identity control and GLA convolution scope",
+      "incorrect_claim": "The duplicate-natural relay field was an independent cache-restoration identity control, and the relay inventory exhausted all cross-position channels outside direct attention and recurrent GLA memory.",
+      "corrected_claim": "The historical duplicate field copied the same value and was vacuous. The corrected runner includes a real no-source-swap cache-restoration scenario. Reports also state that the short causal depthwise convolution on GLA q/k/v is not intercepted, so surviving transfer cannot be assigned exclusively to persistent GLA memory or ordinary attention.",
+      "cause": "The control array was populated from one forward twice, and the route prose omitted a known pre-delta-rule convolution channel.",
+      "verification_evidence": [
+        "mechanistic/run_feedback_relay_mediation.py",
+        "mechanistic/analyze_feedback_relay_mediation.py",
+        "tests/test_relay_cache_identity.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/run_feedback_relay_mediation.py",
+        "mechanistic/analyze_feedback_relay_mediation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/evaluation_relay_final_mediation/PLAN.md",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by corrected 500-question rerun",
+      "resolution_date": "2026-08-24",
+      "resolved_claim": "The real no-source-swap cache-restoration scenario reproduces natural A-D logits with exactly 0.0 error. All eight natural/source/interception arrays shared with the historical run are bit-for-bit identical, so the audit identified a vacuous advertised control but did not change the mediation estimates: 51.8% Game and 41.4% Neutral on confirmation, 53.8% and 43.6% on discovery. The route inventory remains explicitly non-exhaustive over the short causal GLA q/k/v convolution.",
+      "resolution_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/evaluation_relay_final_mediation/relay_corrected_analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/evaluation_relay_final_mediation/relay_corrected_analysis/summary.json",
+        "figures/qwen36_feedback_relay_mediation.png"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "topic": "candidate-history Stage-B comparator provenance and pre-readout convolution confound",
+      "incorrect_claim": "The Stage-B conflict analysis used the canonical W1!=W2 set, and the drop from approximately 94% recovery without prefix restoration to 36-44% with prefix restoration established an antagonistic assistant-prefix interaction that earned higher-order triple follow-up. The analogous older 51.8%/41.4% policy-relay result measured a physiological bypass fraction.",
+      "corrected_claim": "The Stage-B analyzer had been passed Neutral results as its remapped baseline, so its 234-question subset was Neutral-switching rather than canonical W1!=W2 conflict. Corrected analysis uses all 273 canonical conflicts and gives held-out semantic-relay recovery of 59.0% in Game and 61.9% in Neutral, with all-except-prefix recovery of 94.1% in both. Prefix-containing joint cells are convolution-confounded because restored tokens retain lesioned local outputs and the adjacent readout can receive lesioned prefix output through the unintercepted short GLA convolution. Their nominal 36.8%/48.4% values are lower bounds, not prefix physiology. The older 51.8%/41.4% policy-relay joint values are likewise lower bounds rather than bypass estimates.",
+      "cause": "The Stage-B command supplied the trusted Neutral-results file where the analyzer expected the canonical remapped-baseline file. Separately, the downstream-only restorer restores what later ordinary attention and recurrent GLA can read but deliberately preserves each selected token's perturbed local output and does not restore the short GLA q/k/v convolution. The final prefix is only one to two tokens before the readout, making the omitted channel material under source perturbation. A no-perturbation identity control cannot reveal lesion-dependent leakage.",
+      "verification_evidence": [
+        "mechanistic/analyze_candidate_history_relay_mediation.py",
+        "mechanistic/run_candidate_history_relay_mediation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/remapped_baseline_results.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/neutral_results.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_b/run/results.npz",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_b/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_b/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_candidate_history_relay_mediation.py",
+        "tests/test_candidate_history_relay_mediation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_b/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_b/analysis/REPORT.md",
+        "figures/qwen36_candidate_history_relay_mediation.png",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/PLAN.md",
+        "mechanistic/analyze_feedback_relay_mediation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/evaluation_relay_final_mediation/relay_corrected_analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/evaluation_relay_final_mediation/PLAN.md",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "outputs/operations/vast_instance_ledger.json",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by corrected analysis and completed 500-question convolution-safe joint control",
+      "resolution_date": "2026-08-26",
+      "resolved_claim": "The canonical 273-conflict analysis gives semantic-relay recovery of 59.0% in Game and 61.9% in Neutral. The 500-question convolution-safe control then leaves only the final four assistant-prefix tokens free while restoring the remaining five-region causal tail. Recovery rises from the nominal all-five 36.8%/48.4% to 97.7%/96.5% on confirmation and 97.9%/96.3% on discovery. The former collapse is an intervention-boundary artifact, not antagonistic prefix physiology; the five-region inventory accounts for essentially the whole measured candidate-history path. The older policy-relay joint values remain lower bounds because that exact transfer experiment has not been rerun with the convolution-safe boundary.",
+      "resolution_evidence": [
+        "mechanistic/run_candidate_history_convolution_control.py",
+        "mechanistic/analyze_candidate_history_convolution_control.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/convolution_control/run/results.npz",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/convolution_control/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/convolution_control/analysis/REPORT.md",
+        "figures/qwen36_candidate_history_convolution_control.png"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "topic": "fresh-history double-dissociation canonical W2 denominator",
+      "incorrect_claim": "The first generated analysis described 274 canonical W1!=W2 conflicts and computed fresh-winner endpoints from the semantic argmax of the remapped baseline's aggregated A-D logits.",
+      "corrected_claim": "The canonical remapped-baseline W2 is the model's emitted answer_original_content field. It gives 273 W1!=W2 conflicts and 135 questions where W2 also differs from old R2. All final reports, confidence intervals, and figures use that canonical denominator.",
+      "cause": "The initial analyzer reconstructed W2 with an A-D-only argmax. Fourteen near-tie questions differ from the frozen emitted answer, and one changes conflict membership.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/remapped_baseline_results.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_a/analysis/REPORT.md",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/run/results.npz",
+        "mechanistic/analyze_fresh_history_double_dissociation.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_fresh_history_double_dissociation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/REPORT.md",
+        "figures/qwen36_fresh_history_double_dissociation.png",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved before final reporting",
+      "resolution_date": "2026-08-28",
+      "resolved_claim": "On the canonical 273-conflict denominator, the held-out fresh-minus-random change in the Game-minus-Neutral old-W1-avoidance gap is -5.1 percentage points [-13.2,+2.9]. The matching-history effect is -24.3 [-34.6,-14.0]. The corrected denominator does not change the substantive conclusion."
+    },
+    {
+      "date": "2026-08-29",
+      "topic": "final-decision prospective-answer timing versus fixed-output alignment",
+      "incorrect_claim": "The non-remapped JLens trajectories were summarized as showing that the final-decision rank state itself is built late, around layers 48--56.",
+      "corrected_claim": "The fixed output-aligned rank readout emerges late, but held-out ridge decoders recover the exact eventual four-answer score pattern earlier from the final-decision residual. On TriviaMC, shared-decoder cosine is 0.369 at L32 and 0.676 at L40 while fixed-JLens cosine is approximately zero. The specific R2-over-R1 ordering on held-out eventual-switch trials remains later, around L44--48. On paired Game-switch/Neutral-stay questions, a Game-minus-Neutral R2-minus-R1 difference is linearly decodable at L34--35 while the across-condition mean remains R1-favoring.",
+      "cause": "The earlier wording conflated failure of a fixed Jacobian lens to read answer logits with absence of linearly decodable prospective-answer information in another residual-stream basis.",
+      "verification_evidence": [
+        "mechanistic/collect_nonremapped_rank_trajectories.py",
+        "mechanistic/analyze_prospective_answer_decoding.py",
+        "mechanistic/analyze_prospective_answer_results.py",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/REPORT.md",
+        "figures/prospective_decoding/qwen36_simplemc_prospective_answer_decoding.png",
+        "figures/prospective_decoding/qwen36_triviamc_prospective_answer_decoding.png"
+      ],
+      "corrected_artifacts": [
+        "README.md",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/PLAN.md",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/analysis/REPORT.md",
+        "outputs/operations/vast_instance_ledger.json",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by full L1--L64 held-out shared, per-condition, and bidirectional cross-condition prospective decoding"
+    },
+    {
+      "date": "2026-08-29",
+      "topic": "prospective-decoder per-condition selected-layer summary indexing",
+      "incorrect_claim": "The machine-readable prospective-decoder summary's by-condition selected-layer fields indexed the confirmation-question axis as though it were the layer axis, so those nested convenience values did not equal the plotted per-condition layer means.",
+      "corrected_claim": "The by-condition selected-layer fields now average all held-out confirmation questions at the requested layer. At L40, shared-decoder cosine is 0.364 Game and 0.443 Neutral on SimpleMC, and 0.637 Game and 0.715 Neutral on TriviaMC. The aggregate curves, figures, switch-trial timing, policy analysis, and previously reported headline values were already computed over the correct axes and do not change.",
+      "cause": "A selected-layer serialization expression used [condition, layer] on a condition-by-question-by-layer array instead of [condition, all_questions, layer].",
+      "verification_evidence": [
+        "mechanistic/analyze_prospective_answer_results.py",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/REPORT.md"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_prospective_answer_results.py",
+        "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/summary.json",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved before the Seed trajectory analysis"
+    },
+    {
+      "date": "2026-08-30",
+      "topic": "Seed fresh-score necessity interpretation and Qwen analyzer-schema regression",
+      "incorrect_claim": "Seed replicated the central Qwen recollection-versus-fresh-evidence asymmetry: matching recollection was necessary for preferential old-winner avoidance while removing the decoded fresh 2P score coordinate left that effect intact on both datasets. The shared analyzer was also described as preserving the archived Qwen emitted-answer convention after its Seed extension.",
+      "corrected_claim": "Seed replicates aggregate dependence on matching recollection, but not Qwen's clean dissociation. The prespecified Seed confirmation-conflict choice gaps were weak before intervention (+4.8 points SimpleMC and +5.5 TriviaMC, both intervals including zero), so null choice interactions could not establish preservation. At score resolution, fresh scrub minus same-dose random reduces the old-W1 task gap by +0.215 [+0.143,+0.292] logits on full SimpleMC and +0.249 [+0.010,+0.491] on TriviaMC conflicts. Matching blockade removes the full-split choice gap (-10.4/-7.2 points) but not the conflict gap (-0.8/0.0), and the joint lesion leaves significant conflict score gaps (-0.259/-0.362). The shared analyzer now reads the archived Qwen answer_original_content field and exactly reproduces its canonical 273-conflict denominator.",
+      "cause": "The analysis treated a failure to reject the fresh-scrub choice interaction as evidence of sparing without first establishing that the natural Seed effect was detected on that subset. It prioritized the low-resolution prespecified choice endpoint, did not compute the complete-versus-conflict decomposition, and carried the Qwen replication hypothesis into interpretation despite a significant Seed logit interaction. Separately, the Seed-specific analyzer branch introduced a nonexistent emitted_second_answer key in the unexecuted Qwen branch; no archived-Qwen schema regression test existed.",
+      "verification_evidence": [
+        "mechanistic/run_seed_oss_fresh_history_double_dissociation.py",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/fresh_removal/run/results.npz",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/fresh_removal/run/run_metadata.json",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/fresh_removal/run/results.npz",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/fresh_removal/run/run_metadata.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/remapped_baseline_results.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/run/results.npz",
+        "mechanistic/analyze_fresh_history_double_dissociation.py",
+        "tests/test_fresh_history_double_dissociation.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_fresh_history_double_dissociation.py",
+        "tests/test_fresh_history_double_dissociation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/summary.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/REPORT.md",
+        "figures/qwen36_fresh_history_double_dissociation.png",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/fresh_removal/analysis/summary.json",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/fresh_removal/analysis/REPORT.md",
+        "figures/model_replications/seed_oss_36b_simplemc_fresh_history_double_dissociation.png",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/fresh_removal/analysis/summary.json",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/fresh_removal/analysis/REPORT.md",
+        "figures/model_replications/seed_oss_36b_triviamc_fresh_history_double_dissociation.png",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/REPORT.md",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/PLAN.md",
+        "README.md",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by analysis-only regeneration, documentation correction, and an exact archived-Qwen regression test"
+    },
+    {
+      "date": "2026-08-30",
+      "topic": "Qwen decoded-fresh-score contribution to policy-conditioned old-winner suppression",
+      "incorrect_claim": "The Qwen fresh-score scrub was summarized as affecting both tasks primarily in a task-shared way and as making no established contribution to preferential Game switching.",
+      "corrected_claim": "Matching recollection remains the dominant Qwen route and is necessary for the choice-level preferential-switching effect, but the decoded fresh coordinate is not purely task-shared. Fresh scrub minus same-dose random reduces the Game-minus-Neutral centered old-W1 suppression gap by +0.055 [+0.025,+0.084] logits on the complete confirmation split and +0.041 [+0.002,+0.080] on confirmation conflicts, about 10% and 8% of the corresponding natural -0.521/-0.522 gaps. Its -5.1-point [-13.2,+2.9] change to the conflict choice gap is not reliably different from zero, whereas matching-history blockade changes that gap by -24.3 [-34.6,-14.7] points. The decoded fresh coordinate is therefore causally contributory to policy-conditioned scoring but not necessary for the existence of the choice-level effect.",
+      "cause": "The earlier interpretation privileged the prespecified discrete-choice endpoint and described the within-task score changes as primarily shared without foregrounding the already positive conflict interaction. Regenerating the archived Qwen analysis with complete/conflict/non-conflict contrasts exposed the statistically reliable full-split interaction and made the conflict interaction impossible to dismiss as merely shared activity. This quantitative qualification should have been reported explicitly when the analysis was regenerated.",
+      "verification_evidence": [
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/run/results.npz",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/run/run_metadata.json",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/summary.json",
+        "mechanistic/analyze_fresh_history_double_dissociation.py",
+        "tests/test_fresh_history_double_dissociation.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/analyze_fresh_history_double_dissociation.py",
+        "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/analysis/REPORT.md",
+        "README.md",
+        "QWEN36_GAME_NEUTRAL_MECHANISTIC_SYNTHESIS.md",
+        "scripts/check_canonical_headlines.py",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "resolution_status": "resolved by explicit score-level reinterpretation and machine-derived headline checks; README_PAPER.md remains externally owned and untouched"
+    },
+    {
+      "date": "2026-08-30",
+      "topic": "Seed/Gemma shared-runner resume, execution-regime, and provenance regression",
+      "incorrect_claim": "The Seed policy-by-recollection, matching-history, and final-position trajectory runners remained exact rerunnable Seed programs after being shared with the Gemma negative-model comparison.",
+      "corrected_claim": "The completed scientific artifacts remain valid, but the shared source had regressed. The policy-factorial runner could not resume either frozen Seed checkpoint because it required a Gemma-only mixed_batch_natural_drift array; a fresh batch-4 Seed checkpoint created that array without ever filling it. The trajectory collector no longer pinned Seed's model revision, batch size, or 64-layer inventory. The matching-history runner retained its model and layer pins but no longer required canonical batch 4, and both causal runners emitted Gemma-generalized provenance strings instead of the frozen Seed strings. Explicit model bindings now require Seed revision 497f1dca95ebdec98e41d517b9f060ee753c902f / batch 4 / 64 layers and Gemma revision 842da3794eaa0b77d5f08bae87a17459d91ff475 / batch 1 / 60 layers. Legacy Seed policy checkpoints omit the inapplicable drift field and remain resumable; Gemma checkpoints require a present, finite drift field.",
+      "cause": "Gemma support was implemented by weakening Seed-specific assertions and adding a batch-1 diagnostic directly to shared code instead of parameterizing an explicit per-model execution contract. No frozen-schema regression tests covered either model.",
+      "verification_evidence": [
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/policy_recollection_factorial/run/results.npz",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/policy_recollection_factorial/run/results.npz",
+        "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/simplemc/run_metadata.json",
+        "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/matching_history/run/run_metadata.json",
+        "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/policy_recollection/run/results.npz",
+        "tests/test_cross_model_runner_contracts.py"
+      ],
+      "corrected_artifacts": [
+        "mechanistic/run_seed_oss_policy_recollection_factorial.py",
+        "mechanistic/run_gemma4_policy_recollection_factorial.py",
+        "mechanistic/collect_seed_oss_nonremapped_rank_trajectories.py",
+        "mechanistic/collect_gemma4_nonremapped_rank_trajectories.py",
+        "mechanistic/run_seed_oss_matching_history_blockade.py",
+        "mechanistic/run_gemma4_matching_history_blockade.py",
+        "tests/test_cross_model_runner_contracts.py",
+        "outputs/operations/scientific_corrections.json"
+      ],
+      "scientific_impact": "No completed Seed or Gemma result arrays were changed or invalidated. The correction restores exact fail-closed rerun and resume behavior and prevents future provenance drift.",
+      "resolution_status": "resolved with model-specific contracts, legacy checkpoint compatibility, finite-diagnostic validation, and frozen-artifact regression tests"
+    }
+  ]
+}

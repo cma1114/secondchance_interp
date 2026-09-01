@@ -1,0 +1,491 @@
+{
+  "dataset": "TriviaMC_difficulty_filtered",
+  "n_questions": 500,
+  "representation": "actual final RMSNorm output immediately before lm_head",
+  "answer_subspace_rank": 3,
+  "residual_width": 5120,
+  "centering": "condition-specific equal-Baseline-letter-weighted mean across questions",
+  "bootstrap_draws": 10000,
+  "splits": {
+    "all": {
+      "n": 500,
+      "conditions": {
+        "baseline": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "game": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.7577058803434139,
+            "ci95": [
+              0.7339989390237509,
+              0.7838572236610143
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.36947924563620305,
+            "ci95": [
+              0.3537602959636204,
+              0.3853586972982866
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.7714280401868453,
+            "ci95": [
+              0.7475724276106197,
+              0.7975813514172934
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.4789549075072674,
+            "ci95": [
+              0.45707559219244787,
+              0.5003964767827699
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.3521594425495303,
+            "ci95": [
+              0.33749248443596663,
+              0.3671951425328661
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.355845039425756,
+            "ci95": [
+              0.3412109729179689,
+              0.3714303017312912
+            ]
+          }
+        },
+        "neutral": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.7757548025159092,
+            "ci95": [
+              0.752131762655231,
+              0.8012060704316568
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.5664342470513778,
+            "ci95": [
+              0.543768973044644,
+              0.5893011987116791
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.7831533936063078,
+            "ci95": [
+              0.7592347783469285,
+              0.8087218233678326
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.7232736928368915,
+            "ci95": [
+              0.6968332405183107,
+              0.749280774737984
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5422389304345088,
+            "ci95": [
+              0.5201977323829646,
+              0.5647096190429114
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5434246219882821,
+            "ci95": [
+              0.5220995586999237,
+              0.566441327868797
+            ]
+          }
+        }
+      },
+      "game_vs_neutral": {
+        "answer_contrast_variance_ratio": {
+          "estimate": 0.6522897362925336,
+          "ci95": [
+            0.6341906904504543,
+            0.6701998262234069
+          ]
+        },
+        "orthogonal_complement_variance_ratio": {
+          "estimate": 0.9850280245030045,
+          "ci95": [
+            0.9702881474205836,
+            0.9999875453503447
+          ]
+        },
+        "normalized_full_stream_variance_ratio": {
+          "estimate": 0.9767337280878449,
+          "ci95": [
+            0.9622382650774284,
+            0.991438757155971
+          ]
+        }
+      }
+    },
+    "discovery": {
+      "n": 250,
+      "conditions": {
+        "baseline": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "game": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.759921917741187,
+            "ci95": [
+              0.7279827185609584,
+              0.7966302822079807
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.3545388098896361,
+            "ci95": [
+              0.33209734715161243,
+              0.37586067862173683
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.774462862945183,
+            "ci95": [
+              0.742281823456469,
+              0.8115702213284439
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.45778671496444706,
+            "ci95": [
+              0.4261782683505422,
+              0.4872586709284887
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.33567956550148437,
+            "ci95": [
+              0.31537681909068527,
+              0.35528953483218817
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.3448719521687177,
+            "ci95": [
+              0.32503025990759327,
+              0.364539959792969
+            ]
+          }
+        },
+        "neutral": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.7818221773390536,
+            "ci95": [
+              0.7508721794092258,
+              0.816441968608046
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.5488213895777747,
+            "ci95": [
+              0.5189240511015178,
+              0.5789455678477606
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.7901798311773712,
+            "ci95": [
+              0.7587463924525871,
+              0.8249147605740581
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.694552515672323,
+            "ci95": [
+              0.659550661580253,
+              0.7275234096124115
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5234663777855371,
+            "ci95": [
+              0.49415295975202217,
+              0.5531349480592104
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5344269959500153,
+            "ci95": [
+              0.5067252082071112,
+              0.5643064376748271
+            ]
+          }
+        }
+      },
+      "game_vs_neutral": {
+        "answer_contrast_variance_ratio": {
+          "estimate": 0.6460003502458127,
+          "ci95": [
+            0.6168460861793611,
+            0.6736574258435998
+          ]
+        },
+        "orthogonal_complement_variance_ratio": {
+          "estimate": 0.9801096312357531,
+          "ci95": [
+            0.9616356327693866,
+            0.9998176593608094
+          ]
+        },
+        "normalized_full_stream_variance_ratio": {
+          "estimate": 0.9719881832050293,
+          "ci95": [
+            0.9536469614210527,
+            0.9914995672209035
+          ]
+        }
+      }
+    },
+    "confirmation": {
+      "n": 250,
+      "conditions": {
+        "baseline": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "game": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.7498586068057742,
+            "ci95": [
+              0.7169930333660764,
+              0.7863684340434658
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.37850516372202286,
+            "ci95": [
+              0.3554046835701996,
+              0.4014259913230255
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.7628486019803726,
+            "ci95": [
+              0.7298143685405551,
+              0.7998002138799553
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.4961733727235191,
+            "ci95": [
+              0.4647656009354009,
+              0.5265230135743747
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.3628216398335143,
+            "ci95": [
+              0.3405288342412796,
+              0.3851174216731843
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.36542651852024244,
+            "ci95": [
+              0.34349504930754443,
+              0.3886670306908944
+            ]
+          }
+        },
+        "neutral": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 0.7639122049458287,
+            "ci95": [
+              0.7306739518947211,
+              0.8004735228985959
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.5740775734904188,
+            "ci95": [
+              0.5409668817303827,
+              0.6075535036282971
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 0.7705526468011673,
+            "ci95": [
+              0.7370565807873881,
+              0.8072864217242673
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.7450205717592626,
+            "ci95": [
+              0.7039244503263293,
+              0.7839723920699331
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5511973838534007,
+            "ci95": [
+              0.5184963201178778,
+              0.5854451056844135
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.5503207245761832,
+            "ci95": [
+              0.5185851519649393,
+              0.5851361714014706
+            ]
+          }
+        }
+      },
+      "game_vs_neutral": {
+        "answer_contrast_variance_ratio": {
+          "estimate": 0.6593275564148824,
+          "ci95": [
+            0.637557158825079,
+            0.6808239470427109
+          ]
+        },
+        "orthogonal_complement_variance_ratio": {
+          "estimate": 0.9900019228371003,
+          "ci95": [
+            0.9683326979425699,
+            1.0121295435196926
+          ]
+        },
+        "normalized_full_stream_variance_ratio": {
+          "estimate": 0.9816031239597081,
+          "ci95": [
+            0.9603349540349299,
+            1.0035348513112174
+          ]
+        }
+      }
+    }
+  }
+}

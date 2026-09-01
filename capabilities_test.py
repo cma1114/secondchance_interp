@@ -1,0 +1,548 @@
+import time
+import json
+from load_and_format_datasets import load_and_format_dataset
+from base_game_class import *
+import random
+import string
+
+class CapabilitiesTest(BaseGameClass):
+    """
+    Just ask independent multiple-choice or short answer questions and record responses.
+    """
+    def __init__(self, subject_id, subject_name, questions, n_questions=None, is_human_player=False, resume_from=None, temperature=0.0, resample_for_probs=False, nested=None, top_logprobs_count=None):
+        """
+        Args:
+            subject_id (str): Identifier for the subject/session
+            subject_name (str): Name of the subject (model name for LLMs)
+            questions (list): Formatted questions to use
+            n_questions (int): How many questions to use
+            is_human_player (bool): Whether the subject is a human player or an LLM
+            resume_from (string): Filename to resume from (in case game got interrupted)
+        """
+        filepath = "capabilities_test_logs" if not nested else "capabilities_3p_test_logs" if nested == "Other" else "capabilities_1p_test_logs"
+        super().__init__(subject_id, subject_name, is_human_player, filepath)
+        self.n_questions = len(questions) if not n_questions else n_questions
+
+        # Set up state variables
+        self.results = {}
+        self.questions = []
+        self.correct_count = 0
+        self.total_count = 0
+        self.accuracy = None
+        self.temperature = temperature
+        self.log_suffix = "_test_data"
+        self.resample_for_probs = resample_for_probs
+        self.nested = nested
+        self.top_logprobs_count = top_logprobs_count
+
+        if len(questions) < self.n_questions:
+            raise ValueError(f"Not enough questions provided ({len(questions)}); ({self.n_questions} needed)")
+        
+        # Take the first n_questions
+        self.questions = questions[:self.n_questions]
+        self._log(f"Using {len(self.questions)} provided questions")
+
+        if resume_from and resume_from != "":
+            try:
+                with open(resume_from, "r") as f:
+                    prev_data = json.load(f)
+            except Exception as e:
+                print(f"Error opening resume file: {str(e)}")
+                return False
+            self.results = prev_data["results"]
+            self._log(f"Resuming from {resume_from} holding {len(self.results)} questions")
+            for rdict in self.results.values():
+                if rdict["is_correct"] == True: self.correct_count +=1
+                self.total_count += 1
+            self.questions = [q for q in self.questions if q["id"] not in self.results]
+
+    def _save_data(self):
+        """Save data to file"""
+        data = {
+            "subject_id": self.subject_id,
+            "timestamp": time.time(),
+            "accuracy": self.accuracy,
+            "results": self.results,
+        }
+                    
+        filename = f"{self.log_base_name}{self.log_suffix}.json"
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            
+        self._log(f"Data saved to: {filename}")
+
+    def run_capabilities_measurement(self):
+        """
+        Measures a subject's performance on multiple choice questions.
+        Uses parallel execution for resampling if configured.
+        
+        Returns:
+            bool: True if completed successfully, False otherwise
+            str: Path to the capabilities data file
+        """
+        start_message = f"\nStarting Capabilities Measurement for Subject: {self.subject_id}"
+        self._log(start_message)
+        self._log(f"Configuration: Questions={self.n_questions}")
+        self._log("\n" + "="*10 + " Starting Capability Measuring " + "="*10)
+        
+        log_interval = 10
+
+        # This condition diverts the logic to the parallel path
+        if self.resample_for_probs and not self.is_human_player:
+            #################################################################
+            # PARALLEL PATH: For resampling LLM multiple-choice questions
+            #################################################################
+
+            # --- Phase 1: Prepare all tasks ---
+            self._log(f"Preparing {len(self.questions)} questions for parallel resampling...")
+            estimation_tasks = []
+            for question in self.questions:
+                q_text = self._present_question(question)
+                if self.nested == "Other":
+#                    option_dict = {"A": "<20%", "B": "20-40%", "C": "40-60%", "D": "60-80%", "E": ">80%"}
+#                    RANGE_MIDPOINTS = {"A": 0.1, "B": 0.3, "C": 0.5,  "D": 0.7, "E": 0.9}
+#                    option_dict = {"A": "<10%", "B": "10-20%", "C": "20-40%", "D": "40-60%", "E": "60-80%", "F": ">80%"}
+#                    RANGE_MIDPOINTS = {"A": 0.05, "B": 0.15, "C": 0.3,  "D": 0.5, "E": 0.7, "F": 0.9}
+                    option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": ">80%"}
+                    RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.9}
+                    options = list(option_dict.keys())
+                    q_text = self._present_nested_question(question, "What percentage of college-educated people would get this question right?", option_dict)
+                    setup_prompt = "I want your help calibrating question difficulty. I'm going to show you a multiple-choice question, and I want you to tell me approximately what percentage of college-educated people you think would get it right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                elif self.nested == "Self":
+#                    option_dict = {"0": "<5%", "1": "5-15%", "2": "15-25%", "3": "25-35%", "4": "35-45%", "5": "45-55%", "6": "55-65%", "7": "65-75%", "8": "75-85%", "9": "85-95%", "10": ">95%"}
+#                    RANGE_MIDPOINTS = {"0": 0.025, "1": 0.1, "2": 0.2,  "3": 0.3, "4": 0.4, "5": 0.5, "6": 0.6, "7": 0.7, "8": 0.8, "9": 0.9, "10": 0.975}
+                    option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": "80-90%", "H": ">90%"}
+                    RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.85, "H": 0.95}
+                    options = list(option_dict.keys())
+                    q_text = self._present_nested_question(question, "How confident are you that you would get this question right?", option_dict)
+                    setup_prompt = "I'm going to show you a multiple-choice question, and I want you to tell me your level of confidence that you would get the question right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                else:
+                    options = list(question["options"].keys())
+                    setup_prompt = "I'm going to ask you a series of multiple choice questions. For each one, select the answer you think is best. Respond only with the letter of your choice; do NOT output any other text."
+
+                options_str = " or ".join(options) if len(options) == 2 else ", ".join(options[:-1]) + f", or {options[-1]}"
+                llm_prompt = q_text + f"\nYour choice ({options_str}): " 
+
+                task = {
+                    "question_obj": question,
+                    "prompt": setup_prompt + "\n\n" + llm_prompt,
+                    "options": options,
+                    "message_history": [], # no history
+                    "epsilon": 0.05,
+                }
+                estimation_tasks.append(task)
+            
+            # --- Phase 2: Execute all tasks in parallel ---
+            parallel_results = self.run_estimations_in_parallel(estimation_tasks, max_workers=4)
+
+            # --- Phase 3: Process the results ---
+            self._log("Processing results from parallel execution...")
+            for result_item in parallel_results:
+                if result_item.get('error'):
+                    self._log(f"Task for question '{result_item['task']['question_obj'].get('id')}' failed: {result_item['error']}")
+                    continue
+                
+                # Unpack results and original question data
+                subject_answer, _, probs = result_item['result']
+                question = result_item['task']['question_obj']
+                
+                # --- Replicate result processing logic ---
+                if len(subject_answer) == 0:
+                    subject_decision = subject_answer
+                else:
+                    arr = subject_answer.upper().rstrip(string.whitespace + string.punctuation)
+                    if arr[0] in options:
+                        subject_decision = arr[0]
+                    elif arr[-1] in options:
+                        subject_decision = arr[-1]
+                    else:
+                        subject_decision = subject_answer
+
+                if self.nested:
+                    is_correct = sum(
+                        RANGE_MIDPOINTS[key.strip()] * mass
+                        for key, mass in probs.items()
+                        if key.strip() in RANGE_MIDPOINTS
+                    ) if probs else 0.0
+                else:
+                    is_correct = (subject_decision == question["correct_answer"])
+
+                if is_correct:
+                    self.correct_count += 1
+                
+                if subject_decision != "":
+                    self.results[question["id"]] = {
+                        "question": question,
+                        "subject_answer": subject_decision,
+                        "is_correct": is_correct,
+                        "probs": probs 
+                    }
+                self.total_count += 1
+            
+            # Save data once at the end of processing
+            self._save_data()
+
+        else:
+            #################################################################
+            # SEQUENTIAL PATH: For humans or single-sample runs
+            #################################################################
+            probs = None
+            for i, question in enumerate(self.questions):
+                q_text = self._present_question(question)
+
+                if self.is_human_player:
+                    print(q_text)
+                    subject_answer = self._get_subject_answer(
+                        list(question["options"].keys()), 
+                        "Your answer (A, B, C, or D): "
+                    )
+                    if subject_answer is None:
+                        return False, None
+                else:
+                    # For LLM subject
+                    if self.nested == "Other":
+    #                    option_dict = {"A": "<20%", "B": "20-40%", "C": "40-60%", "D": "60-80%", "E": ">80%"}
+    #                    RANGE_MIDPOINTS = {"A": 0.1, "B": 0.3, "C": 0.5,  "D": 0.7, "E": 0.9}
+    #                    option_dict = {"A": "<10%", "B": "10-20%", "C": "20-40%", "D": "40-60%", "E": "60-80%", "F": ">80%"}
+    #                    RANGE_MIDPOINTS = {"A": 0.05, "B": 0.15, "C": 0.3,  "D": 0.5, "E": 0.7, "F": 0.9}
+                        option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": ">80%"}
+                        RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.9}
+                        options = list(option_dict.keys())
+                        q_text = self._present_nested_question(question, "What percentage of college-educated people would get this question right?", option_dict)
+                        setup_prompt = "I want your help calibrating question difficulty. I'm going to show you a multiple-choice question, and I want you to tell me approximately what percentage of college-educated people you think would get it right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                    elif self.nested == "Self":
+                        option_dict = {"0": "<5%", "1": "5-15%", "2": "15-25%", "3": "25-35%", "4": "35-45%", "5": "45-55%", "6": "55-65%", "7": "65-75%", "8": "75-85%", "9": "85-95%", "10": ">95%"}
+                        RANGE_MIDPOINTS = {"0": 0.025, "1": 0.1, "2": 0.2,  "3": 0.3, "4": 0.4, "5": 0.5, "6": 0.6, "7": 0.7, "8": 0.8, "9": 0.9, "10": 0.975}
+    #                    option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": "80-90%", "H": ">90%"}
+    #                    RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.85, "H": 0.95}
+                        options = list(option_dict.keys())
+                        q_text = self._present_nested_question(question, "How confident are you that you would get this question right?", option_dict)
+                        setup_prompt = "I'm going to show you a multiple-choice question, and I want you to tell me your level of confidence that you would get the question right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                    else:
+                        options = list(question["options"].keys())
+                        setup_prompt = "I'm going to ask you a series of multiple choice questions. For each one, select the answer you think is best. Respond only with the letter of your choice; do NOT output any other text."
+
+                    options_str = " or ".join(options) if len(options) == 2 else ", ".join(options[:-1]) + f", or {options[-1]}"
+                    llm_prompt = q_text + f"\nYour choice ({options_str}): " 
+
+                    # Note: self.resample_for_probs is False in this branch
+                    subject_answer, _, probs = self._get_llm_answer(
+                        options,
+                        setup_prompt + "\n\n" + llm_prompt,
+                        [], # no history
+                        keep_appending=False,
+                        MAX_TOKENS=None if ('opus-4' in self.subject_name or 'sonnet-4' in self.subject_name) else 1,
+                        temp=self.temperature,
+                        top_logprobs_count=self.top_logprobs_count,
+                    )
+                
+                # --- Same result processing logic as parallel path ---
+                if len(subject_answer.rstrip(string.whitespace + string.punctuation)) == 0:
+                    subject_decision = subject_answer
+                else:
+                    arr = subject_answer.upper().rstrip(string.whitespace + string.punctuation)
+                    if arr[0] in options:
+                        subject_decision = arr[0]
+                    elif arr[-1] in options:
+                        subject_decision = arr[-1]
+                    else:
+                        subject_decision = subject_answer
+
+                if self.nested:
+                    is_correct = sum(
+                        RANGE_MIDPOINTS[key.strip()] * mass
+                        for key, mass in probs.items()
+                        if key.strip() in RANGE_MIDPOINTS
+                    ) if probs else RANGE_MIDPOINTS[subject_decision] if subject_decision in RANGE_MIDPOINTS else 0.0
+                else:
+                    is_correct = (subject_decision == question["correct_answer"])
+
+                if is_correct:
+                    self.correct_count += 1
+                
+                if subject_decision != "":
+                    self.results[question["id"]] = {
+                        "question": question,
+                        "subject_answer": subject_decision,
+                        "is_correct": is_correct,
+                        "probs": probs,
+                        "call_metadata": self.last_call_metadata,
+                    }
+                self.total_count += 1
+                print(f"Completed question {self.total_count}/{len(self.questions)}")
+                if (i + 1) % log_interval == 0: self._save_data()
+        
+        # --- Finalization steps, common to both paths ---
+        if self.total_count > 0:
+            self.accuracy = self.correct_count / self.total_count
+        else:
+            self.accuracy = 0.0
+            self._log("Warning: No questions were processed.")
+        
+        summary = f"\nCapabilities Test Complete. Accuracy: {self.accuracy:.2%} ({self.correct_count}/{self.total_count})"
+        self._log(summary)
+        
+        self._save_data()
+                    
+        capabilities_file_path = f"{self.log_base_name}{self.log_suffix}.json"
+        self._log(f"Capabilities measurement completed. Results saved to: {capabilities_file_path}")
+        return True, capabilities_file_path
+        
+    def run_capabilities_measurement_orig(self):
+        """
+        This measures a subject's performance on multiple choice questions and saves the results to a file.
+        
+        Returns:
+            bool: True if completed successfully, False otherwise
+            str: Path to the capabilities data file
+        """
+        start_message = f"\nStarting Capabilities Measurement for Subject: {self.subject_id}"
+        self._log(start_message)
+        self._log(f"Configuration: Questions={self.n_questions}")
+        self._log("\n" + "="*10 + " Starting Capability Measuring " + "="*10)
+        
+        # Initialize state
+        probs = None
+        log_interval = 10
+        
+        # Process each question
+        for i, question in enumerate(self.questions):
+            q_text = self._present_question(question)
+
+            # Get subject's answer
+            if self.is_human_player:
+                print(q_text)
+                subject_answer = self._get_subject_answer(
+                    list(question["options"].keys()), 
+                    "Your answer (A, B, C, or D): "
+                )
+                if subject_answer is None:
+                    return False
+            else:
+                # For LLM subject
+                if self.nested == "Other":
+#                    option_dict = {"A": "<20%", "B": "20-40%", "C": "40-60%", "D": "60-80%", "E": ">80%"}
+#                    RANGE_MIDPOINTS = {"A": 0.1, "B": 0.3, "C": 0.5,  "D": 0.7, "E": 0.9}
+#                    option_dict = {"A": "<10%", "B": "10-20%", "C": "20-40%", "D": "40-60%", "E": "60-80%", "F": ">80%"}
+#                    RANGE_MIDPOINTS = {"A": 0.05, "B": 0.15, "C": 0.3,  "D": 0.5, "E": 0.7, "F": 0.9}
+                    option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": ">80%"}
+                    RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.9}
+                    options = list(option_dict.keys())
+                    q_text = self._present_nested_question(question, "What percentage of college-educated people would get this question right?", option_dict)
+                    setup_prompt = "I want your help calibrating question difficulty. I'm going to show you a multiple-choice question, and I want you to tell me approximately what percentage of college-educated people you think would get it right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                elif self.nested == "Self":
+#                    option_dict = {"0": "<5%", "1": "5-15%", "2": "15-25%", "3": "25-35%", "4": "35-45%", "5": "45-55%", "6": "55-65%", "7": "65-75%", "8": "75-85%", "9": "85-95%", "10": ">95%"}
+#                    RANGE_MIDPOINTS = {"0": 0.025, "1": 0.1, "2": 0.2,  "3": 0.3, "4": 0.4, "5": 0.5, "6": 0.6, "7": 0.7, "8": 0.8, "9": 0.9, "10": 0.975}
+                    option_dict = {"A": "<5%", "B": "5-10%", "C": "10-20%", "D": "20-40%", "E": "40-60%", "F": "60-80%", "G": "80-90%", "H": ">90%"}
+                    RANGE_MIDPOINTS = {"A": 0.025, "B": 0.075, "C": 0.15,  "D": 0.3, "E": 0.5, "F": 0.7, "G": 0.85, "H": 0.95}
+                    options = list(option_dict.keys())
+                    q_text = self._present_nested_question(question, "How confident are you that you would get this question right?", option_dict)
+                    setup_prompt = "I'm going to show you a multiple-choice question, and I want you to tell me your level of confidence that you would get the question right. Respond only with the letter corresponding to the percentage range you choose; do NOT output any other text."
+                else:
+                    options = list(question["options"].keys())
+                    setup_prompt = "I'm going to ask you a series of multiple choice questions. For each one, select the answer you think is best. Respond only with the letter of your choice; do NOT output any other text."
+                options_str = " or ".join(options) if len(options) == 2 else ", ".join(options[:-1]) + f", or {options[-1]}"
+                llm_prompt = q_text + f"\nYour choice ({options_str}): "
+                if False:#question['id'] == "gpqa_train_rec42yAdAZnQgoibP" or question['id'] == "gpqa_train_recnTTKdBzfuoZ7w7": 
+                    subject_answer = ""
+                    probs = None
+                else:
+                    if self.resample_for_probs:
+                        subject_answer, _, probs = self.estimate_probs_sequential(
+                            setup_prompt + "\n\n" + llm_prompt,
+                            options,
+                            [], # no history
+                            epsilon=0.05,
+                        )   
+                    else:
+                        subject_answer, _, probs = self._get_llm_answer(
+                            options,
+                            setup_prompt + "\n\n" + llm_prompt,
+                            [], # no history
+                            keep_appending=False,
+                            MAX_TOKENS=None,#1,
+                            temp=self.temperature
+                        )
+            
+            # Check correctness
+            if len(subject_answer) == 0:
+                subject_decision = subject_answer
+            else:
+                arr = subject_answer.upper().rstrip(string.whitespace + string.punctuation)
+                if arr[0] in options:
+                    subject_decision = arr[0]
+                elif arr[-1] in options:
+                    subject_decision = arr[-1]
+                else:
+                    subject_decision = subject_answer
+
+            if self.nested:
+                is_correct = sum(
+                    RANGE_MIDPOINTS[key.strip()] * mass
+                    for key, mass in probs.items()
+                    if key.strip() in RANGE_MIDPOINTS
+                    ) if probs else 0.0
+            else:
+                is_correct = (subject_decision == question["correct_answer"])
+            if is_correct:
+                self.correct_count += 1
+            
+            # Store result
+            if subject_decision != "":
+                self.results[question["id"]] = {
+                    "question": question,
+                    "subject_answer": subject_decision,
+                    "is_correct": is_correct,
+                    "probs": probs 
+                }
+            self.total_count += 1
+            print(f"Completed question {self.total_count}/{len(self.questions)}")
+            self.accuracy = self.correct_count / self.total_count 
+            if (i+1)%log_interval == 0: self._save_data()
+            
+        # Calculate accuracy
+        self.accuracy = self.correct_count / len(self.questions)
+        
+        # Summary
+        summary = f"\nCapabilities Test Complete. Accuracy: {self.accuracy:.2%} ({self.correct_count}/{len(self.questions)})"
+        self._log(summary)
+        
+        self._save_data()
+                    
+        # Return the path to the capabilities data file
+        capabilities_file_path = f"{self.log_base_name}{self.log_suffix}.json"
+        self._log(f"Capabilities measurement completed. Results saved to: {capabilities_file_path}")
+        return True, capabilities_file_path
+
+    def run_capabilities_measurement_sa(self):
+        """
+        This measures a subject's performance on short answer questions and saves the results to a file.
+        
+        Returns:
+            bool: True if completed successfully, False otherwise
+            str: Path to the capabilities data file
+        """
+        start_message = f"\nStarting Capabilities Measurement for Subject: {self.subject_id}"
+        self._log(start_message)
+        self._log(f"Configuration: Questions={self.n_questions}")
+        self._log("\n" + "="*10 + " Starting Capability Measuring " + "="*10)
+        
+        # Initialize state
+        probs = None
+        log_interval = 10
+        self.accuracy = None
+        
+        # Process each question
+        for i, question in enumerate(self.questions):
+            q_text = self._present_question(question)
+
+            # Get subject's answer
+            if self.is_human_player:
+                print(q_text)
+                subject_answer = self._get_subject_answer(
+                    list(question["options"].keys()), 
+                    "Your answer: "
+                )
+                if subject_answer is None:
+                    return False
+            else:
+                # For LLM subject
+                llm_prompt = q_text + "\nYour answer: "
+                setup_prompt = "I'm going to ask you a series of short answer questions. For each one, respond as succinctly as possible. Answer as best you can, even if you're not certain."
+                if False:#question['id'] == "gpqa_train_rec42yAdAZnQgoibP" or question['id'] == "gpqa_train_recnTTKdBzfuoZ7w7": 
+                    subject_answer = ""
+                    probs = None
+                else:
+                    subject_answer, _, probs = self._get_llm_answer(
+                        None,
+                        setup_prompt + "\n\n" + llm_prompt,
+                        [], # no history
+                        keep_appending=False,
+                        MAX_TOKENS=None,
+                        temp=self.temperature
+                    )
+                        
+            # Store result
+            if subject_answer != "":
+                self.results[question["id"]] = {
+                    "question": question,
+                    "subject_answer": subject_answer,
+                    "is_correct": None,
+                    "probs": probs 
+                }
+            self.total_count += 1
+            print(f"Completed question {self.total_count}/{len(self.questions)}")
+            if (i+1)%log_interval == 0: self._save_data()
+            
+        # Summary
+        summary = f"\nCapabilities Test Complete."
+        self._log(summary)
+        
+        self._save_data()
+                    
+        # Return the path to the capabilities data file
+        capabilities_file_path = f"{self.log_base_name}{self.log_suffix}.json"
+        self._log(f"Capabilities measurement completed. Results saved to: {capabilities_file_path}")
+        return True, capabilities_file_path
+
+def main(model_dataset_dict, temp):
+    for subject_name, datasets in model_dataset_dict.items():
+        for DATASET_NAME in datasets:
+            IS_HUMAN = False
+        #    DATASET_NAME = "SimpleQA"    # "TruthfulQA" or "GPQA" or "MMLU or SimpleQA" or "SimpleMC" or "GPSA"
+        #    subject_name = "gpt-4o-mini"#"gemini-2.5-flash"#"grok-4-0709"#"claude-opus-4-1-20250805"#"gemini-2.5-flash-lite"#"claude-3-haiku-20240307"#"grok-4-0709"#"qwen3-235b-a22b-2507"#"gpt-4o-2024-08-06"#"grok-3-latest"#"gpt-4.1-2025-04-14"#'gemini-2.0-flash-001'#"claude-3-5-sonnet-20241022" #"claude-3-sonnet-20240229"#"gemini-2.5-flash-preview-04-17"#"meta-llama/Meta-Llama-3.1-405B-Instruct"#"o3-2025-04-16"#"deepseek-chat"#"gemini-1.5-pro"#"meta-llama/Meta-Llama-3.1-405B"#"gemini-2.5-pro-exp-03-25"#"claude-3-7-sonnet-20250219"#"gpt-4-turbo-2024-04-09"#"Chris"#
+            resume_from = None#"./capabilities_test_logs/qwen3-235b-a22b-2507_GPQA_447_1756209710_test_data.json" #
+            RESAMPLE = False
+            NESTED = None #values: None, "Self", "Other"
+            temp = temp
+            seed = 42
+            
+            N_QUESTIONS = 447 if DATASET_NAME.startswith("GP") else 500#   # Number of questions for capabilities measurement
+            SUBJECT_ID = f"{subject_name.replace('/', '-')}_{DATASET_NAME}_{N_QUESTIONS}"
+            try:
+                # Load questions for capabilities measurement
+                print(f"Loading {N_QUESTIONS} questions for capabilities measurement...")
+                formatted_questions = load_and_format_dataset(DATASET_NAME, N_QUESTIONS)
+
+                random.seed(seed)
+                random.shuffle(formatted_questions)
+                    
+                if not formatted_questions or len(formatted_questions) < N_QUESTIONS:
+                    print(f"Error: Not enough questions available ({len(formatted_questions) if formatted_questions else 0}). Needed: {N_QUESTIONS}")
+                    return
+                
+                # Create game instance for capabilities measurement
+                game = CapabilitiesTest(
+                    subject_id=SUBJECT_ID,
+                    subject_name=subject_name,
+                    questions=formatted_questions,
+                    n_questions=N_QUESTIONS,
+                    is_human_player=IS_HUMAN,
+                    resume_from=resume_from,
+                    temperature=temp,
+                    resample_for_probs=RESAMPLE,
+                    nested = NESTED
+                )
+                            
+                # Run capabilities measurement
+                if (DATASET_NAME == "SimpleQA" or DATASET_NAME == "GPSA") and not NESTED: success, capabilities_file = game.run_capabilities_measurement_sa()
+                else: success, capabilities_file = game.run_capabilities_measurement()
+                
+                if success:
+                    print(f"\nCapabilities measurement completed successfully.")
+                    print(f"Results saved to: {capabilities_file}")
+                else:
+                    print("\nCapabilities measurement failed.")
+                    
+            except Exception as e:
+                print(f"Error during execution: {e}")
+                import traceback
+                traceback.print_exc()
+    
+    print("\nExecution completed.")
+
+if __name__ == "__main__":
+    model_dataset_dict = {
+        "gemini-2.5-flash_nothink": ["SimpleMC"],
+        }
+    main(model_dataset_dict, temp=1.0)

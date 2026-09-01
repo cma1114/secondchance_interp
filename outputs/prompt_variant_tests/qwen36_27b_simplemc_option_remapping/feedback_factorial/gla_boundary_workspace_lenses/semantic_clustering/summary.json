@@ -1,0 +1,944 @@
+{
+  "definition": "JLens top/bottom vocabulary tokens for each GLA contextual change: (Evaluation after-before) - (Neutral after-before).",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "clustering": {
+    "method": "agglomerative average-linkage cosine clustering",
+    "distance_threshold": 0.25,
+    "tokens_clustered": 1693,
+    "clusters": 1335,
+    "candidate_pool": "union of saved top/bottom 24 tokens over all GLA blocks"
+  },
+  "family_scoring": "At each block and cutoff, retain the signed score of the single most extreme token belonging to the family. Missing is not zero.",
+  "anchors_found": {
+    "Answer / response": [
+      "answer",
+      "response",
+      "respond",
+      "reply"
+    ],
+    "Incorrect / wrong": [
+      "incorrect",
+      "wrong"
+    ],
+    "Failure / error": [
+      "failure",
+      "failed",
+      "error",
+      "unsuccessful"
+    ],
+    "Replace / substitute": [
+      "replace",
+      "replacement",
+      "substitute"
+    ],
+    "Alternative / instead": [
+      "alternatives",
+      "instead"
+    ],
+    "Again / retry": [
+      "again",
+      "retry",
+      "retries"
+    ],
+    "Previous / last": [
+      "previous",
+      "last"
+    ],
+    "Another": [
+      "another"
+    ],
+    "New / update": [
+      "new",
+      "updated",
+      "revised"
+    ],
+    "Same": [
+      "same"
+    ]
+  },
+  "family_members": {
+    "Answer / response": [
+      "answer",
+      "answered",
+      "answering",
+      "answers",
+      "reply",
+      "respond",
+      "responded",
+      "response"
+    ],
+    "Incorrect / wrong": [
+      "incorrect",
+      "incorrectly",
+      "wrong",
+      "wrongly"
+    ],
+    "Failure / error": [
+      "error",
+      "errors",
+      "fail",
+      "failed",
+      "failing",
+      "failure",
+      "failures",
+      "unsuccessful"
+    ],
+    "Replace / substitute": [
+      "replace",
+      "replaced",
+      "replacement",
+      "replacements",
+      "replaces",
+      "replacing",
+      "substitute",
+      "substitutes",
+      "substitution"
+    ],
+    "Alternative / instead": [
+      "alternatives",
+      "instead"
+    ],
+    "Again / retry": [
+      "again",
+      "retries",
+      "retry"
+    ],
+    "Previous / last": [
+      "last",
+      "previous",
+      "previously"
+    ],
+    "Another": [
+      "another"
+    ],
+    "New / update": [
+      "existing",
+      "new",
+      "revised",
+      "update",
+      "updated"
+    ],
+    "Same": [
+      "same"
+    ]
+  },
+  "key_block_scores_top24": [
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Answer / response",
+      "score": 0.3125,
+      "representative_token": " answer",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "New / update",
+      "score": -0.21875,
+      "representative_token": ".update",
+      "rank": 18.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 39,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Incorrect / wrong",
+      "score": 0.4375,
+      "representative_token": " incorrect",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Replace / substitute",
+      "score": -0.5703125,
+      "representative_token": " replacement",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "New / update",
+      "score": -0.375,
+      "representative_token": "Existing",
+      "rank": 19.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 42,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Replace / substitute",
+      "score": 0.296875,
+      "representative_token": " replace",
+      "rank": 2.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Alternative / instead",
+      "score": 0.279296875,
+      "representative_token": " instead",
+      "rank": 4.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "New / update",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 43,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Alternative / instead",
+      "score": 0.4296875,
+      "representative_token": "instead",
+      "rank": 11.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Again / retry",
+      "score": 0.515625,
+      "representative_token": "again",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Previous / last",
+      "score": -0.46875,
+      "representative_token": " last",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Another",
+      "score": 0.43359375,
+      "representative_token": "another",
+      "rank": 10.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "New / update",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 47,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Failure / error",
+      "score": 0.64453125,
+      "representative_token": " failure",
+      "rank": 2.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Again / retry",
+      "score": 0.4921875,
+      "representative_token": "_retry",
+      "rank": 14.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "New / update",
+      "score": 0.69140625,
+      "representative_token": " new",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 49,
+      "family": "Same",
+      "score": -0.490234375,
+      "representative_token": "same",
+      "rank": 8.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Failure / error",
+      "score": -0.69140625,
+      "representative_token": " unsuccessful",
+      "rank": 2.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Again / retry",
+      "score": -0.62890625,
+      "representative_token": " retries",
+      "rank": 6.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Another",
+      "score": 0.74609375,
+      "representative_token": "another",
+      "rank": 1.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "New / update",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 50,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Answer / response",
+      "score": 0.66796875,
+      "representative_token": "Respond",
+      "rank": 4.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "New / update",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 51,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Answer / response",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Incorrect / wrong",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Failure / error",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "New / update",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 53,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Answer / response",
+      "score": 0.375,
+      "representative_token": " response",
+      "rank": 24.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Incorrect / wrong",
+      "score": 0.3984375,
+      "representative_token": " Wrong",
+      "rank": 17.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Failure / error",
+      "score": 0.44921875,
+      "representative_token": " error",
+      "rank": 6.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Replace / substitute",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Alternative / instead",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Again / retry",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Previous / last",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Another",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "New / update",
+      "score": 0.46875,
+      "representative_token": " existing",
+      "rank": 3.0,
+      "present": true
+    },
+    {
+      "k": 24,
+      "block": 55,
+      "family": "Same",
+      "score": null,
+      "representative_token": "",
+      "rank": null,
+      "present": false
+    }
+  ],
+  "catalog_rows": 1335,
+  "threshold_sensitivity": [
+    0.2,
+    0.25,
+    0.3
+  ],
+  "figure": "figures/qwen36_jlens_gla_semantic_clusters.png"
+}

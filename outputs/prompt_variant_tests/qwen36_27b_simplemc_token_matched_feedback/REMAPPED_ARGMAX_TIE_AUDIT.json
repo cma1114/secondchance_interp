@@ -1,0 +1,760 @@
+{
+  "rows": [
+    {
+      "experiment": "continuous final-decision signed ablation",
+      "split": "discovery",
+      "array": "natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 8,
+      "percent": 1.593625498007968
+    },
+    {
+      "experiment": "continuous final-decision signed ablation",
+      "split": "discovery",
+      "array": "ablated_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 3,
+      "changed_tie_breaks": 2,
+      "percent": 0.398406374501992
+    },
+    {
+      "experiment": "continuous final-decision signed ablation",
+      "split": "confirmation",
+      "array": "natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "continuous final-decision signed ablation",
+      "split": "confirmation",
+      "array": "ablated_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.40160642570281124
+    },
+    {
+      "experiment": "first-span GLA lesions",
+      "split": "discovery",
+      "array": "natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 8,
+      "percent": 1.593625498007968
+    },
+    {
+      "experiment": "first-span GLA lesions",
+      "split": "discovery",
+      "array": "ablated_logits",
+      "answer_cells": 2008,
+      "exact_max_ties": 22,
+      "changed_tie_breaks": 15,
+      "percent": 0.7470119521912351
+    },
+    {
+      "experiment": "first-span GLA lesions",
+      "split": "confirmation",
+      "array": "natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-span GLA lesions",
+      "split": "confirmation",
+      "array": "ablated_logits",
+      "answer_cells": 1992,
+      "exact_max_ties": 23,
+      "changed_tie_breaks": 11,
+      "percent": 0.5522088353413654
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "discovery",
+      "array": "natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 3,
+      "percent": 0.5976095617529881
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "discovery",
+      "array": "donor_patched_logits",
+      "answer_cells": 5522,
+      "exact_max_ties": 40,
+      "changed_tie_breaks": 26,
+      "percent": 0.4708438971387179
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "discovery",
+      "array": "identity_patched_logits",
+      "answer_cells": 5522,
+      "exact_max_ties": 44,
+      "changed_tie_breaks": 33,
+      "percent": 0.5976095617529881
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "confirmation",
+      "array": "natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "confirmation",
+      "array": "donor_patched_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 3,
+      "changed_tie_breaks": 2,
+      "percent": 0.40160642570281124
+    },
+    {
+      "experiment": "first-decision cross-order patching",
+      "split": "confirmation",
+      "array": "identity_patched_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "discovery",
+      "array": "natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 8,
+      "percent": 1.593625498007968
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "discovery",
+      "array": "donor_patched_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 3,
+      "changed_tie_breaks": 2,
+      "percent": 0.398406374501992
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "discovery",
+      "array": "identity_patched_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 8,
+      "percent": 1.593625498007968
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "confirmation",
+      "array": "natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "confirmation",
+      "array": "donor_patched_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 3,
+      "percent": 0.6024096385542169
+    },
+    {
+      "experiment": "first-boundary GLA memory rewrite",
+      "split": "confirmation",
+      "array": "identity_patched_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "discovery",
+      "array": "natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 8,
+      "percent": 1.593625498007968
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "discovery",
+      "array": "identity_state_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 5,
+      "changed_tie_breaks": 3,
+      "percent": 0.5976095617529881
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "discovery",
+      "array": "different_winner_state_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 5,
+      "changed_tie_breaks": 1,
+      "percent": 0.199203187250996
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "discovery",
+      "array": "same_winner_state_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 5,
+      "changed_tie_breaks": 3,
+      "percent": 0.5976095617529881
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "confirmation",
+      "array": "natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "confirmation",
+      "array": "identity_state_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.40160642570281124
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "confirmation",
+      "array": "different_winner_state_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 1,
+      "percent": 0.20080321285140562
+    },
+    {
+      "experiment": "first-boundary accumulated-state transplant",
+      "split": "confirmation",
+      "array": "same_winner_state_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 5,
+      "changed_tie_breaks": 4,
+      "percent": 0.8032128514056225
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "baseline_logits",
+      "answer_cells": 500,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 4,
+      "percent": 0.8
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "matched_logits",
+      "answer_cells": 4000,
+      "exact_max_ties": 22,
+      "changed_tie_breaks": 14,
+      "percent": 0.35000000000000003
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "control_logits",
+      "answer_cells": 4000,
+      "exact_max_ties": 24,
+      "changed_tie_breaks": 16,
+      "percent": 0.4
+    },
+    {
+      "experiment": "all_candidate_matched_relay/run",
+      "split": "stored",
+      "array": "joint_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 3,
+      "changed_tie_breaks": 1,
+      "percent": 0.1
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "baseline_logits",
+      "answer_cells": 500,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 4,
+      "percent": 0.8
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "matched_logits",
+      "answer_cells": 8000,
+      "exact_max_ties": 40,
+      "changed_tie_breaks": 31,
+      "percent": 0.3875
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "control_logits",
+      "answer_cells": 8000,
+      "exact_max_ties": 33,
+      "changed_tie_breaks": 22,
+      "percent": 0.27499999999999997
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "joint_matched_logits",
+      "answer_cells": 2000,
+      "exact_max_ties": 14,
+      "changed_tie_breaks": 9,
+      "percent": 0.44999999999999996
+    },
+    {
+      "experiment": "all_candidate_matched_relay_full_range/run",
+      "split": "stored",
+      "array": "joint_control_logits",
+      "answer_cells": 2000,
+      "exact_max_ties": 8,
+      "changed_tie_breaks": 6,
+      "percent": 0.3
+    },
+    {
+      "experiment": "feedback_factorial/action_period_mediation/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "feedback_factorial/action_period_mediation/run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "feedback_factorial/action_period_mediation/run",
+      "split": "stored",
+      "array": "identity_state_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "feedback_factorial/action_period_mediation/run",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 3000,
+      "exact_max_ties": 7,
+      "changed_tie_breaks": 5,
+      "percent": 0.16666666666666669
+    },
+    {
+      "experiment": "feedback_factorial/action_period_source_lesion/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "feedback_factorial/action_period_source_lesion/run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "feedback_factorial/action_period_source_lesion/run",
+      "split": "stored",
+      "array": "lesioned_logits",
+      "answer_cells": 3000,
+      "exact_max_ties": 16,
+      "changed_tie_breaks": 14,
+      "percent": 0.46666666666666673
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_bands",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.4016064257028112
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_bands",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 996,
+      "exact_max_ties": 0,
+      "changed_tie_breaks": 0,
+      "percent": 0.0
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_blocks",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.4016064257028112
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_blocks",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 5976,
+      "exact_max_ties": 7,
+      "changed_tie_breaks": 6,
+      "percent": 0.1004016064257028
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_gate",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.4016064257028112
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/confirmation_gate",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 498,
+      "exact_max_ties": 0,
+      "changed_tie_breaks": 0,
+      "percent": 0.0
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_bands",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.398406374501992
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_bands",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 4016,
+      "exact_max_ties": 1,
+      "changed_tie_breaks": 1,
+      "percent": 0.0249003984063745
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_blocks",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.398406374501992
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_blocks",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 6024,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.033200531208499334
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_gate",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 2,
+      "changed_tie_breaks": 2,
+      "percent": 0.398406374501992
+    },
+    {
+      "experiment": "feedback_factorial/evaluation_update_transplant/discovery_gate",
+      "split": "stored",
+      "array": "patched_logits",
+      "answer_cells": 502,
+      "exact_max_ties": 0,
+      "changed_tie_breaks": 0,
+      "percent": 0.0
+    },
+    {
+      "experiment": "final_query_edge_ablation/corrected_run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "final_query_edge_ablation/corrected_run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "final_query_edge_ablation/corrected_run",
+      "split": "stored",
+      "array": "intervention_logits",
+      "answer_cells": 6000,
+      "exact_max_ties": 30,
+      "changed_tie_breaks": 21,
+      "percent": 0.35000000000000003
+    },
+    {
+      "experiment": "final_query_repeated_option_ablation/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "final_query_repeated_option_ablation/run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 7,
+      "changed_tie_breaks": 6,
+      "percent": 0.6
+    },
+    {
+      "experiment": "final_query_repeated_option_ablation/run",
+      "split": "stored",
+      "array": "intervention_logits",
+      "answer_cells": 4000,
+      "exact_max_ties": 27,
+      "changed_tie_breaks": 20,
+      "percent": 0.5
+    },
+    {
+      "experiment": "joint_option_score_decision_letter/run",
+      "split": "stored",
+      "array": "logits",
+      "answer_cells": 5000,
+      "exact_max_ties": 25,
+      "changed_tie_breaks": 18,
+      "percent": 0.36
+    },
+    {
+      "experiment": "joint_option_score_decision_letter/run",
+      "split": "stored",
+      "array": "first_decision_logits",
+      "answer_cells": 500,
+      "exact_max_ties": 9,
+      "changed_tie_breaks": 6,
+      "percent": 1.2
+    },
+    {
+      "experiment": "nonmatching_history_factorial/run",
+      "split": "stored",
+      "array": "baseline_logits",
+      "answer_cells": 500,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 4,
+      "percent": 0.8
+    },
+    {
+      "experiment": "nonmatching_history_factorial/run",
+      "split": "stored",
+      "array": "logits",
+      "answer_cells": 4000,
+      "exact_max_ties": 31,
+      "changed_tie_breaks": 21,
+      "percent": 0.525
+    },
+    {
+      "experiment": "nonmatching_history_factorial/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "option_newline_all_four_centered_projection",
+      "split": "stored",
+      "array": "logits",
+      "answer_cells": 3000,
+      "exact_max_ties": 18,
+      "changed_tie_breaks": 14,
+      "percent": 0.46666666666666673
+    },
+    {
+      "experiment": "option_newline_value_causal/confirmation",
+      "split": "stored",
+      "array": "logits",
+      "answer_cells": 568,
+      "exact_max_ties": 1,
+      "changed_tie_breaks": 1,
+      "percent": 0.17605633802816903
+    },
+    {
+      "experiment": "option_newline_value_causal/discovery",
+      "split": "stored",
+      "array": "logits",
+      "answer_cells": 592,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.6756756756756757
+    },
+    {
+      "experiment": "receiver_path_search/validation",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "receiver_path_search/validation",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "receiver_path_search/validation",
+      "split": "stored",
+      "array": "intervention_logits",
+      "answer_cells": 24000,
+      "exact_max_ties": 115,
+      "changed_tie_breaks": 94,
+      "percent": 0.39166666666666666
+    },
+    {
+      "experiment": "repeated_w1_relay/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "repeated_w1_relay/run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 7,
+      "changed_tie_breaks": 6,
+      "percent": 0.6
+    },
+    {
+      "experiment": "repeated_w1_relay/run",
+      "split": "stored",
+      "array": "intervention_logits",
+      "answer_cells": 4000,
+      "exact_max_ties": 20,
+      "changed_tie_breaks": 15,
+      "percent": 0.375
+    },
+    {
+      "experiment": "second_presentation_residual_workspace/policy_rank_factorial/run",
+      "split": "stored",
+      "array": "baseline_logits",
+      "answer_cells": 500,
+      "exact_max_ties": 6,
+      "changed_tie_breaks": 4,
+      "percent": 0.8
+    },
+    {
+      "experiment": "second_presentation_residual_workspace/policy_rank_factorial/run",
+      "split": "stored",
+      "array": "trusted_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "second_presentation_residual_workspace/policy_rank_factorial/run",
+      "split": "stored",
+      "array": "same_batch_natural_logits",
+      "answer_cells": 1000,
+      "exact_max_ties": 4,
+      "changed_tie_breaks": 4,
+      "percent": 0.4
+    },
+    {
+      "experiment": "second_presentation_residual_workspace/policy_rank_factorial/run",
+      "split": "stored",
+      "array": "scenario_logits",
+      "answer_cells": 7000,
+      "exact_max_ties": 18,
+      "changed_tie_breaks": 15,
+      "percent": 0.2142857142857143
+    }
+  ]
+}

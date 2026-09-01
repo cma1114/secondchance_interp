@@ -1,0 +1,420 @@
+{
+  "conclusion": "The complete local boundary update does not carry the condition-specific semantic winner effect; the result supports reconstruction from distributed first-presentation history.",
+  "confirmation": {
+    "descriptive_boundary_fraction_of_full_condition_interaction": -0.019424807015421066,
+    "manipulation_gate_passed": true,
+    "metrics": {
+      "boundary_centered_evidence_change": {
+        "game": {
+          "donor_old_letter": {
+            "ci": [
+              0.06531815503233222,
+              0.11075704283611748
+            ],
+            "mean": 0.08717102901909941,
+            "n": 93
+          },
+          "donor_semantic": {
+            "ci": [
+              -0.001375790565244613,
+              0.039582847010704775
+            ],
+            "mean": 0.018570907654300813,
+            "n": 93
+          },
+          "semantic_old_letter_decoupled_fraction": {
+            "ci": [
+              0.7688172043010749,
+              0.7688172043010749
+            ],
+            "mean": 0.7688172043010749,
+            "n": 93
+          }
+        },
+        "neutral": {
+          "donor_old_letter": {
+            "ci": [
+              0.05365546082937589,
+              0.10218212258431218
+            ],
+            "mean": 0.07705501587160173,
+            "n": 93
+          },
+          "donor_semantic": {
+            "ci": [
+              -0.0067996885186882424,
+              0.035073695003345444
+            ],
+            "mean": 0.01336144631908786,
+            "n": 93
+          },
+          "semantic_old_letter_decoupled_fraction": {
+            "ci": [
+              0.7688172043010749,
+              0.7688172043010749
+            ],
+            "mean": 0.7688172043010749,
+            "n": 93
+          }
+        }
+      },
+      "boundary_donor_choice_transfer_pp": {
+        "game": {
+          "ci": [
+            -2.150537634408602,
+            3.225806451612903
+          ],
+          "mean": 0.5376344086021505,
+          "n": 93
+        },
+        "neutral": {
+          "ci": [
+            -3.225806451612903,
+            1.075268817204301
+          ],
+          "mean": -1.075268817204301,
+          "n": 93
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -5.376344086021505,
+            1.6129032258064515
+          ],
+          "mean": -1.6129032258064515,
+          "n": 93
+        }
+      },
+      "boundary_semantic_margin_transfer": {
+        "game": {
+          "ci": [
+            0.01565131525839529,
+            0.08904152454868439
+          ],
+          "mean": 0.051856563937279485,
+          "n": 93
+        },
+        "neutral": {
+          "ci": [
+            0.008778659502665204,
+            0.0782409896132766
+          ],
+          "mean": 0.04280887111540763,
+          "n": 93
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.03486140363959856,
+            0.016190678586242013
+          ],
+          "mean": -0.00904769282187185,
+          "n": 93
+        }
+      },
+      "full_history_donor_choice_transfer_pp": {
+        "game": {
+          "ci": [
+            -1.6129032258064515,
+            15.591397849462366
+          ],
+          "mean": 6.989247311827957,
+          "n": 93
+        },
+        "neutral": {
+          "ci": [
+            4.838709677419355,
+            24.731182795698924
+          ],
+          "mean": 14.516129032258064,
+          "n": 93
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -4.838709677419355,
+            19.35483870967742
+          ],
+          "mean": 7.526881720430108,
+          "n": 93
+        }
+      },
+      "full_history_semantic_margin_transfer": {
+        "game": {
+          "ci": [
+            0.14964958877973658,
+            0.6511567782330253
+          ],
+          "mean": 0.39718031114147556,
+          "n": 93
+        },
+        "neutral": {
+          "ci": [
+            0.5786408896087318,
+            1.1561787595031081
+          ],
+          "mean": 0.8629606308475617,
+          "n": 93
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.26788308389725224,
+            0.6719596601301624
+          ],
+          "mean": 0.4657803197060862,
+          "n": 93
+        }
+      },
+      "immediate_boundary_choice": {
+        "cross_donor_match_pp": {
+          "ci": [
+            97.31182795698925,
+            100.0
+          ],
+          "mean": 98.9247311827957,
+          "n": 93
+        },
+        "full_donor_match_pp": {
+          "ci": [
+            97.31182795698925,
+            100.0
+          ],
+          "mean": 98.9247311827957,
+          "n": 93
+        },
+        "identity_donor_match_pp": {
+          "ci": [
+            0.0,
+            1.6129032258064515
+          ],
+          "mean": 0.5376344086021505,
+          "n": 93
+        }
+      }
+    },
+    "n_exact_eligible": 93,
+    "n_frozen": 107,
+    "n_screened_out": 14,
+    "n_token_aligned": 107,
+    "validation": {
+      "all_analyzed_outputs_finite": true,
+      "full_donor_boundary_max_abs_error": 0.0,
+      "full_donor_max_abs_error": 0.0,
+      "identity_boundary_choice_changes": 4,
+      "identity_boundary_vs_inclusive_prefix_max_abs_error": 0.125,
+      "identity_vs_natural_choice_changes": 16,
+      "identity_vs_natural_max_abs_error": 0.7498626708984375,
+      "mean_cross_trajectory_dose": 1.6959878206253052,
+      "mean_identity_trajectory_dose": 0.18261976540088654,
+      "model_calls_total": 851
+    }
+  },
+  "design": {
+    "primary_contrast": "Crossed boundary update minus identity in the reciprocal donor-semantic winner-versus-recipient-winner margin, with Neutral minus Game as the condition-specific selectedness-binding endpoint.",
+    "reconstruction_prediction": "Boundary transfer near zero while full-history transfer is substantial.",
+    "stored_decision_prediction": "Boundary transfer follows the donor and captures a substantial fraction of full-history transfer."
+  },
+  "discovery": {
+    "descriptive_boundary_fraction_of_full_condition_interaction": -0.04488753269161786,
+    "manipulation_gate_passed": true,
+    "metrics": {
+      "boundary_centered_evidence_change": {
+        "game": {
+          "donor_old_letter": {
+            "ci": [
+              0.07945408117203485,
+              0.1304600247882661
+            ],
+            "mean": 0.10363334701174781,
+            "n": 105
+          },
+          "donor_semantic": {
+            "ci": [
+              -0.03102922411192031,
+              0.00849894727979387
+            ],
+            "mean": -0.011461291994367327,
+            "n": 105
+          },
+          "semantic_old_letter_decoupled_fraction": {
+            "ci": [
+              0.8285714285714286,
+              0.8285714285714286
+            ],
+            "mean": 0.8285714285714286,
+            "n": 105
+          }
+        },
+        "neutral": {
+          "donor_old_letter": {
+            "ci": [
+              0.07195688332830157,
+              0.13359976138387405
+            ],
+            "mean": 0.10042114030747186,
+            "n": 105
+          },
+          "donor_semantic": {
+            "ci": [
+              -0.03461998269671485,
+              0.0020416981833321665
+            ],
+            "mean": -0.01611678032647996,
+            "n": 105
+          },
+          "semantic_old_letter_decoupled_fraction": {
+            "ci": [
+              0.8285714285714286,
+              0.8285714285714286
+            ],
+            "mean": 0.8285714285714286,
+            "n": 105
+          }
+        }
+      },
+      "boundary_donor_choice_transfer_pp": {
+        "game": {
+          "ci": [
+            -3.8095238095238093,
+            0.9523809523809523
+          ],
+          "mean": -1.4285714285714286,
+          "n": 105
+        },
+        "neutral": {
+          "ci": [
+            -0.9523809523809523,
+            2.857142857142857
+          ],
+          "mean": 0.9523809523809523,
+          "n": 105
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.47619047619047616,
+            5.238095238095238
+          ],
+          "mean": 2.380952380952381,
+          "n": 105
+        }
+      },
+      "boundary_semantic_margin_transfer": {
+        "game": {
+          "ci": [
+            -0.04543008872440883,
+            0.027692986215863906
+          ],
+          "mean": -0.007483927408854166,
+          "n": 105
+        },
+        "neutral": {
+          "ci": [
+            -0.0589172195252918,
+            0.005541186332702636
+          ],
+          "mean": -0.02670979272751581,
+          "n": 105
+        },
+        "neutral_minus_game": {
+          "ci": [
+            -0.04454282783326649,
+            0.0047449375334239945
+          ],
+          "mean": -0.019225865318661644,
+          "n": 105
+        }
+      },
+      "full_history_donor_choice_transfer_pp": {
+        "game": {
+          "ci": [
+            -7.142857142857143,
+            10.0
+          ],
+          "mean": 1.4285714285714286,
+          "n": 105
+        },
+        "neutral": {
+          "ci": [
+            1.9047619047619047,
+            18.095238095238095
+          ],
+          "mean": 10.0,
+          "n": 105
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.0,
+            17.142857142857142
+          ],
+          "mean": 8.571428571428571,
+          "n": 105
+        }
+      },
+      "full_history_semantic_margin_transfer": {
+        "game": {
+          "ci": [
+            -0.085849491301037,
+            0.4175747489929198
+          ],
+          "mean": 0.16168841407412574,
+          "n": 105
+        },
+        "neutral": {
+          "ci": [
+            0.27609493437267485,
+            0.9294084439958845
+          ],
+          "mean": 0.5900003342401414,
+          "n": 105
+        },
+        "neutral_minus_game": {
+          "ci": [
+            0.2524846685500372,
+            0.6034217007954915
+          ],
+          "mean": 0.4283119201660156,
+          "n": 105
+        }
+      },
+      "immediate_boundary_choice": {
+        "cross_donor_match_pp": {
+          "ci": [
+            94.76190476190476,
+            99.04761904761905
+          ],
+          "mean": 97.14285714285714,
+          "n": 105
+        },
+        "full_donor_match_pp": {
+          "ci": [
+            94.76190476190476,
+            99.04761904761905
+          ],
+          "mean": 97.14285714285714,
+          "n": 105
+        },
+        "identity_donor_match_pp": {
+          "ci": [
+            0.47619047619047616,
+            3.8095238095238093
+          ],
+          "mean": 1.9047619047619047,
+          "n": 105
+        }
+      }
+    },
+    "n_exact_eligible": 105,
+    "n_frozen": 115,
+    "n_screened_out": 10,
+    "n_token_aligned": 115,
+    "validation": {
+      "all_analyzed_outputs_finite": true,
+      "full_donor_boundary_max_abs_error": 0.0,
+      "full_donor_max_abs_error": 0.0,
+      "identity_boundary_choice_changes": 12,
+      "identity_boundary_vs_inclusive_prefix_max_abs_error": 0.125,
+      "identity_vs_natural_choice_changes": 20,
+      "identity_vs_natural_max_abs_error": 0.6238498687744141,
+      "mean_cross_trajectory_dose": 1.7295572757720947,
+      "mean_identity_trajectory_dose": 0.1850842386484146,
+      "model_calls_total": 955
+    }
+  }
+}

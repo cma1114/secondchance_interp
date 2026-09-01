@@ -1,0 +1,756 @@
+{
+  "definitions": {
+    "targeting_contrast": "(Neutral-Game suppression of W1) minus (Neutral-Game suppression of W2)",
+    "reduction_in_targeting_contrast": "Natural targeting contrast minus ablated targeting contrast; positive means the source writes are necessary for preferential W1 targeting."
+  },
+  "discovery": {
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/first_span_gla_ablation/discovery",
+    "n": 251,
+    "n_discordant_w1_w2": 137,
+    "natural": {
+      "targeting_contrast": {
+        "n": 137,
+        "mean": 0.2349642315050111,
+        "ci": [
+          0.07338168882105472,
+          0.3955881188385678
+        ]
+      },
+      "game_choice_rates": {
+        "w1": 0.22627737226277372,
+        "w2": 0.45255474452554745,
+        "other": 0.32116788321167883
+      },
+      "neutral_choice_rates": {
+        "w1": 0.3722627737226277,
+        "w2": 0.45985401459854014,
+        "other": 0.1678832116788321
+      },
+      "game_accuracy": 0.3705179282868526,
+      "neutral_accuracy": 0.46215139442231074,
+      "game_entropy_bits": 1.6401667594909668,
+      "neutral_entropy_bits": 1.425733208656311
+    },
+    "scenarios": [
+      {
+        "scenario": "first_question_content",
+        "ablated_targeting_contrast": {
+          "n": 137,
+          "mean": 0.1417083601011847,
+          "ci": [
+            0.018196410158254805,
+            0.2570652373515776
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 137,
+          "mean": 0.09325587140382642,
+          "ci": [
+            -0.09963153922644845,
+            0.28775269202072246
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 137,
+          "mean": -0.6898340656809563,
+          "ci": [
+            -0.944132902326375,
+            -0.43620288981138355
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 137,
+          "mean": -1.6562673610492344,
+          "ci": [
+            -1.902473675595583,
+            -1.4025070416666297
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 137,
+          "mean": 0.057821858538328295,
+          "ci": [
+            -0.2086934308936126,
+            0.33149194230128376
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 137,
+          "mean": -0.8153555654261234,
+          "ci": [
+            -1.051652337860887,
+            -0.5766645696041358
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -0.7476559242192846,
+          "ci": [
+            -1.040999136179903,
+            -0.44093914902123255
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -0.840911795623111,
+          "ci": [
+            -1.149405106662834,
+            -0.5201983249970598
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.13138686131386862,
+          "w2": 0.7007299270072993,
+          "other": 0.1678832116788321
+        },
+        "neutral_choice_rates": {
+          "w1": 0.17518248175182483,
+          "w2": 0.6861313868613139,
+          "other": 0.1386861313868613
+        },
+        "game_w1_choice_rate_change": -0.0948905109489051,
+        "neutral_w1_choice_rate_change": -0.1970802919708029,
+        "game_accuracy_change": -0.003984063745019917,
+        "neutral_accuracy_change": -0.047808764940239,
+        "game_entropy_change_bits": -0.3314934968948364,
+        "neutral_entropy_change_bits": -0.15557503700256348
+      },
+      {
+        "scenario": "first_options",
+        "ablated_targeting_contrast": {
+          "n": 137,
+          "mean": -0.10708215810956746,
+          "ci": [
+            -0.2069752964660199,
+            -0.00866499190782983
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 137,
+          "mean": 0.34204638961457856,
+          "ci": [
+            0.1804189647201204,
+            0.5058804679090959
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 137,
+          "mean": -0.23632990704835766,
+          "ci": [
+            -0.43081929770699384,
+            -0.04040749229653938
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 137,
+          "mean": -0.9274531733380617,
+          "ci": [
+            -1.1341281560215637,
+            -0.7208868949082647
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 137,
+          "mean": 0.07295403863391738,
+          "ci": [
+            -0.12444363023242812,
+            0.2616489838509662
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 137,
+          "mean": -0.2761228380412081,
+          "ci": [
+            -0.47874821467991296,
+            -0.07798923889215854
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -0.309283945682275,
+          "ci": [
+            -0.5343940644368638,
+            -0.07827868357191992
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -0.6513303352968536,
+          "ci": [
+            -0.8876251714943099,
+            -0.40832362731877947
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.1678832116788321,
+          "w2": 0.5693430656934306,
+          "other": 0.26277372262773724
+        },
+        "neutral_choice_rates": {
+          "w1": 0.15328467153284672,
+          "w2": 0.6204379562043796,
+          "other": 0.22627737226277372
+        },
+        "game_w1_choice_rate_change": -0.05839416058394162,
+        "neutral_w1_choice_rate_change": -0.218978102189781,
+        "game_accuracy_change": -0.0239043824701195,
+        "neutral_accuracy_change": -0.11155378486055773,
+        "game_entropy_change_bits": -0.12498998641967773,
+        "neutral_entropy_change_bits": 0.013944387435913086
+      },
+      {
+        "scenario": "first_answer_boundary",
+        "ablated_targeting_contrast": {
+          "n": 137,
+          "mean": 0.3257209053874886,
+          "ci": [
+            0.07476789968727279,
+            0.5657468865387628
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 137,
+          "mean": -0.09075667388247748,
+          "ci": [
+            -0.2817928888501912,
+            0.09830088545806205
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 137,
+          "mean": 1.7050333371127608,
+          "ci": [
+            1.4987156864500393,
+            1.9013780117034913
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 137,
+          "mean": 0.8154370802162337,
+          "ci": [
+            0.6275130111805713,
+            0.9961515997448105
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 137,
+          "mean": 1.5594838413878949,
+          "ci": [
+            1.3645310057340747,
+            1.7517695068442907
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 137,
+          "mean": 0.5791309106088903,
+          "ci": [
+            0.3917374269805685,
+            0.7684255251919266
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": 0.145549495724866,
+          "ci": [
+            0.010234103933738099,
+            0.28320427706641854
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": 0.23630616960734346,
+          "ci": [
+            0.09022851964853106,
+            0.3830097020977603
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.25547445255474455,
+          "w2": 0.41605839416058393,
+          "other": 0.3284671532846715
+        },
+        "neutral_choice_rates": {
+          "w1": 0.45255474452554745,
+          "w2": 0.35766423357664234,
+          "other": 0.1897810218978102
+        },
+        "game_w1_choice_rate_change": 0.029197080291970823,
+        "neutral_w1_choice_rate_change": 0.08029197080291972,
+        "game_accuracy_change": -0.003984063745019917,
+        "neutral_accuracy_change": -0.031872509960159334,
+        "game_entropy_change_bits": -0.042510271072387695,
+        "neutral_entropy_change_bits": -0.13003873825073242
+      },
+      {
+        "scenario": "content_plus_answer_boundary",
+        "ablated_targeting_contrast": {
+          "n": 137,
+          "mean": -0.24726877421358207,
+          "ci": [
+            -0.35766487887305937,
+            -0.13328618167960732
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 137,
+          "mean": 0.4822330057185932,
+          "ci": [
+            0.2906700896520685,
+            0.6749477229849264
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 137,
+          "mean": 1.48584044240687,
+          "ci": [
+            1.193277403559998,
+            1.771563936846099
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 137,
+          "mean": 0.27822860662084425,
+          "ci": [
+            -0.0028976416065745105,
+            0.5517808096252219
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 137,
+          "mean": 2.0710884289149822,
+          "ci": [
+            1.8271471162782098,
+            2.3274696433631163
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 137,
+          "mean": 1.3457095988475494,
+          "ci": [
+            1.1035688817936138,
+            1.5869221930956317
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -0.5852479865081119,
+          "ci": [
+            -0.9422369668083469,
+            -0.24308287592699937
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 137,
+          "mean": -1.067480992226705,
+          "ci": [
+            -1.4334685280375237,
+            -0.6977129027791269
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.24817518248175183,
+          "w2": 0.5328467153284672,
+          "other": 0.21897810218978103
+        },
+        "neutral_choice_rates": {
+          "w1": 0.15328467153284672,
+          "w2": 0.6861313868613139,
+          "other": 0.16058394160583941
+        },
+        "game_w1_choice_rate_change": 0.021897810218978103,
+        "neutral_w1_choice_rate_change": -0.218978102189781,
+        "game_accuracy_change": -0.03585657370517931,
+        "neutral_accuracy_change": -0.07569721115537847,
+        "game_entropy_change_bits": -0.42306315898895264,
+        "neutral_entropy_change_bits": -0.26035022735595703
+      }
+    ],
+    "historical_validation": {
+      "game": {
+        "aggregated_ad_winner_matches_historical": 251,
+        "n": 251,
+        "rate": 1.0
+      },
+      "neutral": {
+        "aggregated_ad_winner_matches_historical": 251,
+        "n": 251,
+        "rate": 1.0
+      }
+    }
+  },
+  "confirmation": {
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/first_span_gla_ablation/confirmation",
+    "n": 249,
+    "n_discordant_w1_w2": 136,
+    "natural": {
+      "targeting_contrast": {
+        "n": 136,
+        "mean": 0.5868685105267692,
+        "ci": [
+          0.39107420619796307,
+          0.7700539473225086
+        ]
+      },
+      "game_choice_rates": {
+        "w1": 0.19117647058823528,
+        "w2": 0.45588235294117646,
+        "other": 0.35294117647058826
+      },
+      "neutral_choice_rates": {
+        "w1": 0.39705882352941174,
+        "w2": 0.38235294117647056,
+        "other": 0.22058823529411764
+      },
+      "game_accuracy": 0.2891566265060241,
+      "neutral_accuracy": 0.3493975903614458,
+      "game_entropy_bits": 1.6429303884506226,
+      "neutral_entropy_bits": 1.467309594154358
+    },
+    "scenarios": [
+      {
+        "scenario": "first_question_content",
+        "ablated_targeting_contrast": {
+          "n": 136,
+          "mean": 0.10045238102183622,
+          "ci": [
+            0.010739496174980614,
+            0.1960156871991998
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 136,
+          "mean": 0.48641612950493307,
+          "ci": [
+            0.2740349096410415,
+            0.7075399987837847
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 136,
+          "mean": -0.806239927516264,
+          "ci": [
+            -1.0866897856487947,
+            -0.5441631541532629
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 136,
+          "mean": -1.8160701920004452,
+          "ci": [
+            -2.0587996665169213,
+            -1.5793538987636568
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 136,
+          "mean": -0.13484557937173283,
+          "ci": [
+            -0.4132785323788138,
+            0.1431173871545229
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 136,
+          "mean": -0.6582597143509809,
+          "ci": [
+            -0.8822722852230073,
+            -0.4305764363092536
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -0.6713943481445312,
+          "ci": [
+            -0.9255564447711495,
+            -0.4238537101184621
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -1.1578104776494644,
+          "ci": [
+            -1.4438722589436699,
+            -0.8800398921265324
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.11029411764705882,
+          "w2": 0.7132352941176471,
+          "other": 0.17647058823529413
+        },
+        "neutral_choice_rates": {
+          "w1": 0.1323529411764706,
+          "w2": 0.7058823529411765,
+          "other": 0.16176470588235295
+        },
+        "game_w1_choice_rate_change": -0.08088235294117646,
+        "neutral_w1_choice_rate_change": -0.2647058823529411,
+        "game_accuracy_change": 0.04819277108433734,
+        "neutral_accuracy_change": -0.016064257028112483,
+        "game_entropy_change_bits": -0.23613333702087402,
+        "neutral_entropy_change_bits": -0.0735931396484375
+      },
+      {
+        "scenario": "first_options",
+        "ablated_targeting_contrast": {
+          "n": 136,
+          "mean": -0.04104949446285472,
+          "ci": [
+            -0.15814183424500858,
+            0.07817156910896299
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 136,
+          "mean": 0.627918004989624,
+          "ci": [
+            0.44649535662987655,
+            0.7993181021774515
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 136,
+          "mean": -0.21255815730375402,
+          "ci": [
+            -0.4498671061852399,
+            0.028760179000742243
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 136,
+          "mean": -0.938537878148696,
+          "ci": [
+            -1.1648162968018476,
+            -0.7252544168163753
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 136,
+          "mean": 0.04262256622314453,
+          "ci": [
+            -0.1785119807018953,
+            0.26792396517360906
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 136,
+          "mean": -0.055439149632173425,
+          "ci": [
+            -0.2843951751204098,
+            0.15602309248026666
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -0.2551807235268986,
+          "ci": [
+            -0.4936918760047239,
+            -0.024955486199435068
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -0.8830987285165226,
+          "ci": [
+            -1.1515995898667504,
+            -0.6271569171372582
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.19117647058823528,
+          "w2": 0.5367647058823529,
+          "other": 0.27205882352941174
+        },
+        "neutral_choice_rates": {
+          "w1": 0.19117647058823528,
+          "w2": 0.6102941176470589,
+          "other": 0.19852941176470587
+        },
+        "game_w1_choice_rate_change": 0.0,
+        "neutral_w1_choice_rate_change": -0.20588235294117646,
+        "game_accuracy_change": 0.04819277108433734,
+        "neutral_accuracy_change": -0.012048192771084376,
+        "game_entropy_change_bits": -0.13680577278137207,
+        "neutral_entropy_change_bits": -0.010308146476745605
+      },
+      {
+        "scenario": "first_answer_boundary",
+        "ablated_targeting_contrast": {
+          "n": 136,
+          "mean": 0.35289988798253674,
+          "ci": [
+            0.14696448866058798,
+            0.5495755227173076
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 136,
+          "mean": 0.23396862254423254,
+          "ci": [
+            0.09554767854073469,
+            0.37172037924037254
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 136,
+          "mean": 1.7474092735963709,
+          "ci": [
+            1.5369222988100613,
+            1.9577490270137785
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 136,
+          "mean": 0.8216287388521082,
+          "ci": [
+            0.6477830704520731,
+            0.9931529883076162
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 136,
+          "mean": 1.5044788052054012,
+          "ci": [
+            1.283663885383045,
+            1.740104741559309
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 136,
+          "mean": 0.8126668930053711,
+          "ci": [
+            0.6169973219142241,
+            1.0036957358612733
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": 0.24293046839096966,
+          "ci": [
+            0.10507446772911969,
+            0.37727572532261117
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": 0.008961845846737133,
+          "ci": [
+            -0.10910292758661157,
+            0.1250958302441765
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.2867647058823529,
+          "w2": 0.39705882352941174,
+          "other": 0.3161764705882353
+        },
+        "neutral_choice_rates": {
+          "w1": 0.4411764705882353,
+          "w2": 0.34558823529411764,
+          "other": 0.21323529411764705
+        },
+        "game_w1_choice_rate_change": 0.09558823529411764,
+        "neutral_w1_choice_rate_change": 0.04411764705882354,
+        "game_accuracy_change": 0.03614457831325302,
+        "neutral_accuracy_change": 0.0,
+        "game_entropy_change_bits": -0.01630103588104248,
+        "neutral_entropy_change_bits": -0.14338743686676025
+      },
+      {
+        "scenario": "content_plus_answer_boundary",
+        "ablated_targeting_contrast": {
+          "n": 136,
+          "mean": -0.26377331509309654,
+          "ci": [
+            -0.380537400526159,
+            -0.1442920579629786
+          ]
+        },
+        "reduction_in_targeting_contrast": {
+          "n": 136,
+          "mean": 0.8506418256198659,
+          "ci": [
+            0.6247691477046294,
+            1.0696747124195096
+          ]
+        },
+        "game_w1_logit_change": {
+          "n": 136,
+          "mean": 1.5193654509151684,
+          "ci": [
+            1.2382301632095787,
+            1.8115440456306233
+          ]
+        },
+        "neutral_w1_logit_change": {
+          "n": 136,
+          "mean": 0.21602166400236242,
+          "ci": [
+            -0.05233929858488195,
+            0.4716473684591405
+          ]
+        },
+        "game_w2_logit_change": {
+          "n": 136,
+          "mean": 2.1698038858525894,
+          "ci": [
+            1.9128844990449794,
+            2.4207067300291625
+          ]
+        },
+        "neutral_w2_logit_change": {
+          "n": 136,
+          "mean": 1.7171019245596493,
+          "ci": [
+            1.4641944632810706,
+            1.9563705132288092
+          ]
+        },
+        "game_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -0.650438434937421,
+          "ci": [
+            -0.9242916678681092,
+            -0.3811937356696412
+          ]
+        },
+        "neutral_w1_vs_w2_margin_change": {
+          "n": 136,
+          "mean": -1.5010802605572868,
+          "ci": [
+            -1.8287969091359306,
+            -1.2006179676336401
+          ]
+        },
+        "game_choice_rates": {
+          "w1": 0.19852941176470587,
+          "w2": 0.6102941176470589,
+          "other": 0.19117647058823528
+        },
+        "neutral_choice_rates": {
+          "w1": 0.1323529411764706,
+          "w2": 0.7058823529411765,
+          "other": 0.16176470588235295
+        },
+        "game_w1_choice_rate_change": 0.00735294117647059,
+        "neutral_w1_choice_rate_change": -0.2647058823529411,
+        "game_accuracy_change": 0.04819277108433734,
+        "neutral_accuracy_change": -0.008032128514056214,
+        "game_entropy_change_bits": -0.30499267578125,
+        "neutral_entropy_change_bits": -0.1878345012664795
+      }
+    ],
+    "historical_validation": {
+      "game": {
+        "aggregated_ad_winner_matches_historical": 249,
+        "n": 249,
+        "rate": 1.0
+      },
+      "neutral": {
+        "aggregated_ad_winner_matches_historical": 249,
+        "n": 249,
+        "rate": 1.0
+      }
+    }
+  }
+}

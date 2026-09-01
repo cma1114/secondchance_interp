@@ -1,0 +1,3230 @@
+{
+  "analysis": "confidence_dose_response",
+  "evidence_class": "descriptive/observational natural runs; no intervention and no causal claim",
+  "seed": 20260901,
+  "bootstrap_draws": 10000,
+  "definitions": {
+    "score_scale": "plain within-question-centered aggregated A-D logits; no 4/3 advantage scaling",
+    "c1": "model's own first-presentation top-1 minus top-2 aggregated A-D logit",
+    "delta": "within-question-centered Game final A-D logits minus centered Neutral final A-D logits, reordered by first-presentation rank",
+    "push_r1": "negative delta at old R1; positive means Game suppresses the old winner relative to Neutral",
+    "margin_push": "Neutral old-W1-vs-best-other margin minus the corresponding Game margin; positive means Game lowers W1 relative to the strongest Neutral replacement",
+    "neutral_old_w1_margin": "signed Neutral final logit of old W1 minus the strongest non-W1 final logit",
+    "differential_switching": "Game switch indicator minus Neutral switch indicator, with displayed-order-stable A-D argmax",
+    "policy_amplitude": "Euclidean norm of the complete centered Game-minus-Neutral rank vector",
+    "targeting_cosine": "cosine of that vector with (-3,+1,+1,+1)/sqrt(12), a scale-free old-W1-suppression/equal-redistribution direction",
+    "primary_model": "push_r1 ~ z(C1)",
+    "choice_model": "differential_switching ~ z(C1) + z(signed Neutral old-W1 margin); descriptive post-treatment companion",
+    "quadratic_robustness": "push_r1 ~ z(C1) + centered z(C1)^2",
+    "bootstrap": "question-level percentile bootstrap; predictors re-standardized within every resample"
+  },
+  "prespecified_interpretation": {
+    "fixed_reflex": "C1 coefficient on push near zero together with a flat tercile profile; switching differences may then arise through the expression margin",
+    "positive": "larger old-W1 suppression after more confident first answers, consistent with surprise-weighted dose response",
+    "negative": "larger old-W1 suppression after weakly held first answers",
+    "mixed": "dose responsiveness is not a shared property across models",
+    "scale_reference": {
+      "amplitude_positive_targeting_flat": "confidence scales the whole established revision-policy vector, not its old-W1 selectivity",
+      "targeting_positive": "confidence makes the adjustment increasingly old-W1-targeted beyond generic scaling",
+      "rankwise_proportional": "similar proportional R1 and R4 changes support generic policy-amplitude scaling"
+    },
+    "caveat": "A final-output association can arise from late nonlinear saturation or other downstream processing; this analysis cannot establish that the policy circuit itself reads confidence."
+  },
+  "split_sources": {
+    "simplemc": "outputs/causal/qwen36_27b_simplemc_causal_sweep/plans/discovery_plan.json",
+    "triviamc": "outputs/prompt_variant_tests/qwen36_27b_triviamc_difficulty_filtered_strategic_replication/split_plan.json"
+  },
+  "cells": [
+    {
+      "model_key": "qwen",
+      "model": "Qwen3.6-27B",
+      "dataset_key": "simplemc",
+      "dataset": "SimpleMC",
+      "validation": {
+        "model": "Qwen3.6-27B",
+        "dataset": "SimpleMC",
+        "model_id": "Qwen/Qwen3.6-27B",
+        "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/run/simplemc/results.npz",
+        "trajectory_sha256": "30831b0ee7a1e0d751af1a81290d3f8295f511b05fab7268c2e76df12ffbe07c",
+        "trajectory_metadata": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/run/simplemc/run_metadata.json",
+        "baseline": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/baseline_results.json",
+        "baseline_sha256": "12fe5d3b1b60ca5e695b45c0b7fee900a01247a26294fd79d96ac60c5db2d17a",
+        "split_plan": "outputs/causal/qwen36_27b_simplemc_causal_sweep/plans/discovery_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.885482347456911,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.726668994157306,
+                "ci_low": 0.5941300442546479,
+                "ci_high": 0.849540845637278
+              },
+              "standardized_beta": {
+                "value": 0.8211872531259424,
+                "ci_low": 0.7666333389864778,
+                "ci_high": 0.8604943018159927
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.9002068815073982,
+                "ci_low": 0.7498727429032839,
+                "ci_high": 1.045145250703908
+              },
+              "standardized_beta": {
+                "value": 0.7562972299131838,
+                "ci_low": 0.6977151016519506,
+                "ci_high": 0.8034589573510855
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.7798959230951722,
+                "ci_low": 0.6195020427977743,
+                "ci_high": 0.9290428375860142
+              },
+              "standardized_beta": {
+                "value": 0.8152262727732573,
+                "ci_low": 0.7523217590712025,
+                "ci_high": 0.8582234371567311
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1731791140981525,
+                "ci_low": 0.15099597974616127,
+                "ci_high": 0.1965596111235007
+              },
+              "standardized_beta": {
+                "value": 0.3446458164191254,
+                "ci_low": 0.30770405451552285,
+                "ci_high": 0.3830739529414863
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.726668994157306,
+                "ci_low": -0.8495408456372782,
+                "ci_high": -0.594130044254648
+              },
+              "standardized_beta": {
+                "value": -0.8211872531259424,
+                "ci_low": -0.8604943018159927,
+                "ci_high": -0.7666333389864778
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3393143082042493,
+                "ci_low": 0.24425633104247735,
+                "ci_high": 0.4329289978660737
+              },
+              "standardized_beta": {
+                "value": 0.5888505226293066,
+                "ci_low": 0.46787702439696577,
+                "ci_high": 0.6870591991813032
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.13986597187165897,
+                "ci_low": 0.06366649768337707,
+                "ci_high": 0.21872947945934676
+              },
+              "standardized_beta": {
+                "value": 0.31685335742363624,
+                "ci_low": 0.1541774539640349,
+                "ci_high": 0.46267514817055394
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.24748871408139764,
+                "ci_low": 0.170052627689678,
+                "ci_high": 0.3221030732587391
+              },
+              "standardized_beta": {
+                "value": 0.5457127093311888,
+                "ci_low": 0.41584475320986103,
+                "ci_high": 0.6403845089686989
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.10873309860609166,
+              "ci_low": -0.18019036875847297,
+              "ci_high": -0.04382340629286486
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.11490608124346517,
+              "ci_low": 0.049079326783546415,
+              "ci_high": 0.18934865697530698
+            },
+            "corr_c1_margin": 0.8854823474569109,
+            "variance_inflation_factor": 4.631323228584942,
+            "outcome_mean": 0.084
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.7967602854057347,
+              "ci_low": 0.5989817336287758,
+              "ci_high": 0.9861148249321063
+            },
+            "quadratic_c1_squared": {
+              "value": -0.021760490472008568,
+              "ci_low": -0.053468128341444016,
+              "ci_high": 0.018177010697109884
+            }
+          },
+          "means": {
+            "confidence_c1": 1.2294560737609863,
+            "push_r1": 0.570950511932373,
+            "margin_push": 0.5120731925964356,
+            "policy_amplitude": 1.0451404014762826,
+            "targeting_cosine": 0.4735546291372373,
+            "switch_game": 0.348,
+            "switch_neutral": 0.264,
+            "differential_switching": 0.084
+          }
+        },
+        "discovery": {
+          "n": 251,
+          "corr_c1_neutral_old_w1_margin": 0.8948319850646115,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.7937174818569912,
+                "ci_low": 0.5923347900202498,
+                "ci_high": 0.9833579785524381
+              },
+              "standardized_beta": {
+                "value": 0.8390562346346861,
+                "ci_low": 0.7611615868285391,
+                "ci_high": 0.8896061724473638
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.9357544948363351,
+                "ci_low": 0.7123685818876813,
+                "ci_high": 1.1484202356055515
+              },
+              "standardized_beta": {
+                "value": 0.7668669111624868,
+                "ci_low": 0.6802650668584564,
+                "ci_high": 0.8321069517675
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.86959928383398,
+                "ci_low": 0.6197807079610335,
+                "ci_high": 1.1016293099125087
+              },
+              "standardized_beta": {
+                "value": 0.8345861781692939,
+                "ci_low": 0.7440709292417343,
+                "ci_high": 0.8889771478088591
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.182017060249064,
+                "ci_low": 0.1516985318873732,
+                "ci_high": 0.21521679772311975
+              },
+              "standardized_beta": {
+                "value": 0.3717320018031148,
+                "ci_low": 0.3240862476139867,
+                "ci_high": 0.42359964054159527
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.7937174818569912,
+                "ci_low": -0.9833579785524381,
+                "ci_high": -0.5923347900202499
+              },
+              "standardized_beta": {
+                "value": -0.8390562346346861,
+                "ci_low": -0.8896061724473638,
+                "ci_high": -0.7611615868285391
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.37999114335451323,
+                "ci_low": 0.22075474485237961,
+                "ci_high": 0.5319326106105191
+              },
+              "standardized_beta": {
+                "value": 0.6165711740543693,
+                "ci_low": 0.4232575276211743,
+                "ci_high": 0.7546679738270426
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.13738850720494616,
+                "ci_low": 0.015637480282261865,
+                "ci_high": 0.27335617800712353
+              },
+              "standardized_beta": {
+                "value": 0.2980610299267539,
+                "ci_low": 0.03738926972517406,
+                "ci_high": 0.5354687644685862
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.27633783129753176,
+                "ci_low": 0.16420197270330447,
+                "ci_high": 0.3923418540234008
+              },
+              "standardized_beta": {
+                "value": 0.5795777021371928,
+                "ci_low": 0.4026891216843158,
+                "ci_high": 0.7032621080368514
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.07207361180901076,
+              "ci_low": -0.18385791450258762,
+              "ci_high": 0.02738258883586971
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.08606232619363496,
+              "ci_low": -0.016175654313599776,
+              "ci_high": 0.2043006184257939
+            },
+            "corr_c1_margin": 0.8948319850646115,
+            "variance_inflation_factor": 5.018172848656763,
+            "outcome_mean": 0.07171314741035857
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.8181785006697131,
+              "ci_low": 0.5531890603180836,
+              "ci_high": 1.0694573380043217
+            },
+            "quadratic_c1_squared": {
+              "value": -0.00844886143942308,
+              "ci_low": -0.05469253107876481,
+              "ci_high": 0.058339742089106444
+            }
+          },
+          "means": {
+            "confidence_c1": 1.2997434167747954,
+            "push_r1": 0.6248596274995234,
+            "margin_push": 0.561794205015874,
+            "policy_amplitude": 1.0986633211735486,
+            "targeting_cosine": 0.49370444107492983,
+            "switch_game": 0.3426294820717131,
+            "switch_neutral": 0.27091633466135456,
+            "differential_switching": 0.07171314741035857
+          }
+        },
+        "confirmation": {
+          "n": 249,
+          "corr_c1_neutral_old_w1_margin": 0.8757962291906554,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.65281700780506,
+                "ci_low": 0.48776918854534435,
+                "ci_high": 0.8072855036838439
+              },
+              "standardized_beta": {
+                "value": 0.8008559067165141,
+                "ci_low": 0.7120023549431816,
+                "ci_high": 0.8583100554063343
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.8604809207800954,
+                "ci_low": 0.652630665057867,
+                "ci_high": 1.054896104386591
+              },
+              "standardized_beta": {
+                "value": 0.7436211731240243,
+                "ci_low": 0.6536834889987863,
+                "ci_high": 0.8102735213954483
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.6821936959422251,
+                "ci_low": 0.49019865241316557,
+                "ci_high": 0.8623200615230568
+              },
+              "standardized_beta": {
+                "value": 0.7943388799398976,
+                "ci_low": 0.6916724188732221,
+                "ci_high": 0.8562278087687609
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.16253825285982376,
+                "ci_low": 0.12914383646760122,
+                "ci_high": 0.1969790204307478
+              },
+              "standardized_beta": {
+                "value": 0.31603555234299097,
+                "ci_low": 0.25790266758469754,
+                "ci_high": 0.37506155017487086
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.65281700780506,
+                "ci_low": -0.8072855036838439,
+                "ci_high": -0.4877691885453444
+              },
+              "standardized_beta": {
+                "value": -0.8008559067165141,
+                "ci_low": -0.8583100554063343,
+                "ci_high": -0.7120023549431818
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2953784547554283,
+                "ci_low": 0.19305511302674874,
+                "ci_high": 0.3924683032773339
+              },
+              "standardized_beta": {
+                "value": 0.5551340463872969,
+                "ci_low": 0.4085719954686249,
+                "ci_high": 0.6722003240061635
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1416556265703081,
+                "ci_low": 0.06339942997873373,
+                "ci_high": 0.22686994986146175
+              },
+              "standardized_beta": {
+                "value": 0.3369832039522452,
+                "ci_low": 0.16252571223267087,
+                "ci_high": 0.4965007053085228
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2157829264793238,
+                "ci_low": 0.11201487619003835,
+                "ci_high": 0.3105583320931297
+              },
+              "standardized_beta": {
+                "value": 0.5044288751744573,
+                "ci_low": 0.30021142372270143,
+                "ci_high": 0.6402190771940574
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.1414894346543694,
+              "ci_low": -0.2394096428263566,
+              "ci_high": -0.05766471914856285
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.14030084012019137,
+              "ci_low": 0.05525658629880407,
+              "ci_high": 0.2414734826804615
+            },
+            "corr_c1_margin": 0.8757962291906556,
+            "variance_inflation_factor": 4.292196146913345,
+            "outcome_mean": 0.0963855421686747
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.7471828188619732,
+              "ci_low": 0.4537014554168449,
+              "ci_high": 1.0015393971485125
+            },
+            "quadratic_c1_squared": {
+              "value": -0.026213288844760204,
+              "ci_low": -0.06737940333451631,
+              "ci_high": 0.0249711379416705
+            }
+          },
+          "means": {
+            "confidence_c1": 1.1586041737751789,
+            "push_r1": 0.5166083914209082,
+            "margin_push": 0.46195281461539517,
+            "policy_amplitude": 0.9911875788095609,
+            "targeting_cosine": 0.4532429713205271,
+            "switch_game": 0.3534136546184739,
+            "switch_neutral": 0.2570281124497992,
+            "differential_switching": 0.0963855421686747
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 0.0,
+          "c1_max": 0.375,
+          "c1_mean": 0.18712107721203103,
+          "push_r1": {
+            "value": 0.1672549904463534,
+            "ci_low": 0.11470476338963309,
+            "ci_high": 0.2194283615329308
+          },
+          "differential_switching": {
+            "value": 0.09580838323353294,
+            "ci_low": 0.011976047904191617,
+            "ci_high": 0.17964071856287425
+          },
+          "policy_amplitude": {
+            "value": 0.6381803026050744,
+            "ci_low": 0.5933849807826211,
+            "ci_high": 0.6867554724803292
+          },
+          "targeting_cosine": {
+            "value": 0.28089017078424966,
+            "ci_low": 0.19722202620419138,
+            "ci_high": 0.3619909985157806
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 0.375,
+          "c1_max": 1.1248931884765625,
+          "c1_mean": 0.677374788387093,
+          "push_r1": {
+            "value": 0.31659671646392273,
+            "ci_low": 0.2511301904381392,
+            "ci_high": 0.3827752084789162
+          },
+          "differential_switching": {
+            "value": 0.0658682634730539,
+            "ci_low": -0.005988023952095809,
+            "ci_high": 0.1377245508982036
+          },
+          "policy_amplitude": {
+            "value": 0.8243329800181689,
+            "ci_low": 0.7527200045400461,
+            "ci_high": 0.8994377913238923
+          },
+          "targeting_cosine": {
+            "value": 0.4002174266792365,
+            "ci_low": 0.3236906488915592,
+            "ci_high": 0.47352927455466387
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 1.1249351501464844,
+          "c1_max": 12.499872207641602,
+          "c1_mean": 2.833477273044816,
+          "push_r1": {
+            "value": 1.2329639813986168,
+            "ci_low": 1.0578948232064764,
+            "ci_high": 1.416046552629356
+          },
+          "differential_switching": {
+            "value": 0.09036144578313253,
+            "ci_low": 0.04819277108433735,
+            "ci_high": 0.13855421686746988
+          },
+          "policy_amplitude": {
+            "value": 1.6766896538557816,
+            "ci_low": 1.4754434878977454,
+            "ci_high": 1.8890349795541193
+          },
+          "targeting_cosine": {
+            "value": 0.7411587095916654,
+            "ci_low": 0.6867351132599739,
+            "ci_high": 0.7900206089035456
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "qwen",
+      "model": "Qwen3.6-27B",
+      "dataset_key": "triviamc",
+      "dataset": "TriviaMC",
+      "validation": {
+        "model": "Qwen3.6-27B",
+        "dataset": "TriviaMC",
+        "model_id": "Qwen/Qwen3.6-27B",
+        "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/run/triviamc/results.npz",
+        "trajectory_sha256": "b71e31cc33da100fec2b084669ccd5b8089c6bd689d15d54f9c05eea45e2b5c3",
+        "trajectory_metadata": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/run/triviamc/run_metadata.json",
+        "baseline": "outputs/prompt_variant_tests/qwen36_27b_triviamc_difficulty_filtered_strategic_replication/step1/baseline/baseline_results.json",
+        "baseline_sha256": "f80ba22fa209e00b0b07ecc226412dfa2885ebfbf0a08e66588138a124b33fd5",
+        "split_plan": "outputs/prompt_variant_tests/qwen36_27b_triviamc_difficulty_filtered_strategic_replication/split_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.9276937304474535,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.259507906801909,
+                "ci_low": 1.192020413758512,
+                "ci_high": 1.3241559887701082
+              },
+              "standardized_beta": {
+                "value": 0.8671748314000128,
+                "ci_low": 0.8456575812247399,
+                "ci_high": 0.8869145658536123
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.4948096233615702,
+                "ci_low": 1.3983814159353827,
+                "ci_high": 1.5849958475303598
+              },
+              "standardized_beta": {
+                "value": 0.8133874756911061,
+                "ci_low": 0.7846055385904066,
+                "ci_high": 0.8402958628315843
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.4100065766162488,
+                "ci_low": 1.330756892860291,
+                "ci_high": 1.4844142107766745
+              },
+              "standardized_beta": {
+                "value": 0.8670364996371621,
+                "ci_low": 0.8445653035847979,
+                "ci_high": 0.8880618133104697
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.20416287318144238,
+                "ci_low": 0.17565446912289526,
+                "ci_high": 0.23269182437553879
+              },
+              "standardized_beta": {
+                "value": 0.4710423954640098,
+                "ci_low": 0.435400449020997,
+                "ci_high": 0.5067307022436336
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -1.259507906801909,
+                "ci_low": -1.3241559887701082,
+                "ci_high": -1.192020413758512
+              },
+              "standardized_beta": {
+                "value": -0.8671748314000128,
+                "ci_low": -0.8869145658536123,
+                "ci_high": -0.8456575812247399
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5258876013535746,
+                "ci_low": 0.4485134480346975,
+                "ci_high": 0.6013548551802456
+              },
+              "standardized_beta": {
+                "value": 0.5706299382659291,
+                "ci_low": 0.5135975610312012,
+                "ci_high": 0.6260694747942513
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3600842817439428,
+                "ci_low": 0.28691086292517126,
+                "ci_high": 0.43474582626789454
+              },
+              "standardized_beta": {
+                "value": 0.44741340642086813,
+                "ci_low": 0.37648950522147523,
+                "ci_high": 0.5159709577231246
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3735360237043916,
+                "ci_low": 0.31128245646164754,
+                "ci_high": 0.4353015525371452
+              },
+              "standardized_beta": {
+                "value": 0.5159670329738721,
+                "ci_low": 0.4472171340384388,
+                "ci_high": 0.5804738225544637
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.014046992234949263,
+              "ci_low": -0.0649288237468058,
+              "ci_high": 0.036829302817053836
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": -0.04265113103218589,
+              "ci_low": -0.10268099445001765,
+              "ci_high": 0.015583865983559632
+            },
+            "corr_c1_margin": 0.9276937304474534,
+            "variance_inflation_factor": 7.174406982495859,
+            "outcome_mean": 0.074
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.4265529140381188,
+              "ci_low": 1.3337115389643324,
+              "ci_high": 1.514970461303681
+            },
+            "quadratic_c1_squared": {
+              "value": -0.26427142019561956,
+              "ci_low": -0.3582289247119688,
+              "ci_high": -0.16830169933578548
+            }
+          },
+          "means": {
+            "confidence_c1": 5.481542747497558,
+            "push_r1": 1.6328132581710815,
+            "margin_push": 1.8151059379577636,
+            "policy_amplitude": 2.250746106428884,
+            "targeting_cosine": 0.6827447630590406,
+            "switch_game": 0.182,
+            "switch_neutral": 0.108,
+            "differential_switching": 0.074
+          }
+        },
+        "discovery": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.9345103946675122,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.2502826056103395,
+                "ci_low": 1.1514707892520353,
+                "ci_high": 1.342851301156966
+              },
+              "standardized_beta": {
+                "value": 0.8670332191612666,
+                "ci_low": 0.8356525708430997,
+                "ci_high": 0.8957738560151012
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.426727183320288,
+                "ci_low": 1.2945109971152666,
+                "ci_high": 1.5565596957170342
+              },
+              "standardized_beta": {
+                "value": 0.8005069929570134,
+                "ci_low": 0.7583003655622871,
+                "ci_high": 0.8392767492757324
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.4163146979684489,
+                "ci_low": 1.2966547142117069,
+                "ci_high": 1.52813122539355
+              },
+              "standardized_beta": {
+                "value": 0.8621318761042157,
+                "ci_low": 0.8276679142436916,
+                "ci_high": 0.8943662903170692
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.20851661782934042,
+                "ci_low": 0.16645269762240347,
+                "ci_high": 0.25201424284014234
+              },
+              "standardized_beta": {
+                "value": 0.48022046079350755,
+                "ci_low": 0.43212034552582196,
+                "ci_high": 0.5297114235327052
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -1.2502826056103395,
+                "ci_low": -1.342851301156966,
+                "ci_high": -1.1514707892520353
+              },
+              "standardized_beta": {
+                "value": -0.8670332191612666,
+                "ci_low": -0.8957738560151012,
+                "ci_high": -0.8356525708430997
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5349374324126364,
+                "ci_low": 0.42919625424459545,
+                "ci_high": 0.6455803459515456
+              },
+              "standardized_beta": {
+                "value": 0.5695963119478666,
+                "ci_low": 0.4892614076312043,
+                "ci_high": 0.6464733456850534
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2902236515069164,
+                "ci_low": 0.18911287562409052,
+                "ci_high": 0.39542050876032536
+              },
+              "standardized_beta": {
+                "value": 0.3798429220135523,
+                "ci_low": 0.26997814521211033,
+                "ci_high": 0.4820564512463567
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.425121521690787,
+                "ci_low": 0.32751293532259845,
+                "ci_high": 0.5200604990269767
+              },
+              "standardized_beta": {
+                "value": 0.556084671680326,
+                "ci_low": 0.46317565813893924,
+                "ci_high": 0.640092063257451
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": 0.02675993251486138,
+              "ci_low": -0.05554854400178748,
+              "ci_high": 0.11361379580428385
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": -0.09206423835575246,
+              "ci_low": -0.1922044501031888,
+              "ci_high": 0.0037279878246482506
+            },
+            "corr_c1_margin": 0.9345103946675123,
+            "variance_inflation_factor": 7.893262738416708,
+            "outcome_mean": 0.088
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.4271555673188605,
+              "ci_low": 1.298297658892059,
+              "ci_high": 1.548193718511757
+            },
+            "quadratic_c1_squared": {
+              "value": -0.29345392121979635,
+              "ci_low": -0.426899594124775,
+              "ci_high": -0.16136417080547596
+            }
+          },
+          "means": {
+            "confidence_c1": 5.346762115478516,
+            "push_r1": 1.6696712284088135,
+            "margin_push": 1.8633449401855469,
+            "policy_amplitude": 2.2763965192542983,
+            "targeting_cosine": 0.6888725461622318,
+            "switch_game": 0.184,
+            "switch_neutral": 0.096,
+            "differential_switching": 0.088
+          }
+        },
+        "confirmation": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.9224361761001821,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.2724665454884523,
+                "ci_low": 1.1753764888441263,
+                "ci_high": 1.3584519018427779
+              },
+              "standardized_beta": {
+                "value": 0.8704634092799278,
+                "ci_low": 0.8429459768072776,
+                "ci_high": 0.896276943408789
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.5634927006249262,
+                "ci_low": 1.4287817756352599,
+                "ci_high": 1.6857491974705159
+              },
+              "standardized_beta": {
+                "value": 0.8270784300076658,
+                "ci_low": 0.7893080782050006,
+                "ci_high": 0.8619509687060759
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.4082611373088685,
+                "ci_low": 1.3014520543801735,
+                "ci_high": 1.5075838605737517
+              },
+              "standardized_beta": {
+                "value": 0.8751916584437565,
+                "ci_low": 0.8480831846365722,
+                "ci_high": 0.9012478624314691
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2008378041392354,
+                "ci_low": 0.16356455028674033,
+                "ci_high": 0.24017218695797068
+              },
+              "standardized_beta": {
+                "value": 0.4643034465051357,
+                "ci_low": 0.4128152597222165,
+                "ci_high": 0.5162821926530327
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -1.2724665454884523,
+                "ci_low": -1.3584519018427779,
+                "ci_high": -1.1753764888441263
+              },
+              "standardized_beta": {
+                "value": -0.8704634092799278,
+                "ci_low": -0.896276943408789,
+                "ci_high": -0.8429459768072777
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5197649792142249,
+                "ci_low": 0.4143565730217788,
+                "ci_high": 0.6241976771052635
+              },
+              "standardized_beta": {
+                "value": 0.5755720642975027,
+                "ci_low": 0.4931571514564137,
+                "ci_high": 0.6515368695040679
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.42372702341213053,
+                "ci_low": 0.3214715429498948,
+                "ci_high": 0.5239909633306808
+              },
+              "standardized_beta": {
+                "value": 0.5033330594389711,
+                "ci_low": 0.41150471778541053,
+                "ci_high": 0.5875401439963421
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3289745428620969,
+                "ci_low": 0.24593155816526202,
+                "ci_high": 0.41100126277859256
+              },
+              "standardized_beta": {
+                "value": 0.48581509150668356,
+                "ci_low": 0.38072630798118906,
+                "ci_high": 0.5832741709468229
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.04150338854403361,
+              "ci_low": -0.10452802691757458,
+              "ci_high": 0.01580234621520074
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": -0.006767128797178742,
+              "ci_low": -0.07579204369594705,
+              "ci_high": 0.06626435995846594
+            },
+            "corr_c1_margin": 0.922436176100182,
+            "variance_inflation_factor": 6.706390809214953,
+            "outcome_mean": 0.06
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.418756878810127,
+              "ci_low": 1.2824952604682862,
+              "ci_high": 1.542398064049006
+            },
+            "quadratic_c1_squared": {
+              "value": -0.22715721832431338,
+              "ci_low": -0.3671376901718818,
+              "ci_high": -0.08238614454126235
+            }
+          },
+          "means": {
+            "confidence_c1": 5.616323379516602,
+            "push_r1": 1.5959552879333496,
+            "margin_push": 1.7668669357299804,
+            "policy_amplitude": 2.225095693603469,
+            "targeting_cosine": 0.6766169799558494,
+            "switch_game": 0.18,
+            "switch_neutral": 0.12,
+            "differential_switching": 0.06
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 1.9073486328125e-06,
+          "c1_max": 1.4999885559082031,
+          "c1_mean": 0.6317244775280981,
+          "push_r1": {
+            "value": 0.3724552228779136,
+            "ci_low": 0.3002161265847212,
+            "ci_high": 0.44852558117426794
+          },
+          "differential_switching": {
+            "value": 0.12574850299401197,
+            "ci_low": 0.059880239520958084,
+            "ci_high": 0.19161676646706588
+          },
+          "policy_amplitude": {
+            "value": 0.855132917918225,
+            "ci_low": 0.7734750854280913,
+            "ci_high": 0.9398046768803222
+          },
+          "targeting_cosine": {
+            "value": 0.39825520565389666,
+            "ci_low": 0.31723313167347655,
+            "ci_high": 0.47508440878599434
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 1.4999980926513672,
+          "c1_max": 7.499959945678711,
+          "c1_mean": 3.870988640242708,
+          "push_r1": {
+            "value": 1.2439317817459563,
+            "ci_low": 1.0945535180811397,
+            "ci_high": 1.3962563238814918
+          },
+          "differential_switching": {
+            "value": 0.09580838323353294,
+            "ci_low": 0.04790419161676647,
+            "ci_high": 0.1437125748502994
+          },
+          "policy_amplitude": {
+            "value": 1.7723378256079954,
+            "ci_low": 1.6254705832821443,
+            "ci_high": 1.923646883221096
+          },
+          "targeting_cosine": {
+            "value": 0.7336083164077672,
+            "ci_low": 0.6724338084773448,
+            "ci_high": 0.7889268664389174
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 7.624887466430664,
+          "c1_max": 18.749927520751953,
+          "c1_mean": 11.980833030608764,
+          "push_r1": {
+            "value": 3.29198794767081,
+            "ci_low": 3.169913006152015,
+            "ci_high": 3.4154056086238604
+          },
+          "differential_switching": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "policy_amplitude": {
+            "value": 4.1360568617202595,
+            "ci_low": 3.9888266510146178,
+            "ci_high": 4.281832798452919
+          },
+          "targeting_cosine": {
+            "value": 0.9177781526820629,
+            "ci_low": 0.9063629946029581,
+            "ci_high": 0.9288058050690357
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "seed",
+      "model": "Seed-OSS-36B",
+      "dataset_key": "simplemc",
+      "dataset": "SimpleMC",
+      "validation": {
+        "model": "Seed-OSS-36B",
+        "dataset": "SimpleMC",
+        "model_id": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+        "model_revision": "497f1dca95ebdec98e41d517b9f060ee753c902f",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/simplemc/results.npz",
+        "trajectory_sha256": "97c07623d1ca13b8a360621e6ab5c929d07a3386da62818589dbdceeec40c43c",
+        "trajectory_metadata": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/simplemc/run_metadata.json",
+        "baseline": "outputs/model_replications/seed_oss_36b_clean_behavioral_replication/simplemc/run/results.json",
+        "baseline_sha256": "c30671d26aaf373e43e586d1fd9c7de8db9469de7ae5c9268cabc69b80aabf6a",
+        "split_plan": "outputs/causal/qwen36_27b_simplemc_causal_sweep/plans/discovery_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.8979863143948623,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.9467189818489491,
+                "ci_low": 0.8002664786371244,
+                "ci_high": 1.0905288943399594
+              },
+              "standardized_beta": {
+                "value": 0.6291432952465001,
+                "ci_low": 0.5685432318704979,
+                "ci_high": 0.6835498192508228
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.5555130127194559,
+                "ci_low": 1.3309925462664196,
+                "ci_high": 1.7745481288304503
+              },
+              "standardized_beta": {
+                "value": 0.6457209597464992,
+                "ci_low": 0.5866646699446173,
+                "ci_high": 0.6979815041978933
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.807556451666391,
+                "ci_low": 0.6374651796130383,
+                "ci_high": 0.9785117008449916
+              },
+              "standardized_beta": {
+                "value": 0.5524254870242069,
+                "ci_low": 0.4746490407917307,
+                "ci_high": 0.6201985097462729
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.20412364024363142,
+                "ci_low": 0.17553515767283093,
+                "ci_high": 0.23230046930572723
+              },
+              "standardized_beta": {
+                "value": 0.4388644660493586,
+                "ci_low": 0.3951223738294896,
+                "ci_high": 0.4806203731814843
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.9467189818489491,
+                "ci_low": -1.0905288943399596,
+                "ci_high": -0.8002664786371244
+              },
+              "standardized_beta": {
+                "value": -0.6291432952465001,
+                "ci_low": -0.6835498192508228,
+                "ci_high": -0.5685432318704979
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5296140813530968,
+                "ci_low": 0.4273592296364873,
+                "ci_high": 0.638651834106528
+              },
+              "standardized_beta": {
+                "value": 0.488627632931204,
+                "ci_low": 0.41807072528797296,
+                "ci_high": 0.5559609350058068
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1993678462868413,
+                "ci_low": 0.11504878963166829,
+                "ci_high": 0.28311515863042275
+              },
+              "standardized_beta": {
+                "value": 0.22753650088770405,
+                "ci_low": 0.1342354736270586,
+                "ci_high": 0.319331752637196
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.21773705420901093,
+                "ci_low": 0.1099931599766647,
+                "ci_high": 0.33176043715638875
+              },
+              "standardized_beta": {
+                "value": 0.22306794627420598,
+                "ci_low": 0.11947907525095959,
+                "ci_high": 0.31805571346598294
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.09192661876274244,
+              "ci_low": -0.17067826338727218,
+              "ci_high": -0.02034841497109444
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.0689697839860471,
+              "ci_low": -0.0015788327799889064,
+              "ci_high": 0.14423674198360628
+            },
+            "corr_c1_margin": 0.8979863143948621,
+            "variance_inflation_factor": 5.164740258193625,
+            "outcome_mean": 0.142
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.0450089960796398,
+              "ci_low": 0.8539768301989323,
+              "ci_high": 1.2275845002694794
+            },
+            "quadratic_c1_squared": {
+              "value": -0.06872187330354161,
+              "ci_low": -0.1579112433122518,
+              "ci_high": 0.04291474590954224
+            }
+          },
+          "means": {
+            "confidence_c1": 3.9259999732971194,
+            "push_r1": 1.5171875743865966,
+            "margin_push": 1.5720000381469728,
+            "policy_amplitude": 2.5300181077620283,
+            "targeting_cosine": 0.5811531607068642,
+            "switch_game": 0.31,
+            "switch_neutral": 0.168,
+            "differential_switching": 0.142
+          }
+        },
+        "discovery": {
+          "n": 251,
+          "corr_c1_neutral_old_w1_margin": 0.9048676748370648,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.9921884045708607,
+                "ci_low": 0.7808693500870838,
+                "ci_high": 1.1984874455164611
+              },
+              "standardized_beta": {
+                "value": 0.6431091041083303,
+                "ci_low": 0.5579670031973023,
+                "ci_high": 0.7136430892469174
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.5339967847628482,
+                "ci_low": 1.23574287519499,
+                "ci_high": 1.8228891967252256
+              },
+              "standardized_beta": {
+                "value": 0.6369181033965757,
+                "ci_low": 0.5586461099553168,
+                "ci_high": 0.7047464908392599
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.866601450276733,
+                "ci_low": 0.6198901455831789,
+                "ci_high": 1.1213390041364495
+              },
+              "standardized_beta": {
+                "value": 0.562975577741421,
+                "ci_low": 0.4618887294442934,
+                "ci_high": 0.6475432345759559
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2161281402379047,
+                "ci_low": 0.1745886586476912,
+                "ci_high": 0.2587111428700389
+              },
+              "standardized_beta": {
+                "value": 0.459003786923513,
+                "ci_low": 0.40014725843230964,
+                "ci_high": 0.5162133977733891
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.9921884045708607,
+                "ci_low": -1.1984874455164611,
+                "ci_high": -0.7808693500870838
+              },
+              "standardized_beta": {
+                "value": -0.6431091041083303,
+                "ci_low": -0.7136430892469176,
+                "ci_high": -0.5579670031973023
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5015279981780723,
+                "ci_low": 0.3688826291118587,
+                "ci_high": 0.6333426112072036
+              },
+              "standardized_beta": {
+                "value": 0.47434858575789435,
+                "ci_low": 0.38087634999819936,
+                "ci_high": 0.5584668372696524
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.17995689139570525,
+                "ci_low": 0.06061209700856319,
+                "ci_high": 0.2967735909448669
+              },
+              "standardized_beta": {
+                "value": 0.20499684006972765,
+                "ci_low": 0.06962365669823815,
+                "ci_high": 0.33269688948584647
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3107035149970832,
+                "ci_low": 0.14529741644135008,
+                "ci_high": 0.496530021595999
+              },
+              "standardized_beta": {
+                "value": 0.29462446268028747,
+                "ci_low": 0.155660526040074,
+                "ci_high": 0.41764009638706906
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.14583312109587515,
+              "ci_low": -0.2642281143135473,
+              "ci_high": -0.0296253697614302
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.1270211751797025,
+              "ci_low": 0.017684861699765072,
+              "ci_high": 0.24133943168551658
+            },
+            "corr_c1_margin": 0.9048676748370645,
+            "variance_inflation_factor": 5.5183224823176795,
+            "outcome_mean": 0.17131474103585656
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.0233065374973678,
+              "ci_low": 0.7847677650217363,
+              "ci_high": 1.2614821970294818
+            },
+            "quadratic_c1_squared": {
+              "value": -0.027506344803121703,
+              "ci_low": -0.18867229650462472,
+              "ci_high": 0.14976533647074267
+            }
+          },
+          "means": {
+            "confidence_c1": 4.1070716903504145,
+            "push_r1": 1.5953685657911567,
+            "margin_push": 1.6862549724806828,
+            "policy_amplitude": 2.5833658887211572,
+            "targeting_cosine": 0.5933506714396587,
+            "switch_game": 0.3346613545816733,
+            "switch_neutral": 0.16334661354581673,
+            "differential_switching": 0.17131474103585656
+          }
+        },
+        "confirmation": {
+          "n": 249,
+          "corr_c1_neutral_old_w1_margin": 0.8924198424976638,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.8951800257117533,
+                "ci_low": 0.6872212459608062,
+                "ci_high": 1.104420009998138
+              },
+              "standardized_beta": {
+                "value": 0.6126254769428039,
+                "ci_low": 0.5141508606092597,
+                "ci_high": 0.6952071501022457
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 1.5697296914496113,
+                "ci_low": 1.2286056002797545,
+                "ci_high": 1.8993085452875753
+              },
+              "standardized_beta": {
+                "value": 0.6529773904682911,
+                "ci_low": 0.5564209280796357,
+                "ci_high": 0.7309519122596281
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.7444021332285568,
+                "ci_low": 0.5059723624464136,
+                "ci_high": 0.9782280583029893
+              },
+              "standardized_beta": {
+                "value": 0.5405022039873218,
+                "ci_low": 0.4092678700882405,
+                "ci_high": 0.6452361343222318
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1912470482320985,
+                "ci_low": 0.1521862957466552,
+                "ci_high": 0.2303833859547944
+              },
+              "standardized_beta": {
+                "value": 0.416728303006102,
+                "ci_low": 0.34526496645303917,
+                "ci_high": 0.48047932178902303
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.8951800257117533,
+                "ci_low": -1.104420009998138,
+                "ci_high": -0.6872212459608064
+              },
+              "standardized_beta": {
+                "value": -0.6126254769428039,
+                "ci_low": -0.6952071501022457,
+                "ci_high": -0.5141508606092597
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5556892323529845,
+                "ci_low": 0.3901129689969217,
+                "ci_high": 0.7269466604519802
+              },
+              "standardized_beta": {
+                "value": 0.5011659181046398,
+                "ci_low": 0.38388485723448157,
+                "ci_high": 0.5991078698334013
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.2144950050105684,
+                "ci_low": 0.09059414311391932,
+                "ci_high": 0.34174913838713017
+              },
+              "standardized_beta": {
+                "value": 0.24609445911056888,
+                "ci_low": 0.10709380688433164,
+                "ci_high": 0.37955055423270084
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.12499578834820017,
+                "ci_low": -0.0003602898929040804,
+                "ci_high": 0.25317413898230096
+              },
+              "standardized_beta": {
+                "value": 0.14045559748148084,
+                "ci_low": -0.0004382117546051209,
+                "ci_high": 0.28040330607601954
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.057412125193727,
+              "ci_low": -0.15669646227727893,
+              "ci_high": 0.03258544698565979
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.028386927389527774,
+              "ci_low": -0.06436900920969851,
+              "ci_high": 0.13037810931287666
+            },
+            "corr_c1_margin": 0.8924198424976639,
+            "variance_inflation_factor": 4.911909213146763,
+            "outcome_mean": 0.11244979919678715
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 1.0409718939893011,
+              "ci_low": 0.7614386011250555,
+              "ci_high": 1.3120209752077359
+            },
+            "quadratic_c1_squared": {
+              "value": -0.08353800730665305,
+              "ci_low": -0.19602521043903173,
+              "ci_high": 0.06233497823874703
+            }
+          },
+          "means": {
+            "confidence_c1": 3.7434738649421906,
+            "push_r1": 1.438378623211719,
+            "margin_push": 1.4568273934973293,
+            "policy_amplitude": 2.4762418305702956,
+            "targeting_cosine": 0.5688576780003123,
+            "switch_game": 0.285140562248996,
+            "switch_neutral": 0.17269076305220885,
+            "differential_switching": 0.11244979919678715
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 0.0,
+          "c1_max": 1.75,
+          "c1_mean": 0.7964071970499919,
+          "push_r1": {
+            "value": 0.6326722384926802,
+            "ci_low": 0.4754819290366716,
+            "ci_high": 0.7870556475873479
+          },
+          "differential_switching": {
+            "value": 0.10179640718562874,
+            "ci_low": 0.005988023952095809,
+            "ci_high": 0.19161676646706588
+          },
+          "policy_amplitude": {
+            "value": 1.961669920771267,
+            "ci_low": 1.8293968895390076,
+            "ci_high": 2.1012455835797472
+          },
+          "targeting_cosine": {
+            "value": 0.3039525890941422,
+            "ci_low": 0.22166468335536976,
+            "ci_high": 0.3826397124138992
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 1.75,
+          "c1_max": 4.25,
+          "c1_mean": 2.803892215568862,
+          "push_r1": {
+            "value": 1.3355165413039887,
+            "ci_low": 1.1620462579641515,
+            "ci_high": 1.5114147342607647
+          },
+          "differential_switching": {
+            "value": 0.23952095808383234,
+            "ci_low": 0.17365269461077845,
+            "ci_high": 0.31137724550898205
+          },
+          "policy_amplitude": {
+            "value": 2.260241229534919,
+            "ci_low": 2.102166279022509,
+            "ci_high": 2.4227884151569246
+          },
+          "targeting_cosine": {
+            "value": 0.5881480519560702,
+            "ci_low": 0.5216914630470539,
+            "ci_high": 0.6497125306737189
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 4.25,
+          "c1_max": 20.0,
+          "c1_mean": 8.203313161091632,
+          "push_r1": {
+            "value": 2.589796752814787,
+            "ci_low": 2.3516425476734897,
+            "ci_high": 2.833975002420954
+          },
+          "differential_switching": {
+            "value": 0.08433734939759036,
+            "ci_low": 0.04216867469879518,
+            "ci_high": 0.12650602409638553
+          },
+          "policy_amplitude": {
+            "value": 3.3731921191559104,
+            "ci_low": 3.103646057755703,
+            "ci_high": 3.655553835858714
+          },
+          "targeting_cosine": {
+            "value": 0.8529865861328112,
+            "ci_low": 0.8219998890289527,
+            "ci_high": 0.8801458726462116
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "seed",
+      "model": "Seed-OSS-36B",
+      "dataset_key": "triviamc",
+      "dataset": "TriviaMC",
+      "validation": {
+        "model": "Seed-OSS-36B",
+        "dataset": "TriviaMC",
+        "model_id": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+        "model_revision": "497f1dca95ebdec98e41d517b9f060ee753c902f",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/triviamc/results.npz",
+        "trajectory_sha256": "bef62fd9c83ecbc746cafe51746f2d64a2fba781fcb99b12240d56ba7c1f50ed",
+        "trajectory_metadata": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/triviamc/run_metadata.json",
+        "baseline": "outputs/model_replications/seed_oss_36b_clean_behavioral_replication/triviamc/run/results.json",
+        "baseline_sha256": "272322e44f2aa74b3483fc472eba8e43134710727f1c2085e9413baced4434ce",
+        "split_plan": "outputs/prompt_variant_tests/qwen36_27b_triviamc_difficulty_filtered_strategic_replication/split_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.9169367596446808,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.31845296378943116,
+                "ci_low": 0.17926650853283052,
+                "ci_high": 0.45842152411810544
+              },
+              "standardized_beta": {
+                "value": 0.1789594820679909,
+                "ci_low": 0.10253914817986116,
+                "ci_high": 0.2548082144293714
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.7646405235543485,
+                "ci_low": 0.5210234919259271,
+                "ci_high": 1.0136203066913958
+              },
+              "standardized_beta": {
+                "value": 0.23896928278626717,
+                "ci_low": 0.16778806623143724,
+                "ci_high": 0.31034393019867723
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.18260766833420955,
+                "ci_low": 0.0368179414111747,
+                "ci_high": 0.3327445033360594
+              },
+              "standardized_beta": {
+                "value": 0.09017443541264004,
+                "ci_low": 0.018649871729908986,
+                "ci_high": 0.16286869375844706
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.09553768438101926,
+                "ci_low": 0.06196702753301336,
+                "ci_high": 0.13077237379686213
+              },
+              "standardized_beta": {
+                "value": 0.2725735608564709,
+                "ci_low": 0.19173290750063973,
+                "ci_high": 0.34870026936852566
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.31845296378943116,
+                "ci_low": -0.45842152411810544,
+                "ci_high": -0.17926650853283066
+              },
+              "standardized_beta": {
+                "value": -0.1789594820679909,
+                "ci_low": -0.25480821442937146,
+                "ci_high": -0.10253914817986119
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5282511235732937,
+                "ci_low": 0.4127377110104557,
+                "ci_high": 0.6448605885217373
+              },
+              "standardized_beta": {
+                "value": 0.32554229785827515,
+                "ci_low": 0.26242303517413057,
+                "ci_high": 0.3878723862708907
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1430930531689851,
+                "ci_low": 0.058546345224697295,
+                "ci_high": 0.22677361473955515
+              },
+              "standardized_beta": {
+                "value": 0.12635194522044293,
+                "ci_low": 0.05398590349866577,
+                "ci_high": 0.19783708666471325
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.35289121295284764,
+                "ci_low": -0.4509873656719522,
+                "ci_high": -0.25142813122915647
+              },
+              "standardized_beta": {
+                "value": -0.2695045043670926,
+                "ci_low": -0.3511874759662039,
+                "ci_high": -0.1904563381646171
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.07900817113791118,
+              "ci_low": -0.1497850651557367,
+              "ci_high": -0.009221120194180383
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.02081321518276423,
+              "ci_low": -0.051662481182756,
+              "ci_high": 0.09165629530708905
+            },
+            "corr_c1_margin": 0.9169367596446805,
+            "variance_inflation_factor": 6.280342737512689,
+            "outcome_mean": 0.076
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.20438763431728282,
+              "ci_low": 0.024383310399014216,
+              "ci_high": 0.3829380851294299
+            },
+            "quadratic_c1_squared": {
+              "value": -0.688868105024384,
+              "ci_low": -0.836587058915674,
+              "ci_high": -0.5391124459192103
+            }
+          },
+          "means": {
+            "confidence_c1": 11.11649994277954,
+            "push_r1": 2.258124997138977,
+            "margin_push": 2.975999977111816,
+            "policy_amplitude": 3.395381159434013,
+            "targeting_cosine": 0.714254191347201,
+            "switch_game": 0.16,
+            "switch_neutral": 0.084,
+            "differential_switching": 0.076
+          }
+        },
+        "discovery": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.9219346221221251,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.23636467237579606,
+                "ci_low": 0.045371551566469895,
+                "ci_high": 0.4370027797325289
+              },
+              "standardized_beta": {
+                "value": 0.1319245441517543,
+                "ci_low": 0.025988877681975112,
+                "ci_high": 0.23823060639401464
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.6503078914994805,
+                "ci_low": 0.3070202558902321,
+                "ci_high": 1.0064991003001373
+              },
+              "standardized_beta": {
+                "value": 0.20712666923081277,
+                "ci_low": 0.10095255689782265,
+                "ci_high": 0.30908820006335247
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.11881773324437467,
+                "ci_low": -0.07590286613912742,
+                "ci_high": 0.3208465976858603
+              },
+              "standardized_beta": {
+                "value": 0.05742425420599538,
+                "ci_low": -0.03716093618690813,
+                "ci_high": 0.15392706459087638
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.06739524501146393,
+                "ci_low": 0.021796731138869097,
+                "ci_high": 0.1161897954503707
+              },
+              "standardized_beta": {
+                "value": 0.2141318161781277,
+                "ci_low": 0.07939140127448895,
+                "ci_high": 0.3306618269863419
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.23636467237579606,
+                "ci_low": -0.4370027797325289,
+                "ci_high": -0.045371551566469895
+              },
+              "standardized_beta": {
+                "value": -0.1319245441517543,
+                "ci_low": -0.23823060639401475,
+                "ci_high": -0.02598887768197514
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.46907809144077534,
+                "ci_low": 0.30837998219994645,
+                "ci_high": 0.6340925091444886
+              },
+              "standardized_beta": {
+                "value": 0.3045063835299936,
+                "ci_low": 0.20552263634884996,
+                "ci_high": 0.40124125999447585
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.16211602304788564,
+                "ci_low": 0.03921363142531407,
+                "ci_high": 0.285937342894693
+              },
+              "standardized_beta": {
+                "value": 0.12770418768992495,
+                "ci_low": 0.03163961911466315,
+                "ci_high": 0.22362854689106906
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.39482944211286497,
+                "ci_low": -0.531291932362086,
+                "ci_high": -0.24968477300225056
+              },
+              "standardized_beta": {
+                "value": -0.2925710309752197,
+                "ci_low": -0.4109611562274859,
+                "ci_high": -0.17991765772126495
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.07676987218767714,
+              "ci_low": -0.20621357638585192,
+              "ci_high": 0.05438780106167171
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": -0.0016498289655318553,
+              "ci_low": -0.1417170000767198,
+              "ci_high": 0.1328000508074461
+            },
+            "corr_c1_margin": 0.9219346221221251,
+            "variance_inflation_factor": 6.6650425054465074,
+            "outcome_mean": 0.1
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.08599834593056323,
+              "ci_low": -0.17111370787527358,
+              "ci_high": 0.3381481510657956
+            },
+            "quadratic_c1_squared": {
+              "value": -0.7411568447047316,
+              "ci_low": -0.9530808596199469,
+              "ci_high": -0.5360903683185035
+            }
+          },
+          "means": {
+            "confidence_c1": 11.10099993133545,
+            "push_r1": 2.410749980926514,
+            "margin_push": 3.194499969482422,
+            "policy_amplitude": 3.538112196897241,
+            "targeting_cosine": 0.7427425704626321,
+            "switch_game": 0.16,
+            "switch_neutral": 0.06,
+            "differential_switching": 0.1
+          }
+        },
+        "confirmation": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.913060443246547,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.39836089823040005,
+                "ci_low": 0.20570515978103718,
+                "ci_high": 0.5951558823327169
+              },
+              "standardized_beta": {
+                "value": 0.22712107325554334,
+                "ci_low": 0.11952986208631587,
+                "ci_high": 0.3308013993051769
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.8760771435271966,
+                "ci_low": 0.532996266877309,
+                "ci_high": 1.2255274042555406
+              },
+              "standardized_beta": {
+                "value": 0.27005794549809914,
+                "ci_low": 0.16790952011710186,
+                "ci_high": 0.3668880558061796
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.24479562776018363,
+                "ci_low": 0.031116512997717564,
+                "ci_high": 0.4631248681837281
+              },
+              "standardized_beta": {
+                "value": 0.12428187981900873,
+                "ci_low": 0.017029767521276763,
+                "ci_high": 0.23027638139395273
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.12281415267022404,
+                "ci_low": 0.07297376062861717,
+                "ci_high": 0.17519438019367745
+              },
+              "standardized_beta": {
+                "value": 0.322502214024623,
+                "ci_low": 0.21333297867014497,
+                "ci_high": 0.4229127741487983
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.39836089823040005,
+                "ci_low": -0.5951558823327169,
+                "ci_high": -0.2057051597810373
+              },
+              "standardized_beta": {
+                "value": -0.22712107325554334,
+                "ci_low": -0.3308013993051769,
+                "ci_high": -0.11952986208631589
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5855414672896871,
+                "ci_low": 0.41865897137847824,
+                "ci_high": 0.7592690179733331
+              },
+              "standardized_beta": {
+                "value": 0.3443087924873654,
+                "ci_low": 0.2593467309048894,
+                "ci_high": 0.4254955884637914
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.125205840856148,
+                "ci_low": 0.011641582725598013,
+                "ci_high": 0.24004645207525843
+              },
+              "standardized_beta": {
+                "value": 0.1291076748343434,
+                "ci_low": 0.012686112368865571,
+                "ci_high": 0.24042475084499015
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.31238640991543515,
+                "ci_low": -0.45174179682628085,
+                "ci_high": -0.16556059401903625
+              },
+              "standardized_beta": {
+                "value": -0.24672243521336928,
+                "ci_low": -0.36124841474880354,
+                "ci_high": -0.12980593546088587
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.07466382214768146,
+              "ci_low": -0.15587731258795737,
+              "ci_high": -0.0025479912071485226
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.03562190554799314,
+              "ci_low": -0.03167047679731853,
+              "ci_high": 0.10958405529619061
+            },
+            "corr_c1_margin": 0.9130604432465468,
+            "variance_inflation_factor": 6.012483347178292,
+            "outcome_mean": 0.052
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.3147548115123156,
+              "ci_low": 0.05687692790707796,
+              "ci_high": 0.560391718179815
+            },
+            "quadratic_c1_squared": {
+              "value": -0.6304745764461235,
+              "ci_low": -0.8402909974662144,
+              "ci_high": -0.40541896074353967
+            }
+          },
+          "means": {
+            "confidence_c1": 11.131999954223632,
+            "push_r1": 2.1055000133514405,
+            "margin_push": 2.757499984741211,
+            "policy_amplitude": 3.252650121970785,
+            "targeting_cosine": 0.6857658122317701,
+            "switch_game": 0.16,
+            "switch_neutral": 0.108,
+            "differential_switching": 0.052
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 0.0,
+          "c1_max": 7.5,
+          "c1_mean": 3.4678142227812443,
+          "push_r1": {
+            "value": 1.4816616338170217,
+            "ci_low": 1.2499953185012953,
+            "ci_high": 1.7238163971615406
+          },
+          "differential_switching": {
+            "value": 0.1437125748502994,
+            "ci_low": 0.08383233532934131,
+            "ci_high": 0.20958083832335328
+          },
+          "policy_amplitude": {
+            "value": 2.7944758527060967,
+            "ci_low": 2.58975625493651,
+            "ci_high": 3.0023892699202057
+          },
+          "targeting_cosine": {
+            "value": 0.5447130785505316,
+            "ci_low": 0.46788041124547947,
+            "ci_high": 0.6164515332844855
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 7.75,
+          "c1_max": 15.5,
+          "c1_mean": 11.862275426259298,
+          "push_r1": {
+            "value": 3.3272829683954845,
+            "ci_low": 3.0649326659962086,
+            "ci_high": 3.592257731974482
+          },
+          "differential_switching": {
+            "value": 0.08383233532934131,
+            "ci_low": 0.041916167664670656,
+            "ci_high": 0.1317365269461078
+          },
+          "policy_amplitude": {
+            "value": 4.488397906155181,
+            "ci_low": 4.147257351360845,
+            "ci_high": 4.841371443502026
+          },
+          "targeting_cosine": {
+            "value": 0.8536447532617986,
+            "ci_low": 0.8259625523292562,
+            "ci_high": 0.8768762759871064
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 15.75,
+          "c1_max": 23.125,
+          "c1_mean": 18.060993975903614,
+          "push_r1": {
+            "value": 1.9636671686746987,
+            "ci_low": 1.7464231927710843,
+            "ci_high": 2.195411332831325
+          },
+          "differential_switching": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "policy_amplitude": {
+            "value": 2.9003051926938155,
+            "ci_low": 2.62479929647378,
+            "ci_high": 3.191182075826014
+          },
+          "targeting_cosine": {
+            "value": 0.744586372053864,
+            "ci_low": 0.7090248106343622,
+            "ci_high": 0.7787905033657554
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "gemma",
+      "model": "Gemma-4-31B",
+      "dataset_key": "simplemc",
+      "dataset": "SimpleMC",
+      "validation": {
+        "model": "Gemma-4-31B",
+        "dataset": "SimpleMC",
+        "model_id": "google/gemma-4-31B-it",
+        "model_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/trajectories/run/results.npz",
+        "trajectory_sha256": "25cb604984b1286ebc3f23d22ee8cb5021145196c79783fa8f63734a45f300f4",
+        "trajectory_metadata": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/trajectories/run/run_metadata.json",
+        "baseline": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/behavior/run/results.json",
+        "baseline_sha256": "6a4aecc161f9988bf7000f6680add7af8b4bab0652d1849d01b4b54791685703",
+        "split_plan": "outputs/causal/qwen36_27b_simplemc_causal_sweep/plans/discovery_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.8080690937484064,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5565366937535898,
+                "ci_low": 0.454960496857646,
+                "ci_high": 0.6600461403951825
+              },
+              "standardized_beta": {
+                "value": 0.41596840112740036,
+                "ci_low": 0.3463657344279912,
+                "ci_high": 0.4844113521560288
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.8392914057449015,
+                "ci_low": 0.6872954786711851,
+                "ci_high": 0.9982356664545579
+              },
+              "standardized_beta": {
+                "value": 0.3779291079911778,
+                "ci_low": 0.3170412176101115,
+                "ci_high": 0.4375763944216039
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.402865152892378,
+                "ci_low": 0.2778424309819145,
+                "ci_high": 0.5284304792023978
+              },
+              "standardized_beta": {
+                "value": 0.30167389989314686,
+                "ci_low": 0.21590769099968943,
+                "ci_high": 0.3875410874351378
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1823471002030322,
+                "ci_low": 0.15179523932307745,
+                "ci_high": 0.21318249649939616
+              },
+              "standardized_beta": {
+                "value": 0.33758093754087454,
+                "ci_low": 0.28689117545580745,
+                "ci_high": 0.3850716992804123
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.5565366937535898,
+                "ci_low": -0.6600461403951825,
+                "ci_high": -0.45496049685764606
+              },
+              "standardized_beta": {
+                "value": -0.41596840112740036,
+                "ci_low": -0.4844113521560288,
+                "ci_high": -0.3463657344279912
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.28935105864637795,
+                "ci_low": 0.19588848574515527,
+                "ci_high": 0.38795863040578626
+              },
+              "standardized_beta": {
+                "value": 0.2651269654408563,
+                "ci_low": 0.18744273848516102,
+                "ci_high": 0.34019147108814934
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.14504121879877055,
+                "ci_low": 0.06756331827251612,
+                "ci_high": 0.22730163794954633
+              },
+              "standardized_beta": {
+                "value": 0.17784441335789922,
+                "ci_low": 0.08712270938054166,
+                "ci_high": 0.2651657363045826
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.12214441630844136,
+                "ci_low": 0.03515336769506935,
+                "ci_high": 0.21075215047309104
+              },
+              "standardized_beta": {
+                "value": 0.14815190893504415,
+                "ci_low": 0.04535437942328906,
+                "ci_high": 0.2448023332940084
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.007577826933241681,
+              "ci_low": -0.04382927401151909,
+              "ci_high": 0.02844260054879288
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.01740004718382494,
+              "ci_low": -0.01737182404885695,
+              "ci_high": 0.055075228278681575
+            },
+            "corr_c1_margin": 0.8080690937484066,
+            "variance_inflation_factor": 2.8816422524771452,
+            "outcome_mean": 0.006
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.7278417986124014,
+              "ci_low": 0.5606660393948759,
+              "ci_high": 0.8924622398362957
+            },
+            "quadratic_c1_squared": {
+              "value": -0.13696695585227797,
+              "ci_low": -0.2309835923654918,
+              "ci_high": -0.04122566735805004
+            }
+          },
+          "means": {
+            "confidence_c1": 6.046348051548004,
+            "push_r1": 0.906611417955719,
+            "margin_push": 0.9024519222974777,
+            "policy_amplitude": 1.9227319913734777,
+            "targeting_cosine": 0.5019663552512595,
+            "switch_game": 0.204,
+            "switch_neutral": 0.198,
+            "differential_switching": 0.006
+          }
+        },
+        "discovery": {
+          "n": 251,
+          "corr_c1_neutral_old_w1_margin": 0.8258107342238226,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5410068754192559,
+                "ci_low": 0.4109863113646221,
+                "ci_high": 0.6771082279192281
+              },
+              "standardized_beta": {
+                "value": 0.3944045747584376,
+                "ci_low": 0.29920353782996884,
+                "ci_high": 0.4913237148056811
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.8225501932727933,
+                "ci_low": 0.6264904156541463,
+                "ci_high": 1.0259569851023533
+              },
+              "standardized_beta": {
+                "value": 0.36443921083995034,
+                "ci_low": 0.2789130581892524,
+                "ci_high": 0.45497192677333986
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.3315099194228969,
+                "ci_low": 0.1774708772911034,
+                "ci_high": 0.4905079718408728
+              },
+              "standardized_beta": {
+                "value": 0.25077614122018943,
+                "ci_low": 0.13806227631480045,
+                "ci_high": 0.3672204448653178
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.21629580402667253,
+                "ci_low": 0.17191458688249048,
+                "ci_high": 0.2603102601122462
+              },
+              "standardized_beta": {
+                "value": 0.38559991433205154,
+                "ci_low": 0.31951766957415234,
+                "ci_high": 0.4493218331851965
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.5410068754192559,
+                "ci_low": -0.6771082279192281,
+                "ci_high": -0.4109863113646221
+              },
+              "standardized_beta": {
+                "value": -0.3944045747584376,
+                "ci_low": -0.4913237148056811,
+                "ci_high": -0.2992035378299689
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.29665899422045705,
+                "ci_low": 0.17323248956086448,
+                "ci_high": 0.43100458574036826
+              },
+              "standardized_beta": {
+                "value": 0.27145577977921775,
+                "ci_low": 0.16635973774369633,
+                "ci_high": 0.3793130370364374
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1665654957400837,
+                "ci_low": 0.059870218524159,
+                "ci_high": 0.28806965345742236
+              },
+              "standardized_beta": {
+                "value": 0.19591393414804192,
+                "ci_low": 0.07585138174553305,
+                "ci_high": 0.319051568810617
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.07778238545871516,
+                "ci_low": -0.017472950245537557,
+                "ci_high": 0.1722890894199659
+              },
+              "standardized_beta": {
+                "value": 0.10033572268341992,
+                "ci_low": -0.023320065827654134,
+                "ci_high": 0.2177779275414453
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": 0.0017112928363381026,
+              "ci_low": -0.047148580892915154,
+              "ci_high": 0.050016741471450986
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.01106800311287855,
+              "ci_low": -0.03434802714293618,
+              "ci_high": 0.05835755861226551
+            },
+            "corr_c1_margin": 0.8258107342238225,
+            "variance_inflation_factor": 3.144291888952671,
+            "outcome_mean": 0.00398406374501992
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.7805952443472971,
+              "ci_low": 0.5413577292783142,
+              "ci_high": 1.008312573595
+            },
+            "quadratic_c1_squared": {
+              "value": -0.19169196288386547,
+              "ci_low": -0.3289715343184426,
+              "ci_high": -0.05489412438544517
+            }
+          },
+          "means": {
+            "confidence_c1": 6.232135853444437,
+            "push_r1": 0.8760637700746942,
+            "margin_push": 0.7815902724683997,
+            "policy_amplitude": 1.9409409361742156,
+            "targeting_cosine": 0.4746614611407528,
+            "switch_game": 0.20318725099601595,
+            "switch_neutral": 0.199203187250996,
+            "differential_switching": 0.00398406374501992
+          }
+        },
+        "confirmation": {
+          "n": 249,
+          "corr_c1_neutral_old_w1_margin": 0.785417270351222,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.5811778508387133,
+                "ci_low": 0.42156469573717925,
+                "ci_high": 0.7381053166131786
+              },
+              "standardized_beta": {
+                "value": 0.4462795847874362,
+                "ci_low": 0.34378385050803895,
+                "ci_high": 0.544910032067596
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.874714654331567,
+                "ci_low": 0.6431498894495172,
+                "ci_high": 1.1183223665559165
+              },
+              "standardized_beta": {
+                "value": 0.40183204735918165,
+                "ci_low": 0.31853040266936405,
+                "ci_high": 0.483617337938954
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.4875859042791677,
+                "ci_low": 0.29126479598465826,
+                "ci_high": 0.6831104745547791
+              },
+              "standardized_beta": {
+                "value": 0.36153562440321607,
+                "ci_low": 0.2309774536058072,
+                "ci_high": 0.4842454308795462
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1462675856953259,
+                "ci_low": 0.10243838091739016,
+                "ci_high": 0.1905335336366477
+              },
+              "standardized_beta": {
+                "value": 0.28296168905330726,
+                "ci_low": 0.20478917829217963,
+                "ci_high": 0.35819868508830716
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.5811778508387133,
+                "ci_low": -0.7381053166131786,
+                "ci_high": -0.4215646957371793
+              },
+              "standardized_beta": {
+                "value": -0.4462795847874362,
+                "ci_low": -0.544910032067596,
+                "ci_high": -0.343783850508039
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.28723707927401393,
+                "ci_low": 0.14986872066299767,
+                "ci_high": 0.43767526011752655
+              },
+              "standardized_beta": {
+                "value": 0.2641886252367596,
+                "ci_low": 0.15113035539507394,
+                "ci_high": 0.3753728302650493
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.12187800732772891,
+                "ci_low": 0.016727248757272144,
+                "ci_high": 0.23352204827379688
+              },
+              "standardized_beta": {
+                "value": 0.1564728249446401,
+                "ci_low": 0.023640033785881254,
+                "ci_high": 0.28046638402130963
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.17206276423697045,
+                "ci_low": 0.02404661732616369,
+                "ci_high": 0.32315138192139964
+              },
+              "standardized_beta": {
+                "value": 0.19778632157000312,
+                "ci_low": 0.03050015630642385,
+                "ci_high": 0.3458681668468074
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.016245043700578783,
+              "ci_low": -0.07262856206968486,
+              "ci_high": 0.039295593905254306
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.022713992540647876,
+              "ci_low": -0.02936086019425841,
+              "ci_high": 0.08109155742333134
+            },
+            "corr_c1_margin": 0.7854172703512222,
+            "variance_inflation_factor": 2.610150222385982,
+            "outcome_mean": 0.008032128514056224
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.6635330314739888,
+              "ci_low": 0.41711832192107723,
+              "ci_high": 0.9004347653253836
+            },
+            "quadratic_c1_squared": {
+              "value": -0.06907590677821282,
+              "ci_low": -0.2016964307118187,
+              "ci_high": 0.08341473059295176
+            }
+          },
+          "means": {
+            "confidence_c1": 5.859067978150395,
+            "push_r1": 0.9374044284703262,
+            "margin_push": 1.0242843484304038,
+            "policy_amplitude": 1.9043767899879953,
+            "targeting_cosine": 0.5294905657803246,
+            "switch_game": 0.20481927710843373,
+            "switch_neutral": 0.19678714859437751,
+            "differential_switching": 0.008032128514056224
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 1.9073486328125e-06,
+          "c1_max": 3.25,
+          "c1_mean": 1.568866078725118,
+          "push_r1": {
+            "value": 0.3159156416704555,
+            "ci_low": 0.1678053218804434,
+            "ci_high": 0.46140892223683655
+          },
+          "differential_switching": {
+            "value": -0.011976047904191617,
+            "ci_low": -0.059880239520958084,
+            "ci_high": 0.03592814371257485
+          },
+          "policy_amplitude": {
+            "value": 1.5299887601460136,
+            "ci_low": 1.4084040316401099,
+            "ci_high": 1.657776986681661
+          },
+          "targeting_cosine": {
+            "value": 0.2863247210439453,
+            "ci_low": 0.19443500346344061,
+            "ci_high": 0.3748653447787041
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 3.25,
+          "c1_max": 6.750095367431641,
+          "c1_mean": 4.7597413434239915,
+          "push_r1": {
+            "value": 0.7565023328015904,
+            "ci_low": 0.5772343285426408,
+            "ci_high": 0.9459279152804505
+          },
+          "differential_switching": {
+            "value": 0.011976047904191617,
+            "ci_low": -0.029940119760479042,
+            "ci_high": 0.05389221556886228
+          },
+          "policy_amplitude": {
+            "value": 1.7515187036724507,
+            "ci_low": 1.5759781199977319,
+            "ci_high": 1.9416740427997627
+          },
+          "targeting_cosine": {
+            "value": 0.4936213945071067,
+            "ci_low": 0.41133874634804807,
+            "ci_high": 0.5711222629310845
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 6.875,
+          "c1_max": 23.515604496002197,
+          "c1_mean": 11.84516015828374,
+          "push_r1": {
+            "value": 1.6518789592833,
+            "ci_low": 1.4334536568850071,
+            "ci_high": 1.87683087428085
+          },
+          "differential_switching": {
+            "value": 0.018072289156626505,
+            "ci_low": -0.006024096385542169,
+            "ci_high": 0.04216867469879518
+          },
+          "policy_amplitude": {
+            "value": 2.4900858387292493,
+            "ci_low": 2.241074399482667,
+            "ci_high": 2.7422002028328114
+          },
+          "targeting_cosine": {
+            "value": 0.7273022670397838,
+            "ci_low": 0.6650135702027228,
+            "ci_high": 0.7837696512113721
+          }
+        }
+      ]
+    },
+    {
+      "model_key": "gemma",
+      "model": "Gemma-4-31B",
+      "dataset_key": "triviamc",
+      "dataset": "TriviaMC",
+      "validation": {
+        "model": "Gemma-4-31B",
+        "dataset": "TriviaMC",
+        "model_id": "google/gemma-4-31B-it",
+        "model_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+        "n": 500,
+        "conditions": [
+          "game",
+          "neutral"
+        ],
+        "all_inputs_finite": true,
+        "rank_order_exact_matches": 500,
+        "rank_order_gate_passed": true,
+        "trajectory": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/trajectories/run/results.npz",
+        "trajectory_sha256": "cb4d7a47e99c2a73beeb0f41a1fbdbc0a0106c85eec5e29022033c30684744eb",
+        "trajectory_metadata": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/trajectories/run/run_metadata.json",
+        "baseline": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/behavior/run/results.json",
+        "baseline_sha256": "b90309f5c5d505d11934c4cd19c93aca2c31b5affc2028579f021c54193cf887",
+        "split_plan": "outputs/prompt_variant_tests/qwen36_27b_triviamc_difficulty_filtered_strategic_replication/split_plan.json"
+      },
+      "splits": {
+        "full": {
+          "n": 500,
+          "corr_c1_neutral_old_w1_margin": 0.7752091055680675,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.09932730756669732,
+                "ci_low": -0.014513084074596472,
+                "ci_high": 0.21417188238329982
+              },
+              "standardized_beta": {
+                "value": 0.06430550744345198,
+                "ci_low": -0.009420105187185087,
+                "ci_high": 0.13946944565374864
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.24761424093040135,
+                "ci_low": 0.0279479022507646,
+                "ci_high": 0.4761597686741901
+              },
+              "standardized_beta": {
+                "value": 0.08722749038055218,
+                "ci_low": 0.010532861361238247,
+                "ci_high": 0.16289893642540418
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.3692372678781691,
+                "ci_low": -0.5081185001083032,
+                "ci_high": -0.23489207983131938
+              },
+              "standardized_beta": {
+                "value": -0.19401034014106505,
+                "ci_low": -0.2721952426384482,
+                "ci_high": -0.12009643023833946
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.15366395386354792,
+                "ci_low": 0.1100498879818857,
+                "ci_high": 0.1969838450992687
+              },
+              "standardized_beta": {
+                "value": 0.30939303048318245,
+                "ci_low": 0.2321566877623357,
+                "ci_high": 0.38155282268632223
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.09932730756669732,
+                "ci_low": -0.2141718823832999,
+                "ci_high": 0.014513084074596469
+              },
+              "standardized_beta": {
+                "value": -0.06430550744345198,
+                "ci_low": -0.13946944565374864,
+                "ci_high": 0.009420105187185081
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.1339500541180741,
+                "ci_low": 0.011930131489776789,
+                "ci_high": 0.2622109338103591
+              },
+              "standardized_beta": {
+                "value": 0.08858232666639504,
+                "ci_low": 0.008238876756384142,
+                "ci_high": 0.16691576613281195
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.16896845392554816,
+                "ci_low": -0.24917496735685038,
+                "ci_high": -0.08430181706872696
+              },
+              "standardized_beta": {
+                "value": -0.17851258540088333,
+                "ci_low": -0.27162358375850093,
+                "ci_high": -0.08718717010741311
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.13434570737417137,
+                "ci_low": 0.060531684180842836,
+                "ci_high": 0.208019523015724
+              },
+              "standardized_beta": {
+                "value": 0.1555258193121971,
+                "ci_low": 0.06963856344540814,
+                "ci_high": 0.24378319841601107
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.015610443639524987,
+              "ci_low": -0.04110752931789113,
+              "ci_high": 0.00895049443623507
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.005551764867229729,
+              "ci_low": -0.025217146815421542,
+              "ci_high": 0.03681829507817907
+            },
+            "corr_c1_margin": 0.7752091055680674,
+            "variance_inflation_factor": 2.5059463435119786,
+            "outcome_mean": 0.02
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.010802215532754001,
+              "ci_low": -0.13095268974398563,
+              "ci_high": 0.14462663625612973
+            },
+            "quadratic_c1_squared": {
+              "value": -0.45601520400942347,
+              "ci_low": -0.6259388582858054,
+              "ci_high": -0.29800196664511336
+            }
+          },
+          "means": {
+            "confidence_c1": 13.621441600024701,
+            "push_r1": 1.007650990174152,
+            "margin_push": 1.223998912423849,
+            "policy_amplitude": 2.0411230882304556,
+            "targeting_cosine": 0.5356318818181135,
+            "switch_game": 0.128,
+            "switch_neutral": 0.108,
+            "differential_switching": 0.02
+          }
+        },
+        "discovery": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.7749662588103721,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.20331611830017216,
+                "ci_low": 0.005884874817656542,
+                "ci_high": 0.3935664374827408
+              },
+              "standardized_beta": {
+                "value": 0.12313503173528917,
+                "ci_low": 0.0037348262533639497,
+                "ci_high": 0.2349878500182937
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.4678192061356402,
+                "ci_low": 0.09760135387549314,
+                "ci_high": 0.8570167727511853
+              },
+              "standardized_beta": {
+                "value": 0.1521870774548309,
+                "ci_low": 0.03527363794075937,
+                "ci_high": 0.2589511197604962
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.4204999459463909,
+                "ci_low": -0.6463521105622401,
+                "ci_high": -0.19129652981282477
+              },
+              "standardized_beta": {
+                "value": -0.1998545835464598,
+                "ci_low": -0.31708282407831206,
+                "ci_high": -0.08602843667194286
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.19024612803467783,
+                "ci_low": 0.1252624606391455,
+                "ci_high": 0.2531856672487064
+              },
+              "standardized_beta": {
+                "value": 0.37150296041638087,
+                "ci_low": 0.26464252233388375,
+                "ci_high": 0.4664583921863996
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.20331611830017216,
+                "ci_low": -0.3935664374827408,
+                "ci_high": -0.005884874817656544
+              },
+              "standardized_beta": {
+                "value": -0.12313503173528917,
+                "ci_low": -0.23498785001829378,
+                "ci_high": -0.0037348262533639545
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.25041864411798537,
+                "ci_low": 0.04500249643307502,
+                "ci_high": 0.47336694686152586
+              },
+              "standardized_beta": {
+                "value": 0.14358630562526742,
+                "ci_low": 0.030102887332206226,
+                "ci_high": 0.2524697134648841
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.2374805825097352,
+                "ci_low": -0.35885348612521994,
+                "ci_high": -0.11190699044908577
+              },
+              "standardized_beta": {
+                "value": -0.21932821666720104,
+                "ci_low": -0.34042050552381437,
+                "ci_high": -0.10119137367631467
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.19037805669192187,
+                "ci_low": 0.08658394797869771,
+                "ci_high": 0.2940085052395505
+              },
+              "standardized_beta": {
+                "value": 0.21206594897983944,
+                "ci_low": 0.09783123069180392,
+                "ci_high": 0.3250651461162855
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -0.025659873711613088,
+              "ci_low": -0.07192869939788772,
+              "ci_high": 0.009392216084944713
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": 0.03935199829790762,
+              "ci_low": -0.003667555600220973,
+              "ci_high": 0.0984110125765854
+            },
+            "corr_c1_margin": 0.7749662588103722,
+            "variance_inflation_factor": 2.5035845215001244,
+            "outcome_mean": 0.008
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": 0.0830379925174397,
+              "ci_low": -0.1517870491470773,
+              "ci_high": 0.3086792846441297
+            },
+            "quadratic_c1_squared": {
+              "value": -0.5743407791934393,
+              "ci_low": -0.8216653568283295,
+              "ci_high": -0.3292822135429291
+            }
+          },
+          "means": {
+            "confidence_c1": 13.627849198698998,
+            "push_r1": 0.9837769033852964,
+            "margin_push": 1.1213342250585556,
+            "policy_amplitude": 2.1664363763850343,
+            "targeting_cosine": 0.5227245782332135,
+            "switch_game": 0.124,
+            "switch_neutral": 0.116,
+            "differential_switching": 0.008
+          }
+        },
+        "confirmation": {
+          "n": 250,
+          "corr_c1_neutral_old_w1_margin": 0.777270231844721,
+          "univariate": {
+            "push_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.004744648796124764,
+                "ci_low": -0.13697303677318598,
+                "ci_high": 0.12073556678881772
+              },
+              "standardized_beta": {
+                "value": -0.003318508923003366,
+                "ci_low": -0.09487124918569452,
+                "ci_high": 0.09009969648482369
+              }
+            },
+            "margin_push": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.027325045602308733,
+                "ci_low": -0.21866195981696682,
+                "ci_high": 0.2654516188678878
+              },
+              "standardized_beta": {
+                "value": 0.010599195691383057,
+                "ci_low": -0.08360144957492285,
+                "ci_high": 0.1121792900899924
+              }
+            },
+            "policy_amplitude": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.31813398493200334,
+                "ci_low": -0.4749803586555521,
+                "ci_high": -0.17432160553487788
+              },
+              "standardized_beta": {
+                "value": -0.19060305118664356,
+                "ci_low": -0.2888195227886686,
+                "ci_high": -0.10808962210147365
+              }
+            },
+            "targeting_cosine": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.11706060744740464,
+                "ci_low": 0.060080899897715714,
+                "ci_high": 0.1774561153889072
+              },
+              "standardized_beta": {
+                "value": 0.24368099855394865,
+                "ci_low": 0.13213128210459485,
+                "ci_high": 0.3506685049354217
+              }
+            },
+            "delta_r1": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.004744648796124764,
+                "ci_low": -0.12073556678881772,
+                "ci_high": 0.1369730367731859
+              },
+              "standardized_beta": {
+                "value": 0.003318508923003366,
+                "ci_low": -0.09009969648482369,
+                "ci_high": 0.09487124918569449
+              }
+            },
+            "delta_r2": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.017441692877572745,
+                "ci_low": -0.10540616712272086,
+                "ci_high": 0.14009039894964842
+              },
+              "standardized_beta": {
+                "value": 0.014123508217925188,
+                "ci_low": -0.0873159900295524,
+                "ci_high": 0.12003519105214809
+              }
+            },
+            "delta_r3": {
+              "raw_outcome_per_1sd_c1": {
+                "value": -0.10051526427653659,
+                "ci_low": -0.204131360094534,
+                "ci_high": 0.010767539579012891
+              },
+              "standardized_beta": {
+                "value": -0.1290555348495725,
+                "ci_low": -0.2782902617676687,
+                "ci_high": 0.012714951253412883
+              }
+            },
+            "delta_r4": {
+              "raw_outcome_per_1sd_c1": {
+                "value": 0.07832892260283913,
+                "ci_low": -0.026820404686721474,
+                "ci_high": 0.18325726107676213
+              },
+              "standardized_beta": {
+                "value": 0.09484814128270874,
+                "ci_low": -0.03153792010157621,
+                "ci_high": 0.2296329521366138
+              }
+            }
+          },
+          "choice_lpm": {
+            "c1_coefficient": {
+              "value": -4.2422459536609355e-05,
+              "ci_low": -0.033813270467184416,
+              "ci_high": 0.03785398229537267
+            },
+            "neutral_old_w1_margin_coefficient": {
+              "value": -0.035259078855159415,
+              "ci_low": -0.07965255159384324,
+              "ci_high": -0.004021356336480694
+            },
+            "corr_c1_margin": 0.777270231844721,
+            "variance_inflation_factor": 2.526203125996096,
+            "outcome_mean": 0.032
+          },
+          "quadratic_push": {
+            "linear_c1": {
+              "value": -0.06704443388732058,
+              "ci_low": -0.22801571648428062,
+              "ci_high": 0.08569875433493308
+            },
+            "quadratic_c1_squared": {
+              "value": -0.34845848489194037,
+              "ci_low": -0.5690349027208033,
+              "ci_high": -0.1373739783218225
+            }
+          },
+          "means": {
+            "confidence_c1": 13.615034001350402,
+            "push_r1": 1.0315250769630075,
+            "margin_push": 1.3266635997891425,
+            "policy_amplitude": 1.9158098000758776,
+            "targeting_cosine": 0.5485391854030136,
+            "switch_game": 0.132,
+            "switch_neutral": 0.1,
+            "differential_switching": 0.032
+          }
+        }
+      },
+      "terciles": [
+        {
+          "tercile": "low",
+          "n": 167,
+          "c1_min": 0.0,
+          "c1_max": 8.875001907348633,
+          "c1_mean": 4.936010383560272,
+          "push_r1": {
+            "value": 0.6090287205729701,
+            "ci_low": 0.3661621768020573,
+            "ci_high": 0.8541270075332438
+          },
+          "differential_switching": {
+            "value": 0.011976047904191617,
+            "ci_low": -0.029940119760479042,
+            "ci_high": 0.05389221556886228
+          },
+          "policy_amplitude": {
+            "value": 2.2162101606406215,
+            "ci_low": 1.9614267128164415,
+            "ci_high": 2.4875825978599395
+          },
+          "targeting_cosine": {
+            "value": 0.3307462776554339,
+            "ci_low": 0.2344351092319582,
+            "ci_high": 0.42625044864430084
+          }
+        },
+        {
+          "tercile": "middle",
+          "n": 167,
+          "c1_min": 8.87501335144043,
+          "c1_max": 19.59372639656067,
+          "c1_mean": 14.420756655538867,
+          "push_r1": {
+            "value": 1.624035514829803,
+            "ci_low": 1.3469123962608551,
+            "ci_high": 1.9233080225287025
+          },
+          "differential_switching": {
+            "value": 0.04790419161676647,
+            "ci_low": 0.017964071856287425,
+            "ci_high": 0.08383233532934131
+          },
+          "policy_amplitude": {
+            "value": 2.554565214039219,
+            "ci_low": 2.188748212507835,
+            "ci_high": 2.976387286252078
+          },
+          "targeting_cosine": {
+            "value": 0.616630821225918,
+            "ci_low": 0.5471976528738176,
+            "ci_high": 0.6786623857715424
+          }
+        },
+        {
+          "tercile": "high",
+          "n": 166,
+          "c1_min": 19.593733310699463,
+          "c1_max": 25.161954879760742,
+          "c1_mean": 21.55506448483611,
+          "push_r1": {
+            "value": 0.7885769143061017,
+            "ci_low": 0.7040770488526779,
+            "ci_high": 0.8779113405325214
+          },
+          "differential_switching": {
+            "value": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "policy_amplitude": {
+            "value": 1.3484461237571959,
+            "ci_low": 1.2338324001710252,
+            "ci_high": 1.4727459910503824
+          },
+          "targeting_cosine": {
+            "value": 0.6602648517823555,
+            "ci_low": 0.6114116429148853,
+            "ci_high": 0.7066479558002716
+          }
+        }
+      ]
+    }
+  ],
+  "cross_model_synthesis": {
+    "full_cell_primary_signs": [
+      "positive",
+      "positive",
+      "positive",
+      "positive",
+      "positive",
+      "uncertain"
+    ],
+    "full_cell_targeting_signs": [
+      "positive",
+      "positive",
+      "positive",
+      "positive",
+      "positive",
+      "positive"
+    ],
+    "n_primary_positive": 5,
+    "n_targeting_positive": 6,
+    "all_positive": false,
+    "all_negative": false,
+    "all_uncertain": false
+  }
+}

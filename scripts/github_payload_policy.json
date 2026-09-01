@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "maximum_file_bytes": 5242880,
+  "large_artifact_threshold_bytes": 5242880,
+  "root_allowed_suffixes": [
+    ".jsonl",
+    ".md",
+    ".py"
+  ],
+  "root_allowed_names": [
+    ".gitattributes",
+    ".gitignore",
+    "requirements-mechinterp.txt",
+    "requirements.txt"
+  ],
+  "source_trees": {
+    "configs": [
+      ".json"
+    ],
+    "mechanistic": [
+      ".json",
+      ".md",
+      ".py",
+      ".sh"
+    ],
+    "scripts": [
+      ".json",
+      ".md",
+      ".py",
+      ".sh"
+    ],
+    "tests": [
+      ".py"
+    ],
+    "version_control": [
+      ".json",
+      ".md"
+    ]
+  },
+  "compiled_results_directory_prefix": "compiled_results",
+  "readme_link_allowed_suffixes": [
+    ".csv",
+    ".json",
+    ".md",
+    ".png"
+  ],
+  "explicit_includes": [
+    "artifacts/feedback_direction_qwen36_simplemc.csv",
+    "artifacts/feedback_direction_qwen36_simplemc.json",
+    "outputs/operations/scientific_corrections.json"
+  ],
+  "local_only_artifacts": [
+    "outputs/model_replications/mcq_uncertainty_policy/analysis/summary.json",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/analysis/workspace_lens_boundary_explorer.html",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/run/results.npz",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_semantic_switch_association/run/results.npz",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_workspace_lenses/analysis/readouts.json",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_workspace_lenses/analysis/workspace_lens_explorer.html",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/period_jlens/analysis/action_matched_period_jlens_explorer.html",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/full_state_top_tokens/full_state_top_tokens.json",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/semantic_direction_jlens_explorer.html",
+    "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/final_decision_positive_only_exact/data/per_question_condition_layer.csv"
+  ],
+  "forbidden_exact_paths": [
+    ".env",
+    ".vast-known_hosts"
+  ],
+  "forbidden_path_parts": [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".vast-config",
+    ".vast-state",
+    ".venv",
+    "__pycache__",
+    "capabilities_test_logs",
+    "failed_runs",
+    "game_logs",
+    "secondchance_game_logs",
+    "tmp",
+    "venv"
+  ],
+  "forbidden_suffixes": [
+    ".ckpt",
+    ".gz",
+    ".html",
+    ".log",
+    ".npy",
+    ".npz",
+    ".pdf",
+    ".pt",
+    ".pth",
+    ".pyc",
+    ".safetensors",
+    ".svg",
+    ".tar",
+    ".tgz",
+    ".zip"
+  ],
+  "readme_link_excluded_prefixes": [
+    "outputs/operations/"
+  ]
+}

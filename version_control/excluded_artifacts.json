@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "purpose": "Inventory of large or generated local artifacts intentionally excluded from the GitHub repository. It contains no artifact data.",
+  "payload_policy": "scripts/github_payload_policy.json",
+  "excluded_file_count": 11655,
+  "excluded_bytes": 6919288661,
+  "excluded_gib": 6.44409,
+  "excluded_bytes_by_top_level_path": {
+    ".DS_Store": 8196,
+    ".env": 1177,
+    ".pytest_cache": 15094,
+    ".ruff_cache": 1790,
+    ".vast-known_hosts": 2775,
+    "analysis_log_multi_logres_sc_simplemc_neut.txt": 795472,
+    "analysis_log_multi_logres_sc_simplemc_neut_all.txt": 392063,
+    "analysis_log_multi_logres_sc_simplemc_new.txt": 793183,
+    "analysis_log_multi_logres_sc_simplemc_new_all.txt": 391843,
+    "analysis_log_multi_logres_sc_simplemc_new_all_vs_neutral.txt": 645108,
+    "analysis_log_multi_logres_sc_simplemc_new_all_vs_neutral_parsed.txt": 3124,
+    "artifacts": 8486148,
+    "capabilities_test_logs": 3396606,
+    "failed_runs": 56305,
+    "figures": 18439959,
+    "game_logs": 14326,
+    "limitedmetacog.pdf": 3607530,
+    "output": 230343,
+    "outputs": 6869241265,
+    "secondchance_game_logs": 9421572,
+    "tmp": 3344782
+  },
+  "excluded_bytes_by_suffix": {
+    ".csv": 86606771,
+    ".gz": 8583718,
+    ".html": 61090936,
+    ".json": 541389035,
+    ".jsonl": 1936840,
+    ".log": 11231014,
+    ".md": 599836,
+    ".npy": 5201921140,
+    ".npz": 828147214,
+    ".pdf": 5696533,
+    ".png": 77983856,
+    ".pt": 23608546,
+    ".svg": 13084052,
+    ".tag": 234,
+    ".tgz": 54262322,
+    ".txt": 3087375,
+    "[none]": 59239
+  },
+  "large_files_at_or_above_threshold": [
+    {
+      "path": "artifacts/feedback_direction_qwen36_simplemc.npz",
+      "bytes": 8486148,
+      "sha256": "eca06c1038a7f8ae9e98ff61ae806ea0af04c3ac1b544e156c3627121ce574e1"
+    },
+    {
+      "path": "outputs/causal/qwen36_27b_baseline_mixer_function/baseline_mixer_function_results.npz",
+      "bytes": 7990195,
+      "sha256": "e304d7f567cc18196b9ed8545e851fa6380e1bf8354d0c2f36ca78c5ecb3ac73"
+    },
+    {
+      "path": "outputs/causal/qwen36_27b_historical_answer_intervention/confirmation_results.tgz",
+      "bytes": 27025235,
+      "sha256": "729dcd6ec51497b0617b0ca78e50da6bdf1aa8821393af219823b6cbd8b12416"
+    },
+    {
+      "path": "outputs/causal/qwen36_27b_mixer56_across_conditions/mixer56_across_conditions_results.npz",
+      "bytes": 7875132,
+      "sha256": "a40730b1db4e0105a3b8e7c71e1c3fb23c562a586fadc372cde92907056926e2"
+    },
+    {
+      "path": "outputs/causal/qwen36_27b_mixer56_answer_read/confirmation_results.tgz",
+      "bytes": 12479924,
+      "sha256": "71b6f52d2eec8aa9349b5fad205d14cbe37f5fba23a3d7f0c82e06c8eaafbcee"
+    },
+    {
+      "path": "outputs/causal/qwen36_27b_mixer56_endpoint_edge_ablation/confirmation_results.tgz",
+      "bytes": 11777531,
+      "sha256": "323749b9cc398d2a08b79ec9f6776e4886cc9507877221fe1882dbb8625e4e3b"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens/top_tokens.json",
+      "bytes": 7586789,
+      "sha256": "e7d5a3e649e819863bda97e3c769da375d79459021c7f2e741be3730b6e9ec07"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_bare_chatml_matched/top_tokens.json",
+      "bytes": 9413184,
+      "sha256": "fbf6355c0597bec604de23a82fa7929751e3f725e9235e505dd148687b1b7077"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_corrected_empty_history_full/analysis/top_tokens_with_baseline_ranks.json",
+      "bytes": 14605017,
+      "sha256": "f7fcce05940c7cad4d9f58742a6116f9c9d1117d8714833d96160c83a38d15a2"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_empty_history/analysis/top_tokens_with_baseline_ranks.json",
+      "bytes": 10690381,
+      "sha256": "255c42236a43373948f62d77bdfac17e881d90e3a093ee030e25555f14690004"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_empty_history/top_tokens.json",
+      "bytes": 9394261,
+      "sha256": "81ae3c15658c84d5a2a3ee6f3131a6dbaff814627bfd3a902584c0410e5ae179"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_expanded/top_tokens.json",
+      "bytes": 9551242,
+      "sha256": "14b00cddf300a5890ec239171c9a00348c96d4298a7ba3b16a6f8dba422edda9"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_no_system_incorrect/top_tokens.json",
+      "bytes": 9400662,
+      "sha256": "9af4fb84137aaed0253b8669db329ab3f9d1eb3033d5bcf9cfacab0ad54f89b3"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_jlens_raw_chatml_matched/top_tokens.json",
+      "bytes": 9394273,
+      "sha256": "66bf0ba7121bcf30417eb4da4c634dedf7189843e05f047bb00d47a372679176"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_simplemc/analysis/feedback_direction_lens/feedback_direction_vocab_logits.npz",
+      "bytes": 29214383,
+      "sha256": "5f368451b2b0a0cee5729e7611e166819f0185cb2151905ee5731c016a6d1f9f"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_simplemc_clean/analysis/switch_direction/switch_direction.npz",
+      "bytes": 24801441,
+      "sha256": "9e85403a37aebc1e3dbffb3ef5fe05eb17004b588f41a8cf966d23fa925d4d4e"
+    },
+    {
+      "path": "outputs/mechanistic/qwen36_27b_simplemc_clean/analysis/switch_direction/switch_direction_lens/feedback_direction_vocab_logits.npz",
+      "bytes": 29025235,
+      "sha256": "3599def4fc5b29d254507b6d0c4f233aae51944c6a07d143b2c8309ea944a4cd"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/behavior/run/results.json",
+      "bytes": 6982044,
+      "sha256": "6a4aecc161f9988bf7000f6680add7af8b4bab0652d1849d01b4b54791685703"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/trajectories/prospective_decoding/decoders.npz",
+      "bytes": 10991438,
+      "sha256": "33e4d5a72c778485bc604e0e17277f58852c74e1268653cfa12e795eae415999"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/simplemc/trajectories/run/decision_residuals.npy",
+      "bytes": 1290240128,
+      "sha256": "e7410ec27c6228594c2ccd3a82ae1967775c568da929d35456ae3eda65b861c1"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/behavior/run/results.json",
+      "bytes": 6715912,
+      "sha256": "b90309f5c5d505d11934c4cd19c93aca2c31b5affc2028579f021c54193cf887"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/trajectories/prospective_decoding/decoders.npz",
+      "bytes": 10990525,
+      "sha256": "1faf37ee3667499f688a4b27c5bab8b8df7983a2124b1e8ddbfb2bd6d91d7a04"
+    },
+    {
+      "path": "outputs/model_replications/gemma4_31b_negative_model_comparison/triviamc/trajectories/run/decision_residuals.npy",
+      "bytes": 1290240128,
+      "sha256": "9ae5bc7850a81126d5d718c18899e7c778f091416024b54aace164a33901b462"
+    },
+    {
+      "path": "outputs/model_replications/mcq_uncertainty_policy/analysis/summary.json",
+      "bytes": 14282782,
+      "sha256": "5fc02bd419aa82a566dee94927187d5ccf9a2c9e35e11afb7f4163d1b6ffa4f2"
+    },
+    {
+      "path": "outputs/model_replications/mcq_uncertainty_policy/qwen36_27b/directions/directions.npz",
+      "bytes": 7217518,
+      "sha256": "ed33022cf75b7584549ec0207b2b4d464b7f0415cdfbe50b8132dc715e561c76"
+    },
+    {
+      "path": "outputs/model_replications/mcq_uncertainty_policy/seed_oss_36b/directions/directions.npz",
+      "bytes": 7078382,
+      "sha256": "eb3171bdeaff21bdf1231cd8f3b1c67fab643a6bf6a6f1e947caadd98e15bf76"
+    },
+    {
+      "path": "outputs/model_replications/olmo2_32b_simplemc_behavioral_gate/run/results.json",
+      "bytes": 6721320,
+      "sha256": "de2f3f14e80259368b160d1a5f42916654264aa1b86d5ad4e62087054661298a"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_clean_behavioral_replication/simplemc/run/results.json",
+      "bytes": 6633261,
+      "sha256": "c30671d26aaf373e43e586d1fd9c7de8db9469de7ae5c9268cabc69b80aabf6a"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_clean_behavioral_replication/triviamc/run/results.json",
+      "bytes": 6338708,
+      "sha256": "272322e44f2aa74b3483fc472eba8e43134710727f1c2085e9413baced4434ce"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_final_position_trajectories/prospective_decoding/analysis/simplemc/decoders.npz",
+      "bytes": 10901348,
+      "sha256": "a4bb9beef3c0e9c7883cce0fbdb4d2d9b1825a9ca7f8c4d60855573650fb4709"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_final_position_trajectories/prospective_decoding/analysis/triviamc/decoders.npz",
+      "bytes": 10901763,
+      "sha256": "204acc30dce6de3f1e54a62adb318f22b0bce4460af9621db339ba6c68f65855"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/simplemc/decision_residuals.npy",
+      "bytes": 1310720128,
+      "sha256": "72ecc5158892ca051fcf7be434885c4bb2fbb919cbfbe70fa3244a27e8d2e3a6"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_final_position_trajectories/run/triviamc/decision_residuals.npy",
+      "bytes": 1310720128,
+      "sha256": "6faa5faa2b94b2f835248bdc6b8de7ee2b6db971944a92fd5b2243f5bde5795b"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_mechanistic_replication/simplemc/fresh_removal/run/results.npz",
+      "bytes": 45632138,
+      "sha256": "8d6df4f11f4b7b42df5a98ec9faca9b702c988a2e2968910db8d1644a7d9dcd9"
+    },
+    {
+      "path": "outputs/model_replications/seed_oss_36b_mechanistic_replication/triviamc/fresh_removal/run/results.npz",
+      "bytes": 45560121,
+      "sha256": "54966db9b96542fda84790f7d42242cd71d7310271a20426eb2098a478e56a76"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_clean_final_residual_variance/run/simplemc/results.npz",
+      "bytes": 14650748,
+      "sha256": "91908ff9a5670e9b0c99fc8be43c99efc296a5fb29399562d6a91cdf9c424534"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_clean_final_residual_variance/run/triviamc/results.npz",
+      "bytes": 14631397,
+      "sha256": "f9dfa60dcdd34e49e2a0e8f086027ac2e1c26d3fcbc1b39699e3a3f477c31ee6"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/simplemc/decoders.npz",
+      "bytes": 10905199,
+      "sha256": "73bec47f03e01f1f33466f7b337fb999673112a2e7fc6d966613348406b3baad"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_nonremapped_rank_trajectories/prospective_decoding/analysis/triviamc/decoders.npz",
+      "bytes": 10905737,
+      "sha256": "6943b67b75c6909c0fdab77b97bf1f1dfe67dccd4f07ea5a350b868c0964a4e0"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/run/readouts.json",
+      "bytes": 8951218,
+      "sha256": "cd8e1812d9d7ad69d96943a2ea7d54a976d5d129d3fe0251fd1fdd7a2a6cf49b"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/run/results.npz",
+      "bytes": 15007346,
+      "sha256": "2ccce59a55709e6eeba69db18abd44660a734a6fe4231976701ba44467ab036e"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_residual_writes/run/results.npz",
+      "bytes": 18979718,
+      "sha256": "c07c82deb9c45e2d1c4be86262f4bef24d4c026e04989ed1060705489ba4fa54"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_workspace_lenses/analysis/readouts.json",
+      "bytes": 8329436,
+      "sha256": "e7b044150d0c4dc183bc95f915d538320c8cecc8a91fdbc33d229de76d665df6"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/period_jlens/run/results.npz",
+      "bytes": 5432812,
+      "sha256": "10650c35caf9709f6fbeb138d9f9e6087edaaadb5947f03026a06b986f2e55f5"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/fresh_history_double_dissociation/run/results.npz",
+      "bytes": 46010830,
+      "sha256": "e52e9e30af0ae2c6bb0e3a2885a299eae29ab5cf06714a8c474fe711968a66ca"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_choice_probe/analysis/probe_results.npz",
+      "bytes": 7899342,
+      "sha256": "f44cd09acd7bef0b7e22654e87091813df72192ad573600d80c9797d901c3397"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/option_newline_choice_probe/fresh_host_analysis/probe_results.npz",
+      "bytes": 7899120,
+      "sha256": "2375c28b2ad31f37b3b5df6d3647b1be6a39a64dde7406dd2a0b50dc0343db2d"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/question_stem_access_factorial/run/results.npz",
+      "bytes": 15559673,
+      "sha256": "4d8a96711e266f01a76b092e235c774e3ffba2f91cab97a6f06e476cb65a0453"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/cue_score_integration/cue_score_decoders.pt",
+      "bytes": 6558859,
+      "sha256": "bf408736bf9b8baf007cc303785a32995cfedc10ce4aef4b0217ad169f920d16"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/final_position_program/score/final_score_decoders.pt",
+      "bytes": 6559007,
+      "sha256": "737ddc9bc6773aaa69401ec2294be7957fc835a41488abe1791d68f7db99cf5d"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/final_position_program/source_writes/final_query_source_writes.npz",
+      "bytes": 9515322,
+      "sha256": "e1ef1310daa32c82b48b202669a0880842ebdd869e6c748319b1c5a86f63bdc1"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/full_state_top_tokens/full_state_top_tokens.json",
+      "bytes": 8036331,
+      "sha256": "09a336da6e396f52762d2df23acd43cd2bcae8205bce55b82d84f1cfd160d7cc"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_token_cross/policy_token_cross.json",
+      "bytes": 10755735,
+      "sha256": "055d7b147e5ca452057959ab128f9b00c234fdacc8a7543fd6e48f3bed1548d1"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_token_cross_raw/policy_token_cross.json",
+      "bytes": 24792767,
+      "sha256": "42fe1b9f21a1a48f2379725510019c9fa936db98e59f3420ee14d8eba47fe0f5"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_transport/policy_residual_trajectory.json",
+      "bytes": 16034574,
+      "sha256": "e198f3af51c2a447abf6e55bb055de6c4b5016b7a5b5d91e205cb5bdeb0d4b8a"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_transport_raw/policy_residual_trajectory.json",
+      "bytes": 52155937,
+      "sha256": "20ccc19c256a7e39c8c6291c3350e8b25550ca442f998028a4852d050969c990"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/policy_write_semantics/policy_write_semantics.json",
+      "bytes": 10823990,
+      "sha256": "848e088bf7a4faa0348dd926f049077d654abd988236204dc0821df975cc0516"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/score_integration/score_directions.pt",
+      "bytes": 5244520,
+      "sha256": "9c7c3d2635b370455d94f859c5677812d3566ff4247ccea281a26ceb855e2f01"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/score_source_attribution/score_source_attribution_arrays.npz",
+      "bytes": 16812798,
+      "sha256": "4034ebcb4e98ccd3047207a3bac87ff81f0b01a6680e7903cc5fedbf024ab033"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/four_mapping_average_lens_audit.json.gz",
+      "bytes": 8583718,
+      "sha256": "ff8a03b847f5b1ad82210755c51275c4762e663e4523eaf6f9b9aa8d681c284d"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/four_mapping_average_lens_explorer.html",
+      "bytes": 43015188,
+      "sha256": "fa4383f4cf329c73c2b3220ea3de87b0ba5f4c5761b22175871d8c9e1a278d9a"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/sample_lens_top_tokens.json",
+      "bytes": 6222333,
+      "sha256": "2eee8329cfafedbdc2096b818a525eb2747dc28ab65159334a7f4d63468d7d93"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/final_decision_positive_only_exact/data/per_question_condition_layer.csv",
+      "bytes": 13572279,
+      "sha256": "9b8bc69711be7dfc60bddf3c8738a6d6f640a2d10504615b8c4ff20bdc67ceca"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/jlens_explorer/top_tokens_with_baseline_ranks.json",
+      "bytes": 12480499,
+      "sha256": "181da9838ffbb9fffbefa4b0a7e6c3bd7c5977e0cd3e225f339f90612c9addf3"
+    },
+    {
+      "path": "outputs/rank_shifts/trial_rank_shifts.csv",
+      "bytes": 31193167,
+      "sha256": "310f905f1a52d4eb80c00dd12138fbbb5c769704668a43edf45449a05b84ff36"
+    }
+  ],
+  "readme_linked_local_only_artifacts": [
+    {
+      "path": "outputs/model_replications/mcq_uncertainty_policy/analysis/summary.json",
+      "reason": "declared_local_only",
+      "bytes": 14282782,
+      "sha256": "5fc02bd419aa82a566dee94927187d5ccf9a2c9e35e11afb7f4163d1b6ffa4f2"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/analysis/workspace_lens_boundary_explorer.html",
+      "reason": "declared_local_only",
+      "bytes": 1886621,
+      "sha256": "f97a687ec8e6949c973412b8f8d917059f964021a7dd9f6435261c5006091924"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_boundary_workspace_lenses/run/results.npz",
+      "reason": "declared_local_only",
+      "bytes": 15007346,
+      "sha256": "2ccce59a55709e6eeba69db18abd44660a734a6fe4231976701ba44467ab036e"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_semantic_switch_association/run/results.npz",
+      "reason": "declared_local_only",
+      "bytes": 220439,
+      "sha256": "ffa781fb2a34cbbdab7d55226bb8dbcf6a17fb7dbf22b499e8a0532066903884"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_workspace_lenses/analysis/readouts.json",
+      "reason": "declared_local_only",
+      "bytes": 8329436,
+      "sha256": "e7b044150d0c4dc183bc95f915d538320c8cecc8a91fdbc33d229de76d665df6"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/gla_workspace_lenses/analysis/workspace_lens_explorer.html",
+      "reason": "declared_local_only",
+      "bytes": 1449958,
+      "sha256": "b402baacc703104b4e5461366adb305d4aa5b7d54c64736568cd04db51c42678"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/feedback_factorial/period_jlens/analysis/action_matched_period_jlens_explorer.html",
+      "reason": "declared_local_only",
+      "bytes": 349671,
+      "sha256": "eb74b1af0201c02457ca268cced543708b1ba4e6fc2037e2f028cff745ccac8d"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/full_state_top_tokens/full_state_top_tokens.json",
+      "reason": "declared_local_only",
+      "bytes": 8036331,
+      "sha256": "09a336da6e396f52762d2df23acd43cd2bcae8205bce55b82d84f1cfd160d7cc"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/contextual_option_representations/analysis/semantic_direction_jlens_explorer.html",
+      "reason": "declared_local_only",
+      "bytes": 1773542,
+      "sha256": "35e4f57892d0840f258c813ad3cdbc865b62c97d13c7c68f68a5b8e9c9da9ec1"
+    },
+    {
+      "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/final_decision_positive_only_exact/data/per_question_condition_layer.csv",
+      "reason": "declared_local_only",
+      "bytes": 13572279,
+      "sha256": "9b8bc69711be7dfc60bddf3c8738a6d6f640a2d10504615b8c4ff20bdc67ceca"
+    }
+  ],
+  "notes": [
+    "Credential files and virtual environments are never hashed or listed as artifacts.",
+    "Small excluded intermediates are summarized by location and suffix rather than listed individually.",
+    "This manifest is provenance, not a promise that every excluded file will be archived externally."
+  ]
+}

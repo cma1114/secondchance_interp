@@ -1,0 +1,764 @@
+{
+  "confirmation": {
+    "layerwise": [
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.0001862956644737557,
+            0.00843793410960942
+          ],
+          "mean": 0.003980455333239412,
+          "n": 73
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.035446671590413134,
+            0.017011384768028767
+          ],
+          "mean": -0.010279799160892016,
+          "n": 73
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.016594024880291665,
+            0.020838751205026273
+          ],
+          "mean": 0.0023650861766240368,
+          "n": 73
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.02054794520547945,
+            0.08904109589041095
+          ],
+          "mean": 0.03424657534246575,
+          "n": 73
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.003398894773770685,
+            0.005777976243463279
+          ],
+          "mean": 0.0011488370699425266,
+          "n": 73
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.03795368769397474,
+            0.012972526027731697
+          ],
+          "mean": -0.012644885337516053,
+          "n": 73
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.02054794520547945,
+            0.02054794520547945
+          ],
+          "mean": 0.0,
+          "n": 73
+        },
+        "readout": 52
+      }
+    ],
+    "max_identity_patch_ad_logit_error": 0.0,
+    "max_identity_source_error_norm": 0.0,
+    "mean_donor_identity_delta_norm_at_selected": 16.895036697387695,
+    "n": 73,
+    "natural_semantic_targeting": {
+      "ci": [
+        0.852656805351989,
+        1.2047580957412716
+      ],
+      "mean": 1.0160056989486903,
+      "n": 73
+    },
+    "readouts": [
+      52
+    ],
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_first_decision_transfer/confirmation",
+    "selected_readout": 52,
+    "selection_rule": "maximum discovery Game-minus-Neutral signed semantic margin transfer"
+  },
+  "discovery": {
+    "layerwise": [
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.003776670480147004,
+            0.006937135104089973
+          ],
+          "mean": 0.0016199443489313126,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.019544676691293717,
+            0.020007552206516264
+          ],
+          "mean": 0.0006261169910430908,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.017140010744333266,
+            0.03582446463406086
+          ],
+          "mean": 0.01001429557800293,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.03125,
+            0.015625
+          ],
+          "mean": -0.0078125,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.005708101484924555,
+            0.00387218976393342
+          ],
+          "mean": -0.0009252354502677917,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.026207561418414117,
+            0.008749286457896232
+          ],
+          "mean": -0.009388178586959839,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.09375,
+            -0.0234375
+          ],
+          "mean": -0.0546875,
+          "n": 64
+        },
+        "readout": 1
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.0052779456833377475,
+            0.00646131378598511
+          ],
+          "mean": 0.0005522044375538826,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.029199649393558503,
+            0.007865438237786288
+          ],
+          "mean": -0.011307567358016968,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.028497879952192304,
+            0.01789867244660852
+          ],
+          "mean": -0.005477979779243469,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.046875,
+            0.015625
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.002785214874893427,
+            0.00739103953819722
+          ],
+          "mean": 0.0021621333435177803,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.018761858344078064,
+            0.006850475072860716
+          ],
+          "mean": -0.0058295875787734985,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0546875,
+            0.0234375
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "readout": 8
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.006824667216278613,
+            0.005499987606890499
+          ],
+          "mean": -0.0007068226113915443,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.01829178147017956,
+            0.022541932016611095
+          ],
+          "mean": 0.0026858150959014893,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.011115393415093421,
+            0.03893312849104404
+          ],
+          "mean": 0.013455897569656372,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0390625,
+            0.046875
+          ],
+          "mean": 0.0,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.003928371309302747,
+            0.006030411389656365
+          ],
+          "mean": 0.0011220350861549377,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.02586686834692955,
+            0.0048638161271810434
+          ],
+          "mean": -0.010770082473754883,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.03125,
+            0.03125
+          ],
+          "mean": 0.0,
+          "n": 64
+        },
+        "readout": 16
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.009008069057017565,
+            0.0012782074511051172
+          ],
+          "mean": -0.0036924052983522415,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.012790196761488914,
+            0.021182681620120995
+          ],
+          "mean": 0.0038968324661254883,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.022938740253448487,
+            0.03048739507794379
+          ],
+          "mean": 0.004179343581199646,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0390625,
+            0.046875
+          ],
+          "mean": 0.0,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.005908950534649193,
+            0.0058541578240692595
+          ],
+          "mean": -3.056135028600693e-05,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.018412934616208076,
+            0.017966171354055403
+          ],
+          "mean": -0.0002825111150741577,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.046875,
+            0.015625
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "readout": 24
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.005092521919868887,
+            0.003972050477750598
+          ],
+          "mean": -0.0004255492240190506,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.016388798132538795,
+            0.0174056775867939
+          ],
+          "mean": 0.0009331852197647095,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.019738181680440902,
+            0.03065335825085639
+          ],
+          "mean": 0.005717262625694275,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0234375,
+            0.0625
+          ],
+          "mean": 0.015625,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.003961975779384374,
+            0.003880076762288809
+          ],
+          "mean": 2.4611130356788635e-05,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.02106765881180763,
+            0.011443410441279406
+          ],
+          "mean": -0.004784077405929565,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0546875,
+            0.0
+          ],
+          "mean": -0.0234375,
+          "n": 64
+        },
+        "readout": 32
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.006019801367074251,
+            0.00415772013366222
+          ],
+          "mean": -0.0009390860795974731,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.013253211602568626,
+            0.0172572799026966
+          ],
+          "mean": 0.0021489858627319336,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.004053185135126113,
+            0.038893283531069744
+          ],
+          "mean": 0.01751558482646942,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.03125,
+            0.0546875
+          ],
+          "mean": 0.0078125,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.003046563174575567,
+            0.005590726947411888
+          ],
+          "mean": 0.001299903728067875,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.0304671086370945,
+            0.00017262399196624353
+          ],
+          "mean": -0.015366598963737488,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0703125,
+            0.0
+          ],
+          "mean": -0.03125,
+          "n": 64
+        },
+        "readout": 40
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            -0.005668605328537524,
+            0.004952612053602932
+          ],
+          "mean": -0.00025105196982622147,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.020244373381137847,
+            0.022163706272840488
+          ],
+          "mean": 0.0009541958570480347,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.00388062447309494,
+            0.046178700402379036
+          ],
+          "mean": 0.020457938313484192,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0234375,
+            0.0703125
+          ],
+          "mean": 0.015625,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.0010711173759773373,
+            0.007433663797564804
+          ],
+          "mean": 0.003235054202377796,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.04152591712772846,
+            0.0016838844865560464
+          ],
+          "mean": -0.019503742456436157,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0546875,
+            0.0
+          ],
+          "mean": -0.0234375,
+          "n": 64
+        },
+        "readout": 48
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            0.003108477802015841,
+            0.011743088043294847
+          ],
+          "mean": 0.007451430894434452,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.027374038100242613,
+            0.020829537883400917
+          ],
+          "mean": -0.0035231560468673706,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.0005669511854648589,
+            0.042669546231627456
+          ],
+          "mean": 0.020624414086341858,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0234375,
+            0.0
+          ],
+          "mean": -0.0078125,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            0.0010845829732716087,
+            0.010970560042187568
+          ],
+          "mean": 0.005987854674458504,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.0531517468392849,
+            0.004146192595362661
+          ],
+          "mean": -0.02414757013320923,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0390625,
+            0.0
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "readout": 52
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            0.001201041485182941,
+            0.011095738830044865
+          ],
+          "mean": 0.006182375364005566,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.053445587307214736,
+            0.010204662010073657
+          ],
+          "mean": -0.02140931785106659,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.015721967071294782,
+            0.02959241084754467
+          ],
+          "mean": 0.0069904625415802,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            0.0027881252812221647,
+            0.013641791976988315
+          ],
+          "mean": 0.00812237523496151,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.0640022836625576,
+            0.006283400580286962
+          ],
+          "mean": -0.02839978039264679,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0390625,
+            0.0
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "readout": 56
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            0.002559649362228811,
+            0.011369184963405133
+          ],
+          "mean": 0.006908793933689594,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.047833175584673884,
+            0.016036655008792877
+          ],
+          "mean": -0.01577247679233551,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.020871270075440405,
+            0.029723696038126947
+          ],
+          "mean": 0.005063831806182861,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            -0.0234375,
+            0.0
+          ],
+          "mean": -0.0078125,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            -0.0004945967579260467,
+            0.010291120735928416
+          ],
+          "mean": 0.004776237532496452,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.057174419239163395,
+            0.01484910137951374
+          ],
+          "mean": -0.02083630859851837,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0390625,
+            0.0
+          ],
+          "mean": -0.015625,
+          "n": 64
+        },
+        "readout": 60
+      },
+      {
+        "game_entropy_change_bits": {
+          "ci": [
+            0.000731260096654296,
+            0.011927805561572313
+          ],
+          "mean": 0.006348835304379463,
+          "n": 64
+        },
+        "game_margin_transfer": {
+          "ci": [
+            -0.055627785995602606,
+            0.013049145787954314
+          ],
+          "mean": -0.021269753575325012,
+          "n": 64
+        },
+        "game_minus_neutral_margin_transfer": {
+          "ci": [
+            -0.01112915463745594,
+            0.03342859670519829
+          ],
+          "mean": 0.011289238929748535,
+          "n": 64
+        },
+        "game_selection_transfer": {
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n": 64
+        },
+        "neutral_entropy_change_bits": {
+          "ci": [
+            0.0008523426018655304,
+            0.013753213454037901
+          ],
+          "mean": 0.007234819233417511,
+          "n": 64
+        },
+        "neutral_margin_transfer": {
+          "ci": [
+            -0.07132276967167854,
+            0.006223599240183823
+          ],
+          "mean": -0.03255899250507355,
+          "n": 64
+        },
+        "neutral_selection_transfer": {
+          "ci": [
+            -0.0703125,
+            0.0
+          ],
+          "mean": -0.03125,
+          "n": 64
+        },
+        "readout": 63
+      }
+    ],
+    "max_identity_patch_ad_logit_error": 0.0,
+    "max_identity_source_error_norm": 0.0,
+    "mean_donor_identity_delta_norm_at_selected": 15.319255828857422,
+    "n": 64,
+    "natural_semantic_targeting": {
+      "ci": [
+        0.7115302916616202,
+        1.0598664350807665
+      ],
+      "mean": 0.8756958395242691,
+      "n": 64
+    },
+    "readouts": [
+      1,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      52,
+      56,
+      60,
+      63
+    ],
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_first_decision_transfer/discovery",
+    "selected_readout": 52,
+    "selection_rule": "maximum discovery Game-minus-Neutral signed semantic margin transfer"
+  }
+}

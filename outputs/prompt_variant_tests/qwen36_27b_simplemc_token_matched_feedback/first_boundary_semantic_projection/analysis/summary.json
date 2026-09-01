@@ -1,0 +1,2035 @@
+{
+  "definition": "Effect is first-answer-boundary GLA-write lesion minus natural. Projection is the final-decision residual dot the exact layer-specific W1 semantic direction.",
+  "splits": {
+    "discovery": {
+      "n": 251,
+      "subsets": {
+        "all": {
+          "n": 251,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.1765577907106315,
+                "ci_low": 0.10778176074483958,
+                "ci_high": 2.3255177544170165,
+                "n": 251
+              },
+              "final_natural_projection": {
+                "mean": 6.692925843822054,
+                "ci_low": 3.2923949704583424,
+                "ci_high": 10.037464414839722,
+                "n": 251
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.7694463416399708,
+                "ci_low": 0.7431416201638986,
+                "ci_high": 2.8354905938484753,
+                "n": 251
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.4730020652254263,
+                "ci_low": 0.6353512050621063,
+                "ci_high": 2.322154315201885,
+                "n": 251
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.2964442792641689,
+                "ci_low": -0.3592151935119553,
+                "ci_high": 0.985284236037873,
+                "n": 251
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.20823640937349236,
+                "ci_low": 0.13455687105893138,
+                "ci_high": 0.28448128253815175,
+                "n": 251
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.053212590515613556
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 1.685233383064726,
+                "ci_low": 0.6820797685370502,
+                "ci_high": 2.655473111231488,
+                "n": 251
+              },
+              "final_natural_projection": {
+                "mean": 8.304233298358689,
+                "ci_low": 4.898536859233066,
+                "ci_high": 11.744638850275736,
+                "n": 251
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.459465286171294,
+                "ci_low": 1.4864095211266521,
+                "ci_high": 3.4195964450380236,
+                "n": 251
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.0723493303435734,
+                "ci_low": 1.293765914333294,
+                "ci_high": 2.8738485945173466,
+                "n": 251
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.3871159553527832,
+                "ci_low": -0.17294570585171065,
+                "ci_high": 1.0188717021885143,
+                "n": 251
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3206046444486337,
+                "ci_low": 0.24278010721225662,
+                "ci_high": 0.4019587917394372,
+                "n": 251
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.07303089648485184
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.5086755876047203,
+            "ci_low": -1.3709546869019589,
+            "ci_high": 0.40225343207914016,
+            "n": 251
+          }
+        },
+        "conflict": {
+          "n": 137,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 0.020440174715362327,
+                "ci_low": -1.4118315688449972,
+                "ci_high": 1.4177169431300038,
+                "n": 137
+              },
+              "final_natural_projection": {
+                "mean": 4.5871724281867925,
+                "ci_low": -0.0289815217909151,
+                "ci_high": 9.184058588482163,
+                "n": 137
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.699255656151876,
+                "ci_low": 0.312975275473003,
+                "ci_high": 3.144610148972838,
+                "n": 137
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.8598479163037599,
+                "ci_low": -0.21484050067671895,
+                "ci_high": 1.9670234164617357,
+                "n": 137
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.8394077450689608,
+                "ci_low": -0.028021923816987187,
+                "ci_high": 1.7504062822265336,
+                "n": 137
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.12229973034267008,
+                "ci_low": 0.030522671581184782,
+                "ci_high": 0.21251066122611945,
+                "n": 137
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.0009486045455560088,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.15135034157411895,
+                "ci_low": 0.017300778757916753,
+                "ci_high": 0.2914051668487325,
+                "n": 137
+              },
+              "projection_margin_effect_correlation": 0.052285461440854934
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 0.8080185242812999,
+                "ci_low": -0.40748657362304463,
+                "ci_high": 2.007866551406191,
+                "n": 137
+              },
+              "final_natural_projection": {
+                "mean": 5.396399988745251,
+                "ci_low": 0.7414941367876791,
+                "ci_high": 10.036304725608684,
+                "n": 137
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.1381316672276407,
+                "ci_low": 1.0380830251387436,
+                "ci_high": 3.3345288301906444,
+                "n": 137
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.4730750905336254,
+                "ci_low": 0.5992647399867538,
+                "ci_high": 2.3657556493786984,
+                "n": 137
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.6650565766940152,
+                "ci_low": -0.10873960943987769,
+                "ci_high": 1.4714184464329345,
+                "n": 137
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.2902846823643594,
+                "ci_low": 0.19868977600640625,
+                "ci_high": 0.3871930430405331,
+                "n": 137
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.035322725772857666,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.23465127318444914,
+                "ci_low": 0.0897888549052886,
+                "ci_high": 0.3832805918951103,
+                "n": 137
+              },
+              "projection_margin_effect_correlation": 0.20725729975143237
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.7875783478256559,
+            "ci_low": -1.962396082564862,
+            "ci_high": 0.45239226322104453,
+            "n": 137
+          }
+        },
+        "no_conflict": {
+          "n": 114,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 2.5659272064242447,
+                "ci_low": 0.847917157725284,
+                "ci_high": 4.294120759817589,
+                "n": 114
+              },
+              "final_natural_projection": {
+                "mean": 9.223524246822324,
+                "ci_low": 4.129293075935882,
+                "ci_high": 14.444173231433355,
+                "n": 114
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.8537983057791727,
+                "ci_low": 0.27441752526843755,
+                "ci_high": 3.5090935207772653,
+                "n": 114
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.209862752964622,
+                "ci_low": 0.9153409343016775,
+                "ci_high": 3.535778188287166,
+                "n": 114
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.35606444718544944,
+                "ci_low": -1.3401554240469347,
+                "ci_high": 0.7423668846226568,
+                "n": 114
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.31151119031404195,
+                "ci_low": 0.19095464913468613,
+                "ci_high": 0.4345840601544631,
+                "n": 114
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.11260498315095901
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 2.7394301870412994,
+                "ci_low": 1.059257700202758,
+                "ci_high": 4.448780606504072,
+                "n": 114
+              },
+              "final_natural_projection": {
+                "mean": 11.798734731841506,
+                "ci_low": 6.71644461552302,
+                "ci_high": 16.90155441034258,
+                "n": 114
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.8456293720948067,
+                "ci_low": 1.202747346643816,
+                "ci_high": 4.506384379351345,
+                "n": 114
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.7925297764309667,
+                "ci_low": 1.4170915207057668,
+                "ci_high": 4.230376775850329,
+                "n": 114
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.053099594618144785,
+                "ci_low": -0.786080313617723,
+                "ci_high": 1.0026426346155626,
+                "n": 114
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3570417918657002,
+                "ci_low": 0.22377838351224597,
+                "ci_high": 0.48868139067239913,
+                "n": 114
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.11748971045017242
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.17350297225149056,
+            "ci_low": -1.531710965905273,
+            "ci_high": 1.1110696615879994,
+            "n": 114
+          }
+        },
+        "conflict_w1_a": {
+          "n": 89,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -0.1378030776977539,
+                "ci_low": -1.834247323301401,
+                "ci_high": 1.5858242355035925,
+                "n": 89
+              },
+              "final_natural_projection": {
+                "mean": 2.418958988082543,
+                "ci_low": -3.2378772718852824,
+                "ci_high": 7.891496712639089,
+                "n": 89
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.497870822970787,
+                "ci_low": 0.8838357138499785,
+                "ci_high": 4.0978739437092555,
+                "n": 89
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.1800338739759466,
+                "ci_low": 0.04669889955038436,
+                "ci_high": 2.4427906420123704,
+                "n": 89
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.3178369570314215,
+                "ci_low": 0.19616980083872765,
+                "ci_high": 2.452572545308745,
+                "n": 89
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.13823607262600673,
+                "ci_low": 0.027498476558856753,
+                "ci_high": 0.24780042867981983,
+                "n": 89
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.006466604303568602,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.19155532322572857,
+                "ci_low": 0.035693244184001126,
+                "ci_high": 0.34523194184464007,
+                "n": 89
+              },
+              "projection_margin_effect_correlation": -0.009795480953799366
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 1.1913994831985302,
+                "ci_low": -0.22966962583949058,
+                "ci_high": 2.639704925290654,
+                "n": 89
+              },
+              "final_natural_projection": {
+                "mean": 2.852229174603237,
+                "ci_low": -3.030123155840327,
+                "ci_high": 8.62539869854959,
+                "n": 89
+              },
+              "final_absolute_projection_effect": {
+                "mean": 3.0505572169014576,
+                "ci_low": 1.8313807370957365,
+                "ci_high": 4.299469052405838,
+                "n": 89
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.120978344692273,
+                "ci_low": 1.0782643486944476,
+                "ci_high": 3.179058381680692,
+                "n": 89
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.9295788722091847,
+                "ci_low": 0.11873313764507852,
+                "ci_high": 1.7711861792575094,
+                "n": 89
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.37207743826876866,
+                "ci_low": 0.2459333537669664,
+                "ci_high": 0.4993308071340067,
+                "n": 89
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.05291404202580452,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.2929098150703344,
+                "ci_low": 0.09927793245637015,
+                "ci_high": 0.4810543676440634,
+                "n": 89
+              },
+              "projection_margin_effect_correlation": 0.15786872553715492
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -1.3292025582174236,
+            "ci_low": -2.8097775852412323,
+            "ci_high": 0.2590854848368767,
+            "n": 89
+          }
+        },
+        "conflict_w1_bcd": {
+          "n": 48,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 0.313849538564682,
+                "ci_low": -2.2963447784384092,
+                "ci_high": 2.825351313253242,
+                "n": 48
+              },
+              "final_natural_projection": {
+                "mean": 8.607401515046755,
+                "ci_low": 1.1160831086337566,
+                "ci_high": 16.296601235369838,
+                "n": 48
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.21849003434181213,
+                "ci_low": -2.407627051572005,
+                "ci_high": 2.868215826402108,
+                "n": 48
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.26616978645324707,
+                "ci_low": -1.8413646241029102,
+                "ci_high": 2.384170176337162,
+                "n": 48
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.047679752111434937,
+                "ci_low": -1.3663662751515706,
+                "ci_high": 1.4509370793898897,
+                "n": 48
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.0927510956923167,
+                "ci_low": -0.07100565657019615,
+                "ci_high": 0.25293872008721036,
+                "n": 48
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.014273494482040405,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.07680360476175944,
+                "ci_low": -0.18114899694919587,
+                "ci_high": 0.33056685129801416,
+                "n": 48
+              },
+              "projection_margin_effect_correlation": 0.14362109711713272
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 0.09716632962226868,
+                "ci_low": -2.1295656335850555,
+                "ci_high": 2.396978776653607,
+                "n": 48
+              },
+              "final_natural_projection": {
+                "mean": 10.113716706633568,
+                "ci_low": 2.5330506725857656,
+                "ci_high": 17.728471755484733,
+                "n": 48
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.44634262720743817,
+                "ci_low": -1.7224862441420554,
+                "ci_high": 2.665014640738563,
+                "n": 48
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.2717544734477997,
+                "ci_low": -1.1823813674350578,
+                "ci_high": 1.9201528293391061,
+                "n": 48
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.17458815375963846,
+                "ci_low": -1.4243624925613405,
+                "ci_high": 1.8065411843359465,
+                "n": 48
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.13862728079160055,
+                "ci_low": 0.0013927854597568518,
+                "ci_high": 0.28103458335002257,
+                "n": 48
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.004127362743020058,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.12663022677103677,
+                "ci_low": -0.0890794316927592,
+                "ci_high": 0.36037846903006215,
+                "n": 48
+              },
+              "projection_margin_effect_correlation": 0.2909850321074926
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.21668320894241333,
+            "ci_low": -1.7409065959354242,
+            "ci_high": 2.174031895647446,
+            "n": 48
+          }
+        },
+        "no_conflict_w1_a": {
+          "n": 29,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 3.4158846427654397,
+                "ci_low": 0.36411576764336956,
+                "ci_high": 6.501841829151937,
+                "n": 29
+              },
+              "final_natural_projection": {
+                "mean": 4.880583294506731,
+                "ci_low": -6.227035199773723,
+                "ci_high": 16.745876616856147,
+                "n": 29
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.6770633500197838,
+                "ci_low": -2.447500975789695,
+                "ci_high": 3.8399135774579505,
+                "n": 29
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.0464739963926117,
+                "ci_low": -0.6814512211700966,
+                "ci_high": 4.878362174280756,
+                "n": 29
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -1.369410646372828,
+                "ci_low": -2.73282609561394,
+                "ci_high": -0.17647166087709737,
+                "n": 29
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3305655512316474,
+                "ci_low": 0.05954871383206598,
+                "ci_high": 0.5967602104976258,
+                "n": 29
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.1383352279663086
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 2.2579299910315154,
+                "ci_low": -0.5615962030558751,
+                "ci_high": 5.156815580664006,
+                "n": 29
+              },
+              "final_natural_projection": {
+                "mean": 8.683859290747806,
+                "ci_low": -3.0324588734528115,
+                "ci_high": 19.97070721963356,
+                "n": 29
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.6833946376011288,
+                "ci_low": -1.1899053267363844,
+                "ci_high": 4.526598021079752,
+                "n": 29
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.970662314316322,
+                "ci_low": -0.6831896633937441,
+                "ci_high": 4.463192075696482,
+                "n": 29
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.2872676767151931,
+                "ci_low": -1.5380424744096295,
+                "ci_high": 0.8538614749908441,
+                "n": 29
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3878659051040123,
+                "ci_low": 0.1304899191034251,
+                "ci_high": 0.6421485670681658,
+                "n": 29
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.09190760552883148
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 1.1579546928405762,
+            "ci_low": -1.257401283856096,
+            "ci_high": 3.4755556123010005,
+            "n": 29
+          }
+        },
+        "no_conflict_w1_bcd": {
+          "n": 85,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 2.275941728143131,
+                "ci_low": 0.2663738091552959,
+                "ci_high": 4.205083563117416,
+                "n": 85
+              },
+              "final_natural_projection": {
+                "mean": 10.705233512906467,
+                "ci_low": 4.9117170991441785,
+                "ci_high": 16.35528041015653,
+                "n": 85
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.255272584802964,
+                "ci_low": 0.3801043213115019,
+                "ci_high": 4.227275895090664,
+                "n": 85
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.265607152265661,
+                "ci_low": 0.8307033524092506,
+                "ci_high": 3.783103295143912,
+                "n": 85
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.010334567462696748,
+                "ci_low": -1.2409560031049391,
+                "ci_high": 1.378015877569423,
+                "n": 85
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3050102907068589,
+                "ci_low": 0.1690141682063832,
+                "ci_high": 0.44165807317284966,
+                "n": 85
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.10281281918287277
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 2.903706724503461,
+                "ci_low": 0.9074890393369338,
+                "ci_high": 4.852306945183697,
+                "n": 85
+              },
+              "final_natural_projection": {
+                "mean": 12.861456941155826,
+                "ci_low": 7.198619456782061,
+                "ci_high": 18.357033095920784,
+                "n": 85
+              },
+              "final_absolute_projection_effect": {
+                "mean": 3.242156516804415,
+                "ci_low": 1.3471791201479295,
+                "ci_high": 5.264097974440631,
+                "n": 85
+              },
+              "final_positive_projection_effect": {
+                "mean": 3.072931616446551,
+                "ci_low": 1.4850416772505814,
+                "ci_high": 4.777784132326349,
+                "n": 85
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.16922489895540124,
+                "ci_low": -0.902967744995566,
+                "ci_high": 1.3451046095876131,
+                "n": 85
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.34652532970204075,
+                "ci_low": 0.19339196156052982,
+                "ci_high": 0.49979308212504653,
+                "n": 85
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.12685751914978027
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.6277649991652545,
+            "ci_low": -2.16233382617726,
+            "ci_high": 0.9282759226069729,
+            "n": 85
+          }
+        }
+      }
+    },
+    "confirmation": {
+      "n": 249,
+      "subsets": {
+        "all": {
+          "n": 249,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 0.06718152689646525,
+                "ci_low": -1.068829386229496,
+                "ci_high": 1.1368889732054437,
+                "n": 249
+              },
+              "final_natural_projection": {
+                "mean": 6.0030657136775405,
+                "ci_low": 2.336827660163483,
+                "ci_high": 9.635373147586023,
+                "n": 249
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.8409185859572935,
+                "ci_low": -0.22044007957699788,
+                "ci_high": 1.9533174480060969,
+                "n": 249
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.4540500566662555,
+                "ci_low": -0.3090229373559894,
+                "ci_high": 1.2074473852373986,
+                "n": 249
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.3868685300091663,
+                "ci_low": -0.3640075961748759,
+                "ci_high": 1.1691635256790243,
+                "n": 249
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.1261912043314861,
+                "ci_low": 0.04889996544903062,
+                "ci_high": 0.2075576973727428,
+                "n": 249
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.002966645872220397
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -0.15855598736958332,
+                "ci_low": -1.2326265459797947,
+                "ci_high": 0.8995621897609358,
+                "n": 249
+              },
+              "final_natural_projection": {
+                "mean": 8.165078643335397,
+                "ci_low": 4.4089487002676275,
+                "ci_high": 11.86237469767949,
+                "n": 249
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.4992266620498105,
+                "ci_low": 0.5383774091201614,
+                "ci_high": 2.4924886059569538,
+                "n": 249
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.6703353394944984,
+                "ci_low": -0.1044381940281056,
+                "ci_high": 1.4307846678368537,
+                "n": 249
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.8288913251884491,
+                "ci_low": 0.15545174931905356,
+                "ci_high": 1.526206171057788,
+                "n": 249
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.2765652128012784,
+                "ci_low": 0.1961161829860335,
+                "ci_high": 0.3594822047225921,
+                "n": 249
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.006714278366416693
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.2257375094785269,
+            "ci_low": -0.5512402972782472,
+            "ci_high": 0.9967114344897511,
+            "n": 249
+          }
+        },
+        "conflict": {
+          "n": 136,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -1.0165903024813707,
+                "ci_low": -2.603516066468814,
+                "ci_high": 0.47937428679536215,
+                "n": 136
+              },
+              "final_natural_projection": {
+                "mean": 5.751333783216336,
+                "ci_low": 0.8810542414622272,
+                "ci_high": 10.58543831708238,
+                "n": 136
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.500286447651246,
+                "ci_low": 0.01708315628416399,
+                "ci_high": 2.9635444634977475,
+                "n": 136
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.24184807477628484,
+                "ci_low": -0.7877587955006782,
+                "ci_high": 1.285502473999033,
+                "n": 136
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.2584383715601528,
+                "ci_low": 0.21212510063367732,
+                "ci_high": 2.403625390065064,
+                "n": 136
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.1565990412936491,
+                "ci_low": 0.07325883130816851,
+                "ci_high": 0.2380576199468443,
+                "n": 136
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.045494578778743744,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.22156872468836167,
+                "ci_low": 0.08717704906183131,
+                "ci_high": 0.3518710160956662,
+                "n": 136
+              },
+              "projection_margin_effect_correlation": 0.17565050523213888
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -1.1729140772539026,
+                "ci_low": -2.7714073227608904,
+                "ci_high": 0.3476345397531973,
+                "n": 136
+              },
+              "final_natural_projection": {
+                "mean": 7.156236062155051,
+                "ci_low": 2.1273282938582057,
+                "ci_high": 12.198068765528932,
+                "n": 136
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.5723804726320154,
+                "ci_low": 0.09488817449001709,
+                "ci_high": 3.0598204228369585,
+                "n": 136
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.19973319900386474,
+                "ci_low": -0.9400250288055223,
+                "ci_high": 1.2945013712872468,
+                "n": 136
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.372647274942959,
+                "ci_low": 0.38578568420865955,
+                "ci_high": 2.3885055752799786,
+                "n": 136
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.17062325512661652,
+                "ci_low": 0.0793152139029082,
+                "ci_high": 0.2654775882906773,
+                "n": 136
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.05032643675804138,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": -0.015977144241333008,
+                "ci_low": -0.13781966777408822,
+                "ci_high": 0.09923786100219259,
+                "n": 136
+              },
+              "projection_margin_effect_correlation": 0.06618215375549956
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.1563237695132985,
+            "ci_low": -0.8636312711764785,
+            "ci_high": 1.1754386857590247,
+            "n": 136
+          }
+        },
+        "no_conflict": {
+          "n": 113,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.371544082607843,
+                "ci_low": -0.13046238353822082,
+                "ci_high": 2.905487372548179,
+                "n": 113
+              },
+              "final_natural_projection": {
+                "mean": 6.306035116710494,
+                "ci_low": 0.7394144595460554,
+                "ci_high": 11.691974061015431,
+                "n": 113
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.047343106396430364,
+                "ci_low": -1.512786769497711,
+                "ci_high": 1.5731218964652665,
+                "n": 113
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.7094435923922379,
+                "ci_low": -0.4311444117432147,
+                "ci_high": 1.86348538224676,
+                "n": 113
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.6621004828309591,
+                "ci_low": -1.7315660015144179,
+                "ci_high": 0.3577231756617521,
+                "n": 113
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.08959416161596248,
+                "ci_low": -0.05339205233396682,
+                "ci_high": 0.2337283521626901,
+                "n": 113
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.05961400642991066
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 1.0622643685973852,
+                "ci_low": -0.31310107802922743,
+                "ci_high": 2.416616447256729,
+                "n": 113
+              },
+              "final_natural_projection": {
+                "mean": 9.37926086493298,
+                "ci_low": 3.9908600961212564,
+                "ci_high": 14.544483795841174,
+                "n": 113
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.4111831378092807,
+                "ci_low": 0.1166476846268747,
+                "ci_high": 2.7254622705214846,
+                "n": 113
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.2367237563681814,
+                "ci_low": 0.2135099376724885,
+                "ci_high": 2.287410526465525,
+                "n": 113
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.1744593856608973,
+                "ci_low": -0.6720689483448467,
+                "ci_high": 1.050395919369385,
+                "n": 113
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.40407057779025185,
+                "ci_low": 0.264439356116067,
+                "ci_high": 0.5466674114223075,
+                "n": 113
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.04428648203611374
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.3092797097906602,
+            "ci_low": -0.8172957562239823,
+            "ci_high": 1.4969570062856747,
+            "n": 113
+          }
+        },
+        "conflict_w1_a": {
+          "n": 94,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -1.3541674258861136,
+                "ci_low": -3.3431194086024103,
+                "ci_high": 0.6257183256301466,
+                "n": 94
+              },
+              "final_natural_projection": {
+                "mean": 4.711643033205195,
+                "ci_low": -1.3123892061570859,
+                "ci_high": 10.437840189229933,
+                "n": 94
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.7767078064857644,
+                "ci_low": -0.026080501840469682,
+                "ci_high": 3.696135639510256,
+                "n": 94
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.2112701934702853,
+                "ci_low": -1.099843655685161,
+                "ci_high": 1.4857697832616086,
+                "n": 94
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.5654376111132033,
+                "ci_low": 0.20615060583074044,
+                "ci_high": 3.0849703344892947,
+                "n": 94
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.14574918848402957,
+                "ci_low": 0.04228024647590962,
+                "ci_high": 0.24813346456974109,
+                "n": 94
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.06022898107767105,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.20163051118241979,
+                "ci_low": 0.036074769243280944,
+                "ci_high": 0.36294682989729204,
+                "n": 94
+              },
+              "projection_margin_effect_correlation": 0.11839385239183293
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -1.151258833864902,
+                "ci_low": -3.162730965335318,
+                "ci_high": 0.8196440493806865,
+                "n": 94
+              },
+              "final_natural_projection": {
+                "mean": 5.974140046758855,
+                "ci_low": -0.04007051127388112,
+                "ci_high": 11.789953156735024,
+                "n": 94
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.806113730085657,
+                "ci_low": 0.9628025752432803,
+                "ci_high": 4.636259387148186,
+                "n": 94
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.8274274500126534,
+                "ci_low": -0.5693787463326404,
+                "ci_high": 2.2011667453069634,
+                "n": 94
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.9786862794389115,
+                "ci_low": 0.6655254197247484,
+                "ci_high": 3.3469742589174416,
+                "n": 94
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.24774214308312598,
+                "ci_low": 0.13880190392757985,
+                "ci_high": 0.3510614080631985,
+                "n": 94
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.05041375383734703,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.05468543032382397,
+                "ci_low": -0.07922428262994645,
+                "ci_high": 0.1883551252649185,
+                "n": 94
+              },
+              "projection_margin_effect_correlation": 0.07836470189174252
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.20290859963031524,
+            "ci_low": -1.388168551947208,
+            "ci_high": 1.0046378128072049,
+            "n": 94
+          }
+        },
+        "conflict_w1_bcd": {
+          "n": 42,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -0.26106055009932744,
+                "ci_low": -2.7844106207291284,
+                "ci_high": 2.2547041518347597,
+                "n": 42
+              },
+              "final_natural_projection": {
+                "mean": 8.078260699907938,
+                "ci_low": -1.1212631648495082,
+                "ci_high": 17.04406549703506,
+                "n": 42
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.881629120735895,
+                "ci_low": -1.5179943710565567,
+                "ci_high": 3.2227208168733665,
+                "n": 42
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.3102842853182838,
+                "ci_low": -1.6394426474968593,
+                "ci_high": 2.187675307478222,
+                "n": 42
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.5713448354176113,
+                "ci_low": -0.9709550427539008,
+                "ci_high": 2.20041729013125,
+                "n": 42
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.18088204520089285,
+                "ci_low": 0.032209599018096925,
+                "ci_high": 0.3277605825946444,
+                "n": 42
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.011847174726426601,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.2661923453921363,
+                "ci_low": 0.03920244035266695,
+                "ci_high": 0.498670566649664,
+                "n": 42
+              },
+              "projection_margin_effect_correlation": 0.3257817722305859
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -1.2213805743626185,
+                "ci_low": -3.5244932725316,
+                "ci_high": 1.0584187203929512,
+                "n": 42
+              },
+              "final_natural_projection": {
+                "mean": 9.801879525184631,
+                "ci_low": 0.3754274926015309,
+                "ci_high": 19.241151045759516,
+                "n": 42
+              },
+              "final_absolute_projection_effect": {
+                "mean": -1.188832055954706,
+                "ci_low": -3.426326604400362,
+                "ci_high": 0.903908690668287,
+                "n": 42
+              },
+              "final_positive_projection_effect": {
+                "mean": -1.2051063151586623,
+                "ci_low": -3.1070213505199975,
+                "ci_high": 0.6238213473842243,
+                "n": 42
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.016274264880589077,
+                "ci_low": -1.1541183751253854,
+                "ci_high": 1.2629289221195943,
+                "n": 42
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": -0.0019761607760474796,
+                "ci_low": -0.17433646207764036,
+                "ci_high": 0.18174163812682717,
+                "n": 42
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.050143204629421234,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": -0.17412671588716053,
+                "ci_low": -0.3960288206736247,
+                "ci_high": 0.05012696129935127,
+                "n": 42
+              },
+              "projection_margin_effect_correlation": 0.03702426435890153
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.9603200242632911,
+            "ci_low": -0.8220785316966829,
+            "ci_high": 2.863201716542241,
+            "n": 42
+          }
+        },
+        "no_conflict_w1_a": {
+          "n": 28,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.5080716013908386,
+                "ci_low": -1.0639229789376259,
+                "ci_high": 4.047847885319165,
+                "n": 28
+              },
+              "final_natural_projection": {
+                "mean": 12.231214548860278,
+                "ci_low": 3.055372165782111,
+                "ci_high": 21.509385649647026,
+                "n": 28
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.9140647564615522,
+                "ci_low": -1.4264195863689695,
+                "ci_high": 3.242065717492784,
+                "n": 28
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.2110681704112463,
+                "ci_low": -0.7918648562261036,
+                "ci_high": 3.191923334343093,
+                "n": 28
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.29700341394969393,
+                "ci_low": -1.8015019389135496,
+                "ci_high": 1.1158405148557242,
+                "n": 28
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.025462116513933455,
+                "ci_low": -0.32441486418247223,
+                "ci_high": 0.3538718657834186,
+                "n": 28
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.06873204559087753
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 2.399668710572379,
+                "ci_low": 0.4903251047645297,
+                "ci_high": 4.446731996962002,
+                "n": 28
+              },
+              "final_natural_projection": {
+                "mean": 16.862160904066904,
+                "ci_low": 7.843492522835732,
+                "ci_high": 26.03245728952544,
+                "n": 28
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.3166216611862183,
+                "ci_low": -0.6378979687179838,
+                "ci_high": 3.457845847095762,
+                "n": 28
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.8581451858792986,
+                "ci_low": 0.17538429030350283,
+                "ci_high": 3.7492465112890514,
+                "n": 28
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.5415235246930804,
+                "ci_low": -1.589838089261736,
+                "ci_high": 0.2277901087488443,
+                "n": 28
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.7383257320949009,
+                "ci_low": 0.48948139931474416,
+                "ci_high": 0.9910541559968673,
+                "n": 28
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.09783900529146194
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.8915971176964896,
+            "ci_low": -3.509158975737435,
+            "ci_high": 1.7231364841972066,
+            "n": 28
+          }
+        },
+        "no_conflict_w1_bcd": {
+          "n": 85,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.3265703117146213,
+                "ci_low": -0.5363099167627446,
+                "ci_high": 3.2243922679564525,
+                "n": 85
+              },
+              "final_natural_projection": {
+                "mean": 4.354211303767036,
+                "ci_low": -1.8958887651738,
+                "ci_high": 10.651964347748187,
+                "n": 85
+              },
+              "final_absolute_projection_effect": {
+                "mean": -0.23816520186031567,
+                "ci_low": -2.1261352744523214,
+                "ci_high": 1.5890129407714388,
+                "n": 85
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.5442025549271527,
+                "ci_low": -0.7893318348772386,
+                "ci_high": 1.9167719453222607,
+                "n": 85
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.7823677525800817,
+                "ci_low": -2.09871287566774,
+                "ci_high": 0.49396073951440606,
+                "n": 85
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.1107200117672191,
+                "ci_low": -0.04089531309464398,
+                "ci_high": 0.26139240910025185,
+                "n": 85
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.056792598217725754
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 0.621707644182093,
+                "ci_low": -1.0337761679817647,
+                "ci_high": 2.260694620328791,
+                "n": 85
+              },
+              "final_natural_projection": {
+                "mean": 6.914305557924158,
+                "ci_low": 0.47940335063373346,
+                "ci_high": 13.14030147286022,
+                "n": 85
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.4423328006968779,
+                "ci_low": -0.13048780602567334,
+                "ci_high": 3.0587886974390806,
+                "n": 85
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.032020226646872,
+                "ci_low": -0.16857631339746362,
+                "ci_high": 2.284434547354193,
+                "n": 85
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.4103125796598547,
+                "ci_low": -0.6320142438832451,
+                "ci_high": 1.4538977350908158,
+                "n": 85
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.2939629975487204,
+                "ci_low": 0.1320502665463616,
+                "ci_high": 0.4637646236840413,
+                "n": 85
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.026113225147128105
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.7048626647276037,
+            "ci_low": -0.5193213292430429,
+            "ci_high": 1.984309209725436,
+            "n": 85
+          }
+        }
+      }
+    },
+    "pooled": {
+      "n": 500,
+      "subsets": {
+        "all": {
+          "n": 500,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 0.6240884113311768,
+                "ci_low": -0.1676234753370285,
+                "ci_high": 1.4194842206716531,
+                "n": 500
+              },
+              "final_natural_projection": {
+                "mean": 6.349375499010086,
+                "ci_low": 3.8185797724992034,
+                "ci_high": 8.808045911318064,
+                "n": 500
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.3070395193099975,
+                "ci_low": 0.5885885480403901,
+                "ci_high": 2.081245183086395,
+                "n": 500
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.9655639649629593,
+                "ci_low": 0.40868474062383175,
+                "ci_high": 1.5521572093665597,
+                "n": 500
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.3414755561351776,
+                "ci_low": -0.1736629516482353,
+                "ci_high": 0.8695334234476089,
+                "n": 500
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.16737789726257324,
+                "ci_low": 0.1123029557466507,
+                "ci_high": 0.2225555737018585,
+                "n": 500
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.02788972295820713
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 0.7670262765884399,
+                "ci_low": 0.02857948038578034,
+                "ci_high": 1.5159208993911744,
+                "n": 500
+              },
+              "final_natural_projection": {
+                "mean": 8.23493428015709,
+                "ci_low": 5.629366415834427,
+                "ci_high": 10.773576067429781,
+                "n": 500
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.9812664513587952,
+                "ci_low": 1.3114362623929978,
+                "ci_high": 2.67706992470026,
+                "n": 500
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.374146362900734,
+                "ci_low": 0.8064352949589491,
+                "ci_high": 1.940280900171399,
+                "n": 500
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.6071200895309449,
+                "ci_low": 0.1596254197597504,
+                "ci_high": 1.0675213311553,
+                "n": 500
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.2986730074882507,
+                "ci_low": 0.24240078667402268,
+                "ci_high": 0.3559694573044777,
+                "n": 500
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.03285738080739975
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.14293786525726318,
+            "ci_low": -0.7520297758817672,
+            "ci_high": 0.4545609394907949,
+            "n": 500
+          }
+        },
+        "conflict": {
+          "n": 273,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -0.4961757406646952,
+                "ci_low": -1.563245535704679,
+                "ci_high": 0.5474214739196902,
+                "n": 273
+              },
+              "final_natural_projection": {
+                "mean": 5.1671209420476645,
+                "ci_low": 1.8516247169493318,
+                "ci_high": 8.33089369583479,
+                "n": 273
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.6001354643713424,
+                "ci_low": 0.6042107335377089,
+                "ci_high": 2.6329385394578444,
+                "n": 273
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.5519798633816478,
+                "ci_low": -0.21276190798907052,
+                "ci_high": 1.3136350032774518,
+                "n": 273
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.0481556029546828,
+                "ci_low": 0.3709598658722399,
+                "ci_high": 1.7907828496489326,
+                "n": 273
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.13938656656733361,
+                "ci_low": 0.0767587674406422,
+                "ci_high": 0.20295165523941258,
+                "n": 273
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.02260996401309967,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.18633092803396148,
+                "ci_low": 0.08837645569127121,
+                "ci_high": 0.27969610961802277,
+                "n": 273
+              },
+              "projection_margin_effect_correlation": 0.11224519761941396
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -0.17881969479850798,
+                "ci_low": -1.1835887223154633,
+                "ci_high": 0.8094659493956371,
+                "n": 273
+              },
+              "final_natural_projection": {
+                "mean": 6.273094882458557,
+                "ci_low": 2.804280102722374,
+                "ci_high": 9.694369687636692,
+                "n": 273
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.8562922442789043,
+                "ci_low": 0.9010725251702599,
+                "ci_high": 2.76774557473022,
+                "n": 273
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.8387362727752099,
+                "ci_low": 0.12015631499635432,
+                "ci_high": 1.5548796072383928,
+                "n": 273
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.0175559721586904,
+                "ci_low": 0.39015599124597544,
+                "ci_high": 1.669869208990872,
+                "n": 273
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.230673128868634,
+                "ci_low": 0.16424290516000964,
+                "ci_high": 0.29654293595216213,
+                "n": 273
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.007744487375020981,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.1097960908770998,
+                "ci_low": 0.011994845875890267,
+                "ci_high": 0.20793507596948646,
+                "n": 273
+              },
+              "projection_margin_effect_correlation": 0.14875547571357725
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.3173560476128435,
+            "ci_low": -1.1059008498549898,
+            "ci_high": 0.45953447545841053,
+            "n": 273
+          }
+        },
+        "no_conflict": {
+          "n": 227,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.9713664443482386,
+                "ci_low": 0.7978055699018656,
+                "ci_high": 3.1304467174450203,
+                "n": 227
+              },
+              "final_natural_projection": {
+                "mean": 7.771205869277669,
+                "ci_low": 4.039896644146432,
+                "ci_high": 11.440434923406999,
+                "n": 227
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.9545496822978956,
+                "ci_low": -0.15721891724590684,
+                "ci_high": 2.109095064711465,
+                "n": 227
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.4629580606973118,
+                "ci_low": 0.5733995662649298,
+                "ci_high": 2.3309929451228233,
+                "n": 227
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.508408376823963,
+                "ci_low": -1.244747396791559,
+                "ci_high": 0.25140806474612115,
+                "n": 227
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.20104147999297153,
+                "ci_low": 0.10815736029116592,
+                "ci_high": 0.2941406442205286,
+                "n": 227
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.08609886467456818
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 1.9045414756573245,
+                "ci_low": 0.8356265836875344,
+                "ci_high": 3.0117310107542012,
+                "n": 227
+              },
+              "final_natural_projection": {
+                "mean": 10.594327035979552,
+                "ci_low": 7.0276216235192335,
+                "ci_high": 14.21085065957733,
+                "n": 227
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.131565828155316,
+                "ci_low": 1.1191667866601818,
+                "ci_high": 3.1624035064869513,
+                "n": 227
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.01805365190632,
+                "ci_low": 1.157157714054448,
+                "ci_high": 2.8875505189275934,
+                "n": 227
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.1135121778244489,
+                "ci_low": -0.47666923540279205,
+                "ci_high": 0.7476160243744365,
+                "n": 227
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.380452597193781,
+                "ci_low": 0.2834608698468901,
+                "ci_high": 0.48087250382889735,
+                "n": 227
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.08053097873926163
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.06682497079151843,
+            "ci_low": -0.7922847722332909,
+            "ci_high": 0.9732174019719008,
+            "n": 227
+          }
+        },
+        "conflict_w1_a": {
+          "n": 183,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": -0.7626022510841245,
+                "ci_low": -2.0637884599914966,
+                "ci_high": 0.5399303645058406,
+                "n": 183
+              },
+              "final_natural_projection": {
+                "mean": 3.5966218309324294,
+                "ci_low": -0.4027198405865111,
+                "ci_high": 7.594172820693153,
+                "n": 183
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.127437360951158,
+                "ci_low": 0.8601407056949179,
+                "ci_high": 3.345815190656588,
+                "n": 183
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.6824175572134757,
+                "ci_low": -0.1880362607009424,
+                "ci_high": 1.5779432820654955,
+                "n": 183
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.445019806669058,
+                "ci_low": 0.5535105610805783,
+                "ci_high": 2.3884078540762914,
+                "n": 183
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.14209526874979989,
+                "ci_low": 0.06871720578501134,
+                "ci_high": 0.21690812690661898,
+                "n": 183
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.03480160981416702,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.1967305563838104,
+                "ci_low": 0.08796319258017618,
+                "ci_high": 0.3090408343434985,
+                "n": 183
+              },
+              "projection_margin_effect_correlation": 0.06226099058611863
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -0.01193320425481744,
+                "ci_low": -1.2917425319470994,
+                "ci_high": 1.2303275192695884,
+                "n": 183
+              },
+              "final_natural_projection": {
+                "mean": 4.455833666311587,
+                "ci_low": 0.41531462969024324,
+                "ci_high": 8.745235199908741,
+                "n": 183
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.9249960815971665,
+                "ci_low": 1.762700501328609,
+                "ci_high": 4.080507551320914,
+                "n": 183
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.4565314370426323,
+                "ci_low": 0.5593744786792114,
+                "ci_high": 2.3352896739632056,
+                "n": 183
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 1.4684646442288258,
+                "ci_low": 0.6922316587036426,
+                "ci_high": 2.3078836106537466,
+                "n": 183
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.3082112210695861,
+                "ci_low": 0.22688515971267156,
+                "ci_high": 0.3897812073022289,
+                "n": 183
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.0005261453334242105,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.17054319121147113,
+                "ci_low": 0.055095950892714206,
+                "ci_high": 0.29549875050946006,
+                "n": 183
+              },
+              "projection_margin_effect_correlation": 0.12711487913457958
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": -0.7506690494349746,
+            "ci_low": -1.728130421677574,
+            "ci_high": 0.1940652197501696,
+            "n": 183
+          }
+        },
+        "conflict_w1_bcd": {
+          "n": 90,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 0.04555816385481093,
+                "ci_low": -1.7626540856228934,
+                "ci_high": 1.8131634275780735,
+                "n": 90
+              },
+              "final_natural_projection": {
+                "mean": 8.36046913464864,
+                "ci_low": 2.4598221359650294,
+                "ci_high": 14.002646536959537,
+                "n": 90
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.5279549413257175,
+                "ci_low": -1.267293217778206,
+                "ci_high": 2.2648194862074296,
+                "n": 90
+              },
+              "final_positive_projection_effect": {
+                "mean": 0.2867565525902642,
+                "ci_low": -1.2278683202796512,
+                "ci_high": 1.702247222595744,
+                "n": 90
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.2411983887354533,
+                "ci_low": -0.7667422916491826,
+                "ci_high": 1.3185386501418206,
+                "n": 90
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.13387887212965224,
+                "ci_low": 0.022613598505655925,
+                "ci_high": 0.24220234380828004,
+                "n": 90
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.0020698504522442818,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": 0.16518501705593533,
+                "ci_low": -0.010913094944424098,
+                "ci_high": 0.34020734734005387,
+                "n": 90
+              },
+              "projection_margin_effect_correlation": 0.21132778803196675
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": -0.518155558904012,
+                "ci_low": -2.1612975458304087,
+                "ci_high": 1.1385662233829499,
+                "n": 90
+              },
+              "final_natural_projection": {
+                "mean": 9.968192688624065,
+                "ci_low": 4.021420274376869,
+                "ci_high": 15.811067956222429,
+                "n": 90
+              },
+              "final_absolute_projection_effect": {
+                "mean": -0.3167388916015625,
+                "ci_low": -1.7949752002292207,
+                "ci_high": 1.2598747514353843,
+                "n": 90
+              },
+              "final_positive_projection_effect": {
+                "mean": -0.4174472279018826,
+                "ci_low": -1.6387469120820362,
+                "ci_high": 0.8077338899506462,
+                "n": 90
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.10070833894941542,
+                "ci_low": -0.918188836839464,
+                "ci_high": 1.107304168542226,
+                "n": 90
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.0730123413933648,
+                "ci_low": -0.03729974004957411,
+                "ci_high": 0.18832590672704905,
+                "n": 90
+              },
+              "projection_effect_fraction_of_absolute_natural": -0.021659551188349724,
+              "final_w1_minus_w2_margin_effect": {
+                "mean": -0.013723013136121962,
+                "ci_low": -0.17832085927327473,
+                "ci_high": 0.14912913799285887,
+                "n": 90
+              },
+              "projection_margin_effect_correlation": 0.19300630022253237
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.5637137227588229,
+            "ci_low": -0.8353176377216974,
+            "ci_high": 1.9607863729529909,
+            "n": 90
+          }
+        },
+        "no_conflict_w1_a": {
+          "n": 57,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 2.47871332419546,
+                "ci_low": 0.4378820714197661,
+                "ci_high": 4.500062943446008,
+                "n": 57
+              },
+              "final_natural_projection": {
+                "mean": 8.491419700154086,
+                "ci_low": 1.2231981082966454,
+                "ci_high": 15.98601328741039,
+                "n": 57
+              },
+              "final_absolute_projection_effect": {
+                "mean": 0.7934850935350385,
+                "ci_low": -1.1692291883000154,
+                "ci_high": 2.823763048021416,
+                "n": 57
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.6360992046824672,
+                "ci_low": -0.07332375216902344,
+                "ci_high": 3.4415255122017436,
+                "n": 57
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.8426141111474288,
+                "ci_low": -1.8235624917766504,
+                "ci_high": 0.12093797493399136,
+                "n": 57
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.18069017979136684,
+                "ci_low": -0.038550246807566864,
+                "ci_high": 0.39212121503394937,
+                "n": 57
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.10619478672742844
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 2.3275560287007115,
+                "ci_low": 0.5894047849011003,
+                "ci_high": 4.057975506677963,
+                "n": 57
+              },
+              "final_natural_projection": {
+                "mean": 12.701270609571223,
+                "ci_low": 5.060081429230539,
+                "ci_high": 19.931058374622406,
+                "n": 57
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.5032254562043308,
+                "ci_low": -0.24000792503356932,
+                "ci_high": 3.2849657366150304,
+                "n": 57
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.9153907424525212,
+                "ci_low": 0.3377626143003766,
+                "ci_high": 3.474199392711906,
+                "n": 57
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.4121652862481904,
+                "ci_low": -1.2012626531877015,
+                "ci_high": 0.29763046701749046,
+                "n": 57
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.5600216095907646,
+                "ci_low": 0.3795488821832757,
+                "ci_high": 0.7448319301270598,
+                "n": 57
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.0948188304901123
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.1511573122258772,
+            "ci_low": -1.60958806840997,
+            "ci_high": 1.9485384681768583,
+            "n": 57
+          }
+        },
+        "no_conflict_w1_bcd": {
+          "n": 170,
+          "conditions": {
+            "Game": {
+              "final_projection_effect": {
+                "mean": 1.801256019928876,
+                "ci_low": 0.4397665760446997,
+                "ci_high": 3.1958812098643343,
+                "n": 170
+              },
+              "final_natural_projection": {
+                "mean": 7.5297224083367515,
+                "ci_low": 3.354102203872274,
+                "ci_high": 12.003917490471812,
+                "n": 170
+              },
+              "final_absolute_projection_effect": {
+                "mean": 1.0085536914713242,
+                "ci_low": -0.3182405555949491,
+                "ci_high": 2.363720933865098,
+                "n": 170
+              },
+              "final_positive_projection_effect": {
+                "mean": 1.4049048535964068,
+                "ci_low": 0.4167770205525791,
+                "ci_high": 2.410187416637645,
+                "n": 170
+              },
+              "final_negative_magnitude_effect": {
+                "mean": -0.39635116002138926,
+                "ci_low": -1.308643947506652,
+                "ci_high": 0.5711963468965358,
+                "n": 170
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.207865151237039,
+                "ci_low": 0.1043719537117902,
+                "ci_high": 0.31292430400848387,
+                "n": 170
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.07918495684862137
+            },
+            "Neutral": {
+              "final_projection_effect": {
+                "mean": 1.762707184342777,
+                "ci_low": 0.45676824829157664,
+                "ci_high": 3.083694989295566,
+                "n": 170
+              },
+              "final_natural_projection": {
+                "mean": 9.887881249539992,
+                "ci_low": 5.677148188527893,
+                "ci_high": 14.071122906418404,
+                "n": 170
+              },
+              "final_absolute_projection_effect": {
+                "mean": 2.3422446587506465,
+                "ci_low": 1.0849989045016906,
+                "ci_high": 3.61598680706585,
+                "n": 170
+              },
+              "final_positive_projection_effect": {
+                "mean": 2.0524759215467117,
+                "ci_low": 1.0270303451839615,
+                "ci_high": 3.1037460703358923,
+                "n": 170
+              },
+              "final_negative_magnitude_effect": {
+                "mean": 0.289768739307628,
+                "ci_low": -0.490192101352355,
+                "ci_high": 1.0709864370612523,
+                "n": 170
+              },
+              "final_w1_centered_logit_effect": {
+                "mean": 0.32024416362538055,
+                "ci_low": 0.2082129784892587,
+                "ci_high": 0.43696436247404874,
+                "n": 170
+              },
+              "projection_effect_fraction_of_absolute_natural": 0.0754944384098053
+            }
+          },
+          "game_minus_neutral_projection_effect": {
+            "mean": 0.0385488327811746,
+            "ci_low": -0.9931911832444807,
+            "ci_high": 1.0405344929414633,
+            "n": 170
+          }
+        }
+      }
+    }
+  },
+  "cross_host_validation": {
+    "discovery": {
+      "natural_max_abs_logit_difference": 0.9960136413574219,
+      "lesion_max_abs_logit_difference": 1.2526912689208984,
+      "natural_ad_argmax_agreement": 0.9402390438247012,
+      "lesion_ad_argmax_agreement": 0.950199203187251
+    },
+    "confirmation": {
+      "natural_max_abs_logit_difference": 0.7498207092285156,
+      "lesion_max_abs_logit_difference": 1.3749713897705078,
+      "natural_ad_argmax_agreement": 0.963855421686747,
+      "lesion_ad_argmax_agreement": 0.9497991967871486
+    },
+    "pooled": {
+      "natural_max_abs_logit_difference": 0.9960136413574219,
+      "lesion_max_abs_logit_difference": 1.3749713897705078,
+      "natural_ad_argmax_agreement": 0.952,
+      "lesion_ad_argmax_agreement": 0.95
+    }
+  }
+}

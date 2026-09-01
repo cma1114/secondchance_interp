@@ -1,0 +1,33 @@
+{
+  "model_id": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+  "model_revision": "497f1dca95ebdec98e41d517b9f060ee753c902f",
+  "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+  "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+  "output_dir": "outputs/model_replications/seed_oss_36b_clean_behavioral_replication/simplemc/benchmark",
+  "conditions": ["baseline", "incorrect", "neutral"],
+  "question_ids": null,
+  "max_questions": 4,
+  "batch_size": 4,
+  "trial_major": true,
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "model_loader": "causal_lm",
+  "attn_implementation": "sdpa",
+  "save_residuals": false,
+  "residual_dtype": "float16",
+  "prompt_mode": "baseline_matched_empty_history",
+  "feedback_variant": "token_matched_test",
+  "chat_serialization": "hf_template",
+  "chat_template_kwargs": {"thinking_budget": 0},
+  "decision_mode": "unrestricted",
+  "disable_thinking": true,
+  "trust_remote_code": false,
+  "skip_missing_baseline": false,
+  "seed": 42,
+  "answer_variants": {
+    "A": ["A", " A"],
+    "B": ["B", " B"],
+    "C": ["C", " C"],
+    "D": ["D", " D"]
+  }
+}

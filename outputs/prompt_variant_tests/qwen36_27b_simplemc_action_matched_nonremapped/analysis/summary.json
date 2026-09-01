@@ -1,0 +1,209 @@
+{
+  "accuracy": {
+    "baseline": 0.42,
+    "evaluation": 0.394,
+    "neutral": 0.428,
+    "standard_game": 0.372
+  },
+  "by_baseline_letter": {
+    "A": {
+      "evaluation_minus_neutral_switch_rate": {
+        "high": 0.12083333333333333,
+        "low": -0.008333333333333333,
+        "mean": 0.058333333333333334,
+        "n": 240
+      },
+      "evaluation_switch_rate": 0.4625,
+      "n": 240,
+      "neutral_switch_rate": 0.4041666666666667
+    },
+    "B": {
+      "evaluation_minus_neutral_switch_rate": {
+        "high": 0.1917808219178082,
+        "low": 0.0273972602739726,
+        "mean": 0.1095890410958904,
+        "n": 73
+      },
+      "evaluation_switch_rate": 0.1643835616438356,
+      "n": 73,
+      "neutral_switch_rate": 0.0547945205479452
+    },
+    "C": {
+      "evaluation_minus_neutral_switch_rate": {
+        "high": 0.22641509433962265,
+        "low": 0.05660377358490566,
+        "mean": 0.14150943396226415,
+        "n": 106
+      },
+      "evaluation_switch_rate": 0.2641509433962264,
+      "n": 106,
+      "neutral_switch_rate": 0.12264150943396226
+    },
+    "D": {
+      "evaluation_minus_neutral_switch_rate": {
+        "high": 0.18518518518518517,
+        "low": -0.012345679012345678,
+        "mean": 0.08641975308641975,
+        "n": 81
+      },
+      "evaluation_switch_rate": 0.30864197530864196,
+      "n": 81,
+      "neutral_switch_rate": 0.2222222222222222
+    }
+  },
+  "centered_logit_redistribution": {
+    "evaluation_minus_baseline": {
+      "baseline_rank_1": {
+        "high": -0.6441950326919555,
+        "low": -0.8113183151960374,
+        "mean": -0.7244095039367676,
+        "n": 500
+      },
+      "baseline_rank_2": {
+        "high": -0.011607263064384499,
+        "low": -0.10366588413715362,
+        "mean": -0.05877257919311524,
+        "n": 500
+      },
+      "baseline_rank_3": {
+        "high": 0.315131067943573,
+        "low": 0.21126131746768953,
+        "mean": 0.26202687454223633,
+        "n": 500
+      },
+      "baseline_rank_4": {
+        "high": 0.5722218319892883,
+        "low": 0.4715555568218231,
+        "mean": 0.5211552085876465,
+        "n": 500
+      }
+    },
+    "evaluation_minus_neutral": {
+      "baseline_rank_1": {
+        "high": -0.5052473382353783,
+        "low": -0.6587213288426399,
+        "mean": -0.5796741342544556,
+        "n": 500
+      },
+      "baseline_rank_2": {
+        "high": 0.07147991538047789,
+        "low": -0.028911521112918854,
+        "mean": 0.01980659580230713,
+        "n": 500
+      },
+      "baseline_rank_3": {
+        "high": 0.2373442128062248,
+        "low": 0.1588933492183685,
+        "mean": 0.19740686321258544,
+        "n": 500
+      },
+      "baseline_rank_4": {
+        "high": 0.40190837738513946,
+        "low": 0.32348190418481826,
+        "mean": 0.362460675239563,
+        "n": 500
+      }
+    },
+    "neutral_minus_baseline": {
+      "baseline_rank_1": {
+        "high": -0.09669141153097154,
+        "low": -0.19059915771484376,
+        "mean": -0.14473536968231202,
+        "n": 500
+      },
+      "baseline_rank_2": {
+        "high": -0.03184731117486955,
+        "low": -0.12622045851945876,
+        "mean": -0.07857917499542236,
+        "n": 500
+      },
+      "baseline_rank_3": {
+        "high": 0.11026563926935196,
+        "low": 0.01769850913286209,
+        "mean": 0.06462001132965088,
+        "n": 500
+      },
+      "baseline_rank_4": {
+        "high": 0.19963165122270585,
+        "low": 0.11914158065319062,
+        "mean": 0.1586945333480835,
+        "n": 500
+      }
+    }
+  },
+  "evaluation_accincor_changed_baseline_wrong": {
+    "hits": 54,
+    "n": 109,
+    "one_sided_binomial_p_vs_one_third": 0.00033943893249079304,
+    "rate": 0.4954128440366973
+  },
+  "evaluation_minus_baseline_entropy_bits": {
+    "high": 0.2458771958044633,
+    "low": 0.18833438004190248,
+    "mean": 0.21701879253812423,
+    "n": 500
+  },
+  "evaluation_minus_neutral": {
+    "entropy_bits": {
+      "high": 0.2595667404515767,
+      "low": 0.20500554351727635,
+      "mean": 0.23187126125125992,
+      "n": 500
+    },
+    "switch_rate": {
+      "high": 0.128,
+      "low": 0.046,
+      "mean": 0.088,
+      "n": 500
+    }
+  },
+  "evaluation_switches_to_runner": {
+    "hits": 125,
+    "n": 176,
+    "one_sided_binomial_p_vs_one_third": 2.030847683833529e-24,
+    "rate": 0.7102272727272727
+  },
+  "mean_ad_entropy_bits": {
+    "baseline": 1.3586957613692299,
+    "evaluation": 1.575714553907354,
+    "neutral": 1.3438432926560944,
+    "standard_game": 1.5995552449375132
+  },
+  "n": 500,
+  "neutral_accincor_changed_baseline_wrong": {
+    "hits": 47,
+    "n": 89,
+    "one_sided_binomial_p_vs_one_third": 0.00011931181362880418,
+    "rate": 0.5280898876404494
+  },
+  "neutral_minus_baseline_entropy_bits": {
+    "high": 0.004345725237878499,
+    "low": -0.03497358258716019,
+    "mean": -0.014852468713135728,
+    "n": 500
+  },
+  "neutral_switches_to_runner": {
+    "hits": 110,
+    "n": 132,
+    "one_sided_binomial_p_vs_one_third": 3.051771423422035e-32,
+    "rate": 0.8333333333333334
+  },
+  "prompts": {
+    "evaluation": "Your answer was incorrect. Choose the answer again.",
+    "neutral": "Your answer was lost. Choose the answer again."
+  },
+  "standard_different_action_context": {
+    "accuracy": 0.372,
+    "evaluation_again_minus_neutral_fraction_of_standard_lift": 0.6197183098591549,
+    "mean_ad_entropy_bits": 1.5995552449375132,
+    "prompt": "Your answer was incorrect. Choose a different answer.",
+    "standard_minus_neutral_switch_rate": 0.14200000000000002,
+    "switch_rate": 0.406
+  },
+  "switch_rate": {
+    "evaluation": 0.352,
+    "neutral": 0.264,
+    "standard_game": 0.406
+  },
+  "switch_readout": "Aggregated A-D answer argmax: evaluation uses aggregated_ad_answer_new_letter; reused baseline/neutral artifacts use their answer field from the same aggregated A-D pipeline. This is distinct from the unrestricted top-token endpoint used by the feedback factorial."
+}

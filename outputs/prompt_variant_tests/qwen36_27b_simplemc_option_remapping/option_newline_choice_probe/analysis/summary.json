@@ -1,0 +1,88 @@
+{
+  "best_descriptive_heldout_accuracy": 0.6485943794250488,
+  "best_descriptive_heldout_accuracy_ci": [
+    0.6050871014595032,
+    0.6914324164390564
+  ],
+  "best_descriptive_heldout_layer": 53,
+  "best_layer_paired_accuracy_gain_over_letter_only": {
+    "ci_percentage_points": [
+      5.29,
+      20.82
+    ],
+    "gain_percentage_points": 12.99
+  },
+  "best_layer_selected_minus_best_rejected_score": {
+    "ci": [
+      2.7719195,
+      4.9583454
+    ],
+    "mean": 3.8431745
+  },
+  "definition": "At each post-block readout, a shared linear ranker scores the four option-closing-newline residuals. Static displayed-letter means are estimated on discovery questions and removed before fitting.",
+  "final_layer_accuracy": 0.6198126077651978,
+  "final_layer_accuracy_ci": [
+    0.5783131718635559,
+    0.663320004940033
+  ],
+  "heldout_presentations": 1494,
+  "heldout_questions": 249,
+  "interpretive_scope": "Held-out rank decoding establishes that candidate-value information is linearly available at the option-closing newline. It does not establish a clean mapping-invariant semantic code there. Matched same-content differences test whether that local value itself changes with ordering; they do not by themselves establish causal use.",
+  "letter_only_baseline": {
+    "accuracy": 0.5187416331994646,
+    "ci": [
+      0.46653279785809904,
+      0.568942436412316
+    ],
+    "majority_letter": "A"
+  },
+  "matched_sensitive_pairs": 107,
+  "matched_sensitive_pairs_by_letter": {
+    "A": 36,
+    "B": 24,
+    "C": 31,
+    "D": 16
+  },
+  "matched_w1_chosen_minus_unchosen_at_readout_53": {
+    "all": {
+      "ci": [
+        3.0635238,
+        5.785206
+      ],
+      "mean": 4.355342
+    },
+    "by_letter": {
+      "A": {
+        "ci": [0.0, 0.0],
+        "mean": 0.0,
+        "n": 36
+      },
+      "B": {
+        "ci": [1.821, 6.935],
+        "mean": 4.313,
+        "n": 24
+      },
+      "C": {
+        "ci": [6.818, 13.012],
+        "mean": 9.729,
+        "n": 31
+      },
+      "D": {
+        "ci": [2.084, 5.574],
+        "mean": 3.807,
+        "n": 16
+      }
+    }
+  },
+  "matched_w1_chosen_minus_unchosen_final_readout": {
+    "ci": [
+      1.4242729,
+      2.753709
+    ],
+    "mean": 2.0592406
+  },
+  "presentations_per_question": 6,
+  "screen_choice_agreement": 1.0,
+  "screen_max_abs_logit_error": 0.0,
+  "train_questions": 251
+}

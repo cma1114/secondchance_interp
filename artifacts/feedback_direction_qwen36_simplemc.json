@@ -1,0 +1,99 @@
+{
+  "input_dir": "outputs/mechanistic/qwen36_27b_simplemc",
+  "n_questions": 500,
+  "n_readouts": 65,
+  "hidden_size": 5120,
+  "k_folds": 5,
+  "test_fold": 0,
+  "seed": 42,
+  "direction_sign": "incorrect_minus_neutral",
+  "scale": "training mean projection gap",
+  "probe": "paired mean-difference linear classifier with midpoint threshold",
+  "control": "randomly signed paired differences, orthogonalized to feedback direction",
+  "output_path": "artifacts/feedback_direction_qwen36_simplemc.npz",
+  "heldout_questions": 102,
+  "intervention_questions": 60,
+  "selected_readouts": {
+    "0": {
+      "readout": 0,
+      "probe_accuracy": 0.5,
+      "probe_auc": 0.5,
+      "mean_fold_cosine": 0.0,
+      "mean_gap": 0.0,
+      "game_projection_mean": 0.0,
+      "neutral_projection_mean": 0.0
+    },
+    "8": {
+      "readout": 8,
+      "probe_accuracy": 0.999,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.999942746777767,
+      "mean_gap": 0.6202925262632619,
+      "game_projection_mean": 7.695394204550972,
+      "neutral_projection_mean": 7.075101677561533
+    },
+    "16": {
+      "readout": 16,
+      "probe_accuracy": 1.0,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.9999493828688222,
+      "mean_gap": 1.9951407436390245,
+      "game_projection_mean": 5.815385856648701,
+      "neutral_projection_mean": 3.820245112272958
+    },
+    "24": {
+      "readout": 24,
+      "probe_accuracy": 1.0,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.9999671120696385,
+      "mean_gap": 5.4042653876497075,
+      "game_projection_mean": 7.21732418859305,
+      "neutral_projection_mean": 1.8130587917530299
+    },
+    "30": {
+      "readout": 30,
+      "probe_accuracy": 1.0,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.9999446881910137,
+      "mean_gap": 10.339829823415329,
+      "game_projection_mean": 1.6189532176393444,
+      "neutral_projection_mean": -8.720876603944106
+    },
+    "36": {
+      "readout": 36,
+      "probe_accuracy": 1.0,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.9998899341619918,
+      "mean_gap": 14.81791909773056,
+      "game_projection_mean": -0.04251524983910904,
+      "neutral_projection_mean": -14.860434349589767
+    },
+    "48": {
+      "readout": 48,
+      "probe_accuracy": 1.0,
+      "probe_auc": 1.0,
+      "mean_fold_cosine": 0.9997257218150608,
+      "mean_gap": 20.429919897222206,
+      "game_projection_mean": 16.51410433366769,
+      "neutral_projection_mean": -3.9158155504244068
+    },
+    "56": {
+      "readout": 56,
+      "probe_accuracy": 0.998,
+      "probe_auc": 0.999924,
+      "mean_fold_cosine": 0.999491710098307,
+      "mean_gap": 32.21426983523912,
+      "game_projection_mean": 22.76626715023741,
+      "neutral_projection_mean": -9.448002701106907
+    },
+    "64": {
+      "readout": 64,
+      "probe_accuracy": 0.998,
+      "probe_auc": 0.999992,
+      "mean_fold_cosine": 0.9995044430730626,
+      "mean_gap": 94.99006469306073,
+      "game_projection_mean": 148.3452443580466,
+      "neutral_projection_mean": 53.355179643803325
+    }
+  }
+}

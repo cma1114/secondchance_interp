@@ -1,0 +1,424 @@
+{
+  "n_confirmation": 249,
+  "bootstrap_draws": 10000,
+  "immediate_rank_writes": {
+    "Baseline": {
+      "Rank 1": {
+        "estimate": 0.40655954487352486,
+        "ci": [
+          0.3144302811488569,
+          0.5037939053343002
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.628837505976359,
+        "ci": [
+          0.4995797055552762,
+          0.7594003147509204
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.017027903752154613,
+        "ci": [
+          -0.14018477043473576,
+          0.10830705630252635
+        ]
+      },
+      "Rank 4": {
+        "estimate": -1.0183691470977292,
+        "ci": [
+          -1.1184156168297112,
+          -0.9186914136251771
+        ]
+      }
+    },
+    "Game": {
+      "Rank 1": {
+        "estimate": 0.5227057660918638,
+        "ci": [
+          0.41474824077393635,
+          0.6336814720946622
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.3038086723611058,
+        "ci": [
+          0.20005101109125528,
+          0.408799673347588
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.11746583645602307,
+        "ci": [
+          -0.21782106934302303,
+          -0.015591247900422817
+        ]
+      },
+      "Rank 4": {
+        "estimate": -0.7090486019969465,
+        "ci": [
+          -0.7912774963311882,
+          -0.6263328296831813
+        ]
+      }
+    },
+    "Neutral": {
+      "Rank 1": {
+        "estimate": 0.9769113858540853,
+        "ci": [
+          0.860440806775208,
+          1.0923434304425037
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.4897595677509844,
+        "ci": [
+          0.3553276957158583,
+          0.626497910467975
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.27076147837811204,
+        "ci": [
+          -0.3904400763502083,
+          -0.14635249488803756
+        ]
+      },
+      "Rank 4": {
+        "estimate": -1.1959094752269577,
+        "ci": [
+          -1.2881142668575647,
+          -1.1007749055762848
+        ]
+      }
+    }
+  },
+  "mean_ablation_rank_changes": {
+    "Baseline": {
+      "Rank 1": {
+        "estimate": -0.1007781124497992,
+        "ci": [
+          -0.11395582329317269,
+          -0.0878482680722892
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.08471385542168675,
+        "ci": [
+          -0.10040160642570281,
+          -0.06990461847389558
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.005396586345381526,
+        "ci": [
+          -0.023468875502008033,
+          0.012804342369477865
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.19088855421686746,
+        "ci": [
+          0.16666666666666666,
+          0.21636546184738956
+        ]
+      }
+    },
+    "Game": {
+      "Rank 1": {
+        "estimate": -0.03187751004016064,
+        "ci": [
+          -0.039909638554216864,
+          -0.024347389558232933
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.025853413654618473,
+        "ci": [
+          -0.033760040160642574,
+          -0.018072289156626505
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.003263052208835341,
+        "ci": [
+          -0.012299196787148595,
+          0.006149598393574297
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.06099397590361446,
+        "ci": [
+          0.04907128514056225,
+          0.07354417670682731
+        ]
+      }
+    },
+    "Neutral": {
+      "Rank 1": {
+        "estimate": -0.09870732931726908,
+        "ci": [
+          -0.1120121109437751,
+          -0.0858433734939759
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.06657881526104417,
+        "ci": [
+          -0.0790035140562249,
+          -0.05377761044176707
+        ]
+      },
+      "Rank 3": {
+        "estimate": 0.0042043172690763055,
+        "ci": [
+          -0.01267570281124498,
+          0.021586345381526106
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.16108182730923695,
+        "ci": [
+          0.13729919678714858,
+          0.18624497991967873
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "Baseline": {
+      "answer_change_rate": {
+        "estimate": 0.03614457831325301,
+        "ci": [
+          0.01606425702811245,
+          0.060240963855421686
+        ]
+      },
+      "spread_change": {
+        "estimate": -0.11141744779731504,
+        "ci": [
+          -0.1251499603333265,
+          -0.09839818830285632
+        ]
+      },
+      "winner_advantage_change": {
+        "estimate": -0.1343708165997322,
+        "ci": [
+          -0.1519410977242302,
+          -0.11713102409638543
+        ]
+      },
+      "entropy_change": {
+        "estimate": 0.01945022628300395,
+        "ci": [
+          0.01636913509342276,
+          0.022515336125323228
+        ]
+      },
+      "switch_rate_change": {
+        "estimate": 0.03614457831325301,
+        "ci": [
+          0.01606425702811245,
+          0.060240963855421686
+        ]
+      }
+    },
+    "Game": {
+      "answer_change_rate": {
+        "estimate": 0.04819277108433735,
+        "ci": [
+          0.024096385542168676,
+          0.07630522088353414
+        ]
+      },
+      "spread_change": {
+        "estimate": -0.036619303373666146,
+        "ci": [
+          -0.04317650193242366,
+          -0.030113847743659643
+        ]
+      },
+      "winner_advantage_change": {
+        "estimate": -0.042503346720214254,
+        "ci": [
+          -0.0532128514056224,
+          -0.032463186077643945
+        ]
+      },
+      "entropy_change": {
+        "estimate": 0.010260273804372956,
+        "ci": [
+          0.007892251832659881,
+          0.012666010398059764
+        ]
+      },
+      "switch_rate_change": {
+        "estimate": 0.004016064257028112,
+        "ci": [
+          -0.020080321285140562,
+          0.028112449799196786
+        ]
+      }
+    },
+    "Neutral": {
+      "answer_change_rate": {
+        "estimate": 0.01606425702811245,
+        "ci": [
+          0.004016064257028112,
+          0.0321285140562249
+        ]
+      },
+      "spread_change": {
+        "estimate": -0.0996428807553093,
+        "ci": [
+          -0.11234794046964527,
+          -0.08740952073316739
+        ]
+      },
+      "winner_advantage_change": {
+        "estimate": -0.13160977242302552,
+        "ci": [
+          -0.14934948125836703,
+          -0.11445783132530132
+        ]
+      },
+      "entropy_change": {
+        "estimate": 0.021508891306762784,
+        "ci": [
+          0.018902395524790002,
+          0.024158952425550734
+        ]
+      },
+      "switch_rate_change": {
+        "estimate": 0.0,
+        "ci": [
+          -0.01606425702811245,
+          0.01606425702811245
+        ]
+      }
+    }
+  },
+  "paired_condition_contrasts": {
+    "Baseline_minus_Game": {
+      "spread_sharpening": {
+        "estimate": 0.07479814442364889,
+        "ci": [
+          0.06388538196448758,
+          0.08593647293432462
+        ]
+      },
+      "winner_advantage_sharpening": {
+        "estimate": 0.09186746987951795,
+        "ci": [
+          0.07529702141900894,
+          0.1086010709504683
+        ]
+      }
+    },
+    "Neutral_minus_Game": {
+      "spread_sharpening": {
+        "estimate": 0.06302357738164313,
+        "ci": [
+          0.05382140890921258,
+          0.07233007146375225
+        ]
+      },
+      "winner_advantage_sharpening": {
+        "estimate": 0.08910642570281128,
+        "ci": [
+          0.07362784471218202,
+          0.10508701472556904
+        ]
+      }
+    },
+    "Baseline_minus_Neutral": {
+      "spread_sharpening": {
+        "estimate": 0.011774567042005748,
+        "ci": [
+          0.0037073306937990026,
+          0.019878515434582467
+        ]
+      },
+      "winner_advantage_sharpening": {
+        "estimate": 0.0027610441767066704,
+        "ci": [
+          -0.011797188755020295,
+          0.01740503681392227
+        ]
+      }
+    }
+  },
+  "run_metadata": {
+    "batch_control": "Each condition's mean-ablation row is corrected by a condition-matched control in the same fixed four-row forward and recentered on single-trial natural logits.",
+    "component": {
+      "label": "Mixer 56",
+      "one_based_block": 56,
+      "zero_based_layer": 55
+    },
+    "conditions": [
+      "incorrect",
+      "neutral"
+    ],
+    "config": {
+      "answer_variants": {
+        "A": [
+          "A",
+          " A"
+        ],
+        "B": [
+          "B",
+          " B"
+        ],
+        "C": [
+          "C",
+          " C"
+        ],
+        "D": [
+          "D",
+          " D"
+        ]
+      },
+      "attn_implementation": "sdpa",
+      "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+      "batch_size": 1,
+      "bootstrap_samples": 10000,
+      "candidates_per_kind": 4,
+      "chat_serialization": "raw_qwen_chatml",
+      "conditions": [
+        "baseline",
+        "incorrect",
+        "neutral"
+      ],
+      "decision_mode": "unrestricted",
+      "device_map": "auto",
+      "disable_thinking": true,
+      "discovery_fraction": 0.5,
+      "dtype": "bfloat16",
+      "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+      "max_questions": null,
+      "model_id": "Qwen/Qwen3.6-27B",
+      "model_loader": "multimodal",
+      "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "output_dir": "outputs/causal/qwen36_27b_position_components_corrected",
+      "prompt_mode": "baseline_matched_empty_history",
+      "question_ids": null,
+      "residual_dtype": "float16",
+      "save_residuals": false,
+      "seed": 42,
+      "skip_missing_baseline": false,
+      "trial_major": true,
+      "trust_remote_code": false
+    },
+    "immediate_write": "JLens finite-difference direct attribution at post-block 56, holding downstream computation fixed.",
+    "mean_ablation": "Condition-specific Mixer-56 mean, equal-weighted over natural Baseline winner letters on the disjoint discovery set.",
+    "n_confirmation": 249,
+    "n_discovery": 251,
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "resolved_model_commit": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "software": {
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.14.1"
+    }
+  }
+}

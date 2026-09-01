@@ -1,0 +1,56 @@
+# Credentials and host-local state
+.env
+.env.*
+!.env.example
+.vast-config/
+.vast-state/
+.vast-known_hosts
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editor and operating-system state
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Logs, temporary work, and failed/superseded runs
+*.log
+analysis_log_*.txt
+tmp/
+failed_runs/
+game_logs/
+capabilities_test_logs/
+secondchance_game_logs/
+output/
+
+# Generated scientific artifacts are deny-by-default. Canonical, audited
+# exceptions are staged explicitly by scripts/audit_github_payload.py.
+outputs/
+figures/
+artifacts/
+
+# Raw tensors, checkpoints, archives, and interactive generated views
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.tgz
+*.tar
+*.tar.gz
+*.gz
+*.zip
+*.html
+*.svg
+*.pdf

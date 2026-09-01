@@ -1,0 +1,382 @@
+{
+  "confirmation": {
+    "game_margin_transfer": {
+      "ci": [
+        -0.0381725549697876,
+        0.09471512102100946
+      ],
+      "mean": 0.030226302473512413,
+      "n": 73
+    },
+    "game_minus_neutral_transfer": {
+      "ci": [
+        -0.04256756958896167,
+        0.05948134089169436
+      ],
+      "mean": 0.007712338068713881,
+      "n": 73
+    },
+    "game_selection_transfer": {
+      "ci": [
+        -0.0136986301369863,
+        0.1232876712328767
+      ],
+      "mean": 0.0547945205479452,
+      "n": 73
+    },
+    "identity_vs_natural_answer_differences": {
+      "evaluation_x": 1,
+      "evaluation_y": 3,
+      "neutral_x": 3,
+      "neutral_y": 1
+    },
+    "max_identity_vs_natural_ad_logit_difference": 0.6226711273193359,
+    "mean_relative_cross_semantic_state_difference": 0.09984196722507477,
+    "n": 73,
+    "natural_semantic_targeting": {
+      "ci": [
+        0.8561686669310478,
+        1.2013014355750935
+      ],
+      "mean": 1.0179588631407854,
+      "n": 73
+    },
+    "neutral_margin_transfer": {
+      "ci": [
+        -0.07249908969826893,
+        0.11128352700847469
+      ],
+      "mean": 0.022513964404798532,
+      "n": 73
+    },
+    "neutral_selection_transfer": {
+      "ci": [
+        -0.0547945205479452,
+        0.0684931506849315
+      ],
+      "mean": 0.00684931506849315,
+      "n": 73
+    },
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/confirmation"
+  },
+  "definitions": {
+    "game_margin_transfer": "Change, relative to recipient-state reinsertion, in the recipient-answer minus donor-answer margin after cross-semantic GLA-state transplantation. Positive means Game redirects suppression toward the donor semantic answer.",
+    "neutral_margin_transfer": "The same signed margin change in Neutral. Negative means Neutral redirects repetition toward the donor semantic answer."
+  },
+  "discovery": {
+    "game_margin_transfer": {
+      "ci": [
+        -0.0076088570058345795,
+        0.10769456066191195
+      ],
+      "mean": 0.04999500513076782,
+      "n": 64
+    },
+    "game_minus_neutral_transfer": {
+      "ci": [
+        -0.05895930677652359,
+        0.027870849519968023
+      ],
+      "mean": -0.015199556946754456,
+      "n": 64
+    },
+    "game_selection_transfer": {
+      "ci": [
+        0.015625,
+        0.1171875
+      ],
+      "mean": 0.0625,
+      "n": 64
+    },
+    "identity_vs_natural_answer_differences": {
+      "evaluation_x": 4,
+      "evaluation_y": 1,
+      "neutral_x": 4,
+      "neutral_y": 6
+    },
+    "max_identity_vs_natural_ad_logit_difference": 0.6247100830078125,
+    "mean_relative_cross_semantic_state_difference": 0.10493368655443192,
+    "n": 64,
+    "natural_semantic_targeting": {
+      "ci": [
+        0.7129740189760924,
+        1.0499466311186552
+      ],
+      "mean": 0.8705544769763947,
+      "n": 64
+    },
+    "neutral_margin_transfer": {
+      "ci": [
+        0.0037702620029449467,
+        0.1285232938826084
+      ],
+      "mean": 0.06519456207752228,
+      "n": 64
+    },
+    "neutral_selection_transfer": {
+      "ci": [
+        -0.0703125,
+        0.046875
+      ],
+      "mean": -0.015625,
+      "n": 64
+    },
+    "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/discovery"
+  },
+  "shard_sensitivity": {
+    "confirmation_shard0": {
+      "game_margin_transfer": {
+        "ci": [
+          0.004276191866075671,
+          0.17787996047251928
+        ],
+        "mean": 0.08848731582229202,
+        "n": 37
+      },
+      "game_minus_neutral_transfer": {
+        "ci": [
+          -0.05328569863293622,
+          0.09601441202936944
+        ],
+        "mean": 0.02288748766924884,
+        "n": 37
+      },
+      "game_selection_transfer": {
+        "ci": [
+          -0.02702702702702703,
+          0.16216216216216217
+        ],
+        "mean": 0.06756756756756757,
+        "n": 37
+      },
+      "identity_vs_natural_answer_differences": {
+        "evaluation_x": 1,
+        "evaluation_y": 2,
+        "neutral_x": 2,
+        "neutral_y": 1
+      },
+      "max_identity_vs_natural_ad_logit_difference": 0.6226711273193359,
+      "mean_relative_cross_semantic_state_difference": 0.09788651019334793,
+      "n": 37,
+      "natural_semantic_targeting": {
+        "ci": [
+          0.9392606915654362,
+          1.4388353437990755
+        ],
+        "mean": 1.1625949756519214,
+        "n": 37
+      },
+      "neutral_margin_transfer": {
+        "ci": [
+          -0.030474001652485615,
+          0.17477054144885087
+        ],
+        "mean": 0.06559982815304317,
+        "n": 37
+      },
+      "neutral_selection_transfer": {
+        "ci": [
+          -0.06756756756756757,
+          0.10810810810810811
+        ],
+        "mean": 0.013513513513513514,
+        "n": 37
+      },
+      "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/confirmation_shard0"
+    },
+    "confirmation_shard1": {
+      "game_margin_transfer": {
+        "ci": [
+          -0.13557885421646967,
+          0.0626060320271386
+        ],
+        "mean": -0.029653072357177734,
+        "n": 36
+      },
+      "game_minus_neutral_transfer": {
+        "ci": [
+          -0.07081719504462348,
+          0.06356528335147432
+        ],
+        "mean": -0.007884343465169271,
+        "n": 36
+      },
+      "game_selection_transfer": {
+        "ci": [
+          -0.05555555555555555,
+          0.1388888888888889
+        ],
+        "mean": 0.041666666666666664,
+        "n": 36
+      },
+      "identity_vs_natural_answer_differences": {
+        "evaluation_x": 0,
+        "evaluation_y": 1,
+        "neutral_x": 1,
+        "neutral_y": 0
+      },
+      "max_identity_vs_natural_ad_logit_difference": 0.49913978576660156,
+      "mean_relative_cross_semantic_state_difference": 0.10185176134109497,
+      "n": 36,
+      "natural_semantic_targeting": {
+        "ci": [
+          0.654749761025111,
+          1.108253017399046
+        ],
+        "mean": 0.8693050808376737,
+        "n": 36
+      },
+      "neutral_margin_transfer": {
+        "ci": [
+          -0.18297826713985865,
+          0.11022918356789477
+        ],
+        "mean": -0.021768728892008465,
+        "n": 36
+      },
+      "neutral_selection_transfer": {
+        "ci": [
+          -0.08333333333333333,
+          0.08333333333333333
+        ],
+        "mean": 0.0,
+        "n": 36
+      },
+      "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/confirmation_shard1"
+    },
+    "discovery_shard0": {
+      "game_margin_transfer": {
+        "ci": [
+          -0.03701571226119995,
+          0.13647304475307465
+        ],
+        "mean": 0.050755470991134644,
+        "n": 32
+      },
+      "game_minus_neutral_transfer": {
+        "ci": [
+          -0.02971023991703987,
+          0.07036119401454924
+        ],
+        "mean": 0.02191653847694397,
+        "n": 32
+      },
+      "game_selection_transfer": {
+        "ci": [
+          -0.03125,
+          0.09375
+        ],
+        "mean": 0.03125,
+        "n": 32
+      },
+      "identity_vs_natural_answer_differences": {
+        "evaluation_x": 3,
+        "evaluation_y": 1,
+        "neutral_x": 2,
+        "neutral_y": 3
+      },
+      "max_identity_vs_natural_ad_logit_difference": 0.6247100830078125,
+      "mean_relative_cross_semantic_state_difference": 0.1097530722618103,
+      "n": 32,
+      "natural_semantic_targeting": {
+        "ci": [
+          0.6404537379741668,
+          1.2018853977322579
+        ],
+        "mean": 0.8976533114910126,
+        "n": 32
+      },
+      "neutral_margin_transfer": {
+        "ci": [
+          -0.07304734513163566,
+          0.1276048682630062
+        ],
+        "mean": 0.028838932514190674,
+        "n": 32
+      },
+      "neutral_selection_transfer": {
+        "ci": [
+          -0.140625,
+          0.0
+        ],
+        "mean": -0.0625,
+        "n": 32
+      },
+      "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/discovery_shard0"
+    },
+    "discovery_shard1": {
+      "game_margin_transfer": {
+        "ci": [
+          -0.02309780865907669,
+          0.12452936396002767
+        ],
+        "mean": 0.049234539270401,
+        "n": 32
+      },
+      "game_minus_neutral_transfer": {
+        "ci": [
+          -0.12495892867445946,
+          0.01546185463666914
+        ],
+        "mean": -0.05231565237045288,
+        "n": 32
+      },
+      "game_selection_transfer": {
+        "ci": [
+          0.015625,
+          0.1875
+        ],
+        "mean": 0.09375,
+        "n": 32
+      },
+      "identity_vs_natural_answer_differences": {
+        "evaluation_x": 1,
+        "evaluation_y": 0,
+        "neutral_x": 2,
+        "neutral_y": 3
+      },
+      "max_identity_vs_natural_ad_logit_difference": 0.49991607666015625,
+      "mean_relative_cross_semantic_state_difference": 0.10011430829763412,
+      "n": 32,
+      "natural_semantic_targeting": {
+        "ci": [
+          0.6721622899174691,
+          1.0329063758254051
+        ],
+        "mean": 0.8434556424617767,
+        "n": 32
+      },
+      "neutral_margin_transfer": {
+        "ci": [
+          0.02940606251358986,
+          0.17388721629977225
+        ],
+        "mean": 0.10155019164085388,
+        "n": 32
+      },
+      "neutral_selection_transfer": {
+        "ci": [
+          -0.046875,
+          0.125
+        ],
+        "mean": 0.03125,
+        "n": 32
+      },
+      "root": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/semantic_binding_fixed_a_gla_state_transplant/discovery_shard1"
+    }
+  },
+  "trusted_natural_validation": {
+    "confirmation": {
+      "cell_level_answer_differences": 10,
+      "cell_level_answers": 292,
+      "max_absolute_ad_logit_difference": 0.8665676116943359,
+      "mean_absolute_ad_logit_difference": 0.15035822987556458
+    },
+    "discovery": {
+      "cell_level_answer_differences": 9,
+      "cell_level_answers": 256,
+      "max_absolute_ad_logit_difference": 0.8738498687744141,
+      "mean_absolute_ad_logit_difference": 0.13417494297027588
+    }
+  }
+}

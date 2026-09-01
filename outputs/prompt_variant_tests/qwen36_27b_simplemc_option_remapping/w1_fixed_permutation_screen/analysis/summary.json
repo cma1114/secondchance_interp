@@ -1,0 +1,45 @@
+{
+  "definition": "W1 remains at its original displayed letter while the other three options are permuted through all six arrangements. Eligible questions select W1 in the identity companion but not in at least one same-position permutation.",
+  "n_questions": 500,
+  "identity_choice_agreement_with_trusted": 0.984,
+  "max_abs_identity_logit_error": 0.125,
+  "eligible_questions": 222,
+  "eligible_by_split": {
+    "confirmation": 107,
+    "discovery": 115
+  },
+  "eligible_by_w1_letter": {
+    "C": 64,
+    "A": 77,
+    "B": 44,
+    "D": 37
+  },
+  "letter_summary": {
+    "A": {
+      "n_questions": 240,
+      "identity_companion_still_selects_w1": 237,
+      "has_same_position_unchosen_permutation": 77,
+      "eligible_fraction": 0.32489451476793246
+    },
+    "B": {
+      "n_questions": 73,
+      "identity_companion_still_selects_w1": 72,
+      "has_same_position_unchosen_permutation": 44,
+      "eligible_fraction": 0.6111111111111112
+    },
+    "C": {
+      "n_questions": 106,
+      "identity_companion_still_selects_w1": 104,
+      "has_same_position_unchosen_permutation": 64,
+      "eligible_fraction": 0.6153846153846154
+    },
+    "D": {
+      "n_questions": 81,
+      "identity_companion_still_selects_w1": 79,
+      "has_same_position_unchosen_permutation": 37,
+      "eligible_fraction": 0.46835443037974683
+    }
+  },
+  "w1_choice_rate_across_all_permutations": 0.7946666666666666,
+  "mean_ad_probability_mass": 0.999949038028717
+}

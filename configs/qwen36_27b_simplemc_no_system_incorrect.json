@@ -1,0 +1,19 @@
+{
+  "model_id": "Qwen/Qwen3.6-27B",
+  "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+  "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+  "output_dir": "outputs/reproduction/qwen36_27b_simplemc_no_system_incorrect",
+  "conditions": [
+    "incorrect_no_system_setup"
+  ],
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "model_loader": "multimodal",
+  "attn_implementation": "sdpa",
+  "save_residuals": false,
+  "prompt_mode": "faithful",
+  "disable_thinking": true,
+  "trust_remote_code": false
+}

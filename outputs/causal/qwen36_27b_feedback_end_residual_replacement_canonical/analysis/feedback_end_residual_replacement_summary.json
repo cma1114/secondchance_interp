@@ -1,0 +1,1035 @@
+{
+  "n_questions": 249,
+  "bootstrap_draws": 10000,
+  "natural": {
+    "Game_switch_rate": 0.42168674698795183,
+    "Neutral_switch_rate": 0.28112449799196787,
+    "Game_winner_advantage": 1.0145582329317269,
+    "Neutral_winner_advantage": 1.8092369477911647,
+    "Game_spread": 0.8236431892601724,
+    "Neutral_spread": 1.1380795578138359,
+    "Game_entropy": 1.1129816069096852,
+    "Neutral_entropy": 0.9764437217599478
+  },
+  "effects": {
+    "Neutral into Game": {
+      "L1_16": {
+        "winner_advantage_change": {
+          "estimate": 0.0364792503346721,
+          "ci": [
+            0.016566265060240965,
+            0.05639223560910333
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.02976490663200314,
+          "ci": [
+            0.020447695017521965,
+            0.03920067125524487
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.014880693760471042,
+          "ci": [
+            -0.019730450220477473,
+            -0.010202100324819219
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 1.2048192771084338,
+          "ci": [
+            -2.4096385542168677,
+            4.819277108433735
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 26,
+          "new_switches": 11,
+          "prevented_switches": 8,
+          "switched_to_different_alternative": 7
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.027359437751004016,
+            "ci": [
+              0.012424698795180723,
+              0.04229417670682731
+            ]
+          },
+          "Rank 2": {
+            "estimate": -0.004769076305220884,
+            "ci": [
+              -0.02120983935742972,
+              0.010793172690763053
+            ]
+          },
+          "Rank 3": {
+            "estimate": -0.000251004016064257,
+            "ci": [
+              -0.01593875502008032,
+              0.015436746987951807
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.022339357429718876,
+            "ci": [
+              -0.03903112449799197,
+              -0.005647590361445783
+            ]
+          }
+        }
+      },
+      "L17_32": {
+        "winner_advantage_change": {
+          "estimate": 0.06124497991967863,
+          "ci": [
+            0.034805890227576824,
+            0.08819026104417665
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.04275488959127104,
+          "ci": [
+            0.03140025014263671,
+            0.053999284908868926
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.021299802563794722,
+          "ci": [
+            -0.029008965095318997,
+            -0.013749407820990496
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -0.40160642570281124,
+          "ci": [
+            -4.417670682730924,
+            3.6144578313253013
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 27,
+          "new_switches": 12,
+          "prevented_switches": 13,
+          "switched_to_different_alternative": 2
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.04593373493975904,
+            "ci": [
+              0.02610441767068273,
+              0.06614269578313249
+            ]
+          },
+          "Rank 2": {
+            "estimate": -0.012801204819277108,
+            "ci": [
+              -0.032003012048192774,
+              0.005647590361445783
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.002259036144578313,
+            "ci": [
+              -0.014683734939759037,
+              0.01857429718875502
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.035391566265060244,
+            "ci": [
+              -0.05271084337349398,
+              -0.017193775100401605
+            ]
+          }
+        }
+      },
+      "L33_40": {
+        "winner_advantage_change": {
+          "estimate": 0.09923025435073625,
+          "ci": [
+            0.08350066934404271,
+            0.11529869477911643
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.055607114577794506,
+          "ci": [
+            0.049086888101986074,
+            0.06231187794840167
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.0255985121924962,
+          "ci": [
+            -0.03019068217457812,
+            -0.02122565818550353
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -0.8032128514056225,
+          "ci": [
+            -3.21285140562249,
+            1.606425702811245
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 12,
+          "new_switches": 4,
+          "prevented_switches": 6,
+          "switched_to_different_alternative": 2
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.0744226907630522,
+            "ci": [
+              0.06262550200803213,
+              0.08647402108433731
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.007153614457831325,
+            "ci": [
+              -0.00338855421686747,
+              0.018072289156626505
+            ]
+          },
+          "Rank 3": {
+            "estimate": -0.020958835341365462,
+            "ci": [
+              -0.03175200803212851,
+              -0.01016566265060241
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.06061746987951807,
+            "ci": [
+              -0.07078313253012049,
+              -0.050326305220883535
+            ]
+          }
+        }
+      },
+      "L41_48": {
+        "winner_advantage_change": {
+          "estimate": 0.030789825970548853,
+          "ci": [
+            0.01941097724230251,
+            0.042001338688085546
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.023454754301992998,
+          "ci": [
+            0.018402832322480633,
+            0.028410225305175396
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.011112860666606912,
+          "ci": [
+            -0.014082337297356055,
+            -0.008238150408114625
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 1.2048192771084338,
+          "ci": [
+            -1.2048192771084338,
+            3.6144578313253013
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 11,
+          "new_switches": 6,
+          "prevented_switches": 3,
+          "switched_to_different_alternative": 2
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.023092369477911646,
+            "ci": [
+              0.014558232931726908,
+              0.03150100401606426
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.004518072289156626,
+            "ci": [
+              -0.0030120481927710845,
+              0.012173694779116466
+            ]
+          },
+          "Rank 3": {
+            "estimate": -0.005522088353413655,
+            "ci": [
+              -0.013052208835341365,
+              0.0018825301204819277
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.02208835341365462,
+            "ci": [
+              -0.030120481927710843,
+              -0.014181726907630521
+            ]
+          }
+        }
+      },
+      "L49_64": {
+        "winner_advantage_change": {
+          "estimate": 0.03597724230254342,
+          "ci": [
+            0.026773761713520656,
+            0.045013386880856744
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.023352079012123203,
+          "ci": [
+            0.019324350050299692,
+            0.027287384861101594
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.009505216375136892,
+          "ci": [
+            -0.011613065559191022,
+            -0.007409806568213424
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -0.40160642570281124,
+          "ci": [
+            -2.8112449799196786,
+            2.0080321285140563
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 12,
+          "new_switches": 4,
+          "prevented_switches": 5,
+          "switched_to_different_alternative": 3
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.02698293172690763,
+            "ci": [
+              0.020080321285140562,
+              0.033760040160642574
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.009914658634538153,
+            "ci": [
+              0.003263052208835341,
+              0.016566265060240965
+            ]
+          },
+          "Rank 3": {
+            "estimate": -0.009663654618473896,
+            "ci": [
+              -0.01606425702811245,
+              -0.003137550200803213
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.027233935742971886,
+            "ci": [
+              -0.03413654618473896,
+              -0.019954819277108432
+            ]
+          }
+        }
+      },
+      "all_layers": {
+        "winner_advantage_change": {
+          "estimate": 0.10793172690763045,
+          "ci": [
+            0.07647255689424354,
+            0.14039491298527437
+          ]
+        },
+        "spread_change": {
+          "estimate": 0.07371263190368303,
+          "ci": [
+            0.05966391243519535,
+            0.08809412626927579
+          ]
+        },
+        "entropy_change": {
+          "estimate": -0.03553944448736288,
+          "ci": [
+            -0.043776309052199175,
+            -0.02745743768386517
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -1.2048192771084338,
+          "ci": [
+            -5.220883534136546,
+            2.8112449799196786
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 30,
+          "new_switches": 11,
+          "prevented_switches": 14,
+          "switched_to_different_alternative": 5
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": 0.08094879518072289,
+            "ci": [
+              0.05735441767068273,
+              0.10529618473895583
+            ]
+          },
+          "Rank 2": {
+            "estimate": -0.018448795180722892,
+            "ci": [
+              -0.04066265060240964,
+              0.00401920180722887
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.004643574297188755,
+            "ci": [
+              -0.016440763052208835,
+              0.025602409638554216
+            ]
+          },
+          "Rank 4": {
+            "estimate": -0.06714357429718876,
+            "ci": [
+              -0.08785454317269076,
+              -0.045306224899598395
+            ]
+          }
+        }
+      }
+    },
+    "Game into Neutral": {
+      "L1_16": {
+        "winner_advantage_change": {
+          "estimate": -0.0057730923694779114,
+          "ci": [
+            -0.01999665327978577,
+            0.008283132530120354
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.00011935362235860852,
+          "ci": [
+            -0.006249288617666033,
+            0.0060269511510750344
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.000422250531905947,
+          "ci": [
+            -0.0027872762361083572,
+            0.0036821426436893143
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 0.0,
+          "ci": [
+            -2.4096385542168677,
+            2.4096385542168677
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 10,
+          "new_switches": 5,
+          "prevented_switches": 5,
+          "switched_to_different_alternative": 0
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.004329819277108434,
+            "ci": [
+              -0.014997489959839357,
+              0.0062123493975903615
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.002196285140562249,
+            "ci": [
+              -0.007719942269076303,
+              0.01192269076305221
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.0006902610441767068,
+            "ci": [
+              -0.009914658634538153,
+              0.011671686746987951
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.0014432730923694779,
+            "ci": [
+              -0.008345883534136546,
+              0.011357931726907631
+            ]
+          }
+        }
+      },
+      "L17_32": {
+        "winner_advantage_change": {
+          "estimate": -0.005103748326640002,
+          "ci": [
+            -0.01823962516733617,
+            0.007613788487282402
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.0010819795604723951,
+          "ci": [
+            -0.007504524827950363,
+            0.005246056104821887
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.0005899451294898512,
+          "ci": [
+            -0.0023236077764551195,
+            0.0035405420380273966
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 0.0,
+          "ci": [
+            -2.8112449799196786,
+            2.8112449799196786
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 15,
+          "new_switches": 7,
+          "prevented_switches": 7,
+          "switched_to_different_alternative": 1
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.0038278112449799196,
+            "ci": [
+              -0.013679718875502008,
+              0.005710341365461847
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.002196285140562249,
+            "ci": [
+              -0.007592871485943775,
+              0.011985441767068273
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.0006902610441767068,
+            "ci": [
+              -0.008471385542168674,
+              0.010040160642570281
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.0009412650602409639,
+            "ci": [
+              -0.009914658634538153,
+              0.011420682730923695
+            ]
+          }
+        }
+      },
+      "L33_40": {
+        "winner_advantage_change": {
+          "estimate": -0.05162315930388229,
+          "ci": [
+            -0.0640060240963856,
+            -0.039323962516733695
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.02396769376840089,
+          "ci": [
+            -0.02935752464906886,
+            -0.018719651146261868
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.007243384142803867,
+          "ci": [
+            0.004758986402646157,
+            0.009786720253788014
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 0.40160642570281124,
+          "ci": [
+            -1.2048192771084338,
+            2.4096385542168677
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 7,
+          "new_switches": 3,
+          "prevented_switches": 2,
+          "switched_to_different_alternative": 2
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.03871736947791165,
+            "ci": [
+              -0.04800451807228916,
+              -0.0294929718875502
+            ]
+          },
+          "Rank 2": {
+            "estimate": -0.006086847389558233,
+            "ci": [
+              -0.013805220883534136,
+              0.0014432730923694779
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.014997489959839357,
+            "ci": [
+              0.00677710843373494,
+              0.023343373493975902
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.02980672690763052,
+            "ci": [
+              0.022025602409638554,
+              0.037838855421686746
+            ]
+          }
+        }
+      },
+      "L41_48": {
+        "winner_advantage_change": {
+          "estimate": -0.018908969210174067,
+          "ci": [
+            -0.02844712182061592,
+            -0.009036144578313253
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.007068239370652464,
+          "ci": [
+            -0.01118805257343268,
+            -0.002938743897731429
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.0026597874444783463,
+          "ci": [
+            0.0002733661924894832,
+            0.004986656658112341
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -1.2048192771084338,
+          "ci": [
+            -3.21285140562249,
+            0.8032128514056225
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 8,
+          "new_switches": 2,
+          "prevented_switches": 5,
+          "switched_to_different_alternative": 1
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.014181726907630521,
+            "ci": [
+              -0.02133534136546185,
+              -0.00677710843373494
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.004392570281124498,
+            "ci": [
+              -0.002008032128514056,
+              0.010667670682730925
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.0038905622489959837,
+            "ci": [
+              -0.003639558232931727,
+              0.011047314257028066
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.00589859437751004,
+            "ci": [
+              -0.000502008032128514,
+              0.012550200803212851
+            ]
+          }
+        }
+      },
+      "L49_64": {
+        "winner_advantage_change": {
+          "estimate": -0.02267402945113785,
+          "ci": [
+            -0.03129183400267728,
+            -0.014139892904953098
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.009458523830728233,
+          "ci": [
+            -0.013029767023105931,
+            -0.005881755726604336
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.00259392956328927,
+          "ci": [
+            0.0006274905748560267,
+            0.004516108217957046
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": 0.8032128514056225,
+          "ci": [
+            -1.2048192771084338,
+            3.21285140562249
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 9,
+          "new_switches": 5,
+          "prevented_switches": 3,
+          "switched_to_different_alternative": 1
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.017005522088353413,
+            "ci": [
+              -0.023468875502008033,
+              -0.01060491967871486
+            ]
+          },
+          "Rank 2": {
+            "estimate": 0.0025727911646586344,
+            "ci": [
+              -0.0038905622489959837,
+              0.009036144578313253
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.0035768072289156625,
+            "ci": [
+              -0.0033258032128514058,
+              0.010416666666666666
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.010855923694779116,
+            "ci": [
+              0.0045808232931726905,
+              0.017131024096385544
+            ]
+          }
+        }
+      },
+      "all_layers": {
+        "winner_advantage_change": {
+          "estimate": -0.030204149933065704,
+          "ci": [
+            -0.0476070950468542,
+            -0.01288487282463204
+          ]
+        },
+        "spread_change": {
+          "estimate": -0.01692510035712888,
+          "ci": [
+            -0.02495884096131237,
+            -0.009158077629718635
+          ]
+        },
+        "entropy_change": {
+          "estimate": 0.007022232087593311,
+          "ci": [
+            0.003300446448478499,
+            0.010783337667880913
+          ]
+        },
+        "switch_rate_change_pp": {
+          "estimate": -0.8032128514056225,
+          "ci": [
+            -3.6144578313253013,
+            2.0080321285140563
+          ]
+        },
+        "choice_transitions": {
+          "total_choice_flips": 15,
+          "new_switches": 6,
+          "prevented_switches": 8,
+          "switched_to_different_alternative": 1
+        },
+        "rank_logit_changes": {
+          "Rank 1": {
+            "estimate": -0.022653112449799197,
+            "ci": [
+              -0.03570532128514056,
+              -0.009663654618473896
+            ]
+          },
+          "Rank 2": {
+            "estimate": -0.0020707831325301206,
+            "ci": [
+              -0.0147464859437751,
+              0.010542168674698794
+            ]
+          },
+          "Rank 3": {
+            "estimate": 0.009475401606425703,
+            "ci": [
+              -0.002447289156626506,
+              0.021774598393574297
+            ]
+          },
+          "Rank 4": {
+            "estimate": 0.015248493975903615,
+            "ci": [
+              0.002445720381526106,
+              0.027735943775100403
+            ]
+          }
+        }
+      }
+    }
+  },
+  "run_metadata": {
+    "batch_control": "Six intervention rows plus an unpatched matched row; saved logits equal single-trial natural logits plus patched-minus-control logits.",
+    "conditions": [
+      "incorrect",
+      "neutral"
+    ],
+    "config": {
+      "answer_variants": {
+        "A": [
+          "A",
+          " A"
+        ],
+        "B": [
+          "B",
+          " B"
+        ],
+        "C": [
+          "C",
+          " C"
+        ],
+        "D": [
+          "D",
+          " D"
+        ]
+      },
+      "attn_implementation": "sdpa",
+      "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+      "batch_size": 1,
+      "bootstrap_samples": 10000,
+      "candidates_per_kind": 4,
+      "chat_serialization": "raw_qwen_chatml",
+      "conditions": [
+        "baseline",
+        "incorrect",
+        "neutral"
+      ],
+      "decision_mode": "unrestricted",
+      "device_map": "auto",
+      "disable_thinking": true,
+      "discovery_fraction": 0.5,
+      "dtype": "bfloat16",
+      "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+      "max_questions": null,
+      "model_id": "Qwen/Qwen3.6-27B",
+      "model_loader": "multimodal",
+      "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "output_dir": "outputs/causal/qwen36_27b_position_components_corrected",
+      "prompt_mode": "baseline_matched_empty_history",
+      "question_ids": null,
+      "residual_dtype": "float16",
+      "save_residuals": false,
+      "seed": 42,
+      "skip_missing_baseline": false,
+      "trial_major": true,
+      "trust_remote_code": false
+    },
+    "intervention": "At the period ending the feedback sentence, replace the complete post-block residual with the paired same-question residual from the other condition at every layer in the specified window.",
+    "n_questions": 249,
+    "plan_path": "outputs/causal/qwen36_27b_position_components_corrected/plans/confirmation_plan.json",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "resolved_model_commit": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "software": {
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.14.1"
+    },
+    "windows": {
+      "L17_32": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "L1_16": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "L33_40": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "L41_48": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "L49_64": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "all_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    }
+  },
+  "all_layer_fraction_of_condition_gap": {
+    "Neutral into Game": {
+      "winner_advantage_change": 0.13581806696146548,
+      "spread_change": 0.2344278183937328,
+      "entropy_change": 0.2602899880014089,
+      "switch_rate_change_pp": 0.08571428571428572
+    },
+    "Game into Neutral": {
+      "winner_advantage_change": 0.03800800168456531,
+      "spread_change": 0.05382678993203152,
+      "entropy_change": 0.051430649302149516,
+      "switch_rate_change_pp": -0.05714285714285714
+    }
+  }
+}

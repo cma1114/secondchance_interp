@@ -1,0 +1,2619 @@
+{
+  "behavioral_semantic_targeting": {
+    "content_switch": {
+      "incorrect": 0.656,
+      "neutral": 0.468
+    },
+    "game_minus_neutral_content_switch": {
+      "ci_high": 0.23,
+      "ci_low": 0.146,
+      "mean": 0.188
+    },
+    "game_minus_neutral_entropy_bits": {
+      "ci_high": 0.2241288764311085,
+      "ci_low": 0.16627046401300166,
+      "mean": 0.1951046972421446
+    },
+    "game_minus_neutral_old_letter_avoidance": {
+      "ci_high": -0.048,
+      "ci_low": -0.132,
+      "mean": -0.09
+    },
+    "old_letter_avoidance": {
+      "incorrect": 0.63,
+      "neutral": 0.72
+    }
+  },
+  "definitions": {
+    "aggregated_logit": "For each letter, log-sum-exp over the configured bare-letter and leading-space answer-token logits.",
+    "causal_lesion_effect": "Candidate advantage after blocking the true matching 1P source minus blocking an equally sized cyclic wrong-line source; positive means the intact Game match normally opposed that candidate.",
+    "centered_change": "Final-minus-first logit change after subtracting each question's mean over its four candidates at each presentation.",
+    "conditional_ad_probability": "Softmax over the four aggregated A-D logits for each question, then averaged over questions.",
+    "rank": "R1-R4 are candidates ordered by first-presentation aggregated A-D logits."
+  },
+  "destination_selection": {
+    "counts": {
+      "all_questions": 500,
+      "destination_distinct_confirmation": 70,
+      "destination_distinct_discovery": 65,
+      "destination_distinct_questions": 135,
+      "old_winner_vs_fresh_winner_conflicts": 273
+    },
+    "definition": "Old winner and old runner-up are the first- and second-ranked candidates under first-presentation A-D logits. Fresh winner is the semantic answer selected by the standalone remapped second-presentation baseline. The primary destination-distinct subset requires the fresh winner to differ from both old candidates. No correctness label is used.",
+    "splits": {
+      "confirmation": {
+        "Game": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.2,
+                  0.34
+                ],
+                "mean": 0.08,
+                "n": 50
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.36,
+                  0.64
+                ],
+                "mean": 0.5,
+                "n": 50
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.28,
+                  0.56
+                ],
+                "mean": 0.42,
+                "n": 50
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.1289285714285711,
+                  0.24285714285714285
+                ],
+                "mean": 0.05714285714285714,
+                "n": 70
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.24285714285714285,
+                  0.4714285714285714
+                ],
+                "mean": 0.35714285714285715,
+                "n": 70
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.2,
+                  0.4
+                ],
+                "mean": 0.3,
+                "n": 70
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.18571428571428572,
+                  0.4
+                ],
+                "mean": 0.2857142857142857,
+                "n": 70
+              },
+              "other_choice": {
+                "ci": [
+                  0.014285714285714285,
+                  0.11428571428571428
+                ],
+                "mean": 0.05714285714285714,
+                "n": 70
+              },
+              "switch_rate": {
+                "ci": [
+                  0.6,
+                  0.8142857142857143
+                ],
+                "mean": 0.7142857142857143,
+                "n": 70
+              }
+            },
+            "n_questions": 70,
+            "n_switches": 50
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.16666666666666666,
+                  0.6
+                ],
+                "mean": 0.38333333333333336,
+                "n": 60
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.5,
+                  0.75
+                ],
+                "mean": 0.6333333333333333,
+                "n": 60
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.15,
+                  0.36666666666666664
+                ],
+                "mean": 0.25,
+                "n": 60
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.14285714285714285,
+                  0.5142857142857142
+                ],
+                "mean": 0.32857142857142857,
+                "n": 70
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.42857142857142855,
+                  0.6571428571428571
+                ],
+                "mean": 0.5428571428571428,
+                "n": 70
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.11428571428571428,
+                  0.3142857142857143
+                ],
+                "mean": 0.21428571428571427,
+                "n": 70
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.07142857142857142,
+                  0.22857142857142856
+                ],
+                "mean": 0.14285714285714285,
+                "n": 70
+              },
+              "other_choice": {
+                "ci": [
+                  0.02857142857142857,
+                  0.17142857142857143
+                ],
+                "mean": 0.1,
+                "n": 70
+              },
+              "switch_rate": {
+                "ci": [
+                  0.7714285714285715,
+                  0.9285714285714286
+                ],
+                "mean": 0.8571428571428571,
+                "n": 70
+              }
+            },
+            "n_questions": 70,
+            "n_switches": 60
+          }
+        },
+        "Neutral": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.3333333333333333,
+                  0.17647058823529413
+                ],
+                "mean": -0.0784313725490196,
+                "n": 51
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.2549019607843137,
+                  0.5294117647058824
+                ],
+                "mean": 0.39215686274509803,
+                "n": 51
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.3333333333333333,
+                  0.6078431372549019
+                ],
+                "mean": 0.47058823529411764,
+                "n": 51
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.24285714285714285,
+                  0.12857142857142856
+                ],
+                "mean": -0.05714285714285714,
+                "n": 70
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.18571428571428572,
+                  0.38571428571428573
+                ],
+                "mean": 0.2857142857142857,
+                "n": 70
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.22857142857142856,
+                  0.45714285714285713
+                ],
+                "mean": 0.34285714285714286,
+                "n": 70
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.17142857142857143,
+                  0.37142857142857144
+                ],
+                "mean": 0.2714285714285714,
+                "n": 70
+              },
+              "other_choice": {
+                "ci": [
+                  0.04285714285714286,
+                  0.17142857142857143
+                ],
+                "mean": 0.1,
+                "n": 70
+              },
+              "switch_rate": {
+                "ci": [
+                  0.6285714285714286,
+                  0.8285714285714286
+                ],
+                "mean": 0.7285714285714285,
+                "n": 70
+              }
+            },
+            "n_questions": 70,
+            "n_switches": 51
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.06976744186046512,
+                  0.4883720930232558
+                ],
+                "mean": 0.20930232558139536,
+                "n": 43
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.4186046511627907,
+                  0.6976744186046512
+                ],
+                "mean": 0.5581395348837209,
+                "n": 43
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.20930232558139536,
+                  0.4883720930232558
+                ],
+                "mean": 0.3488372093023256,
+                "n": 43
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.04285714285714286,
+                  0.3
+                ],
+                "mean": 0.12857142857142856,
+                "n": 70
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.22857142857142856,
+                  0.45714285714285713
+                ],
+                "mean": 0.34285714285714286,
+                "n": 70
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.11428571428571428,
+                  0.3142857142857143
+                ],
+                "mean": 0.21428571428571427,
+                "n": 70
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.2714285714285714,
+                  0.5
+                ],
+                "mean": 0.38571428571428573,
+                "n": 70
+              },
+              "other_choice": {
+                "ci": [
+                  0.014285714285714285,
+                  0.11428571428571428
+                ],
+                "mean": 0.05714285714285714,
+                "n": 70
+              },
+              "switch_rate": {
+                "ci": [
+                  0.5,
+                  0.7285714285714285
+                ],
+                "mean": 0.6142857142857143,
+                "n": 70
+              }
+            },
+            "n_questions": 70,
+            "n_switches": 43
+          }
+        }
+      },
+      "discovery": {
+        "Game": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.24390243902439024,
+                  0.3170731707317073
+                ],
+                "mean": 0.04878048780487805,
+                "n": 41
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.2926829268292683,
+                  0.5853658536585366
+                ],
+                "mean": 0.43902439024390244,
+                "n": 41
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.24390243902439024,
+                  0.5365853658536586
+                ],
+                "mean": 0.3902439024390244,
+                "n": 41
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.13846153846153847,
+                  0.2
+                ],
+                "mean": 0.03076923076923077,
+                "n": 65
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.16923076923076924,
+                  0.38461538461538464
+                ],
+                "mean": 0.27692307692307694,
+                "n": 65
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.15384615384615385,
+                  0.35384615384615387
+                ],
+                "mean": 0.24615384615384617,
+                "n": 65
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.24615384615384617,
+                  0.49230769230769234
+                ],
+                "mean": 0.36923076923076925,
+                "n": 65
+              },
+              "other_choice": {
+                "ci": [
+                  0.046153846153846156,
+                  0.18461538461538463
+                ],
+                "mean": 0.1076923076923077,
+                "n": 65
+              },
+              "switch_rate": {
+                "ci": [
+                  0.5076923076923077,
+                  0.7384615384615385
+                ],
+                "mean": 0.6307692307692307,
+                "n": 65
+              }
+            },
+            "n_questions": 65,
+            "n_switches": 41
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.2549019607843137,
+                  0.7058823529411765
+                ],
+                "mean": 0.49019607843137253,
+                "n": 51
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.5490196078431373,
+                  0.803921568627451
+                ],
+                "mean": 0.6862745098039216,
+                "n": 51
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.09803921568627451,
+                  0.3137254901960784
+                ],
+                "mean": 0.19607843137254902,
+                "n": 51
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.2,
+                  0.5538461538461539
+                ],
+                "mean": 0.38461538461538464,
+                "n": 65
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.4153846153846154,
+                  0.6615384615384615
+                ],
+                "mean": 0.5384615384615384,
+                "n": 65
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.07692307692307693,
+                  0.24615384615384617
+                ],
+                "mean": 0.15384615384615385,
+                "n": 65
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.12307692307692308,
+                  0.3230769230769231
+                ],
+                "mean": 0.2153846153846154,
+                "n": 65
+              },
+              "other_choice": {
+                "ci": [
+                  0.03076923076923077,
+                  0.16923076923076924
+                ],
+                "mean": 0.09230769230769231,
+                "n": 65
+              },
+              "switch_rate": {
+                "ci": [
+                  0.676923076923077,
+                  0.8769230769230769
+                ],
+                "mean": 0.7846153846153846,
+                "n": 65
+              }
+            },
+            "n_questions": 65,
+            "n_switches": 51
+          }
+        },
+        "Neutral": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.3076923076923077,
+                  0.2564102564102564
+                ],
+                "mean": -0.02564102564102564,
+                "n": 39
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.2564102564102564,
+                  0.5641025641025641
+                ],
+                "mean": 0.41025641025641024,
+                "n": 39
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.28205128205128205,
+                  0.5897435897435898
+                ],
+                "mean": 0.4358974358974359,
+                "n": 39
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.18461538461538463,
+                  0.15384615384615385
+                ],
+                "mean": -0.015384615384615385,
+                "n": 65
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.15384615384615385,
+                  0.35384615384615387
+                ],
+                "mean": 0.24615384615384617,
+                "n": 65
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.15384615384615385,
+                  0.36923076923076925
+                ],
+                "mean": 0.26153846153846155,
+                "n": 65
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.27692307692307694,
+                  0.5230769230769231
+                ],
+                "mean": 0.4,
+                "n": 65
+              },
+              "other_choice": {
+                "ci": [
+                  0.03076923076923077,
+                  0.16923076923076924
+                ],
+                "mean": 0.09230769230769231,
+                "n": 65
+              },
+              "switch_rate": {
+                "ci": [
+                  0.47692307692307695,
+                  0.7230769230769231
+                ],
+                "mean": 0.6,
+                "n": 65
+              }
+            },
+            "n_questions": 65,
+            "n_switches": 39
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.10810810810810811,
+                  0.6486486486486487
+                ],
+                "mean": 0.3783783783783784,
+                "n": 37
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.4594594594594595,
+                  0.7837837837837838
+                ],
+                "mean": 0.6216216216216216,
+                "n": 37
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.10810810810810811,
+                  0.3783783783783784
+                ],
+                "mean": 0.24324324324324326,
+                "n": 37
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.06153846153846154,
+                  0.36923076923076925
+                ],
+                "mean": 0.2153846153846154,
+                "n": 65
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.24615384615384617,
+                  0.46153846153846156
+                ],
+                "mean": 0.35384615384615387,
+                "n": 65
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.06153846153846154,
+                  0.23076923076923078
+                ],
+                "mean": 0.13846153846153847,
+                "n": 65
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.3076923076923077,
+                  0.5538461538461539
+                ],
+                "mean": 0.4307692307692308,
+                "n": 65
+              },
+              "other_choice": {
+                "ci": [
+                  0.015384615384615385,
+                  0.13846153846153847
+                ],
+                "mean": 0.07692307692307693,
+                "n": 65
+              },
+              "switch_rate": {
+                "ci": [
+                  0.4461538461538462,
+                  0.6923076923076923
+                ],
+                "mean": 0.5692307692307692,
+                "n": 65
+              }
+            },
+            "n_questions": 65,
+            "n_switches": 37
+          }
+        }
+      },
+      "pooled": {
+        "Game": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.12087912087912088,
+                  0.25274725274725274
+                ],
+                "mean": 0.06593406593406594,
+                "n": 91
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.37362637362637363,
+                  0.5714285714285714
+                ],
+                "mean": 0.4725274725274725,
+                "n": 91
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.3076923076923077,
+                  0.5054945054945055
+                ],
+                "mean": 0.4065934065934066,
+                "n": 91
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.08148148148148149,
+                  0.17777777777777778
+                ],
+                "mean": 0.044444444444444446,
+                "n": 135
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.24444444444444444,
+                  0.4
+                ],
+                "mean": 0.31851851851851853,
+                "n": 135
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.2,
+                  0.34814814814814815
+                ],
+                "mean": 0.2740740740740741,
+                "n": 135
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.24444444444444444,
+                  0.4074074074074074
+                ],
+                "mean": 0.32592592592592595,
+                "n": 135
+              },
+              "other_choice": {
+                "ci": [
+                  0.037037037037037035,
+                  0.13333333333333333
+                ],
+                "mean": 0.08148148148148149,
+                "n": 135
+              },
+              "switch_rate": {
+                "ci": [
+                  0.5925925925925926,
+                  0.7481481481481481
+                ],
+                "mean": 0.674074074074074,
+                "n": 135
+              }
+            },
+            "n_questions": 135,
+            "n_switches": 91
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.2702702702702703,
+                  0.5855855855855856
+                ],
+                "mean": 0.43243243243243246,
+                "n": 111
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.5675675675675675,
+                  0.7477477477477478
+                ],
+                "mean": 0.6576576576576577,
+                "n": 111
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.15315315315315314,
+                  0.3063063063063063
+                ],
+                "mean": 0.22522522522522523,
+                "n": 111
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.2222222222222222,
+                  0.48148148148148145
+                ],
+                "mean": 0.35555555555555557,
+                "n": 135
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.45925925925925926,
+                  0.6222222222222222
+                ],
+                "mean": 0.5407407407407407,
+                "n": 135
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.11851851851851852,
+                  0.2518518518518518
+                ],
+                "mean": 0.18518518518518517,
+                "n": 135
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.11851851851851852,
+                  0.24444444444444444
+                ],
+                "mean": 0.17777777777777778,
+                "n": 135
+              },
+              "other_choice": {
+                "ci": [
+                  0.05185185185185185,
+                  0.14814814814814814
+                ],
+                "mean": 0.0962962962962963,
+                "n": 135
+              },
+              "switch_rate": {
+                "ci": [
+                  0.7555555555555555,
+                  0.8814814814814815
+                ],
+                "mean": 0.8222222222222222,
+                "n": 135
+              }
+            },
+            "n_questions": 135,
+            "n_switches": 111
+          }
+        },
+        "Neutral": {
+          "matching_history_blockade": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.24444444444444444,
+                  0.13333333333333333
+                ],
+                "mean": -0.05555555555555555,
+                "n": 90
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.3,
+                  0.5
+                ],
+                "mean": 0.4,
+                "n": 90
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.35555555555555557,
+                  0.5555555555555556
+                ],
+                "mean": 0.45555555555555555,
+                "n": 90
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  -0.16296296296296298,
+                  0.08888888888888889
+                ],
+                "mean": -0.037037037037037035,
+                "n": 135
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.1925925925925926,
+                  0.34074074074074073
+                ],
+                "mean": 0.26666666666666666,
+                "n": 135
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.22962962962962963,
+                  0.37777777777777777
+                ],
+                "mean": 0.3037037037037037,
+                "n": 135
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.2518518518518518,
+                  0.4148148148148148
+                ],
+                "mean": 0.3333333333333333,
+                "n": 135
+              },
+              "other_choice": {
+                "ci": [
+                  0.05185185185185185,
+                  0.14814814814814814
+                ],
+                "mean": 0.0962962962962963,
+                "n": 135
+              },
+              "switch_rate": {
+                "ci": [
+                  0.5851851851851851,
+                  0.7481481481481481
+                ],
+                "mean": 0.6666666666666666,
+                "n": 135
+              }
+            },
+            "n_questions": 135,
+            "n_switches": 90
+          },
+          "natural": {
+            "among_switches": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.0875,
+                  0.4875
+                ],
+                "mean": 0.2875,
+                "n": 80
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.475,
+                  0.6875
+                ],
+                "mean": 0.5875,
+                "n": 80
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.2,
+                  0.4
+                ],
+                "mean": 0.3,
+                "n": 80
+              }
+            },
+            "fixed_denominator": {
+              "fresh_minus_old_runner_up": {
+                "ci": [
+                  0.05185185185185185,
+                  0.28888888888888886
+                ],
+                "mean": 0.17037037037037037,
+                "n": 135
+              },
+              "fresh_winner_choice": {
+                "ci": [
+                  0.26666666666666666,
+                  0.42962962962962964
+                ],
+                "mean": 0.34814814814814815,
+                "n": 135
+              },
+              "old_runner_up_choice": {
+                "ci": [
+                  0.11851851851851852,
+                  0.24444444444444444
+                ],
+                "mean": 0.17777777777777778,
+                "n": 135
+              },
+              "old_winner_choice": {
+                "ci": [
+                  0.32592592592592595,
+                  0.4888888888888889
+                ],
+                "mean": 0.4074074074074074,
+                "n": 135
+              },
+              "other_choice": {
+                "ci": [
+                  0.02962962962962963,
+                  0.1111111111111111
+                ],
+                "mean": 0.06666666666666667,
+                "n": 135
+              },
+              "switch_rate": {
+                "ci": [
+                  0.5111111111111111,
+                  0.674074074074074
+                ],
+                "mean": 0.5925925925925926,
+                "n": 135
+              }
+            },
+            "n_questions": 135,
+            "n_switches": 80
+          }
+        }
+      }
+    }
+  },
+  "fresh_2p_evidence": {
+    "confirmation_option_line_crossover": {
+      "Game": {
+        "oriented_target_logit_change": 0.42571925350939893,
+        "oriented_target_logit_change_ci": [
+          0.37134415761055234,
+          0.4835743845227253
+        ],
+        "transfer_fraction": 0.2352196165678983,
+        "transfer_fraction_ci": [
+          0.14470308203615995,
+          0.32740515240890183
+        ]
+      },
+      "Neutral": {
+        "oriented_target_logit_change": 0.5578083771778398,
+        "oriented_target_logit_change_ci": [
+          0.4975438622585741,
+          0.6217362118772715
+        ],
+        "transfer_fraction": 0.25476997829938913,
+        "transfer_fraction_ci": [
+          0.1346087610052538,
+          0.36850507951930006
+        ]
+      }
+    },
+    "content_mean_mlp_confirmation_attribution": {
+      "29": {
+        "Game": {
+          "confirmation_correlation": 0.14869419785348312,
+          "confirmation_target_covariance_fraction": 0.18661495551268706
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.1531610076580575,
+          "confirmation_target_covariance_fraction": 0.19243207391874975
+        }
+      },
+      "30": {
+        "Game": {
+          "confirmation_correlation": 0.18203880462029118,
+          "confirmation_target_covariance_fraction": 0.2667005658053289
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.18896695738290833,
+          "confirmation_target_covariance_fraction": 0.2678018213229337
+        }
+      },
+      "31": {
+        "Game": {
+          "confirmation_correlation": 0.18764478524607206,
+          "confirmation_target_covariance_fraction": 0.1503427155574281
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.18228398623561246,
+          "confirmation_target_covariance_fraction": 0.14869591353533354
+        }
+      }
+    },
+    "content_mean_residual_confirmation_correlation": {
+      "28": {
+        "Game": {
+          "confirmation_correlation": 0.10896641835256057,
+          "discovery_correlation": 0.5114341699859666
+        },
+        "Game_minus_Neutral_confirmation_by_first_rank": {
+          "R1": {
+            "ci": [
+              0.00018183343890996185,
+              0.012994755525141951
+            ],
+            "mean": 0.006666949484497309
+          },
+          "R2": {
+            "ci": [
+              -0.011000188719481229,
+              0.0007712337086559229
+            ],
+            "mean": -0.0050660232082009315
+          },
+          "R3": {
+            "ci": [
+              0.0010883846174692736,
+              0.013314143451862034
+            ],
+            "mean": 0.007111842278391123
+          },
+          "R4": {
+            "ci": [
+              -0.015203851624391973,
+              -0.002264749287860471
+            ],
+            "mean": -0.008712693117558956
+          }
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.1087259257553918,
+          "discovery_correlation": 0.5118500354472891
+        },
+        "shared_confirmation_correlation": 0.10887543565977491,
+        "shared_discovery_correlation": 0.511713509958091
+      },
+      "29": {
+        "Game": {
+          "confirmation_correlation": 0.14179708198674618,
+          "discovery_correlation": 0.4909025541957362
+        },
+        "Game_minus_Neutral_confirmation_by_first_rank": {
+          "R1": {
+            "ci": [
+              0.008012914727441967,
+              0.02511963886208832
+            ],
+            "mean": 0.016880208626389503
+          },
+          "R2": {
+            "ci": [
+              -0.015599116845987738,
+              -0.0001740251034789256
+            ],
+            "mean": -0.008061695843935013
+          },
+          "R3": {
+            "ci": [
+              -0.0016690626594936474,
+              0.015062750480137754
+            ],
+            "mean": 0.006690746173262596
+          },
+          "R4": {
+            "ci": [
+              -0.024790039286017418,
+              -0.006393852864857769
+            ],
+            "mean": -0.015509199351072311
+          }
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.14395076781911156,
+          "discovery_correlation": 0.4920592413268588
+        },
+        "shared_confirmation_correlation": 0.14291179085626568,
+        "shared_discovery_correlation": 0.491579671066864
+      },
+      "30": {
+        "Game": {
+          "confirmation_correlation": 0.16649969607501458,
+          "discovery_correlation": 0.45676137106119746
+        },
+        "Game_minus_Neutral_confirmation_by_first_rank": {
+          "R1": {
+            "ci": [
+              0.01355923735536635,
+              0.03701838674023747
+            ],
+            "mean": 0.024849122390151024
+          },
+          "R2": {
+            "ci": [
+              -0.017723779333755373,
+              0.006996755255386228
+            ],
+            "mean": -0.005429727956652641
+          },
+          "R3": {
+            "ci": [
+              -0.0054008605773560705,
+              0.018874089280143377
+            ],
+            "mean": 0.006974930875003338
+          },
+          "R4": {
+            "ci": [
+              -0.040258686244487765,
+              -0.012350467569194735
+            ],
+            "mean": -0.026394398882985115
+          }
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.16986751618206838,
+          "discovery_correlation": 0.46164577887225783
+        },
+        "shared_confirmation_correlation": 0.1682513931213699,
+        "shared_discovery_correlation": 0.45933507378671184
+      },
+      "31": {
+        "Game": {
+          "confirmation_correlation": 0.1906259693194028,
+          "discovery_correlation": 0.45426837419367166
+        },
+        "Game_minus_Neutral_confirmation_by_first_rank": {
+          "R1": {
+            "ci": [
+              -0.002027358690975234,
+              0.029147005593404145
+            ],
+            "mean": 0.013059422373771667
+          },
+          "R2": {
+            "ci": [
+              -0.028818403463810684,
+              0.004672833089716708
+            ],
+            "mean": -0.012662832625210285
+          },
+          "R3": {
+            "ci": [
+              -0.003302557813003659,
+              0.027557084290310736
+            ],
+            "mean": 0.013177432119846344
+          },
+          "R4": {
+            "ci": [
+              -0.02963907169178128,
+              0.0020696958294138305
+            ],
+            "mean": -0.013574041426181793
+          }
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.19154202468706502,
+          "discovery_correlation": 0.45820238381103523
+        },
+        "shared_confirmation_correlation": 0.19122511545478352,
+        "shared_discovery_correlation": 0.4564347128524336
+      },
+      "32": {
+        "Game": {
+          "confirmation_correlation": 0.18157003171366132,
+          "discovery_correlation": 0.43204926659222603
+        },
+        "Game_minus_Neutral_confirmation_by_first_rank": {
+          "R1": {
+            "ci": [
+              -0.03109642774797976,
+              0.006255776295438407
+            ],
+            "mean": -0.012525388039648533
+          },
+          "R2": {
+            "ci": [
+              -0.028609746415168048,
+              0.01345210864674299
+            ],
+            "mean": -0.008022019639611244
+          },
+          "R3": {
+            "ci": [
+              0.0007824389816960321,
+              0.037609729170799217
+            ],
+            "mean": 0.01933075673878193
+          },
+          "R4": {
+            "ci": [
+              -0.019024724420160056,
+              0.020790727529674764
+            ],
+            "mean": 0.001216565491631627
+          }
+        },
+        "Neutral": {
+          "confirmation_correlation": 0.17971299897603601,
+          "discovery_correlation": 0.43682485097701046
+        },
+        "shared_confirmation_correlation": 0.18079618001311337,
+        "shared_discovery_correlation": 0.4346385011296462
+      }
+    },
+    "definition": {
+      "direction_fit": "condition-mean, RMS-normalized, question-centered 2P residual; score residualized on the other score and both displayed positions; discovery only",
+      "fresh_score": "candidate-centered remapped-presentation Baseline A-D logit without Second Chance history, aligned to semantic identity",
+      "old_score": "candidate-centered original-presentation Baseline A-D logit",
+      "task_application": "shared frozen direction applied separately to Game and Neutral residuals"
+    }
+  },
+  "fresh_state_choice_crossover": {
+    "definition": "On questions where the natural low- and high-order prompts choose different semantic answers, install the opposite ordering's complete 2P option-line outgoing state and ask whether the recipient adopts the opposite ordering's natural choice. Both directions are averaged within question before question-level bootstrap resampling.",
+    "generic_change_null": "If a state swap merely causes an undirected change away from the recipient choice, a specified one of the three alternative answers is expected on one third of changed directions. The donor-specific excess subtracts this per-question changed/3 expectation. A stricter leave-one-out null also preserves empirical donor-answer frequencies conditional on the recipient's natural answer.",
+    "splits": {
+      "confirmation": {
+        "Game": {
+          "any_choice_change": {
+            "ci": [
+              0.5037878787878788,
+              0.6628787878787878
+            ],
+            "mean": 0.5833333333333334,
+            "n": 132
+          },
+          "donor_adoption_among_changes": {
+            "ci": [
+              0.3591549295774648,
+              0.47019867549668876
+            ],
+            "mean": 0.4155844155844156,
+            "n": 132
+          },
+          "donor_choice_adoption": {
+            "ci": [
+              0.19696969696969696,
+              0.2878787878787879
+            ],
+            "mean": 0.24242424242424243,
+            "n": 132
+          },
+          "donor_specific_excess_over_frequency_null": {
+            "ci": [
+              0.01894410472597231,
+              0.08510177295256345
+            ],
+            "mean": 0.05160484004357522,
+            "n": 132
+          },
+          "donor_specific_excess_over_generic_change": {
+            "ci": [
+              0.015151515151515166,
+              0.07954545454545457
+            ],
+            "mean": 0.04797979797979798,
+            "n": 132
+          },
+          "generic_change_null": {
+            "ci": [
+              0.1679292929292929,
+              0.22095959595959594
+            ],
+            "mean": 0.19444444444444445,
+            "n": 132
+          },
+          "n_discordant_questions": 132,
+          "recipient_choice_retention": {
+            "ci": [
+              0.3371212121212121,
+              0.4962121212121212
+            ],
+            "mean": 0.4166666666666667,
+            "n": 132
+          },
+          "recipient_conditioned_frequency_null": {
+            "ci": [
+              0.1644425996982815,
+              0.2177536659651284
+            ],
+            "mean": 0.19081940238066725,
+            "n": 132
+          }
+        },
+        "Neutral": {
+          "any_choice_change": {
+            "ci": [
+              0.532258064516129,
+              0.6935483870967742
+            ],
+            "mean": 0.6129032258064516,
+            "n": 124
+          },
+          "donor_adoption_among_changes": {
+            "ci": [
+              0.3841059602649007,
+              0.49673202614379086
+            ],
+            "mean": 0.4407894736842105,
+            "n": 124
+          },
+          "donor_choice_adoption": {
+            "ci": [
+              0.2217741935483871,
+              0.3185483870967742
+            ],
+            "mean": 0.2701612903225806,
+            "n": 124
+          },
+          "donor_specific_excess_over_frequency_null": {
+            "ci": [
+              0.031130183711067853,
+              0.1025969067192714
+            ],
+            "mean": 0.06670388973859843,
+            "n": 124
+          },
+          "donor_specific_excess_over_generic_change": {
+            "ci": [
+              0.030913978494623674,
+              0.09949596774193503
+            ],
+            "mean": 0.06586021505376345,
+            "n": 124
+          },
+          "generic_change_null": {
+            "ci": [
+              0.17741935483870966,
+              0.23118279569892472
+            ],
+            "mean": 0.2043010752688172,
+            "n": 124
+          },
+          "n_discordant_questions": 124,
+          "recipient_choice_retention": {
+            "ci": [
+              0.31048387096774194,
+              0.46774193548387094
+            ],
+            "mean": 0.3870967741935484,
+            "n": 124
+          },
+          "recipient_conditioned_frequency_null": {
+            "ci": [
+              0.17526401948345383,
+              0.2300431468993326
+            ],
+            "mean": 0.2034574005839822,
+            "n": 124
+          }
+        }
+      },
+      "discovery": {
+        "Game": {
+          "any_choice_change": {
+            "ci": [
+              0.42857142857142855,
+              0.5912698412698413
+            ],
+            "mean": 0.5119047619047619,
+            "n": 126
+          },
+          "donor_adoption_among_changes": {
+            "ci": [
+              0.37323680891318056,
+              0.49264705882352944
+            ],
+            "mean": 0.43410852713178294,
+            "n": 126
+          },
+          "donor_choice_adoption": {
+            "ci": [
+              0.17857142857142858,
+              0.26587301587301587
+            ],
+            "mean": 0.2222222222222222,
+            "n": 126
+          },
+          "donor_specific_excess_over_frequency_null": {
+            "ci": [
+              0.016957217398705125,
+              0.0806142633986473
+            ],
+            "mean": 0.049283761667352835,
+            "n": 126
+          },
+          "donor_specific_excess_over_generic_change": {
+            "ci": [
+              0.02116402116402117,
+              0.08333333333333333
+            ],
+            "mean": 0.051587301587301605,
+            "n": 126
+          },
+          "generic_change_null": {
+            "ci": [
+              0.14285714285714285,
+              0.19841269841269835
+            ],
+            "mean": 0.1706349206349206,
+            "n": 126
+          },
+          "n_discordant_questions": 126,
+          "recipient_choice_retention": {
+            "ci": [
+              0.40476190476190477,
+              0.5674603174603174
+            ],
+            "mean": 0.4880952380952381,
+            "n": 126
+          },
+          "recipient_conditioned_frequency_null": {
+            "ci": [
+              0.1443249010354375,
+              0.20138546162626433
+            ],
+            "mean": 0.17293846055486936,
+            "n": 126
+          }
+        },
+        "Neutral": {
+          "any_choice_change": {
+            "ci": [
+              0.569672131147541,
+              0.7295081967213115
+            ],
+            "mean": 0.6516393442622951,
+            "n": 122
+          },
+          "donor_adoption_among_changes": {
+            "ci": [
+              0.3766213724547058,
+              0.49324324324324326
+            ],
+            "mean": 0.4339622641509434,
+            "n": 122
+          },
+          "donor_choice_adoption": {
+            "ci": [
+              0.22950819672131148,
+              0.3360655737704918
+            ],
+            "mean": 0.2827868852459016,
+            "n": 122
+          },
+          "donor_specific_excess_over_frequency_null": {
+            "ci": [
+              0.029192956974719266,
+              0.10688849231369721
+            ],
+            "mean": 0.06688359454752897,
+            "n": 122
+          },
+          "donor_specific_excess_over_generic_change": {
+            "ci": [
+              0.025956284153005486,
+              0.10382513661202188
+            ],
+            "mean": 0.0655737704918033,
+            "n": 122
+          },
+          "generic_change_null": {
+            "ci": [
+              0.18989071038251368,
+              0.24316939890710385
+            ],
+            "mean": 0.21721311475409832,
+            "n": 122
+          },
+          "n_discordant_questions": 122,
+          "recipient_choice_retention": {
+            "ci": [
+              0.26639344262295084,
+              0.430327868852459
+            ],
+            "mean": 0.3483606557377049,
+            "n": 122
+          },
+          "recipient_conditioned_frequency_null": {
+            "ci": [
+              0.18808059483776696,
+              0.2419851152945415
+            ],
+            "mean": 0.21590329069837266,
+            "n": 122
+          }
+        }
+      }
+    },
+    "validation": {
+      "duplicate_natural_choice_agreement": 1.0,
+      "duplicate_natural_max_abs_error": 0.0,
+      "questions": 500
+    }
+  },
+  "heldout_within_game_causal_matching": {
+    "joint_conflict_W1_choice_effect": {
+      "ci": [
+        0.014705882352941176,
+        0.17647058823529413
+      ],
+      "mean": 0.09558823529411764,
+      "n": 136
+    },
+    "matching_specific_candidate_advantage_effects": {
+      "R1": {
+        "ci": [
+          0.1817319181230331,
+          0.5015839787372144
+        ],
+        "mean": 0.3427138654103719,
+        "n": 249
+      },
+      "R2": {
+        "ci": [
+          0.03216946887842289,
+          0.2916257671882188
+        ],
+        "mean": 0.15958209976135002,
+        "n": 249
+      },
+      "R3": {
+        "ci": [
+          -0.0916508793990455,
+          0.12048254376913166
+        ],
+        "mean": 0.010931104381719596,
+        "n": 249
+      },
+      "R4": {
+        "ci": [
+          -0.24644343594470652,
+          -0.06879197424514553
+        ],
+        "mean": -0.1598664096081591,
+        "n": 249
+      }
+    }
+  },
+  "interpretation": "Game compresses the old semantic ranking: R1 and R2 fall, R3 and R4 rise. The held-out matching-edge lesions show that Game actively constructs part of this transformation by reading each candidate's matching 1P line: the intact route suppresses R1/R2, is approximately neutral for R3, and supports R4. On destination-distinct questions, natural Game switches select the fresh second-presentation winner much more often than the old runner-up, and the fresh-state crossover redirects discrete choices beyond a generic change null. This rejects a pure undirected-noise account but does not yet establish that the fresh representation is necessary for destination selection.",
+  "policy_at_2p_semantics": {
+    "questions": 136,
+    "tasks": {
+      "Game": {
+        "feedback_source_mediation": {
+          "all_pre_prefix_relays": {
+            "fraction_of_feedback_transfer_intercepted": {
+              "ci": [
+                0.5387077715583851,
+                0.6365889655935899
+              ],
+              "denominator_ci": [
+                2.139986905885252,
+                3.2495373163660415
+              ],
+              "denominator_mean": 2.6633516662859265,
+              "n": 136,
+              "ratio": 0.5882565352210373,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "residual_transfer": {
+              "ci": [
+                0.33685345072077794,
+                0.4305534084951931
+              ],
+              "denominator_ci": [
+                2.3054666535538733,
+                3.4908027047758172
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.38296959578124146,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "source_transfer": {
+              "ci": [
+                0.9131297971048578,
+                0.9466499656862423
+              ],
+              "denominator_ci": [
+                2.304356857810025,
+                3.482538066965075
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.9301169989105521,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "semantic_relays": {
+            "fraction_of_feedback_transfer_intercepted": {
+              "ci": [
+                0.20913576870831782,
+                0.30416555474437257
+              ],
+              "denominator_ci": [
+                2.132849249691106,
+                3.234514798130921
+              ],
+              "denominator_mean": 2.6633516662859265,
+              "n": 136,
+              "ratio": 0.2559540715162491,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "residual_transfer": {
+              "ci": [
+                0.6441619155498559,
+                0.7397322573890962
+              ],
+              "denominator_ci": [
+                2.298579775120428,
+                3.4823882211141846
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.6920497660529218,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "source_transfer": {
+              "ci": [
+                0.9128315443183936,
+                0.9464738129279684
+              ],
+              "denominator_ci": [
+                2.3085306858379835,
+                3.4896790131496296
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.9301169989105521,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          }
+        },
+        "joint": {
+          "feedback_suffix_swapped": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.7777777777777778,
+                0.9449074074074006
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.8703703703703703,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.9128617236612908,
+                0.9473028244138881
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.3066720437000514,
+                3.478970158773164
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.9301169989105521,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "feedback_suffix_swapped_restore_pre_prefix": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.3333333333333333,
+                0.5925925925925926
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.46296296296296297,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.33655689772912206,
+                0.4314207400456122
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.2977867951627036,
+                3.4723138640431497
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.38296959578124146,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "feedback_suffix_swapped_restore_semantics": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.5370370370370371,
+                0.7962962962962963
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.6666666666666666,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.6444259652755059,
+                0.7392142052380226
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.3069361650655855,
+                3.4880368475593135
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.6920497660529218,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "relay_task_swapped_all_pre_prefix": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.42592592592592593,
+                0.6851851851851852
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.5555555555555556,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.46925567133552243,
+                0.579622572279742
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.305737139857908,
+                3.4686924747265344
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.5254424675714215,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "relay_task_swapped_all_semantics": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.1111111111111111,
+                0.3333333333333333
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.2222222222222222,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.16558285553670501,
+                0.2260276160725787
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.303489894563277,
+                3.474830893837096
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.19563459561843285,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          }
+        },
+        "single_candidates": {
+          "R1": {
+            "off_target": {
+              "ci": [
+                0.01932591895298639,
+                0.06241128237030714
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.34739686307957,
+                2.0761652446576453
+              ],
+              "denominator_mean": 1.6935888225731386,
+              "n": 136,
+              "ratio": 0.041762951547458814,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.09139823550818581,
+                0.14149367256765613
+              ],
+              "definition": "Donor-task transfer on the transplanted R1 coordinate",
+              "denominator_ci": [
+                0.8718588645311242,
+                1.5042533272112755
+              ],
+              "denominator_mean": 1.1698699352019752,
+              "n": 136,
+              "ratio": 0.11667461752237132,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.04605662309945072,
+                0.10514092344292549
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.0749116659749125
+            }
+          },
+          "R2": {
+            "off_target": {
+              "ci": [
+                0.030913903142137315,
+                0.06937600658056783
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.7639649405654558,
+                2.709428457613469
+              ],
+              "denominator_mean": 2.2102171148830303,
+              "n": 136,
+              "ratio": 0.050561295202719674,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.07742264830796015,
+                0.20518571424127868
+              ],
+              "definition": "Donor-task transfer on the transplanted R2 coordinate",
+              "denominator_ci": [
+                0.4378943941522875,
+                0.9010846967101909
+              ],
+              "denominator_mean": 0.6532416428920835,
+              "n": 136,
+              "ratio": 0.1410524556081359,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.032598492048124005,
+                0.14847215693920143
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.09049116040541622
+            }
+          },
+          "R3": {
+            "off_target": {
+              "ci": [
+                0.01906864980018489,
+                0.061353360731324406
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.8344292654621777,
+                2.832252114090817
+              ],
+              "denominator_mean": 2.300760222865687,
+              "n": 136,
+              "ratio": 0.039954200592208444,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.08965576354650433,
+                0.18267189423624952
+              ],
+              "definition": "Donor-task transfer on the transplanted R3 coordinate",
+              "denominator_ci": [
+                0.38116571134516875,
+                0.7796974943123396
+              ],
+              "denominator_mean": 0.562698534909427,
+              "n": 136,
+              "ratio": 0.13574953539097057,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.05245027648584146,
+                0.1420936209072728
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.09579533479876212
+            }
+          },
+          "R4": {
+            "off_target": {
+              "ci": [
+                0.022333956068001048,
+                0.06469545722378589
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.8742369508335663,
+                2.9454549237705083
+              ],
+              "denominator_mean": 2.385810113003486,
+              "n": 136,
+              "ratio": 0.04336076690748593,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.1230513839003911,
+                0.21050577776788232
+              ],
+              "definition": "Donor-task transfer on the transplanted R4 coordinate",
+              "denominator_ci": [
+                0.35935721826623296,
+                0.6039229882830531
+              ],
+              "denominator_mean": 0.47764864477162805,
+              "n": 136,
+              "ratio": 0.16530609696790685,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.07976888897836963,
+                0.1683443630379735
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.12194533006042092
+            }
+          }
+        }
+      },
+      "Neutral": {
+        "feedback_source_mediation": {
+          "all_pre_prefix_relays": {
+            "fraction_of_feedback_transfer_intercepted": {
+              "ci": [
+                0.4655502378236053,
+                0.5682377460290511
+              ],
+              "denominator_ci": [
+                2.1410469894259885,
+                3.2291975999720615
+              ],
+              "denominator_mean": 2.662515485633372,
+              "n": 136,
+              "ratio": 0.5187636349413697,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "residual_transfer": {
+              "ci": [
+                0.3991799651095825,
+                0.4988132696647366
+              ],
+              "denominator_ci": [
+                2.302118699232975,
+                3.4714802155507947
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.44746559409644765,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "source_transfer": {
+              "ci": [
+                0.9057935340948216,
+                0.9530800263863783
+              ],
+              "denominator_ci": [
+                2.314918486024568,
+                3.4992236776126577
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.929824981206339,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "semantic_relays": {
+            "fraction_of_feedback_transfer_intercepted": {
+              "ci": [
+                0.1608372799008933,
+                0.21489564668910924
+              ],
+              "denominator_ci": [
+                2.141208785602178,
+                3.2408243231644467
+              ],
+              "denominator_mean": 2.662515485633372,
+              "n": 136,
+              "ratio": 0.18866762471441892,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "residual_transfer": {
+              "ci": [
+                0.7174393483206083,
+                0.7924317169443534
+              ],
+              "denominator_ci": [
+                2.287861868795143,
+                3.4826025100566746
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.7543971106020099,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "source_transfer": {
+              "ci": [
+                0.9054137319025418,
+                0.9536360812349204
+              ],
+              "denominator_ci": [
+                2.3040081638927834,
+                3.471457622781741
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.929824981206339,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          }
+        },
+        "joint": {
+          "feedback_suffix_swapped": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.7777777777777778,
+                0.9444444444444444
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.8703703703703703,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.9056918971327181,
+                0.9536200083967677
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.297760430449833,
+                3.4993124456208524
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.929824981206339,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "feedback_suffix_swapped_restore_pre_prefix": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.3333333333333333,
+                0.5925925925925926
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.46296296296296297,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.39940664070059617,
+                0.5016655873765241
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.2990157706842305,
+                3.4807889984082774
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.44746559409644765,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "feedback_suffix_swapped_restore_semantics": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.5185185185185185,
+                0.7777777777777778
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.6481481481481481,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.7174874176913689,
+                0.7924881476982637
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.292998987885222,
+                3.4815166399639326
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.7543971106020099,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "relay_task_swapped_all_pre_prefix": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.4074074074074074,
+                0.6666666666666666
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.5370370370370371,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.5531569326911827,
+                0.6533187226678822
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.294873310884578,
+                3.485765511329619
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.6048121609006695,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          },
+          "relay_task_swapped_all_semantics": {
+            "donor_choice_adoption": {
+              "ci": [
+                0.16666666666666666,
+                0.4074074074074074
+              ],
+              "definition": "Among questions where recipient and donor natural choices differ, fraction of scenario choices equal to the donor natural choice; np.argmax implements the displayed A-D tie rule",
+              "mean": 0.2777777777777778,
+              "n": 54
+            },
+            "task_vector_transfer": {
+              "ci": [
+                0.19631996673560306,
+                0.2920252442947752
+              ],
+              "definition": "Projection of scenario-minus-recipient-natural R1-R4 centered logits onto donor-natural-minus-recipient-natural, divided by donor-gap squared magnitude",
+              "denominator_ci": [
+                2.2997397945136875,
+                3.4952267928178764
+              ],
+              "denominator_mean": 2.863458757775114,
+              "n": 136,
+              "ratio": 0.24268245739267288,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            }
+          }
+        },
+        "single_candidates": {
+          "R1": {
+            "off_target": {
+              "ci": [
+                0.03929423149774375,
+                0.10516268160319169
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.3494952841629304,
+                2.0712937096881006
+              ],
+              "denominator_mean": 1.6935888225731386,
+              "n": 136,
+              "ratio": 0.07108134065731025,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.16602685670147346,
+                0.25996034202387863
+              ],
+              "definition": "Donor-task transfer on the transplanted R1 coordinate",
+              "denominator_ci": [
+                0.8767514652373769,
+                1.5055953801303472
+              ],
+              "denominator_mean": 1.1698699352019752,
+              "n": 136,
+              "ratio": 0.21233745983560823,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.09479158315867034,
+                0.1872343048633402
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.14125611917829797
+            }
+          },
+          "R2": {
+            "off_target": {
+              "ci": [
+                0.005944903665577376,
+                0.05475814028899894
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.7648963684821775,
+                2.711755435988908
+              ],
+              "denominator_mean": 2.2102171148830303,
+              "n": 136,
+              "ratio": 0.029887550519287518,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.06572761335553294,
+                0.1904270300523123
+              ],
+              "definition": "Donor-task transfer on the transplanted R2 coordinate",
+              "denominator_ci": [
+                0.44398721580141653,
+                0.9007388846434522
+              ],
+              "denominator_mean": 0.6532416428920835,
+              "n": 136,
+              "ratio": 0.13293832861516197,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.04571385064341109,
+                0.15392166854761904
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.10305077809587446
+            }
+          },
+          "R3": {
+            "off_target": {
+              "ci": [
+                0.006092115187502939,
+                0.05516131274214832
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.8211378247069057,
+                2.841042940378652
+              ],
+              "denominator_mean": 2.300760222865687,
+              "n": 136,
+              "ratio": 0.029193605514899537,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.09111308985690547,
+                0.27388447184204273
+              ],
+              "definition": "Donor-task transfer on the transplanted R3 coordinate",
+              "denominator_ci": [
+                0.3820311895865049,
+                0.7774952079767855
+              ],
+              "denominator_mean": 0.562698534909427,
+              "n": 136,
+              "ratio": 0.17354719507210387,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.06631329081545259,
+                0.23814939306717656
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.14435358955720434
+            }
+          },
+          "R4": {
+            "off_target": {
+              "ci": [
+                0.01657571528144806,
+                0.051781051802064826
+              ],
+              "definition": "Donor-task transfer projected over the three untouched ranks",
+              "denominator_ci": [
+                1.8724332185733763,
+                2.9582570146586087
+              ],
+              "denominator_mean": 2.385810113003486,
+              "n": 136,
+              "ratio": 0.03333156432629242,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target": {
+              "ci": [
+                0.09228693057462233,
+                0.2013861347578658
+              ],
+              "definition": "Donor-task transfer on the transplanted R4 coordinate",
+              "denominator_ci": [
+                0.3622037523902082,
+                0.6052925107769327
+              ],
+              "denominator_mean": 0.47764864477162805,
+              "n": 136,
+              "ratio": 0.14215265728467857,
+              "stable_denominator": true,
+              "zero_denominator_bootstrap_fraction": 0.0
+            },
+            "target_minus_off_target": {
+              "ci": [
+                0.06278723141518727,
+                0.15912900837928987
+              ],
+              "definition": "Paired bootstrap difference between target-rank and off-target donor-task transfer ratios; positive values localize transferred policy to the swapped candidate",
+              "difference": 0.10882109295838616
+            }
+          }
+        }
+      }
+    }
+  },
+  "question": "Does Game strategically transform its first-presentation semantic ranking, rather than merely adding undirected answer noise?",
+  "validation": {
+    "first_answer_vs_aggregated_argmax_mismatches": 0,
+    "inputs": {
+      "baseline": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_token_matched_feedback/baseline_results.json",
+        "sha256": "12fe5d3b1b60ca5e695b45c0b7fee900a01247a26294fd79d96ac60c5db2d17a"
+      },
+      "causal_results": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/all_candidate_matched_relay/run/results.npz",
+        "sha256": "1830831a0ca71e19707c82b39a873bd057214334323391f73ca8611895749c62"
+      },
+      "causal_summary": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/all_candidate_matched_relay/analysis/summary.json",
+        "sha256": "48a2baa46cb2cecfdbd69167590065a2a51fb160328574935b9d01f1da977b65"
+      },
+      "discovery_plan": {
+        "path": "outputs/causal/qwen36_27b_simplemc_causal_sweep/plans/discovery_plan.json",
+        "sha256": "255651ee38db6034b57866272a1eafa32540fcfe63f676e6beb0ff537d4b3594"
+      },
+      "fresh_path_pair_plan": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/fresh_score_path/pair_plan.json",
+        "sha256": "5c161ebe0166cb4838e3cf096a5e3e734ab663a993bb417479d082bc384f2de4"
+      },
+      "fresh_path_results": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/fresh_score_path/run/results.npz",
+        "sha256": "5130a063875cef6114d63ca5a8f7f857e9e43af2161e2ef77af60d2e17f845cf"
+      },
+      "fresh_path_summary": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/fresh_score_path/analysis/summary.json",
+        "sha256": "1d7fde2c4ce218e0f0db57fc6c9c7b433a28a9cdb708cc07b8fdccd5bd5dfd2c"
+      },
+      "game": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/incorrect_results.json",
+        "sha256": "a652bb1bb61b4bfe046e43a9ed1dc612053482d7ea90cbc8f9c6c4aef209fbf0"
+      },
+      "plan": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/plan.json",
+        "sha256": "5bf1b599aa3304657e8ade9a3cac223518c85e60150f8d7b2f42f5090d4d5bff"
+      },
+      "remapped_baseline": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/remapped_baseline_results.json",
+        "sha256": "e9d522e08430641ddb5651719497503cb0229a4dc54ae473ed2b3a7e67151228"
+      },
+      "remapping_summary": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/analysis/summary.json",
+        "sha256": "ba98684d42f18f52aea9c63237427a982aee90bf6770269d13a2319f09737e19"
+      },
+      "score_attribution": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/score_source_attribution/score_source_attribution.json",
+        "sha256": "acb1e82d9c2cc293219292ff1153946aefba35b952426d976479843d594e005a"
+      },
+      "score_trajectory": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/second_presentation_residual_workspace/score_integration/score_residual_trajectory.json",
+        "sha256": "60007534fb21079d712e121c8729ddd95a95a2dcd28efe97837970e158de86bb"
+      },
+      "stage_c_summary": {
+        "path": "outputs/prompt_variant_tests/qwen36_27b_simplemc_option_remapping/candidate_history_pathway/stage_c/analysis/summary.json",
+        "sha256": "4ee854a840c70d29296247d39fd8a2ebc3b843fc9b14025cf79942e04871a3b8"
+      }
+    },
+    "questions": 500
+  },
+  "within_game_first_to_final": {
+    "mean_rank_profiles": {
+      "first_centered_logits": [
+        1.6683721570968628,
+        0.43891608333587645,
+        -0.5147868165969849,
+        -1.5925014238357544
+      ],
+      "game_final_centered_logits": [
+        0.32252188205718996,
+        0.02622476291656494,
+        -0.1566561040878296,
+        -0.19209054088592528
+      ]
+    },
+    "mean_raw_logit_over_all_four": {
+      "change": -0.7685324459075927,
+      "first": 23.265866433143614,
+      "game_final": 22.497333987236022
+    },
+    "ranks": {
+      "R1": {
+        "centered_logit_change": {
+          "ci": [
+            -1.4525292257785796,
+            -1.2394878689765931
+          ],
+          "mean": -1.3458502750396728,
+          "n": 500
+        },
+        "first_conditional_ad_probability_mean": 0.585764124168951,
+        "first_raw_logit_mean": 24.93423859024048,
+        "game_final_conditional_ad_probability_mean": 0.31472909194591586,
+        "game_final_raw_logit_mean": 22.819855869293214,
+        "raw_logit_change": {
+          "ci": [
+            -2.2617424941062927,
+            -1.9630177700042724
+          ],
+          "mean": -2.1143827209472654,
+          "n": 500
+        }
+      },
+      "R2": {
+        "centered_logit_change": {
+          "ci": [
+            -0.5008150306224822,
+            -0.3232275769710541
+          ],
+          "mean": -0.4126913204193115,
+          "n": 500
+        },
+        "first_conditional_ad_probability_mean": 0.24034986226491736,
+        "first_raw_logit_mean": 23.704782516479494,
+        "game_final_conditional_ad_probability_mean": 0.2550490502620597,
+        "game_final_raw_logit_mean": 22.52355875015259,
+        "raw_logit_change": {
+          "ci": [
+            -1.3179346013069153,
+            -1.0454551400184633
+          ],
+          "mean": -1.1812237663269043,
+          "n": 500
+        }
+      },
+      "R3": {
+        "centered_logit_change": {
+          "ci": [
+            0.2688970254659653,
+            0.45052933621406555
+          ],
+          "mean": 0.3581307125091553,
+          "n": 500
+        },
+        "first_conditional_ad_probability_mean": 0.12048337986135113,
+        "first_raw_logit_mean": 22.75107961654663,
+        "game_final_conditional_ad_probability_mean": 0.22948389514167747,
+        "game_final_raw_logit_mean": 22.340677883148192,
+        "raw_logit_change": {
+          "ci": [
+            -0.5430371005058289,
+            -0.27353069391250606
+          ],
+          "mean": -0.4104017333984375,
+          "n": 500
+        }
+      },
+      "R4": {
+        "centered_logit_change": {
+          "ci": [
+            1.3092107909440995,
+            1.4944117270469666
+          ],
+          "mean": 1.4004108829498292,
+          "n": 500
+        },
+        "first_conditional_ad_probability_mean": 0.053402633704780544,
+        "first_raw_logit_mean": 21.67336500930786,
+        "game_final_conditional_ad_probability_mean": 0.2007379626503469,
+        "game_final_raw_logit_mean": 22.305243446350097,
+        "raw_logit_change": {
+          "ci": [
+            0.49585631036758426,
+            0.7709959381103513
+          ],
+          "mean": 0.6318784370422363,
+          "n": 500
+        }
+      }
+    }
+  }
+}

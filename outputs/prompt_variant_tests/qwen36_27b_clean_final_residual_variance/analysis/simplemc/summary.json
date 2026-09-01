@@ -1,0 +1,171 @@
+{
+  "dataset": "SimpleMC",
+  "n_questions": 500,
+  "representation": "actual final RMSNorm output immediately before lm_head",
+  "answer_subspace_rank": 3,
+  "residual_width": 5120,
+  "centering": "condition-specific equal-Baseline-letter-weighted mean across questions",
+  "bootstrap_draws": 10000,
+  "splits": {
+    "all": {
+      "n": 500,
+      "conditions": {
+        "baseline": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "game": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.3531573010194122,
+            "ci95": [
+              1.2687302657664,
+              1.4464701782634666
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.38727866674885075,
+            "ci95": [
+              0.34792533752581645,
+              0.43033202273057575
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.3680008109683535,
+            "ci95": [
+              1.2831197986217358,
+              1.4617169846983404
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.2830982727815136,
+            "ci95": [
+              0.25319974406866047,
+              0.31303195093998454
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.38930351541466357,
+            "ci95": [
+              0.35042823413371194,
+              0.4310915520655284
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.39190716463773334,
+            "ci95": [
+              0.3530753199960876,
+              0.434893918135514
+            ]
+          }
+        },
+        "neutral": {
+          "normalized_full_stream_variance_ratio": {
+            "estimate": 1.2875499553720855,
+            "ci95": [
+              1.216272298530511,
+              1.3653195379816743
+            ]
+          },
+          "answer_contrast_variance_ratio": {
+            "estimate": 0.763744669466161,
+            "ci95": [
+              0.7016403789416623,
+              0.8257918672915296
+            ]
+          },
+          "orthogonal_complement_variance_ratio": {
+            "estimate": 1.295599733777759,
+            "ci95": [
+              1.2238631957982127,
+              1.3738601196116822
+            ]
+          },
+          "answer_to_complement_relative_variance_ratio": {
+            "estimate": 0.589491221366035,
+            "ci95": [
+              0.5330815075606142,
+              0.6432999638061566
+            ]
+          },
+          "displayed_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.7595409242556316,
+            "ci95": [
+              0.6976446229612822,
+              0.8209335306675669
+            ]
+          },
+          "semantic_aggregated_logit_contrast_variance_ratio": {
+            "estimate": 0.750177351472429,
+            "ci95": [
+              0.6898035855386634,
+              0.8115651334172906
+            ]
+          }
+        }
+      },
+      "game_vs_neutral": {
+        "answer_contrast_variance_ratio": {
+          "estimate": 0.5070787165291106,
+          "ci95": [
+            0.4665232464716334,
+            0.5522994729708032
+          ]
+        },
+        "orthogonal_complement_variance_ratio": {
+          "estimate": 1.0558822877953862,
+          "ci95": [
+            1.0330810762762546,
+            1.0792392444070453
+          ]
+        },
+        "normalized_full_stream_variance_ratio": {
+          "estimate": 1.0509551845919383,
+          "ci95": [
+            1.0278996836950236,
+            1.0745585445488153
+          ]
+        }
+      }
+    }
+  }
+}

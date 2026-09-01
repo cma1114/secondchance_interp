@@ -1,0 +1,16 @@
+{
+  "base_config_path": "configs/mechinterp_qwen36_simplemc.json",
+  "directions_path": "artifacts/feedback_direction_qwen36_simplemc.npz",
+  "output_dir": "outputs/causal/qwen36_27b_simplemc_feedback",
+  "conditions": ["incorrect", "neutral"],
+  "scan_readouts": [24, 30, 36],
+  "scan_doses": [-1.0, 1.0],
+  "detailed_readout": 30,
+  "detailed_doses": [-0.5, 0.5, 2.0],
+  "control_readout": 30,
+  "control_doses": [-1.0, 1.0],
+  "max_questions": null,
+  "unsteered_abs_tolerance": 0.15,
+  "unsteered_rel_tolerance": 0.0075,
+  "seed": 42
+}

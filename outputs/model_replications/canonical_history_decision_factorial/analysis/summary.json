@@ -1,0 +1,3682 @@
+{
+  "schema_version": 1,
+  "results": {
+    "qwen36_27b": {
+      "simplemc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 251,
+          "n_confirmation": 249,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64
+          ],
+          "gla_layers": 48
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.654,
+                "neutral_w1_choice": 0.736,
+                "old_winner_avoidance_gap_pp": 8.199999999999996,
+                "game_w1_minus_w2": 0.5708388671875,
+                "neutral_w1_minus_w2": 1.1632998790740967,
+                "game_minus_neutral_w1_centered_logit": -0.570950511932373,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.612,
+                "neutral_w1_choice": 0.584,
+                "old_winner_avoidance_gap_pp": -2.8000000000000025,
+                "game_w1_minus_w2": 1.2711708927154541,
+                "neutral_w1_minus_w2": 1.2740738334655761,
+                "game_minus_neutral_w1_centered_logit": 0.017708394050598146,
+                "game_centered_rank_effect": [
+                  0.7376252212524413,
+                  0.037293195724487305,
+                  -0.2825438556671143,
+                  -0.4923745613098145
+                ],
+                "neutral_centered_rank_effect": [
+                  0.14896631526947002,
+                  0.038192360877990716,
+                  -0.09015256977081298,
+                  -0.09700610637664808
+                ],
+                "avoidance_gap_reduction_pp": 10.999999999999998,
+                "w1_logit_gap_reduction": 0.5886589059829711,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    6.199999999999995,
+                    15.800000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.5219014239668847,
+                    0.658492535841465
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.668,
+                "neutral_w1_choice": 0.746,
+                "old_winner_avoidance_gap_pp": 7.799999999999995,
+                "game_w1_minus_w2": 0.57273291015625,
+                "neutral_w1_minus_w2": 1.177123420715332,
+                "game_minus_neutral_w1_centered_logit": -0.5859834809303284,
+                "game_centered_rank_effect": [
+                  -0.012260104179382392,
+                  -0.01415414714813229,
+                  -0.0021505041122436563,
+                  0.028564755439758338
+                ],
+                "neutral_centered_rank_effect": [
+                  0.002772864818572973,
+                  -0.011050676822662364,
+                  -0.0192637219429016,
+                  0.02754153394699088
+                ],
+                "avoidance_gap_reduction_pp": 0.40000000000000036,
+                "w1_logit_gap_reduction": -0.015032968997955365,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.799999999999992,
+                    3.600000000000003
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.027991647243499816,
+                    -0.0021442817330360056
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.594,
+                "neutral_w1_choice": 0.64,
+                "old_winner_avoidance_gap_pp": 4.600000000000004,
+                "game_w1_minus_w2": 0.921982810974121,
+                "neutral_w1_minus_w2": 1.5111188430786133,
+                "game_minus_neutral_w1_centered_logit": -0.5302853221893311,
+                "game_centered_rank_effect": [
+                  0.4823534898757934,
+                  0.1312095460891724,
+                  -0.1558111753463745,
+                  -0.4577518606185913
+                ],
+                "neutral_centered_rank_effect": [
+                  0.4416883001327514,
+                  0.09386933612823484,
+                  -0.1870955781936645,
+                  -0.3484620580673219
+                ],
+                "avoidance_gap_reduction_pp": 3.5999999999999917,
+                "w1_logit_gap_reduction": 0.040665189743041896,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.200000000000001,
+                    8.399999999999997
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.011205667614936833,
+                    0.09306032619476315
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.562,
+                "neutral_w1_choice": 0.558,
+                "old_winner_avoidance_gap_pp": -0.40000000000000036,
+                "game_w1_minus_w2": 2.041836856842041,
+                "neutral_w1_minus_w2": 1.7845722236633301,
+                "game_minus_neutral_w1_centered_logit": 0.29932584953308106,
+                "game_centered_rank_effect": [
+                  1.667796383857727,
+                  0.19679839420318607,
+                  -0.6292707433700562,
+                  -1.235324034690857
+                ],
+                "neutral_centered_rank_effect": [
+                  0.7975200223922727,
+                  0.17624767780303957,
+                  -0.3598035516738891,
+                  -0.6139641485214233
+                ],
+                "avoidance_gap_reduction_pp": 8.599999999999996,
+                "w1_logit_gap_reduction": 0.8702763614654541,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.000000000000014,
+                    13.2
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7701908074736595,
+                    0.9729327639222145
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 10.599999999999998,
+                "w1_logit_gap_reduction": 0.6036918749809265,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.7999999999999945,
+                    15.400000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.5357653831243515,
+                    0.6741162412405014
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -2.400000000000002,
+                "w1_logit_gap_reduction": 0.28161745548248296,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.400000000000004,
+                    0.6000000000000103
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.21038874650001532,
+                    0.3539941554784774
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 251,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.6573705179282868,
+                "neutral_w1_choice": 0.7290836653386454,
+                "old_winner_avoidance_gap_pp": 7.171314741035861,
+                "game_w1_minus_w2": 0.557612179759964,
+                "neutral_w1_minus_w2": 1.2234272481910735,
+                "game_minus_neutral_w1_centered_logit": -0.6248596274995234,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.6294820717131474,
+                "neutral_w1_choice": 0.5856573705179283,
+                "old_winner_avoidance_gap_pp": -4.3824701195219085,
+                "game_w1_minus_w2": 1.4154609550992807,
+                "neutral_w1_minus_w2": 1.4088321017079144,
+                "game_minus_neutral_w1_centered_logit": 0.002909011574855364,
+                "game_centered_rank_effect": [
+                  0.8310975999946139,
+                  -0.026751175344702727,
+                  -0.3191672159856059,
+                  -0.4851792086643052
+                ],
+                "neutral_centered_rank_effect": [
+                  0.2033289609202351,
+                  0.01792410740339423,
+                  -0.13375185780316234,
+                  -0.08750121052046689
+                ],
+                "avoidance_gap_reduction_pp": 11.55378486055777,
+                "w1_logit_gap_reduction": 0.6277686390743787,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.3824701195219085,
+                    18.72509960159362
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.5289001507113179,
+                    0.733950626327697
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.6772908366533864,
+                "neutral_w1_choice": 0.749003984063745,
+                "old_winner_avoidance_gap_pp": 7.171314741035861,
+                "game_w1_minus_w2": 0.5702346026659961,
+                "neutral_w1_minus_w2": 1.2551261780271492,
+                "game_minus_neutral_w1_centered_logit": -0.6475078660653407,
+                "game_centered_rank_effect": [
+                  -0.00441102107682545,
+                  -0.01703344398285761,
+                  -0.003588231911222317,
+                  0.025032696970905377
+                ],
+                "neutral_centered_rank_effect": [
+                  0.018237217488991764,
+                  -0.01346171234708382,
+                  -0.03382415220556978,
+                  0.029048647063661948
+                ],
+                "avoidance_gap_reduction_pp": 0.0,
+                "w1_logit_gap_reduction": -0.022648238565817325,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.984063745019917,
+                    3.984063745019917
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.04254265123629481,
+                    -0.0033426945665442753
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.6095617529880478,
+                "neutral_w1_choice": 0.6374501992031872,
+                "old_winner_avoidance_gap_pp": 2.7888446215139417,
+                "game_w1_minus_w2": 0.8236802469686683,
+                "neutral_w1_minus_w2": 1.5108483151135692,
+                "game_minus_neutral_w1_centered_logit": -0.5906922522769031,
+                "game_centered_rank_effect": [
+                  0.46284780844274265,
+                  0.1967797412340384,
+                  -0.1614204079981344,
+                  -0.49820714167864666
+                ],
+                "neutral_centered_rank_effect": [
+                  0.4286804332201226,
+                  0.14125936629762686,
+                  -0.19531907503348422,
+                  -0.374620724484265
+                ],
+                "avoidance_gap_reduction_pp": 4.382470119521919,
+                "w1_logit_gap_reduction": 0.034167375222620255,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.7888446215139306,
+                    11.165338645418183
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.04113927329204,
+                    0.11051780626593341
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.5816733067729084,
+                "neutral_w1_choice": 0.5537848605577689,
+                "old_winner_avoidance_gap_pp": -2.788844621513953,
+                "game_w1_minus_w2": 2.2553905243892594,
+                "neutral_w1_minus_w2": 1.9110563057827286,
+                "game_minus_neutral_w1_centered_logit": 0.34152734612088753,
+                "game_centered_rank_effect": [
+                  1.8408792370344065,
+                  0.14310089240511104,
+                  -0.7224387343661245,
+                  -1.261541395073393
+                ],
+                "neutral_centered_rank_effect": [
+                  0.8744922634139953,
+                  0.18686320582234056,
+                  -0.4539150013866653,
+                  -0.6074404678496705
+                ],
+                "avoidance_gap_reduction_pp": 9.960159362549813,
+                "w1_logit_gap_reduction": 0.9663869736204109,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    2.7888446215139417,
+                    17.131474103585663
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.8280042408946976,
+                    1.1096536096348706
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 11.55378486055777,
+                "w1_logit_gap_reduction": 0.6504168776401961,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.3824701195219085,
+                    18.72509960159362
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.5509998489186109,
+                    0.7577635675787451
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -1.593625498007956,
+                "w1_logit_gap_reduction": 0.3386183345460322,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.976095617529875,
+                    2.3904382470119607
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.24011294492687352,
+                    0.4331184352299133
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 249,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.6506024096385542,
+                "neutral_w1_choice": 0.7429718875502008,
+                "old_winner_avoidance_gap_pp": 9.236947791164663,
+                "game_w1_minus_w2": 0.5841717930682692,
+                "neutral_w1_minus_w2": 1.10268955920116,
+                "game_minus_neutral_w1_centered_logit": -0.5166083914209082,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.5943775100401606,
+                "neutral_w1_choice": 0.5823293172690763,
+                "old_winner_avoidance_gap_pp": -1.2048192771084265,
+                "game_w1_minus_w2": 1.1257218740072594,
+                "neutral_w1_minus_w2": 1.1382331694943837,
+                "game_minus_neutral_w1_centered_logit": 0.032626647068314765,
+                "game_centered_rank_effect": [
+                  0.6434020603516972,
+                  0.10185197941270696,
+                  -0.24562633181192786,
+                  -0.49962770795247646
+                ],
+                "neutral_centered_rank_effect": [
+                  0.09416702186247417,
+                  0.05862341156925066,
+                  -0.046203086653866465,
+                  -0.10658734677785842
+                ],
+                "avoidance_gap_reduction_pp": 10.44176706827309,
+                "w1_logit_gap_reduction": 0.549235038489223,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.016064257028118,
+                    16.867469879518083
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.4624656731345088,
+                    0.6405724534308576
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.6586345381526104,
+                "neutral_w1_choice": 0.7429718875502008,
+                "old_winner_avoidance_gap_pp": 8.433734939759042,
+                "game_w1_minus_w2": 0.5752512843733332,
+                "neutral_w1_minus_w2": 1.0984941352323356,
+                "game_minus_neutral_w1_centered_logit": -0.5239649240271633,
+                "game_centered_rank_effect": [
+                  -0.02017223212613639,
+                  -0.0112517234312004,
+                  -0.0007012282988153873,
+                  0.03212518385615215
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.012815699519881374,
+                  -0.008620275551056766,
+                  -0.00458634043314371,
+                  0.02602231550408174
+                ],
+                "avoidance_gap_reduction_pp": 0.8032128514056218,
+                "w1_logit_gap_reduction": -0.007356532606255128,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.016064257028118,
+                    5.622489959839371
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.02430640272347323,
+                    0.010327369477375422
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.5783132530120482,
+                "neutral_w1_choice": 0.642570281124498,
+                "old_winner_avoidance_gap_pp": 6.425702811244982,
+                "game_w1_minus_w2": 1.021074953806927,
+                "neutral_w1_minus_w2": 1.5113915439590393,
+                "game_minus_neutral_w1_centered_logit": -0.46939319587615597,
+                "game_centered_rank_effect": [
+                  0.5020158434488686,
+                  0.06511268271021092,
+                  -0.15015688861709045,
+                  -0.4169716375419892
+                ],
+                "neutral_centered_rank_effect": [
+                  0.45480064790411645,
+                  0.046098663146237284,
+                  -0.17880602917039246,
+                  -0.3220932818799611
+                ],
+                "avoidance_gap_reduction_pp": 2.8112449799196817,
+                "w1_logit_gap_reduction": 0.04721519554475223,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.212851405622497,
+                    8.835341365461858
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.021750118023899152,
+                    0.11510881137656394
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.5421686746987951,
+                "neutral_w1_choice": 0.5622489959839357,
+                "old_winner_avoidance_gap_pp": 2.008032128514059,
+                "game_w1_minus_w2": 1.8265678987924354,
+                "neutral_w1_minus_w2": 1.6570722051413662,
+                "game_minus_neutral_w1_centered_logit": 0.2567853851011958,
+                "game_centered_rank_effect": [
+                  1.4933233069607532,
+                  0.25092720123658696,
+                  -0.5353544150969111,
+                  -1.208896093100429
+                ],
+                "neutral_centered_rank_effect": [
+                  0.7199295304386493,
+                  0.16554688449844301,
+                  -0.26493618670237595,
+                  -0.6205402282347161
+                ],
+                "avoidance_gap_reduction_pp": 7.228915662650604,
+                "w1_logit_gap_reduction": 0.773393776522104,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    1.2048192771084265,
+                    13.25301204819278
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.631075138739314,
+                    0.9180126379292652
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 9.638554216867469,
+                "w1_logit_gap_reduction": 0.5565915710954781,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    2.81124497991969,
+                    16.465863453815256
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.4685576218438436,
+                    0.6501498544551282
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -3.2128514056224864,
+                "w1_logit_gap_reduction": 0.224158738032881,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -7.63052208835342,
+                    1.2048192771084256
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.12110857312459067,
+                    0.3284336966922483
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "triviamc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 250,
+          "n_confirmation": 250,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64
+          ],
+          "gla_layers": 48
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.82,
+                "neutral_w1_choice": 0.894,
+                "old_winner_avoidance_gap_pp": 7.400000000000007,
+                "game_w1_minus_w2": 2.449711658477783,
+                "neutral_w1_minus_w2": 4.511167331695557,
+                "game_minus_neutral_w1_centered_logit": -1.6328132581710815,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.784,
+                "neutral_w1_choice": 0.778,
+                "old_winner_avoidance_gap_pp": -0.6000000000000005,
+                "game_w1_minus_w2": 4.317312509536743,
+                "neutral_w1_minus_w2": 4.74253353881836,
+                "game_minus_neutral_w1_centered_logit": -0.3332699384689331,
+                "game_centered_rank_effect": [
+                  1.4632327313423157,
+                  -0.40436811971664427,
+                  -0.504686709880829,
+                  -0.5541779017448425
+                ],
+                "neutral_centered_rank_effect": [
+                  0.16368941164016704,
+                  -0.06767679548263555,
+                  -0.06907063055038454,
+                  -0.02694198560714689
+                ],
+                "avoidance_gap_reduction_pp": 8.000000000000007,
+                "w1_logit_gap_reduction": 1.2995433197021484,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.800000000000004,
+                    11.2
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.1858831370115281,
+                    1.4128832244157792
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.82,
+                "neutral_w1_choice": 0.9,
+                "old_winner_avoidance_gap_pp": 8.000000000000007,
+                "game_w1_minus_w2": 2.4308563613891603,
+                "neutral_w1_minus_w2": 4.486980838775635,
+                "game_minus_neutral_w1_centered_logit": -1.6354900059700013,
+                "game_centered_rank_effect": [
+                  -0.024083710670470992,
+                  -0.005228413581848147,
+                  -0.004778866767883305,
+                  0.03409099102020274
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.021406962871552082,
+                  0.002779530048370338,
+                  -0.004871150493621856,
+                  0.023498583316803323
+                ],
+                "avoidance_gap_reduction_pp": -0.6000000000000005,
+                "w1_logit_gap_reduction": -0.0026767477989197985,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.400000000000003,
+                    1.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.01960256849527354,
+                    0.013913687217235435
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.796,
+                "neutral_w1_choice": 0.872,
+                "old_winner_avoidance_gap_pp": 7.599999999999996,
+                "game_w1_minus_w2": 3.6986878929138185,
+                "neutral_w1_minus_w2": 6.0842147636413575,
+                "game_minus_neutral_w1_centered_logit": -1.7495373635292053,
+                "game_centered_rank_effect": [
+                  1.1091589946746825,
+                  -0.13981723976135255,
+                  -0.4105160655975342,
+                  -0.5588256893157957
+                ],
+                "neutral_centered_rank_effect": [
+                  1.2258831000328057,
+                  -0.3471643319129944,
+                  -0.4904422497749328,
+                  -0.38827651834487886
+                ],
+                "avoidance_gap_reduction_pp": -0.19999999999998952,
+                "w1_logit_gap_reduction": -0.11672410535812383,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.0000000000000018,
+                    2.6000000000000023
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.18530435004234322,
+                    -0.04929669455289853
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.776,
+                "neutral_w1_choice": 0.772,
+                "old_winner_avoidance_gap_pp": -0.40000000000000036,
+                "game_w1_minus_w2": 6.549763593673706,
+                "neutral_w1_minus_w2": 6.6677750434875485,
+                "game_minus_neutral_w1_centered_logit": 0.07711545467376708,
+                "game_centered_rank_effect": [
+                  3.3445538730621336,
+                  -0.7554980621337891,
+                  -1.1877328929901125,
+                  -1.4013229179382325
+                ],
+                "neutral_centered_rank_effect": [
+                  1.6346251602172845,
+                  -0.521982551574707,
+                  -0.6051283950805664,
+                  -0.5075142135620117
+                ],
+                "avoidance_gap_reduction_pp": 7.800000000000007,
+                "w1_logit_gap_reduction": 1.7099287128448486,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.600000000000004,
+                    11.0
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.559368133199215,
+                    1.8636485899209978
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 8.600000000000009,
+                "w1_logit_gap_reduction": 1.3022200675010682,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.199999999999994,
+                    12.00000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.188475148010254,
+                    1.4164743304252623
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -0.20000000000000018,
+                "w1_logit_gap_reduction": 0.41038539314270017,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.6000000000000014,
+                    2.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.3341571602106094,
+                    0.48633289722204215
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.816,
+                "neutral_w1_choice": 0.908,
+                "old_winner_avoidance_gap_pp": 9.200000000000008,
+                "game_w1_minus_w2": 2.3679953079223632,
+                "neutral_w1_minus_w2": 4.49052152633667,
+                "game_minus_neutral_w1_centered_logit": -1.6696712284088135,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.784,
+                "neutral_w1_choice": 0.776,
+                "old_winner_avoidance_gap_pp": -0.8000000000000007,
+                "game_w1_minus_w2": 4.2305564689636235,
+                "neutral_w1_minus_w2": 4.639263633728027,
+                "game_minus_neutral_w1_centered_logit": -0.3371518211364746,
+                "game_centered_rank_effect": [
+                  1.509775661468506,
+                  -0.3527854995727539,
+                  -0.5483954772949219,
+                  -0.6085946846008299
+                ],
+                "neutral_centered_rank_effect": [
+                  0.17725625419616708,
+                  0.02851414680480957,
+                  -0.1552264957427978,
+                  -0.05054390525817842
+                ],
+                "avoidance_gap_reduction_pp": 10.000000000000009,
+                "w1_logit_gap_reduction": 1.332519407272339,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.600000000000005,
+                    14.79999999999999
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.1740281551599503,
+                    1.489513145160675
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.824,
+                "neutral_w1_choice": 0.904,
+                "old_winner_avoidance_gap_pp": 8.000000000000007,
+                "game_w1_minus_w2": 2.3372285385131835,
+                "neutral_w1_minus_w2": 4.461941455841065,
+                "game_minus_neutral_w1_centered_logit": -1.6738472776412965,
+                "game_centered_rank_effect": [
+                  -0.023533935546874662,
+                  0.007232833862304687,
+                  0.0027681808471679004,
+                  0.013532920837402429
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.019357886314391948,
+                  0.009222184181213344,
+                  -0.012294249534607005,
+                  0.02242995166778572
+                ],
+                "avoidance_gap_reduction_pp": 1.200000000000001,
+                "w1_logit_gap_reduction": -0.004176049232482937,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.6000000000000014,
+                    4.0000000000000036
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.027521034693717927,
+                    0.018637376427650624
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.772,
+                "neutral_w1_choice": 0.884,
+                "old_winner_avoidance_gap_pp": 11.2,
+                "game_w1_minus_w2": 3.556443893432617,
+                "neutral_w1_minus_w2": 6.1358993644714355,
+                "game_minus_neutral_w1_centered_logit": -1.8625844707489014,
+                "game_centered_rank_effect": [
+                  1.0791637163162235,
+                  -0.10928486919403077,
+                  -0.4197685804367065,
+                  -0.5501102666854858
+                ],
+                "neutral_centered_rank_effect": [
+                  1.272076958656311,
+                  -0.3733008794784546,
+                  -0.5018982572555541,
+                  -0.39687782192230214
+                ],
+                "avoidance_gap_reduction_pp": -1.9999999999999911,
+                "w1_logit_gap_reduction": -0.1929132423400879,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -6.399999999999995,
+                    2.400000000000002
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.2889619074821473,
+                    -0.09926620755195623
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.764,
+                "neutral_w1_choice": 0.772,
+                "old_winner_avoidance_gap_pp": 0.8000000000000007,
+                "game_w1_minus_w2": 6.291077056884766,
+                "neutral_w1_minus_w2": 6.530159820556641,
+                "game_minus_neutral_w1_centered_logit": -0.011774055480957031,
+                "game_centered_rank_effect": [
+                  3.2935616044998173,
+                  -0.6295201444625854,
+                  -1.2526041746139525,
+                  -1.4114372854232786
+                ],
+                "neutral_centered_rank_effect": [
+                  1.6356644315719606,
+                  -0.4039738626480103,
+                  -0.7010695276260375,
+                  -0.5306210412979127
+                ],
+                "avoidance_gap_reduction_pp": 8.400000000000007,
+                "w1_logit_gap_reduction": 1.6578971729278564,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    3.999999999999993,
+                    13.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.443329004073143,
+                    1.8715601522207261
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 8.800000000000008,
+                "w1_logit_gap_reduction": 1.336695456504822,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.0000000000000036,
+                    13.600000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.1791931667089464,
+                    1.494878087544441
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -1.6000000000000014,
+                "w1_logit_gap_reduction": 0.32537776565551746,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.800000000000004,
+                    1.6000000000000014
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.2220219012022019,
+                    0.43153508067131013
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.824,
+                "neutral_w1_choice": 0.88,
+                "old_winner_avoidance_gap_pp": 5.600000000000005,
+                "game_w1_minus_w2": 2.531428009033203,
+                "neutral_w1_minus_w2": 4.531813137054443,
+                "game_minus_neutral_w1_centered_logit": -1.5959552879333496,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.784,
+                "neutral_w1_choice": 0.78,
+                "old_winner_avoidance_gap_pp": -0.40000000000000036,
+                "game_w1_minus_w2": 4.404068550109863,
+                "neutral_w1_minus_w2": 4.845803443908691,
+                "game_minus_neutral_w1_centered_logit": -0.3293880558013916,
+                "game_centered_rank_effect": [
+                  1.4166898012161253,
+                  -0.4559507398605347,
+                  -0.46097794246673585,
+                  -0.4997611188888549
+                ],
+                "neutral_centered_rank_effect": [
+                  0.150122569084167,
+                  -0.16386773777008057,
+                  0.017085234642028935,
+                  -0.003340065956115801
+                ],
+                "avoidance_gap_reduction_pp": 6.000000000000005,
+                "w1_logit_gap_reduction": 1.266567232131958,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    2.0000000000000018,
+                    10.000000000000009
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.1042484108686448,
+                    1.4334563224554062
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.816,
+                "neutral_w1_choice": 0.896,
+                "old_winner_avoidance_gap_pp": 8.000000000000007,
+                "game_w1_minus_w2": 2.5244841842651367,
+                "neutral_w1_minus_w2": 4.5120202217102054,
+                "game_minus_neutral_w1_centered_logit": -1.597132734298706,
+                "game_centered_rank_effect": [
+                  -0.024633485794067767,
+                  -0.01768966102600098,
+                  -0.012325914382934622,
+                  0.054649061203002836
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.02345603942871133,
+                  -0.0036631240844726687,
+                  0.002551948547363292,
+                  0.02456721496582004
+                ],
+                "avoidance_gap_reduction_pp": -2.400000000000002,
+                "w1_logit_gap_reduction": -0.0011774463653564382,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.800000000000004,
+                    0.0
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.024916304612159768,
+                    0.023017552614212046
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.82,
+                "neutral_w1_choice": 0.86,
+                "old_winner_avoidance_gap_pp": 4.0000000000000036,
+                "game_w1_minus_w2": 3.8409318923950195,
+                "neutral_w1_minus_w2": 6.0325301628112795,
+                "game_minus_neutral_w1_centered_logit": -1.6364902563095092,
+                "game_centered_rank_effect": [
+                  1.1391542730331419,
+                  -0.1703496103286743,
+                  -0.40126355075836184,
+                  -0.5675411119461062
+                ],
+                "neutral_centered_rank_effect": [
+                  1.1796892414093012,
+                  -0.3210277843475342,
+                  -0.4789862422943114,
+                  -0.379675214767456
+                ],
+                "avoidance_gap_reduction_pp": 1.6000000000000014,
+                "w1_logit_gap_reduction": -0.04053496837615955,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.9999999999999911,
+                    4.800000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.13692879974842057,
+                    0.05203139872550963
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.788,
+                "neutral_w1_choice": 0.772,
+                "old_winner_avoidance_gap_pp": -1.6000000000000014,
+                "game_w1_minus_w2": 6.808450130462647,
+                "neutral_w1_minus_w2": 6.805390266418457,
+                "game_minus_neutral_w1_centered_logit": 0.1660049648284912,
+                "game_centered_rank_effect": [
+                  3.395546141624451,
+                  -0.8814759798049927,
+                  -1.1228616113662722,
+                  -1.3912085504531861
+                ],
+                "neutral_centered_rank_effect": [
+                  1.6335858888626094,
+                  -0.6399912405014038,
+                  -0.5091872625350953,
+                  -0.4844073858261111
+                ],
+                "avoidance_gap_reduction_pp": 7.200000000000006,
+                "w1_logit_gap_reduction": 1.7619602527618408,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    3.199999999999992,
+                    11.6
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.5460396869182587,
+                    1.9788616178274154
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 8.400000000000007,
+                "w1_logit_gap_reduction": 1.2677446784973145,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    3.999999999999993,
+                    13.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.1067831267595294,
+                    1.4333120601415632
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 1.200000000000001,
+                "w1_logit_gap_reduction": 0.49539302062988266,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.0000000000000018,
+                    4.400000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.3846125345230103,
+                    0.6050789660453795
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "seed_oss_36b": {
+      "simplemc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 251,
+          "n_confirmation": 249,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64
+          ],
+          "gla_layers": 0
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.722,
+                "neutral_w1_choice": 0.856,
+                "old_winner_avoidance_gap_pp": 13.4,
+                "game_w1_minus_w2": 1.7372499351501465,
+                "neutral_w1_minus_w2": 3.4239999771118166,
+                "game_minus_neutral_w1_centered_logit": -1.5171875743865966,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.652,
+                "neutral_w1_choice": 0.534,
+                "old_winner_avoidance_gap_pp": -11.799999999999999,
+                "game_w1_minus_w2": 3.079499912261963,
+                "neutral_w1_minus_w2": 2.722749977111816,
+                "game_minus_neutral_w1_centered_logit": 0.4018749294281006,
+                "game_centered_rank_effect": [
+                  1.2744374990463254,
+                  -0.06781247806549068,
+                  -0.29356246662139907,
+                  -0.913062554359436
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.6446250047683715,
+                  0.05662499523162845,
+                  0.4108749952316284,
+                  0.17712501430511507
+                ],
+                "avoidance_gap_reduction_pp": 25.2,
+                "w1_logit_gap_reduction": 1.9190625038146971,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    19.999999999999993,
+                    30.39999999999999
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7949343623161318,
+                    2.042751601219177
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.724,
+                "neutral_w1_choice": 0.862,
+                "old_winner_avoidance_gap_pp": 13.8,
+                "game_w1_minus_w2": 1.762249942779541,
+                "neutral_w1_minus_w2": 3.451499980926514,
+                "game_minus_neutral_w1_centered_logit": -1.5414375629425048,
+                "game_centered_rank_effect": [
+                  -0.022374987602233887,
+                  -0.04737499523162836,
+                  -0.00837499141693121,
+                  0.07812497425079346
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0018750009536745438,
+                  -0.025625002861022927,
+                  -0.03337500286102291,
+                  0.05712500476837157
+                ],
+                "avoidance_gap_reduction_pp": -0.40000000000000036,
+                "w1_logit_gap_reduction": -0.02424998855590821,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.2000000000000046,
+                    2.5999999999999908
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.05131408798694613,
+                    0.002314091181754945
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.71,
+                "neutral_w1_choice": 0.852,
+                "old_winner_avoidance_gap_pp": 14.200000000000001,
+                "game_w1_minus_w2": 1.694999927520752,
+                "neutral_w1_minus_w2": 3.313249988555908,
+                "game_minus_neutral_w1_centered_logit": -1.451500093460083,
+                "game_centered_rank_effect": [
+                  -0.07900001525878908,
+                  -0.036750007629394454,
+                  0.028250019073486232,
+                  0.08750000381469736
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.1446874961853024,
+                  -0.033937507629394514,
+                  0.04706249618530278,
+                  0.1315625076293947
+                ],
+                "avoidance_gap_reduction_pp": -0.8000000000000007,
+                "w1_logit_gap_reduction": 0.06568748092651355,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.5999999999999925,
+                    2.0000000000000018
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.039248472976684545,
+                    0.09193746120929722
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.644,
+                "neutral_w1_choice": 0.536,
+                "old_winner_avoidance_gap_pp": -10.799999999999999,
+                "game_w1_minus_w2": 3.0212498779296877,
+                "neutral_w1_minus_w2": 2.6809999809265137,
+                "game_minus_neutral_w1_centered_logit": 0.39493738651275634,
+                "game_centered_rank_effect": [
+                  1.223812461853027,
+                  -0.060187480926513603,
+                  -0.26768746948242195,
+                  -0.8959375114440917
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.6883124990463254,
+                  0.05468749713897708,
+                  0.42593750095367433,
+                  0.2076875009536745
+                ],
+                "avoidance_gap_reduction_pp": 24.2,
+                "w1_logit_gap_reduction": 1.912124960899353,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    18.999999999999993,
+                    29.200000000000003
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.78768433637619,
+                    2.0376265548467636
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 25.6,
+                "w1_logit_gap_reduction": 1.9433124923706053,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    20.599999999999994,
+                    30.599999999999994
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.8191249880075455,
+                    2.06975153977871
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -1.0,
+                "w1_logit_gap_reduction": -0.006937542915344208,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.6000000000000014,
+                    0.6000000000000014
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.026000054407119583,
+                    0.01237496018409719
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 251,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.7091633466135459,
+                "neutral_w1_choice": 0.8645418326693227,
+                "old_winner_avoidance_gap_pp": 15.537848605577686,
+                "game_w1_minus_w2": 1.6807768544352861,
+                "neutral_w1_minus_w2": 3.4825696831205453,
+                "game_minus_neutral_w1_centered_logit": -1.5953685657911567,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.649402390438247,
+                "neutral_w1_choice": 0.5537848605577689,
+                "old_winner_avoidance_gap_pp": -9.561752988047811,
+                "game_w1_minus_w2": 3.0288844013594063,
+                "neutral_w1_minus_w2": 2.8441234907780983,
+                "game_minus_neutral_w1_centered_logit": 0.29619019155008386,
+                "game_centered_rank_effect": [
+                  1.3370268962297782,
+                  -0.01108065069434172,
+                  -0.46825197303437627,
+                  -0.8576942725010601
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.5545318611114625,
+                  0.08391433123098424,
+                  0.23730080061224812,
+                  0.2333167292682301
+                ],
+                "avoidance_gap_reduction_pp": 25.099601593625497,
+                "w1_logit_gap_reduction": 1.8915587573412407,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    17.928286852589636,
+                    32.270916334661365
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7145169554953557,
+                    2.0688495845433725
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.6972111553784861,
+                "neutral_w1_choice": 0.8565737051792829,
+                "old_winner_avoidance_gap_pp": 15.936254980079678,
+                "game_w1_minus_w2": 1.6937250464086038,
+                "neutral_w1_minus_w2": 3.4865537544645635,
+                "game_minus_neutral_w1_centered_logit": -1.6130478372611847,
+                "game_centered_rank_effect": [
+                  -0.03212149874622616,
+                  -0.0450696907195437,
+                  0.0032370289958331133,
+                  0.07395416046993675
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.01444222727619815,
+                  -0.01842629862021644,
+                  -0.011454187066431532,
+                  0.044322712962845845
+                ],
+                "avoidance_gap_reduction_pp": -0.3984063745019917,
+                "w1_logit_gap_reduction": -0.017679271470028013,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.382470119521919,
+                    3.5856573705179464
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.05490537302427566,
+                    0.018180423618787626
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.6892430278884463,
+                "neutral_w1_choice": 0.8565737051792829,
+                "old_winner_avoidance_gap_pp": 16.73306772908366,
+                "game_w1_minus_w2": 1.6364541528709382,
+                "neutral_w1_minus_w2": 3.3989043672721224,
+                "game_minus_neutral_w1_centered_logit": -1.544322769955335,
+                "game_centered_rank_effect": [
+                  -0.08080180612693288,
+                  -0.03647910456258463,
+                  0.031747987070881556,
+                  0.08553292361863574
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.13184760196275436,
+                  -0.048182286114331785,
+                  0.047435258964143356,
+                  0.13259462911294273
+                ],
+                "avoidance_gap_reduction_pp": -1.195219123505975,
+                "w1_logit_gap_reduction": 0.051045795835821695,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.179282868525892,
+                    2.39043824701195
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.012948191640861462,
+                    0.0891433678775193
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.6454183266932271,
+                "neutral_w1_choice": 0.549800796812749,
+                "old_winner_avoidance_gap_pp": -9.561752988047811,
+                "game_w1_minus_w2": 2.976095495945904,
+                "neutral_w1_minus_w2": 2.808266917072919,
+                "game_minus_neutral_w1_centered_logit": 0.29096105089225616,
+                "game_centered_rank_effect": [
+                  1.2913346081615917,
+                  -0.003984033349025751,
+                  -0.4422310377022184,
+                  -0.8451195371103475
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.594995008521821,
+                  0.07930775752580493,
+                  0.2635707209309732,
+                  0.25211653006504253
+                ],
+                "avoidance_gap_reduction_pp": 25.099601593625497,
+                "w1_logit_gap_reduction": 1.886329616683413,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    18.326693227091628,
+                    32.27091633466136
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7099103689668662,
+                    2.065369705374972
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 25.49800796812749,
+                "w1_logit_gap_reduction": 1.9092380288112687,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    18.326693227091628,
+                    33.06772908366534
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7310726026139887,
+                    2.0886453394870834
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.0,
+                "w1_logit_gap_reduction": -0.005229140657827758,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.39043824701195,
+                    2.39043824701195
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.03187253104738045,
+                    0.021414289578973594
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 249,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.7349397590361446,
+                "neutral_w1_choice": 0.8473895582329317,
+                "old_winner_avoidance_gap_pp": 11.24497991967871,
+                "game_w1_minus_w2": 1.7941766149068932,
+                "neutral_w1_minus_w2": 3.364959831697395,
+                "game_minus_neutral_w1_centered_logit": -1.438378623211719,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.6546184738955824,
+                "neutral_w1_choice": 0.5140562248995983,
+                "old_winner_avoidance_gap_pp": -14.056224899598401,
+                "game_w1_minus_w2": 3.1305219734528937,
+                "neutral_w1_minus_w2": 2.6004015757855643,
+                "game_minus_neutral_w1_centered_logit": 0.5084085407027279,
+                "game_centered_rank_effect": [
+                  1.2113453757810784,
+                  -0.12499998276492197,
+                  -0.11746983164285563,
+                  -0.9688755613733007
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.7354417881333681,
+                  0.029116467778462496,
+                  0.5858433600889152,
+                  0.12048196026599056
+                ],
+                "avoidance_gap_reduction_pp": 25.30120481927711,
+                "w1_logit_gap_reduction": 1.946787163914447,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    18.473895582329305,
+                    32.5301204819277
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7718374286310739,
+                    2.124874489278678
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.751004016064257,
+                "neutral_w1_choice": 0.8674698795180723,
+                "old_winner_avoidance_gap_pp": 11.646586345381527,
+                "game_w1_minus_w2": 1.8313252399245419,
+                "neutral_w1_minus_w2": 3.4161646509745034,
+                "game_minus_neutral_w1_centered_logit": -1.4692521056975705,
+                "game_centered_rank_effect": [
+                  -0.01255019122816936,
+                  -0.04969881624581818,
+                  -0.020080281069958517,
+                  0.08232928854394639
+                ],
+                "neutral_centered_rank_effect": [
+                  0.01832329125768206,
+                  -0.03288152801942634,
+                  -0.05547188946520931,
+                  0.07003012622695381
+                ],
+                "avoidance_gap_reduction_pp": -0.40160642570281624,
+                "w1_logit_gap_reduction": -0.030873482485851422,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.417670682730924,
+                    3.6144578313253017
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.07116279084998443,
+                    0.007909795558117593
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.7309236947791165,
+                "neutral_w1_choice": 0.8473895582329317,
+                "old_winner_avoidance_gap_pp": 11.646586345381527,
+                "game_w1_minus_w2": 1.754015949356508,
+                "neutral_w1_minus_w2": 3.2269076228620537,
+                "game_minus_neutral_w1_centered_logit": -1.3579318532982025,
+                "game_centered_rank_effect": [
+                  -0.07718375217483686,
+                  -0.03702308662445186,
+                  0.024723954947598048,
+                  0.08948288385169101
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.15763052208835315,
+                  -0.01957831325301207,
+                  0.046686739327917115,
+                  0.13052209601344833
+                ],
+                "avoidance_gap_reduction_pp": -0.40160642570281624,
+                "w1_logit_gap_reduction": 0.08044676991351651,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.417670682730922,
+                    3.6144578313253017
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.04380018510014184,
+                    0.11684228167476426
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.642570281124498,
+                "neutral_w1_choice": 0.5220883534136547,
+                "old_winner_avoidance_gap_pp": -12.04819277108433,
+                "game_w1_minus_w2": 3.0667669457125375,
+                "neutral_w1_minus_w2": 2.55271082039339,
+                "game_minus_neutral_w1_centered_logit": 0.49974887342338103,
+                "game_centered_rank_effect": [
+                  1.1557479689877677,
+                  -0.11684236181787694,
+                  -0.09174194489138199,
+                  -0.9471636622785085
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.7823795276473322,
+                  0.02986948365667258,
+                  0.5896084318199312,
+                  0.16290161217072852
+                ],
+                "avoidance_gap_reduction_pp": 23.293172690763043,
+                "w1_logit_gap_reduction": 1.9381274966351,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    16.465863453815253,
+                    30.522088353413658
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7644264422267315,
+                    2.119101368471322
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 25.702811244979927,
+                "w1_logit_gap_reduction": 1.9776606464002984,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    19.277108433734945,
+                    32.1285140562249
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.804342380584962,
+                    2.1557542676427754
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -2.008032128514067,
+                "w1_logit_gap_reduction": -0.008659667279346861,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.417670682730925,
+                    0.4016064257028056
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.034387551206182636,
+                    0.017444727794233443
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "triviamc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 250,
+          "n_confirmation": 250,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64
+          ],
+          "gla_layers": 0
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.85,
+                "neutral_w1_choice": 0.918,
+                "old_winner_avoidance_gap_pp": 6.800000000000006,
+                "game_w1_minus_w2": 7.726250011444092,
+                "neutral_w1_minus_w2": 10.826749992370605,
+                "game_minus_neutral_w1_centered_logit": -2.258124997138977,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.84,
+                "neutral_w1_choice": 0.824,
+                "old_winner_avoidance_gap_pp": -1.6000000000000014,
+                "game_w1_minus_w2": 10.045499988555909,
+                "neutral_w1_minus_w2": 10.415000011444091,
+                "game_minus_neutral_w1_centered_logit": -0.2314375591278076,
+                "game_centered_rank_effect": [
+                  1.5675624504089356,
+                  -0.7516875267028809,
+                  -0.47718746566772463,
+                  -0.33868745803832967
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.45912498760223386,
+                  -0.047375006675720144,
+                  0.2808750047683719,
+                  0.22562498950958254
+                ],
+                "avoidance_gap_reduction_pp": 8.400000000000007,
+                "w1_logit_gap_reduction": 2.0266874380111695,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.400000000000005,
+                    11.40000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.8612483740091326,
+                    2.188999956345558
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.854,
+                "neutral_w1_choice": 0.922,
+                "old_winner_avoidance_gap_pp": 6.800000000000006,
+                "game_w1_minus_w2": 7.753250019073486,
+                "neutral_w1_minus_w2": 10.866500007629394,
+                "game_minus_neutral_w1_centered_logit": -2.3082500019073486,
+                "game_centered_rank_effect": [
+                  -0.03174999713897719,
+                  -0.058750004768371555,
+                  0.014499999046325485,
+                  0.07600000286102304
+                ],
+                "neutral_centered_rank_effect": [
+                  0.018375007629394702,
+                  -0.02137500762939437,
+                  -0.012624999999999886,
+                  0.015625
+                ],
+                "avoidance_gap_reduction_pp": 0.0,
+                "w1_logit_gap_reduction": -0.05012500476837145,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.1999999999999913,
+                    2.0000000000000027
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.08725158488750454,
+                    -0.014062530922889638
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.862,
+                "neutral_w1_choice": 0.936,
+                "old_winner_avoidance_gap_pp": 7.400000000000007,
+                "game_w1_minus_w2": 7.5312499351501465,
+                "neutral_w1_minus_w2": 10.54925,
+                "game_minus_neutral_w1_centered_logit": -2.1875000858306883,
+                "game_centered_rank_effect": [
+                  -0.2131250829696656,
+                  -0.018125006675720257,
+                  0.07437500095367433,
+                  0.15687508869171163
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.28374999427795444,
+                  -0.00625000190734859,
+                  0.13000000572204629,
+                  0.1599999904632563
+                ],
+                "avoidance_gap_reduction_pp": -0.6000000000000005,
+                "w1_logit_gap_reduction": 0.07062491130828885,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.799999999999991,
+                    1.4000000000000128
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.035999922728538324,
+                    0.1061889714002606
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.846,
+                "neutral_w1_choice": 0.824,
+                "old_winner_avoidance_gap_pp": -2.200000000000002,
+                "game_w1_minus_w2": 9.970249969482422,
+                "neutral_w1_minus_w2": 10.353000003814698,
+                "game_minus_neutral_w1_centered_logit": -0.26925005531311036,
+                "game_centered_rank_effect": [
+                  1.4864999513626103,
+                  -0.7575000066757203,
+                  -0.43924996852874765,
+                  -0.2897499761581419
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.502374990463256,
+                  -0.028625001907348624,
+                  0.30312500190734903,
+                  0.2278749904632562
+                ],
+                "avoidance_gap_reduction_pp": 9.000000000000007,
+                "w1_logit_gap_reduction": 1.9888749418258669,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    6.000000000000005,
+                    12.00000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.8223077282190323,
+                    2.151379622578621
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 8.400000000000007,
+                "w1_logit_gap_reduction": 2.076812442779541,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.400000000000004,
+                    11.599999999999998
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.9109374461174011,
+                    2.240445235967636
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.5999999999999996,
+                "w1_logit_gap_reduction": -0.03781249618530258,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.5999999999999996,
+                    1.8000000000000016
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.06193750970363637,
+                    -0.0126250073671339
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.852,
+                "neutral_w1_choice": 0.944,
+                "old_winner_avoidance_gap_pp": 9.199999999999998,
+                "game_w1_minus_w2": 7.529500022888183,
+                "neutral_w1_minus_w2": 10.8055,
+                "game_minus_neutral_w1_centered_logit": -2.410749980926514,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.852,
+                "neutral_w1_choice": 0.84,
+                "old_winner_avoidance_gap_pp": -1.200000000000001,
+                "game_w1_minus_w2": 9.97949991607666,
+                "neutral_w1_minus_w2": 10.4245,
+                "game_minus_neutral_w1_centered_logit": -0.2792501106262207,
+                "game_centered_rank_effect": [
+                  1.635624879837036,
+                  -0.8143750133514404,
+                  -0.45337495994567867,
+                  -0.36787490653991695
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.4958749904632569,
+                  -0.11487499046325689,
+                  0.38912500190734844,
+                  0.22162497901916467
+                ],
+                "avoidance_gap_reduction_pp": 10.399999999999999,
+                "w1_logit_gap_reduction": 2.131499870300293,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    5.600000000000005,
+                    15.200000000000003
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.8908655356884003,
+                    2.3721248343944548
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.868,
+                "neutral_w1_choice": 0.944,
+                "old_winner_avoidance_gap_pp": 7.599999999999996,
+                "game_w1_minus_w2": 7.5260000381469725,
+                "neutral_w1_minus_w2": 10.813000015258789,
+                "game_minus_neutral_w1_centered_logit": -2.4626249771118163,
+                "game_centered_rank_effect": [
+                  -0.044374986648559656,
+                  -0.04087500190734861,
+                  0.01862497520446782,
+                  0.06662501335144055
+                ],
+                "neutral_centered_rank_effect": [
+                  0.007500009536743235,
+                  -5.7220459481754915e-09,
+                  -0.029499990463256687,
+                  0.0219999866485594
+                ],
+                "avoidance_gap_reduction_pp": 1.6000000000000014,
+                "w1_logit_gap_reduction": -0.05187499618530245,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.6000000000000014,
+                    4.800000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.10624997925758348,
+                    -0.0008718525409698762
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.876,
+                "neutral_w1_choice": 0.952,
+                "old_winner_avoidance_gap_pp": 7.599999999999996,
+                "game_w1_minus_w2": 7.31,
+                "neutral_w1_minus_w2": 10.569,
+                "game_minus_neutral_w1_centered_logit": -2.385875074386597,
+                "game_centered_rank_effect": [
+                  -0.2246250877380369,
+                  -0.005125064849853533,
+                  0.06287502670288081,
+                  0.16687512588501008
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.24949999427795433,
+                  -0.012999994277954174,
+                  0.11000000572204582,
+                  0.152499982833862
+                ],
+                "avoidance_gap_reduction_pp": 1.6000000000000014,
+                "w1_logit_gap_reduction": 0.024874906539916974,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.5999999999999908,
+                    4.800000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.02387832055091855,
+                    0.07349991850852966
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.86,
+                "neutral_w1_choice": 0.84,
+                "old_winner_avoidance_gap_pp": -2.0000000000000018,
+                "game_w1_minus_w2": 9.922999946594238,
+                "neutral_w1_minus_w2": 10.369,
+                "game_minus_neutral_w1_centered_logit": -0.3181250801086426,
+                "game_centered_rank_effect": [
+                  1.5574999046325688,
+                  -0.8360000190734863,
+                  -0.41049994277954127,
+                  -0.3109999427795409
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.5351249961853028,
+                  -0.09862499618530274,
+                  0.40737500381469705,
+                  0.2263749885559081
+                ],
+                "avoidance_gap_reduction_pp": 11.2,
+                "w1_logit_gap_reduction": 2.0926249008178712,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    6.799999999999995,
+                    16.000000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.8537405642032623,
+                    2.3311248512744904
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 8.799999999999997,
+                "w1_logit_gap_reduction": 2.1833748664855954,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.0000000000000036,
+                    13.600000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.9408623287677764,
+                    2.424124861240387
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.8000000000000007,
+                "w1_logit_gap_reduction": -0.03887496948242175,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.8000000000000007,
+                    2.400000000000002
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.07524999456405682,
+                    -0.0018749750137329046
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.848,
+                "neutral_w1_choice": 0.892,
+                "old_winner_avoidance_gap_pp": 4.400000000000004,
+                "game_w1_minus_w2": 7.923,
+                "neutral_w1_minus_w2": 10.847999984741211,
+                "game_minus_neutral_w1_centered_logit": -2.1055000133514405,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.828,
+                "neutral_w1_choice": 0.808,
+                "old_winner_avoidance_gap_pp": -1.9999999999999907,
+                "game_w1_minus_w2": 10.111500061035157,
+                "neutral_w1_minus_w2": 10.405500022888184,
+                "game_minus_neutral_w1_centered_logit": -0.18362500762939454,
+                "game_centered_rank_effect": [
+                  1.4995000209808342,
+                  -0.6890000400543212,
+                  -0.5009999713897706,
+                  -0.3095000095367433
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.4223749847412108,
+                  0.020124977111816378,
+                  0.17262500762939448,
+                  0.22962499999999952
+                ],
+                "avoidance_gap_reduction_pp": 6.399999999999995,
+                "w1_logit_gap_reduction": 1.921875005722046,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    2.8000000000000025,
+                    10.399999999999999
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7002500446796418,
+                    2.1531312760829926
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.84,
+                "neutral_w1_choice": 0.9,
+                "old_winner_avoidance_gap_pp": 6.000000000000005,
+                "game_w1_minus_w2": 7.9805,
+                "neutral_w1_minus_w2": 10.92,
+                "game_minus_neutral_w1_centered_logit": -2.153875026702881,
+                "game_centered_rank_effect": [
+                  -0.01912500762939473,
+                  -0.0766250076293945,
+                  0.010375022888183594,
+                  0.08537499237060553
+                ],
+                "neutral_centered_rank_effect": [
+                  0.02925000572204617,
+                  -0.04275000953674324,
+                  0.004249990463256914,
+                  0.009250013351439712
+                ],
+                "avoidance_gap_reduction_pp": -1.6000000000000014,
+                "w1_logit_gap_reduction": -0.048375013351440455,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.399999999999993,
+                    0.8000000000000007
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.09950000572204587,
+                    0.0011281056404113577
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.848,
+                "neutral_w1_choice": 0.92,
+                "old_winner_avoidance_gap_pp": 7.200000000000006,
+                "game_w1_minus_w2": 7.7524998703002925,
+                "neutral_w1_minus_w2": 10.5295,
+                "game_minus_neutral_w1_centered_logit": -1.9891250972747803,
+                "game_centered_rank_effect": [
+                  -0.20162507820129427,
+                  -0.03112494850158687,
+                  0.08587497520446785,
+                  0.14687505149841318
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.31799999427795456,
+                  0.000499990463256772,
+                  0.15000000572204586,
+                  0.16749999809265148
+                ],
+                "avoidance_gap_reduction_pp": -2.8000000000000025,
+                "w1_logit_gap_reduction": 0.11637491607666028,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.609999999999996,
+                    0.0
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.06674994254112268,
+                    0.16687489519119286
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.832,
+                "neutral_w1_choice": 0.808,
+                "old_winner_avoidance_gap_pp": -2.399999999999991,
+                "game_w1_minus_w2": 10.017499992370606,
+                "neutral_w1_minus_w2": 10.337000007629394,
+                "game_minus_neutral_w1_centered_logit": -0.22037503051757812,
+                "game_centered_rank_effect": [
+                  1.4154999980926508,
+                  -0.6789999942779541,
+                  -0.467999994277954,
+                  -0.26850000953674336
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.46962498474121084,
+                  0.04137499237060549,
+                  0.19887500000000014,
+                  0.2293749923706052
+                ],
+                "avoidance_gap_reduction_pp": 6.799999999999995,
+                "w1_logit_gap_reduction": 1.8851249828338625,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    3.2000000000000024,
+                    10.799999999999999
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.6626249763965608,
+                    2.1142656514167784
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 7.9999999999999964,
+                "w1_logit_gap_reduction": 1.9702500190734864,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    4.0000000000000036,
+                    12.00000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    1.7469843562602996,
+                    2.2003781563282008
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.40000000000000036,
+                "w1_logit_gap_reduction": -0.03675002288818341,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.200000000000001,
+                    2.0000000000000018
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.06825317349433904,
+                    -0.005000015068054364
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "gemma4_31b": {
+      "simplemc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 251,
+          "n_confirmation": 249,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "gla_layers": 0
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.796,
+                "neutral_w1_choice": 0.804,
+                "old_winner_avoidance_gap_pp": 0.8000000000000007,
+                "game_w1_minus_w2": 5.095215899944305,
+                "neutral_w1_minus_w2": 6.126170486152172,
+                "game_minus_neutral_w1_centered_logit": -0.906611417955719,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.638,
+                "neutral_w1_choice": 0.642,
+                "old_winner_avoidance_gap_pp": 0.40000000000000036,
+                "game_w1_minus_w2": 4.850746040076017,
+                "neutral_w1_minus_w2": 4.962424497723579,
+                "game_minus_neutral_w1_centered_logit": -0.1006932362752268,
+                "game_centered_rank_effect": [
+                  0.08754910204745858,
+                  0.3320189619157463,
+                  -0.13276680352352566,
+                  -0.28680126043967835
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.7183690796330335,
+                  0.44537690879555886,
+                  0.16177871188113935,
+                  0.11121345895633539
+                ],
+                "avoidance_gap_reduction_pp": 0.40000000000000036,
+                "w1_logit_gap_reduction": 0.8059181816804921,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.8000000000000025,
+                    3.600000000000003
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6724036713793757,
+                    0.9379088312976525
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.79,
+                "neutral_w1_choice": 0.824,
+                "old_winner_avoidance_gap_pp": 3.399999999999992,
+                "game_w1_minus_w2": 5.048779192924499,
+                "neutral_w1_minus_w2": 6.180745048761368,
+                "game_minus_neutral_w1_centered_logit": -0.9507523078471423,
+                "game_centered_rank_effect": [
+                  -0.037405795911326756,
+                  0.009030911108478867,
+                  0.029537363549694273,
+                  -0.0011624787468456077
+                ],
+                "neutral_centered_rank_effect": [
+                  0.006735093980096529,
+                  -0.047839468629099435,
+                  0.0062580132512377595,
+                  0.03484636139776587
+                ],
+                "avoidance_gap_reduction_pp": -2.599999999999991,
+                "w1_logit_gap_reduction": -0.044140889891423285,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.199999999999994,
+                    0.0
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.08712794111312824,
+                    -0.0016232174690812662
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.808,
+                "neutral_w1_choice": 0.81,
+                "old_winner_avoidance_gap_pp": 0.20000000000000018,
+                "game_w1_minus_w2": 4.9938726904392245,
+                "neutral_w1_minus_w2": 6.05869218158722,
+                "game_minus_neutral_w1_centered_logit": -0.9398225016165525,
+                "game_centered_rank_effect": [
+                  -0.11633812589198378,
+                  -0.014994916386902313,
+                  0.03273758696764695,
+                  0.09859545531123937
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.08312704223114942,
+                  -0.01564873766619712,
+                  0.03785159682389372,
+                  0.060924183073453264
+                ],
+                "avoidance_gap_reduction_pp": 0.6000000000000005,
+                "w1_logit_gap_reduction": -0.033211083660833474,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.000000000000012,
+                    2.39999999999998
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.07010398677235938,
+                    0.004047154009621592
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.642,
+                "neutral_w1_choice": 0.644,
+                "old_winner_avoidance_gap_pp": 0.20000000000000018,
+                "game_w1_minus_w2": 4.800340250194073,
+                "neutral_w1_minus_w2": 4.948842557579279,
+                "game_minus_neutral_w1_centered_logit": -0.13374100286047905,
+                "game_centered_rank_effect": [
+                  0.002871955990791264,
+                  0.297747605741024,
+                  -0.10640488889813415,
+                  -0.19421467283368088
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.769998459104448,
+                  0.40732946946844456,
+                  0.19380396582931292,
+                  0.1688650238066911
+                ],
+                "avoidance_gap_reduction_pp": 0.6000000000000005,
+                "w1_logit_gap_reduction": 0.7728704150952399,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.599999999999991,
+                    3.7999999999999923
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6408478058197302,
+                    0.9038884771793847
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 2.9999999999999916,
+                "w1_logit_gap_reduction": 0.8500590715719154,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.1102230246251565e-14,
+                    6.199999999999994
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7188181613372202,
+                    0.9818971649452491
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.20000000000000018,
+                "w1_logit_gap_reduction": -0.033047766585252214,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.0000000000000018,
+                    2.400000000000002
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.08299390477234843,
+                    0.016756274332065307
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 251,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.796812749003984,
+                "neutral_w1_choice": 0.8047808764940239,
+                "old_winner_avoidance_gap_pp": 0.7968127490039834,
+                "game_w1_minus_w2": 5.213081387409651,
+                "neutral_w1_minus_w2": 6.160253412576311,
+                "game_minus_neutral_w1_centered_logit": -0.8760637700746942,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.6374501992031872,
+                "neutral_w1_choice": 0.6414342629482072,
+                "old_winner_avoidance_gap_pp": 0.3984063745019917,
+                "game_w1_minus_w2": 5.527202428574581,
+                "neutral_w1_minus_w2": 5.602034516187303,
+                "game_minus_neutral_w1_centered_logit": -0.12826878676655706,
+                "game_centered_rank_effect": [
+                  0.32398345004173557,
+                  0.009862408876804951,
+                  -0.08951050844191943,
+                  -0.24433535047662058
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.4238115332664014,
+                  0.1344073631226056,
+                  0.1734122515712171,
+                  0.11599191857257907
+                ],
+                "avoidance_gap_reduction_pp": 0.3984063745019917,
+                "w1_logit_gap_reduction": 0.7477949833081371,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -3.9840637450199274,
+                    4.7808764940239
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.558772732948792,
+                    0.9327705665621502
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.7808764940239044,
+                "neutral_w1_choice": 0.8127490039840638,
+                "old_winner_avoidance_gap_pp": 3.1872509960159445,
+                "game_w1_minus_w2": 5.171063815455038,
+                "neutral_w1_minus_w2": 6.238790311186437,
+                "game_minus_neutral_w1_centered_logit": -0.9311876762138895,
+                "game_centered_rank_effect": [
+                  -0.04127151369529081,
+                  0.0007460582593225573,
+                  0.029661474693789103,
+                  0.010863980742178647
+                ],
+                "neutral_centered_rank_effect": [
+                  0.013852392443904904,
+                  -0.06468450616622173,
+                  0.016641363299329193,
+                  0.03419075042298747
+                ],
+                "avoidance_gap_reduction_pp": -2.390438247011961,
+                "w1_logit_gap_reduction": -0.05512390613919538,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -6.3745019920318775,
+                    1.5936254980079667
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.11551517758521235,
+                    0.002717316079749251
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.8167330677290837,
+                "neutral_w1_choice": 0.8047808764940239,
+                "old_winner_avoidance_gap_pp": -1.1952191235059861,
+                "game_w1_minus_w2": 5.113668516337634,
+                "neutral_w1_minus_w2": 6.1246997027758106,
+                "game_minus_neutral_w1_centered_logit": -0.9155373108050084,
+                "game_centered_rank_effect": [
+                  -0.1111523292335379,
+                  -0.011739458161521221,
+                  0.03623242949347061,
+                  0.08665935790158841
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.07167878850322396,
+                  -0.03612507870272397,
+                  0.041226954468381205,
+                  0.06657691273756683
+                ],
+                "avoidance_gap_reduction_pp": 1.9920318725099695,
+                "w1_logit_gap_reduction": -0.03947354073031428,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.7968127490039834,
+                    4.780876494023911
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.09716028674061318,
+                    0.013517689591540776
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.649402390438247,
+                "neutral_w1_choice": 0.6374501992031872,
+                "old_winner_avoidance_gap_pp": -1.195219123505975,
+                "game_w1_minus_w2": 5.450237582997972,
+                "neutral_w1_minus_w2": 5.584285057398428,
+                "game_minus_neutral_w1_centered_logit": -0.1486535042698729,
+                "game_centered_rank_effect": [
+                  0.2393690435238094,
+                  0.0022128479354884822,
+                  -0.06655761086014644,
+                  -0.17502428059915154
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.4880412222810113,
+                  0.08792713289687115,
+                  0.21779328951263333,
+                  0.1823207998715075
+                ],
+                "avoidance_gap_reduction_pp": 1.9920318725099584,
+                "w1_logit_gap_reduction": 0.7274102658048213,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.39043824701195,
+                    6.374501992031867
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.5310872777411065,
+                    0.9158802258841455
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 2.788844621513953,
+                "w1_logit_gap_reduction": 0.8029188894473325,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.195219123505975,
+                    6.772908366533869
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6116272355045971,
+                    0.9924694805631907
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 1.5936254980079667,
+                "w1_logit_gap_reduction": -0.02038471750331583,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.7968127490039945,
+                    4.3824701195219085
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.09613519553503834,
+                    0.05376394605250144
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 249,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.7951807228915663,
+                "neutral_w1_choice": 0.8032128514056225,
+                "old_winner_avoidance_gap_pp": 0.8032128514056214,
+                "game_w1_minus_w2": 4.976403701736267,
+                "neutral_w1_minus_w2": 6.09181380128286,
+                "game_minus_neutral_w1_centered_logit": -0.9374044284703262,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.6385542168674698,
+                "neutral_w1_choice": 0.642570281124498,
+                "old_winner_avoidance_gap_pp": 0.40160642570281624,
+                "game_w1_minus_w2": 4.168856266930879,
+                "neutral_w1_minus_w2": 4.317677049392677,
+                "game_minus_neutral_w1_centered_logit": -0.07289619541850435,
+                "game_centered_rank_effect": [
+                  -0.15078431701504602,
+                  0.6567631177903419,
+                  -0.17637053872626973,
+                  -0.32960826204902727
+                ],
+                "neutral_centered_rank_effect": [
+                  -1.0152925500668672,
+                  0.758844201823315,
+                  0.15005173010519712,
+                  0.10639661813835577
+                ],
+                "avoidance_gap_reduction_pp": 0.40160642570280514,
+                "w1_logit_gap_reduction": 0.8645082330518219,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.016064257028107,
+                    4.81927710843374
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6848530648257509,
+                    1.050394890654129
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.7991967871485943,
+                "neutral_w1_choice": 0.8353413654618473,
+                "old_winner_avoidance_gap_pp": 3.6144578313253017,
+                "game_w1_minus_w2": 4.925512364590503,
+                "neutral_w1_minus_w2": 6.122233559328868,
+                "game_minus_neutral_w1_centered_logit": -0.9704740851160034,
+                "game_centered_rank_effect": [
+                  -0.033509028185323864,
+                  0.01738230896043974,
+                  0.029412255528940223,
+                  -0.013285536304056933
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.0004393715396462383,
+                  -0.0308591295856549,
+                  -0.004208737198846624,
+                  0.035507238324148815
+                ],
+                "avoidance_gap_reduction_pp": -2.8112449799196804,
+                "w1_logit_gap_reduction": -0.03306965664567718,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -6.425702811244971,
+                    0.40160642570281624
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.09628982266493472,
+                    0.028262115385099106
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.7991967871485943,
+                "neutral_w1_choice": 0.8152610441767069,
+                "old_winner_avoidance_gap_pp": 1.6064257028112539,
+                "game_w1_minus_w2": 4.873114649071751,
+                "neutral_w1_minus_w2": 5.992154479505547,
+                "game_minus_neutral_w1_centered_logit": -0.9643027542016832,
+                "game_centered_rank_effect": [
+                  -0.1215655755356373,
+                  -0.018276522871121803,
+                  0.029214673417519377,
+                  0.11062742498923939
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.09466724980427976,
+                  0.004992071973032752,
+                  0.034449127873024565,
+                  0.055226049958223555
+                ],
+                "avoidance_gap_reduction_pp": -0.8032128514056325,
+                "w1_logit_gap_reduction": -0.026898325731356976,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.8112449799196804,
+                    1.2048192771084265
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.07580162959180801,
+                    0.02243562817955053
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.6345381526104418,
+                "neutral_w1_choice": 0.6506024096385542,
+                "old_winner_avoidance_gap_pp": 1.6064257028112428,
+                "game_w1_minus_w2": 4.145222858492151,
+                "neutral_w1_minus_w2": 4.30829610193829,
+                "game_minus_neutral_w1_centered_logit": -0.11870872232329893,
+                "game_centered_rank_effect": [
+                  -0.2355247065424919,
+                  0.595656136701624,
+                  -0.14657222539425874,
+                  -0.21355920476487356
+                ],
+                "neutral_centered_rank_effect": [
+                  -1.054220412689519,
+                  0.7292972866550507,
+                  0.16962195681520287,
+                  0.15530116921926673
+                ],
+                "avoidance_gap_reduction_pp": -0.8032128514056214,
+                "w1_logit_gap_reduction": 0.8186957061470272,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -5.2208835341365445,
+                    3.614457831325313
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6439439494177759,
+                    0.9959066239006099
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 3.2128514056224855,
+                "w1_logit_gap_reduction": 0.8975778896974991,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.2048192771084376,
+                    8.032128514056215
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7193588434969146,
+                    1.0827561587925598
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -1.2048192771084265,
+                "w1_logit_gap_reduction": -0.04581252690479465,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.819277108433728,
+                    2.008032128514059
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.111558431318501,
+                    0.019993054014761508
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "triviamc": {
+        "validity": {
+          "n": 500,
+          "n_discovery": 250,
+          "n_confirmation": 250,
+          "all_complete": true,
+          "all_logits_finite": true,
+          "natural_reproduction_max_absolute_error": 0.0,
+          "ordinary_attention_layers_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "gla_layers": 0
+        },
+        "subsets": {
+          "full": {
+            "n": 500,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.872,
+                "neutral_w1_choice": 0.892,
+                "old_winner_avoidance_gap_pp": 2.0000000000000018,
+                "game_w1_minus_w2": 13.100824873566628,
+                "neutral_w1_minus_w2": 14.364000696361066,
+                "game_minus_neutral_w1_centered_logit": -1.007650990174152,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.832,
+                "neutral_w1_choice": 0.832,
+                "old_winner_avoidance_gap_pp": 0.0,
+                "game_w1_minus_w2": 13.579447273746133,
+                "neutral_w1_minus_w2": 13.796166734196246,
+                "game_minus_neutral_w1_centered_logit": -0.11901575002679601,
+                "game_centered_rank_effect": [
+                  0.6027333479430528,
+                  0.12411094776354736,
+                  -0.14461807243339697,
+                  -0.582226223273203
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.2859018922043024,
+                  0.2819320699605159,
+                  0.013501545445527618,
+                  -0.009531723201741116
+                ],
+                "avoidance_gap_reduction_pp": 2.0000000000000018,
+                "w1_logit_gap_reduction": 0.888635240147356,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.0,
+                    4.0000000000000036
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7486255811127718,
+                    1.0326692004139302
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.872,
+                "neutral_w1_choice": 0.9,
+                "old_winner_avoidance_gap_pp": 2.8000000000000025,
+                "game_w1_minus_w2": 13.209865855753423,
+                "neutral_w1_minus_w2": 14.54512421810627,
+                "game_minus_neutral_w1_centered_logit": -1.0321711021608206,
+                "game_centered_rank_effect": [
+                  0.044909717202653354,
+                  -0.06413126498414212,
+                  0.00976823559822515,
+                  0.009453312183264728
+                ],
+                "neutral_centered_rank_effect": [
+                  0.06942982918932117,
+                  -0.1116936925558838,
+                  -0.010411479615838992,
+                  0.052675342982401396
+                ],
+                "avoidance_gap_reduction_pp": -0.8000000000000007,
+                "w1_logit_gap_reduction": -0.024520111986668702,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.400000000000002,
+                    0.8000000000000007
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.09108526998676834,
+                    0.045663369513594086
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.876,
+                "neutral_w1_choice": 0.894,
+                "old_winner_avoidance_gap_pp": 1.8000000000000016,
+                "game_w1_minus_w2": 13.012175167560578,
+                "neutral_w1_minus_w2": 14.24663212902844,
+                "game_minus_neutral_w1_centered_logit": -0.9879250408692751,
+                "game_centered_rank_effect": [
+                  -0.09718818950653052,
+                  -0.008538483500480698,
+                  -0.04645506044104675,
+                  0.1521817334480584
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.11691413881140811,
+                  0.00045442852121779787,
+                  -0.0057502739846242434,
+                  0.12220998427481344
+                ],
+                "avoidance_gap_reduction_pp": 0.20000000000000018,
+                "w1_logit_gap_reduction": 0.01972594930487681,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.0000000000000009,
+                    1.6000000000000014
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.0374797861467756,
+                    0.0758771560809751
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.832,
+                "neutral_w1_choice": 0.83,
+                "old_winner_avoidance_gap_pp": -0.20000000000000018,
+                "game_w1_minus_w2": 13.558805885624606,
+                "neutral_w1_minus_w2": 13.80775469793193,
+                "game_minus_neutral_w1_centered_logit": -0.1437182969477726,
+                "game_centered_rank_effect": [
+                  0.5347048746767697,
+                  0.07672386261879005,
+                  -0.2122251078475963,
+                  -0.39920362944796217
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.3292278185496098,
+                  0.22701817987952388,
+                  -0.03294589618127741,
+                  0.13515553485136422
+                ],
+                "avoidance_gap_reduction_pp": 2.200000000000002,
+                "w1_logit_gap_reduction": 0.8639326932263793,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.0,
+                    4.400000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7187664894305548,
+                    1.0125427836689052
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 2.8000000000000025,
+                "w1_logit_gap_reduction": 0.9131553521340247,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.8000000000000007,
+                    5.000000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7744293413783249,
+                    1.052893158168852
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.20000000000000018,
+                "w1_logit_gap_reduction": -0.02470254692097662,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.8000000000000007,
+                    1.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.08526328358789322,
+                    0.0361226227555715
+                  ]
+                }
+              }
+            }
+          },
+          "discovery": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.876,
+                "neutral_w1_choice": 0.884,
+                "old_winner_avoidance_gap_pp": 0.8000000000000007,
+                "game_w1_minus_w2": 12.814444177865981,
+                "neutral_w1_minus_w2": 13.996734633088112,
+                "game_minus_neutral_w1_centered_logit": -0.9837769033852964,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.84,
+                "neutral_w1_choice": 0.828,
+                "old_winner_avoidance_gap_pp": -1.200000000000001,
+                "game_w1_minus_w2": 12.925333318173886,
+                "neutral_w1_minus_w2": 13.1434099380821,
+                "game_minus_neutral_w1_centered_logit": -0.11683992156200111,
+                "game_centered_rank_effect": [
+                  0.48217150974646295,
+                  0.37128236943855886,
+                  -0.22358683874085594,
+                  -0.6298670404441653
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.3847654720768343,
+                  0.4685592229291796,
+                  -0.0007809592187406622,
+                  -0.08301279163360586
+                ],
+                "avoidance_gap_reduction_pp": 2.0000000000000018,
+                "w1_logit_gap_reduction": 0.8669369818232954,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -1.200000000000001,
+                    5.200000000000005
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6642214322065935,
+                    1.0809643938542342
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.872,
+                "neutral_w1_choice": 0.896,
+                "old_winner_avoidance_gap_pp": 2.400000000000002,
+                "game_w1_minus_w2": 12.953274431347847,
+                "neutral_w1_minus_w2": 14.163282412111759,
+                "game_minus_neutral_w1_centered_logit": -1.0056393533102237,
+                "game_centered_rank_effect": [
+                  0.05819651666283754,
+                  -0.08063373681902886,
+                  -0.014215003304183682,
+                  0.036652223460376554
+                ],
+                "neutral_centered_rank_effect": [
+                  0.08005896658776201,
+                  -0.08648881243588402,
+                  -0.03929330749297577,
+                  0.045723153341096
+                ],
+                "avoidance_gap_reduction_pp": -1.6000000000000014,
+                "w1_logit_gap_reduction": -0.021862449924927252,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -4.0000000000000036,
+                    0.8000000000000007
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.1257213330648839,
+                    0.08469818653567926
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.876,
+                "neutral_w1_choice": 0.892,
+                "old_winner_avoidance_gap_pp": 1.6000000000000014,
+                "game_w1_minus_w2": 12.689211000442505,
+                "neutral_w1_minus_w2": 13.924669296026229,
+                "game_minus_neutral_w1_centered_logit": -1.0301310103158468,
+                "game_centered_rank_effect": [
+                  -0.1362813169732675,
+                  -0.011048139549791891,
+                  -0.034299445882439716,
+                  0.18162890240550045
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.08992721004271864,
+                  -0.017861872980836857,
+                  0.004169819494243221,
+                  0.10361926352931139
+                ],
+                "avoidance_gap_reduction_pp": -0.8000000000000007,
+                "w1_logit_gap_reduction": -0.04635410693055031,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.8000000000000025,
+                    1.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.13258833448389795,
+                    0.035779980797460295
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.836,
+                "neutral_w1_choice": 0.828,
+                "old_winner_avoidance_gap_pp": -0.8000000000000007,
+                "game_w1_minus_w2": 12.906336984899827,
+                "neutral_w1_minus_w2": 13.171078380107879,
+                "game_minus_neutral_w1_centered_logit": -0.15926383733074181,
+                "game_centered_rank_effect": [
+                  0.41764108851854687,
+                  0.3257482814847026,
+                  -0.30448431267286624,
+                  -0.4389050573303823
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.40687197753600834,
+                  0.41878427544422436,
+                  -0.04834831936471229,
+                  0.036436021456494494
+                ],
+                "avoidance_gap_reduction_pp": 1.6000000000000014,
+                "w1_logit_gap_reduction": 0.8245130660545547,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.0000000000000018,
+                    5.200000000000005
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6070863208377093,
+                    1.0526889793995882
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 3.600000000000003,
+                "w1_logit_gap_reduction": 0.8887994317482226,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.40000000000000036,
+                    6.800000000000006
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.6947948035167065,
+                    1.087687327379547
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": -0.40000000000000036,
+                "w1_logit_gap_reduction": -0.042423915768740716,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.0000000000000018,
+                    1.200000000000001
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.1381808798133396,
+                    0.04786131049795076
+                  ]
+                }
+              }
+            }
+          },
+          "confirmation": {
+            "n": 250,
+            "cells": {
+              "natural": {
+                "game_w1_choice": 0.868,
+                "neutral_w1_choice": 0.9,
+                "old_winner_avoidance_gap_pp": 3.200000000000003,
+                "game_w1_minus_w2": 13.387205569267273,
+                "neutral_w1_minus_w2": 14.731266759634018,
+                "game_minus_neutral_w1_centered_logit": -1.0315250769630075,
+                "game_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "neutral_centered_rank_effect": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "matching": {
+                "game_w1_choice": 0.824,
+                "neutral_w1_choice": 0.836,
+                "old_winner_avoidance_gap_pp": 1.200000000000001,
+                "game_w1_minus_w2": 14.233561229318381,
+                "neutral_w1_minus_w2": 14.448923530310392,
+                "game_minus_neutral_w1_centered_logit": -0.12119157849159092,
+                "game_centered_rank_effect": [
+                  0.7232951861396444,
+                  -0.12306047391146424,
+                  -0.06564930612593933,
+                  -0.5345854061022397
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.18703831233177404,
+                  0.09530491699185228,
+                  0.027784050109796343,
+                  0.06394934523012541
+                ],
+                "avoidance_gap_reduction_pp": 2.0000000000000018,
+                "w1_logit_gap_reduction": 0.9103334984714166,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.39999999999998925,
+                    4.400000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7195685165333795,
+                    1.0975496129808715
+                  ]
+                }
+              },
+              "cyclic_wrong": {
+                "game_w1_choice": 0.872,
+                "neutral_w1_choice": 0.904,
+                "old_winner_avoidance_gap_pp": 3.200000000000003,
+                "game_w1_minus_w2": 13.466457280158997,
+                "neutral_w1_minus_w2": 14.92696602410078,
+                "game_minus_neutral_w1_centered_logit": -1.0587028510114178,
+                "game_centered_rank_effect": [
+                  0.03162291774246917,
+                  -0.047628793149255166,
+                  0.03375147450063354,
+                  -0.017745599093847098
+                ],
+                "neutral_centered_rank_effect": [
+                  0.058800691790878545,
+                  -0.13689857267588357,
+                  0.0184703482612969,
+                  0.05962753262370857
+                ],
+                "avoidance_gap_reduction_pp": 0.0,
+                "w1_logit_gap_reduction": -0.027177774048410264,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -2.0000000000000018,
+                    2.0000000000000018
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.11074865272932227,
+                    0.058492271260171994
+                  ]
+                }
+              },
+              "first_decision": {
+                "game_w1_choice": 0.876,
+                "neutral_w1_choice": 0.896,
+                "old_winner_avoidance_gap_pp": 2.0000000000000018,
+                "game_w1_minus_w2": 13.335139334678649,
+                "neutral_w1_minus_w2": 14.56859496203065,
+                "game_minus_neutral_w1_centered_logit": -0.9457190714227036,
+                "game_centered_rank_effect": [
+                  -0.058095062039791756,
+                  -0.006028827451169505,
+                  -0.058610674999654666,
+                  0.12273456449061637
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.14390106758009757,
+                  0.018770730023272453,
+                  -0.015670367463492152,
+                  0.14080070502031639
+                ],
+                "avoidance_gap_reduction_pp": 1.200000000000001,
+                "w1_logit_gap_reduction": 0.08580600554030393,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.40000000000000036,
+                    3.200000000000003
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.015136513269483226,
+                    0.16023525573490166
+                  ]
+                }
+              },
+              "matching_plus_first_decision": {
+                "game_w1_choice": 0.828,
+                "neutral_w1_choice": 0.832,
+                "old_winner_avoidance_gap_pp": 0.40000000000000036,
+                "game_w1_minus_w2": 14.211274786349385,
+                "neutral_w1_minus_w2": 14.444431015755981,
+                "game_minus_neutral_w1_centered_logit": -0.12817275656480343,
+                "game_centered_rank_effect": [
+                  0.6517686608349909,
+                  -0.1723005562471227,
+                  -0.11996590302232679,
+                  -0.35950220156554114
+                ],
+                "neutral_centered_rank_effect": [
+                  -0.2515836595632148,
+                  0.035252084314823184,
+                  -0.017543472997843867,
+                  0.23387504824623484
+                ],
+                "avoidance_gap_reduction_pp": 2.8000000000000025,
+                "w1_logit_gap_reduction": 0.9033523203982041,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.40000000000001146,
+                    5.200000000000005
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7111548913355684,
+                    1.0978987572456476
+                  ]
+                }
+              }
+            },
+            "contrasts": {
+              "matching_minus_wrong": {
+                "avoidance_gap_reduction_pp": 2.0000000000000018,
+                "w1_logit_gap_reduction": 0.9375112725198269,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    -0.40000000000000036,
+                    4.800000000000004
+                  ],
+                  "w1_logit_gap_reduction": [
+                    0.7425320350049063,
+                    1.1349168931893305
+                  ]
+                }
+              },
+              "joint_minus_matching": {
+                "avoidance_gap_reduction_pp": 0.8000000000000007,
+                "w1_logit_gap_reduction": -0.006981178073212524,
+                "ci95": {
+                  "avoidance_gap_reduction_pp": [
+                    0.0,
+                    2.0000000000000018
+                  ],
+                  "w1_logit_gap_reduction": [
+                    -0.08173304604094009,
+                    0.07664916732686104
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "interpretation_scope": {
+    "matching": "Complete matching 1P option-line reads by complete 2P option lines",
+    "cyclic_wrong": "Same all-four intervention form with cyclic nonmatching sources",
+    "first_decision": "Complete first-decision-token outgoing attention route; plus its GLA write on Qwen",
+    "not_established": "The first-decision intervention does not isolate a literal-letter coordinate inside that token state",
+    "semantic_scope": "On non-remapped prompts, semantic candidate identity, displayed letter, and line identity coincide. Semantic mapping invariance comes from the prior remapped experiments; this experiment establishes that the candidate-matched line route is also used in the canonical prompt."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "model_id": "/workspace/models/qwen35-397b-fp8",
+  "model_revision": null,
+  "manifest_path": "outputs/reproduction/popmc/stimulus_manifest.json",
+  "baseline_results_path": "compiled_results_popmc_qwen35_397b_a17b/qwen3.5-397b-a17b_phase1_compiled.json",
+  "output_dir": "outputs/mechanistic/qwen35_397b_popmc",
+  "conditions": ["baseline", "incorrect", "neutral"],
+  "question_ids": null,
+  "max_questions": 500,
+  "batch_size": 64,
+  "trial_major": true,
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "model_loader": "multimodal",
+  "attn_implementation": "sdpa",
+  "save_residuals": false,
+  "residual_dtype": "float16",
+  "prompt_mode": "faithful",
+  "disable_thinking": true,
+  "trust_remote_code": false,
+  "seed": 42,
+  "answer_variants": {
+    "A": ["A", " A"],
+    "B": ["B", " B"],
+    "C": ["C", " C"],
+    "D": ["D", " D"]
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "discovery": {
+    "incorrect_again": {
+      "winner_agreement": {
+        "mean": 0.6613545816733067,
+        "ci_low": 0.601593625498008,
+        "ci_high": 0.7211155378486056,
+        "n": 251
+      },
+      "pairwise_order_agreement": {
+        "mean": 0.7549800796812749,
+        "ci_low": 0.7297476759628153,
+        "ci_high": 0.7795484727755645,
+        "n": 251
+      },
+      "spearman": {
+        "mean": 0.6677290836653387,
+        "ci_low": 0.6199203187250997,
+        "ci_high": 0.7139442231075697,
+        "n": 251
+      },
+      "centered_cosine": {
+        "mean": 0.7226678729057312,
+        "ci_low": 0.6763623505830765,
+        "ci_high": 0.7653395339846611,
+        "n": 251
+      },
+      "pooled_centered_pearson": 0.7902827904981735,
+      "winner_transition_counts": [
+        [
+          92,
+          8,
+          9,
+          8
+        ],
+        [
+          8,
+          16,
+          5,
+          4
+        ],
+        [
+          6,
+          5,
+          33,
+          2
+        ],
+        [
+          16,
+          5,
+          9,
+          25
+        ]
+      ],
+      "cue_winner_counts": [
+        117,
+        33,
+        46,
+        55
+      ],
+      "final_winner_counts": [
+        122,
+        34,
+        56,
+        39
+      ],
+      "cue_winner_vs_actual_answer": {
+        "mean": 0.6653386454183267,
+        "ci_low": 0.6055776892430279,
+        "ci_high": 0.7211155378486056
+      },
+      "reconstructed_final_winner_vs_actual_answer": {
+        "mean": 0.9442231075697212,
+        "ci_low": 0.9123505976095617,
+        "ci_high": 0.9721115537848606
+      },
+      "independent_marginal_winner_agreement": 0.30996333391533465,
+      "maximum_reconstructed_final_score_error": 0.17988204956054688
+    },
+    "lost_again": {
+      "winner_agreement": {
+        "mean": 0.7211155378486056,
+        "ci_low": 0.6653386454183267,
+        "ci_high": 0.7768924302788844,
+        "n": 251
+      },
+      "pairwise_order_agreement": {
+        "mean": 0.8114209827357238,
+        "ci_low": 0.7868525896414342,
+        "ci_high": 0.8346613545816733,
+        "n": 251
+      },
+      "spearman": {
+        "mean": 0.7370517928286853,
+        "ci_low": 0.6924302788844621,
+        "ci_high": 0.7792828685258965,
+        "n": 251
+      },
+      "centered_cosine": {
+        "mean": 0.7841213941574097,
+        "ci_low": 0.7401804745197296,
+        "ci_high": 0.8220873892307281,
+        "n": 251
+      },
+      "pooled_centered_pearson": 0.8574289867792863,
+      "winner_transition_counts": [
+        [
+          66,
+          3,
+          11,
+          2
+        ],
+        [
+          2,
+          27,
+          10,
+          1
+        ],
+        [
+          3,
+          1,
+          38,
+          2
+        ],
+        [
+          10,
+          7,
+          18,
+          50
+        ]
+      ],
+      "cue_winner_counts": [
+        82,
+        40,
+        44,
+        85
+      ],
+      "final_winner_counts": [
+        81,
+        38,
+        77,
+        55
+      ],
+      "cue_winner_vs_actual_answer": {
+        "mean": 0.7410358565737052,
+        "ci_low": 0.6892430278884463,
+        "ci_high": 0.7928286852589641
+      },
+      "reconstructed_final_winner_vs_actual_answer": {
+        "mean": 0.9601593625498008,
+        "ci_low": 0.9322709163346613,
+        "ci_high": 0.9840637450199203
+      },
+      "independent_marginal_winner_agreement": 0.26018634624847226,
+      "maximum_reconstructed_final_score_error": 0.17358779907226562
+    }
+  },
+  "confirmation": {
+    "incorrect_again": {
+      "winner_agreement": {
+        "mean": 0.606425702811245,
+        "ci_low": 0.5461847389558233,
+        "ci_high": 0.6666666666666666,
+        "n": 249
+      },
+      "pairwise_order_agreement": {
+        "mean": 0.7670682730923695,
+        "ci_low": 0.7423025435073628,
+        "ci_high": 0.7911646586345381,
+        "n": 249
+      },
+      "spearman": {
+        "mean": 0.640160642570281,
+        "ci_low": 0.5879518072289157,
+        "ci_high": 0.6907630522088354,
+        "n": 249
+      },
+      "centered_cosine": {
+        "mean": 0.681402325630188,
+        "ci_low": 0.6283147901296615,
+        "ci_high": 0.7295418232679367,
+        "n": 249
+      },
+      "pooled_centered_pearson": 0.7818231107197751,
+      "winner_transition_counts": [
+        [
+          90,
+          9,
+          19,
+          8
+        ],
+        [
+          10,
+          19,
+          7,
+          3
+        ],
+        [
+          14,
+          1,
+          21,
+          1
+        ],
+        [
+          13,
+          8,
+          5,
+          21
+        ]
+      ],
+      "cue_winner_counts": [
+        126,
+        39,
+        37,
+        47
+      ],
+      "final_winner_counts": [
+        127,
+        37,
+        52,
+        33
+      ],
+      "cue_winner_vs_actual_answer": {
+        "mean": 0.6144578313253012,
+        "ci_low": 0.5542168674698795,
+        "ci_high": 0.6746987951807228
+      },
+      "reconstructed_final_winner_vs_actual_answer": {
+        "mean": 0.9718875502008032,
+        "ci_low": 0.9518072289156626,
+        "ci_high": 0.9919678714859438
+      },
+      "independent_marginal_winner_agreement": 0.33668811793358167,
+      "maximum_reconstructed_final_score_error": 0.17988204956054688
+    },
+    "lost_again": {
+      "winner_agreement": {
+        "mean": 0.642570281124498,
+        "ci_low": 0.5823293172690763,
+        "ci_high": 0.7028112449799196,
+        "n": 249
+      },
+      "pairwise_order_agreement": {
+        "mean": 0.7911646586345381,
+        "ci_low": 0.7663989290495316,
+        "ci_high": 0.8152610441767069,
+        "n": 249
+      },
+      "spearman": {
+        "mean": 0.6987951807228916,
+        "ci_low": 0.6530120481927711,
+        "ci_high": 0.7429718875502008,
+        "n": 249
+      },
+      "centered_cosine": {
+        "mean": 0.7619026303291321,
+        "ci_low": 0.7210586950182915,
+        "ci_high": 0.7993237391114235,
+        "n": 249
+      },
+      "pooled_centered_pearson": 0.8555374403209389,
+      "winner_transition_counts": [
+        [
+          58,
+          5,
+          13,
+          3
+        ],
+        [
+          7,
+          35,
+          4,
+          2
+        ],
+        [
+          3,
+          3,
+          30,
+          3
+        ],
+        [
+          20,
+          8,
+          18,
+          37
+        ]
+      ],
+      "cue_winner_counts": [
+        79,
+        48,
+        39,
+        83
+      ],
+      "final_winner_counts": [
+        88,
+        51,
+        65,
+        45
+      ],
+      "cue_winner_vs_actual_answer": {
+        "mean": 0.6666666666666666,
+        "ci_low": 0.606425702811245,
+        "ci_high": 0.7228915662650602
+      },
+      "reconstructed_final_winner_vs_actual_answer": {
+        "mean": 0.9678714859437751,
+        "ci_low": 0.9437751004016064,
+        "ci_high": 0.9879518072289156
+      },
+      "independent_marginal_winner_agreement": 0.2555603941871905,
+      "maximum_reconstructed_final_score_error": 0.17358779907226562
+    }
+  }
+}

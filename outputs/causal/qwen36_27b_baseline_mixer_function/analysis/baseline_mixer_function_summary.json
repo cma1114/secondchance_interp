@@ -1,0 +1,600 @@
+{
+  "n_confirmation": 249,
+  "bootstrap_draws": 10000,
+  "natural": {
+    "baseline_accuracy": 0.37349397590361444,
+    "game_accuracy": 0.3253012048192771,
+    "game_switch_rate": 0.42168674698795183,
+    "baseline_full_vocab_top_is_ad": 1.0
+  },
+  "metrics": {
+    "baseline_mean_ablation": {
+      "answer_change_rate": [
+        {
+          "estimate": 0.03614457831325301,
+          "ci": [
+            0.01606425702811245,
+            0.060240963855421686
+          ]
+        },
+        {
+          "estimate": 0.0642570281124498,
+          "ci": [
+            0.03614457831325301,
+            0.0963855421686747
+          ]
+        },
+        {
+          "estimate": 0.06827309236947791,
+          "ci": [
+            0.040160642570281124,
+            0.10040160642570281
+          ]
+        }
+      ],
+      "accuracy_change": [
+        {
+          "estimate": 0.004016064257028112,
+          "ci": [
+            -0.01606425702811245,
+            0.024096385542168676
+          ]
+        },
+        {
+          "estimate": 0.0,
+          "ci": [
+            -0.024096385542168676,
+            0.024096385542168676
+          ]
+        },
+        {
+          "estimate": 0.01606425702811245,
+          "ci": [
+            -0.008032128514056224,
+            0.040160642570281124
+          ]
+        }
+      ],
+      "entropy_change": [
+        {
+          "estimate": 0.019450226283003948,
+          "ci": [
+            0.016369135093422756,
+            0.022515336125323245
+          ]
+        },
+        {
+          "estimate": -0.0038708487075356747,
+          "ci": [
+            -0.010539579474186414,
+            0.0029737299791053142
+          ]
+        },
+        {
+          "estimate": 0.02557352984115786,
+          "ci": [
+            0.018586803460699238,
+            0.03278145332941064
+          ]
+        }
+      ],
+      "spread_change": [
+        {
+          "estimate": -0.11141744779731504,
+          "ci": [
+            -0.12514996033332654,
+            -0.09839818830285635
+          ]
+        },
+        {
+          "estimate": 0.03216966193891026,
+          "ci": [
+            0.0189824017869136,
+            0.0458185591746133
+          ]
+        },
+        {
+          "estimate": -0.12425277538255636,
+          "ci": [
+            -0.1420265266708702,
+            -0.10678374501521985
+          ]
+        }
+      ],
+      "winner_advantage_change": [
+        {
+          "estimate": -0.13437081659973218,
+          "ci": [
+            -0.15194109772423017,
+            -0.11713102409638543
+          ]
+        },
+        {
+          "estimate": 0.03112449799196793,
+          "ci": [
+            0.0008366800535476749,
+            0.061746987951807386
+          ]
+        },
+        {
+          "estimate": -0.15880187416332003,
+          "ci": [
+            -0.18908969210174045,
+            -0.12801204819277118
+          ]
+        }
+      ]
+    },
+    "baseline_into_game": {
+      "answer_change_rate": [
+        {
+          "estimate": 0.42168674698795183,
+          "ci": [
+            0.3614457831325301,
+            0.4779116465863454
+          ]
+        },
+        {
+          "estimate": 0.46987951807228917,
+          "ci": [
+            0.40963855421686746,
+            0.5301204819277109
+          ]
+        },
+        {
+          "estimate": 0.40562248995983935,
+          "ci": [
+            0.3493975903614458,
+            0.46586345381526106
+          ]
+        }
+      ],
+      "accuracy_change": [
+        {
+          "estimate": 0.012048192771084338,
+          "ci": [
+            -0.012048192771084338,
+            0.03614457831325301
+          ]
+        },
+        {
+          "estimate": 0.07630522088353414,
+          "ci": [
+            0.0321285140562249,
+            0.12048192771084337
+          ]
+        },
+        {
+          "estimate": 0.060240963855421686,
+          "ci": [
+            0.01606425702811245,
+            0.10441767068273092
+          ]
+        }
+      ],
+      "entropy_change": [
+        {
+          "estimate": -0.0028089438431739577,
+          "ci": [
+            -0.005868429887439482,
+            0.00023852888139029653
+          ]
+        },
+        {
+          "estimate": 0.038330571313310594,
+          "ci": [
+            0.027248328600422856,
+            0.049730414429689666
+          ]
+        },
+        {
+          "estimate": 0.03298395874467654,
+          "ci": [
+            0.02188065322722792,
+            0.04420383420775863
+          ]
+        }
+      ],
+      "spread_change": [
+        {
+          "estimate": 0.010057381980323826,
+          "ci": [
+            0.0036065629633595378,
+            0.016414191461881715
+          ]
+        },
+        {
+          "estimate": -0.07637759911937364,
+          "ci": [
+            -0.09474812727113635,
+            -0.058671367816704734
+          ]
+        },
+        {
+          "estimate": -0.046973847075994224,
+          "ci": [
+            -0.06502037846797279,
+            -0.029150069980063458
+          ]
+        }
+      ],
+      "winner_advantage_change": [
+        {
+          "estimate": 0.029618473895582257,
+          "ci": [
+            0.01857429718875499,
+            0.040829986613118895
+          ]
+        },
+        {
+          "estimate": -0.09822623828647921,
+          "ci": [
+            -0.14574966532797862,
+            -0.05153530789825965
+          ]
+        },
+        {
+          "estimate": -0.02342704149933058,
+          "ci": [
+            -0.07313002008032124,
+            0.025439257028112592
+          ]
+        }
+      ],
+      "switch_rate_change": [
+        {
+          "estimate": 0.0,
+          "ci": [
+            -0.028112449799196786,
+            0.028112449799196786
+          ]
+        },
+        {
+          "estimate": 0.04819277108433735,
+          "ci": [
+            -0.004016064257028112,
+            0.10040160642570281
+          ]
+        },
+        {
+          "estimate": -0.01606425702811245,
+          "ci": [
+            -0.06827309236947791,
+            0.03614457831325301
+          ]
+        }
+      ]
+    }
+  },
+  "immediate_rank_writes": {
+    "Mixer 56": {
+      "Rank 1": {
+        "estimate": 0.40655954487352486,
+        "ci": [
+          0.3144302811488569,
+          0.5037939053343002
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.628837505976359,
+        "ci": [
+          0.4995797055552762,
+          0.7594003147509204
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.017027903752154613,
+        "ci": [
+          -0.14018477043473576,
+          0.10830705630252635
+        ]
+      },
+      "Rank 4": {
+        "estimate": -1.0183691470977292,
+        "ci": [
+          -1.1184156168297112,
+          -0.9186914136251771
+        ]
+      }
+    },
+    "Mixer 63": {
+      "Rank 1": {
+        "estimate": -0.31558126905357026,
+        "ci": [
+          -0.3529456854824081,
+          -0.27924112347235164
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.15126772673733263,
+        "ci": [
+          -0.1940420339863942,
+          -0.10606351372707322
+        ]
+      },
+      "Rank 3": {
+        "estimate": 0.09026921800820224,
+        "ci": [
+          0.04390691382339202,
+          0.13568984179132912
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.37657977778270063,
+        "ci": [
+          0.329383598728831,
+          0.4242523837999168
+        ]
+      }
+    }
+  },
+  "baseline_ablation_rank_changes": {
+    "Mixer 56": {
+      "Rank 1": {
+        "estimate": -0.1007781124497992,
+        "ci": [
+          -0.11395582329317269,
+          -0.0878482680722892
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.08471385542168675,
+        "ci": [
+          -0.10040160642570281,
+          -0.06990461847389558
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.005396586345381526,
+        "ci": [
+          -0.023468875502008033,
+          0.012804342369477865
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.19088855421686746,
+        "ci": [
+          0.16666666666666666,
+          0.21636546184738956
+        ]
+      }
+    },
+    "Mixer 63": {
+      "Rank 1": {
+        "estimate": 0.023343373493975902,
+        "ci": [
+          0.0006275100401606426,
+          0.04631024096385542
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.019829317269076305,
+        "ci": [
+          -0.0020111696787148566,
+          0.04129016064257028
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.0077811244979919675,
+        "ci": [
+          -0.02786144578313253,
+          0.011546184738955823
+        ]
+      },
+      "Rank 4": {
+        "estimate": -0.035391566265060244,
+        "ci": [
+          -0.05647590361445783,
+          -0.014806099397590408
+        ]
+      }
+    },
+    "Both": {
+      "Rank 1": {
+        "estimate": -0.11910140562248996,
+        "ci": [
+          -0.1418172690763052,
+          -0.09600903614457831
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.09751506024096386,
+        "ci": [
+          -0.12248995983935743,
+          -0.07341867469879518
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.005647590361445783,
+        "ci": [
+          -0.030998995983935743,
+          0.020080321285140562
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.2222640562248996,
+        "ci": [
+          0.1915160642570281,
+          0.25338855421686746
+        ]
+      }
+    }
+  },
+  "baseline_into_game_rank_changes": {
+    "Mixer 56": {
+      "Rank 1": {
+        "estimate": 0.022213855421686746,
+        "ci": [
+          0.013930722891566265,
+          0.030622489959839357
+        ]
+      },
+      "Rank 2": {
+        "estimate": 0.008157630522088354,
+        "ci": [
+          -0.002384538152610442,
+          0.01882530120481928
+        ]
+      },
+      "Rank 3": {
+        "estimate": -0.010918674698795181,
+        "ci": [
+          -0.021711847389558232,
+          -0.00037650602409638556
+        ]
+      },
+      "Rank 4": {
+        "estimate": -0.01945281124497992,
+        "ci": [
+          -0.030873493975903613,
+          -0.008032128514056224
+        ]
+      }
+    },
+    "Mixer 63": {
+      "Rank 1": {
+        "estimate": -0.07366967871485944,
+        "ci": [
+          -0.10931224899598393,
+          -0.038651480923694824
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.06413152610441768,
+        "ci": [
+          -0.09738955823293173,
+          -0.030998995983935743
+        ]
+      },
+      "Rank 3": {
+        "estimate": 0.04781626506024096,
+        "ci": [
+          0.014934738955823293,
+          0.0814508032128514
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.08998493975903614,
+        "ci": [
+          0.06187248995983936,
+          0.1179718875502008
+        ]
+      }
+    },
+    "Both": {
+      "Rank 1": {
+        "estimate": -0.017570281124497992,
+        "ci": [
+          -0.054847515060240964,
+          0.019079442771084292
+        ]
+      },
+      "Rank 2": {
+        "estimate": -0.01706827309236948,
+        "ci": [
+          -0.05057730923694779,
+          0.01631526104417671
+        ]
+      },
+      "Rank 3": {
+        "estimate": 0.028112449799196786,
+        "ci": [
+          -0.0030120481927710845,
+          0.0598644578313253
+        ]
+      },
+      "Rank 4": {
+        "estimate": 0.006526104417670682,
+        "ci": [
+          -0.02133534136546185,
+          0.033763177710843334
+        ]
+      }
+    }
+  },
+  "run_metadata": {
+    "baseline_into_game": "Replace the final-position Game mixer output with the paired same-question natural Baseline output.",
+    "batch_control": "Each patched eight-row forward includes condition-matched unpatched control rows and is recentered on single-trial natural logits.",
+    "components": [
+      {
+        "label": "Mixer 56",
+        "one_based_block": 56,
+        "zero_based_layer": 55
+      },
+      {
+        "label": "Mixer 63",
+        "one_based_block": 63,
+        "zero_based_layer": 62
+      }
+    ],
+    "config": {
+      "answer_variants": {
+        "A": [
+          "A",
+          " A"
+        ],
+        "B": [
+          "B",
+          " B"
+        ],
+        "C": [
+          "C",
+          " C"
+        ],
+        "D": [
+          "D",
+          " D"
+        ]
+      },
+      "attn_implementation": "sdpa",
+      "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+      "batch_size": 1,
+      "bootstrap_samples": 10000,
+      "candidates_per_kind": 4,
+      "chat_serialization": "raw_qwen_chatml",
+      "conditions": [
+        "baseline",
+        "incorrect",
+        "neutral"
+      ],
+      "decision_mode": "unrestricted",
+      "device_map": "auto",
+      "disable_thinking": true,
+      "discovery_fraction": 0.5,
+      "dtype": "bfloat16",
+      "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+      "max_questions": null,
+      "model_id": "Qwen/Qwen3.6-27B",
+      "model_loader": "multimodal",
+      "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "output_dir": "outputs/causal/qwen36_27b_position_components_corrected",
+      "prompt_mode": "baseline_matched_empty_history",
+      "question_ids": null,
+      "residual_dtype": "float16",
+      "save_residuals": false,
+      "seed": 42,
+      "skip_missing_baseline": false,
+      "trial_major": true,
+      "trust_remote_code": false
+    },
+    "confirmation_plan": "outputs/causal/qwen36_27b_position_components_corrected/plans/confirmation_plan.json",
+    "discovery_baseline_letter_counts": [
+      125,
+      35,
+      53,
+      38
+    ],
+    "discovery_plan": "outputs/causal/qwen36_27b_position_components_corrected/plans/discovery_plan.json",
+    "immediate_write": "JLens finite-difference direct attribution: compare the transported post-block Baseline residual with the same residual minus that mixer's output, holding downstream computation fixed.",
+    "mean_ablation": "Replace the final-position Baseline mixer output with the equal-Baseline-letter mean estimated on the disjoint 251-question discovery set.",
+    "n_confirmation": 249,
+    "n_discovery": 251,
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "resolved_model_commit": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "software": {
+      "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.14.1"
+    }
+  }
+}

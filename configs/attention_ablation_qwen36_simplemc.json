@@ -1,0 +1,41 @@
+{
+  "model_id": "Qwen/Qwen3.6-27B",
+  "model_revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "manifest_path": "outputs/reproduction/simplemc_qwen36_27b/stimulus_manifest.json",
+  "baseline_results_path": "compiled_results_simplemc_qwen36_27b/qwen3.6-27b_phase1_compiled.json",
+  "output_dir": "outputs/causal/qwen36_27b_simplemc_attention_edge",
+  "natural_attention_dir": "outputs/mechanistic/qwen36_27b_simplemc_attention",
+  "mechanistic_dir": "outputs/mechanistic/qwen36_27b_simplemc",
+  "conditions": ["incorrect"],
+  "question_ids": null,
+  "max_questions": null,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "attn_implementation": "eager",
+  "save_residuals": false,
+  "residual_dtype": "float16",
+  "prompt_mode": "faithful",
+  "disable_thinking": true,
+  "trust_remote_code": false,
+  "seed": 42,
+  "bootstrap_samples": 10000,
+  "source_token": "user_incorrect",
+  "answer_variants": {
+    "A": ["A", " A"],
+    "B": ["B", " B"],
+    "C": ["C", " C"],
+    "D": ["D", " D"]
+  },
+  "scenarios": [
+    {"id": "ablate_user_incorrect__l27h1", "source": "user_incorrect", "targets": [{"layer": 27, "heads": [1]}]},
+    {"id": "ablate_user_incorrect__l27h4", "source": "user_incorrect", "targets": [{"layer": 27, "heads": [4]}]},
+    {"id": "ablate_user_incorrect__l27h19", "source": "user_incorrect", "targets": [{"layer": 27, "heads": [19]}]},
+    {"id": "ablate_user_incorrect__l27_joint", "source": "user_incorrect", "targets": [{"layer": 27, "heads": [1, 4, 19]}]},
+    {"id": "ablate_user_incorrect__l35h15", "source": "user_incorrect", "targets": [{"layer": 35, "heads": [15]}]},
+    {"id": "ablate_user_incorrect__l43h0", "source": "user_incorrect", "targets": [{"layer": 43, "heads": [0]}]},
+    {"id": "ablate_user_incorrect__all5", "source": "user_incorrect", "targets": [{"layer": 27, "heads": [1, 4, 19]}, {"layer": 35, "heads": [15]}, {"layer": 43, "heads": [0]}]},
+    {"id": "ablate_system_incorrect__all5", "source": "system_incorrect", "targets": [{"layer": 27, "heads": [1, 4, 19]}, {"layer": 35, "heads": [15]}, {"layer": 43, "heads": [0]}]},
+    {"id": "natural_game_rerun", "source": "none", "targets": []}
+  ]
+}

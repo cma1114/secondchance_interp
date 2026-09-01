@@ -1,0 +1,1441 @@
+k,block,family,score,representative_token,rank,present
+6,1,Answer / response,,,,False
+6,1,Incorrect / wrong,,,,False
+6,1,Failure / error,,,,False
+6,1,Replace / substitute,,,,False
+6,1,Alternative / instead,,,,False
+6,1,Again / retry,,,,False
+6,1,Previous / last,,,,False
+6,1,Another,,,,False
+6,1,New / update,,,,False
+6,1,Same,,,,False
+6,2,Answer / response,,,,False
+6,2,Incorrect / wrong,,,,False
+6,2,Failure / error,,,,False
+6,2,Replace / substitute,,,,False
+6,2,Alternative / instead,,,,False
+6,2,Again / retry,,,,False
+6,2,Previous / last,,,,False
+6,2,Another,,,,False
+6,2,New / update,,,,False
+6,2,Same,,,,False
+6,3,Answer / response,,,,False
+6,3,Incorrect / wrong,,,,False
+6,3,Failure / error,,,,False
+6,3,Replace / substitute,,,,False
+6,3,Alternative / instead,,,,False
+6,3,Again / retry,,,,False
+6,3,Previous / last,,,,False
+6,3,Another,,,,False
+6,3,New / update,,,,False
+6,3,Same,,,,False
+6,5,Answer / response,,,,False
+6,5,Incorrect / wrong,,,,False
+6,5,Failure / error,,,,False
+6,5,Replace / substitute,,,,False
+6,5,Alternative / instead,,,,False
+6,5,Again / retry,,,,False
+6,5,Previous / last,,,,False
+6,5,Another,,,,False
+6,5,New / update,,,,False
+6,5,Same,,,,False
+6,6,Answer / response,,,,False
+6,6,Incorrect / wrong,,,,False
+6,6,Failure / error,,,,False
+6,6,Replace / substitute,,,,False
+6,6,Alternative / instead,,,,False
+6,6,Again / retry,,,,False
+6,6,Previous / last,,,,False
+6,6,Another,,,,False
+6,6,New / update,,,,False
+6,6,Same,,,,False
+6,7,Answer / response,,,,False
+6,7,Incorrect / wrong,,,,False
+6,7,Failure / error,,,,False
+6,7,Replace / substitute,,,,False
+6,7,Alternative / instead,,,,False
+6,7,Again / retry,,,,False
+6,7,Previous / last,,,,False
+6,7,Another,,,,False
+6,7,New / update,,,,False
+6,7,Same,,,,False
+6,9,Answer / response,,,,False
+6,9,Incorrect / wrong,,,,False
+6,9,Failure / error,,,,False
+6,9,Replace / substitute,,,,False
+6,9,Alternative / instead,,,,False
+6,9,Again / retry,,,,False
+6,9,Previous / last,,,,False
+6,9,Another,,,,False
+6,9,New / update,,,,False
+6,9,Same,,,,False
+6,10,Answer / response,,,,False
+6,10,Incorrect / wrong,,,,False
+6,10,Failure / error,,,,False
+6,10,Replace / substitute,,,,False
+6,10,Alternative / instead,,,,False
+6,10,Again / retry,,,,False
+6,10,Previous / last,,,,False
+6,10,Another,,,,False
+6,10,New / update,,,,False
+6,10,Same,,,,False
+6,11,Answer / response,,,,False
+6,11,Incorrect / wrong,,,,False
+6,11,Failure / error,,,,False
+6,11,Replace / substitute,,,,False
+6,11,Alternative / instead,,,,False
+6,11,Again / retry,,,,False
+6,11,Previous / last,,,,False
+6,11,Another,,,,False
+6,11,New / update,,,,False
+6,11,Same,,,,False
+6,13,Answer / response,,,,False
+6,13,Incorrect / wrong,,,,False
+6,13,Failure / error,,,,False
+6,13,Replace / substitute,,,,False
+6,13,Alternative / instead,,,,False
+6,13,Again / retry,,,,False
+6,13,Previous / last,,,,False
+6,13,Another,,,,False
+6,13,New / update,,,,False
+6,13,Same,,,,False
+6,14,Answer / response,,,,False
+6,14,Incorrect / wrong,,,,False
+6,14,Failure / error,,,,False
+6,14,Replace / substitute,,,,False
+6,14,Alternative / instead,,,,False
+6,14,Again / retry,,,,False
+6,14,Previous / last,,,,False
+6,14,Another,,,,False
+6,14,New / update,,,,False
+6,14,Same,,,,False
+6,15,Answer / response,,,,False
+6,15,Incorrect / wrong,,,,False
+6,15,Failure / error,,,,False
+6,15,Replace / substitute,,,,False
+6,15,Alternative / instead,,,,False
+6,15,Again / retry,,,,False
+6,15,Previous / last,,,,False
+6,15,Another,,,,False
+6,15,New / update,,,,False
+6,15,Same,,,,False
+6,17,Answer / response,,,,False
+6,17,Incorrect / wrong,,,,False
+6,17,Failure / error,,,,False
+6,17,Replace / substitute,,,,False
+6,17,Alternative / instead,,,,False
+6,17,Again / retry,,,,False
+6,17,Previous / last,,,,False
+6,17,Another,,,,False
+6,17,New / update,,,,False
+6,17,Same,,,,False
+6,18,Answer / response,,,,False
+6,18,Incorrect / wrong,,,,False
+6,18,Failure / error,,,,False
+6,18,Replace / substitute,,,,False
+6,18,Alternative / instead,,,,False
+6,18,Again / retry,,,,False
+6,18,Previous / last,,,,False
+6,18,Another,,,,False
+6,18,New / update,,,,False
+6,18,Same,,,,False
+6,19,Answer / response,,,,False
+6,19,Incorrect / wrong,,,,False
+6,19,Failure / error,,,,False
+6,19,Replace / substitute,,,,False
+6,19,Alternative / instead,,,,False
+6,19,Again / retry,,,,False
+6,19,Previous / last,,,,False
+6,19,Another,,,,False
+6,19,New / update,,,,False
+6,19,Same,,,,False
+6,21,Answer / response,,,,False
+6,21,Incorrect / wrong,,,,False
+6,21,Failure / error,,,,False
+6,21,Replace / substitute,,,,False
+6,21,Alternative / instead,,,,False
+6,21,Again / retry,,,,False
+6,21,Previous / last,,,,False
+6,21,Another,,,,False
+6,21,New / update,,,,False
+6,21,Same,,,,False
+6,22,Answer / response,,,,False
+6,22,Incorrect / wrong,,,,False
+6,22,Failure / error,,,,False
+6,22,Replace / substitute,,,,False
+6,22,Alternative / instead,,,,False
+6,22,Again / retry,,,,False
+6,22,Previous / last,,,,False
+6,22,Another,,,,False
+6,22,New / update,,,,False
+6,22,Same,,,,False
+6,23,Answer / response,,,,False
+6,23,Incorrect / wrong,,,,False
+6,23,Failure / error,,,,False
+6,23,Replace / substitute,,,,False
+6,23,Alternative / instead,,,,False
+6,23,Again / retry,,,,False
+6,23,Previous / last,,,,False
+6,23,Another,,,,False
+6,23,New / update,,,,False
+6,23,Same,,,,False
+6,25,Answer / response,,,,False
+6,25,Incorrect / wrong,,,,False
+6,25,Failure / error,,,,False
+6,25,Replace / substitute,,,,False
+6,25,Alternative / instead,,,,False
+6,25,Again / retry,,,,False
+6,25,Previous / last,,,,False
+6,25,Another,,,,False
+6,25,New / update,,,,False
+6,25,Same,,,,False
+6,26,Answer / response,,,,False
+6,26,Incorrect / wrong,,,,False
+6,26,Failure / error,,,,False
+6,26,Replace / substitute,,,,False
+6,26,Alternative / instead,,,,False
+6,26,Again / retry,,,,False
+6,26,Previous / last,,,,False
+6,26,Another,,,,False
+6,26,New / update,,,,False
+6,26,Same,,,,False
+6,27,Answer / response,,,,False
+6,27,Incorrect / wrong,,,,False
+6,27,Failure / error,,,,False
+6,27,Replace / substitute,,,,False
+6,27,Alternative / instead,,,,False
+6,27,Again / retry,0.265625, retries,3.0,True
+6,27,Previous / last,,,,False
+6,27,Another,,,,False
+6,27,New / update,,,,False
+6,27,Same,,,,False
+6,29,Answer / response,,,,False
+6,29,Incorrect / wrong,,,,False
+6,29,Failure / error,,,,False
+6,29,Replace / substitute,,,,False
+6,29,Alternative / instead,,,,False
+6,29,Again / retry,,,,False
+6,29,Previous / last,,,,False
+6,29,Another,,,,False
+6,29,New / update,,,,False
+6,29,Same,,,,False
+6,30,Answer / response,,,,False
+6,30,Incorrect / wrong,,,,False
+6,30,Failure / error,,,,False
+6,30,Replace / substitute,,,,False
+6,30,Alternative / instead,,,,False
+6,30,Again / retry,,,,False
+6,30,Previous / last,,,,False
+6,30,Another,,,,False
+6,30,New / update,,,,False
+6,30,Same,,,,False
+6,31,Answer / response,,,,False
+6,31,Incorrect / wrong,,,,False
+6,31,Failure / error,,,,False
+6,31,Replace / substitute,,,,False
+6,31,Alternative / instead,,,,False
+6,31,Again / retry,,,,False
+6,31,Previous / last,,,,False
+6,31,Another,,,,False
+6,31,New / update,,,,False
+6,31,Same,,,,False
+6,33,Answer / response,,,,False
+6,33,Incorrect / wrong,,,,False
+6,33,Failure / error,,,,False
+6,33,Replace / substitute,,,,False
+6,33,Alternative / instead,,,,False
+6,33,Again / retry,,,,False
+6,33,Previous / last,,,,False
+6,33,Another,,,,False
+6,33,New / update,,,,False
+6,33,Same,,,,False
+6,34,Answer / response,,,,False
+6,34,Incorrect / wrong,,,,False
+6,34,Failure / error,,,,False
+6,34,Replace / substitute,,,,False
+6,34,Alternative / instead,,,,False
+6,34,Again / retry,,,,False
+6,34,Previous / last,,,,False
+6,34,Another,,,,False
+6,34,New / update,,,,False
+6,34,Same,,,,False
+6,35,Answer / response,,,,False
+6,35,Incorrect / wrong,,,,False
+6,35,Failure / error,0.546875, failed,3.0,True
+6,35,Replace / substitute,,,,False
+6,35,Alternative / instead,,,,False
+6,35,Again / retry,,,,False
+6,35,Previous / last,,,,False
+6,35,Another,,,,False
+6,35,New / update,,,,False
+6,35,Same,,,,False
+6,37,Answer / response,,,,False
+6,37,Incorrect / wrong,,,,False
+6,37,Failure / error,,,,False
+6,37,Replace / substitute,,,,False
+6,37,Alternative / instead,,,,False
+6,37,Again / retry,,,,False
+6,37,Previous / last,,,,False
+6,37,Another,,,,False
+6,37,New / update,,,,False
+6,37,Same,,,,False
+6,38,Answer / response,,,,False
+6,38,Incorrect / wrong,,,,False
+6,38,Failure / error,,,,False
+6,38,Replace / substitute,,,,False
+6,38,Alternative / instead,,,,False
+6,38,Again / retry,,,,False
+6,38,Previous / last,,,,False
+6,38,Another,,,,False
+6,38,New / update,,,,False
+6,38,Same,,,,False
+6,39,Answer / response,0.3125, answer,1.0,True
+6,39,Incorrect / wrong,,,,False
+6,39,Failure / error,,,,False
+6,39,Replace / substitute,,,,False
+6,39,Alternative / instead,,,,False
+6,39,Again / retry,,,,False
+6,39,Previous / last,,,,False
+6,39,Another,,,,False
+6,39,New / update,,,,False
+6,39,Same,,,,False
+6,41,Answer / response,,,,False
+6,41,Incorrect / wrong,,,,False
+6,41,Failure / error,,,,False
+6,41,Replace / substitute,,,,False
+6,41,Alternative / instead,,,,False
+6,41,Again / retry,,,,False
+6,41,Previous / last,,,,False
+6,41,Another,,,,False
+6,41,New / update,,,,False
+6,41,Same,,,,False
+6,42,Answer / response,,,,False
+6,42,Incorrect / wrong,0.4375, incorrect,1.0,True
+6,42,Failure / error,,,,False
+6,42,Replace / substitute,-0.5703125, replacement,1.0,True
+6,42,Alternative / instead,,,,False
+6,42,Again / retry,,,,False
+6,42,Previous / last,,,,False
+6,42,Another,,,,False
+6,42,New / update,,,,False
+6,42,Same,,,,False
+6,43,Answer / response,,,,False
+6,43,Incorrect / wrong,,,,False
+6,43,Failure / error,,,,False
+6,43,Replace / substitute,0.296875, replace,2.0,True
+6,43,Alternative / instead,0.279296875, instead,4.0,True
+6,43,Again / retry,,,,False
+6,43,Previous / last,,,,False
+6,43,Another,,,,False
+6,43,New / update,,,,False
+6,43,Same,,,,False
+6,45,Answer / response,,,,False
+6,45,Incorrect / wrong,,,,False
+6,45,Failure / error,,,,False
+6,45,Replace / substitute,,,,False
+6,45,Alternative / instead,,,,False
+6,45,Again / retry,,,,False
+6,45,Previous / last,-0.390625, Last,3.0,True
+6,45,Another,,,,False
+6,45,New / update,,,,False
+6,45,Same,,,,False
+6,46,Answer / response,,,,False
+6,46,Incorrect / wrong,,,,False
+6,46,Failure / error,,,,False
+6,46,Replace / substitute,,,,False
+6,46,Alternative / instead,,,,False
+6,46,Again / retry,,,,False
+6,46,Previous / last,,,,False
+6,46,Another,,,,False
+6,46,New / update,,,,False
+6,46,Same,,,,False
+6,47,Answer / response,,,,False
+6,47,Incorrect / wrong,,,,False
+6,47,Failure / error,,,,False
+6,47,Replace / substitute,,,,False
+6,47,Alternative / instead,,,,False
+6,47,Again / retry,0.515625,again,1.0,True
+6,47,Previous / last,-0.46875, last,1.0,True
+6,47,Another,,,,False
+6,47,New / update,,,,False
+6,47,Same,,,,False
+6,49,Answer / response,,,,False
+6,49,Incorrect / wrong,,,,False
+6,49,Failure / error,0.64453125, failure,2.0,True
+6,49,Replace / substitute,,,,False
+6,49,Alternative / instead,,,,False
+6,49,Again / retry,,,,False
+6,49,Previous / last,,,,False
+6,49,Another,,,,False
+6,49,New / update,0.69140625, new,1.0,True
+6,49,Same,,,,False
+6,50,Answer / response,,,,False
+6,50,Incorrect / wrong,,,,False
+6,50,Failure / error,-0.69140625, unsuccessful,2.0,True
+6,50,Replace / substitute,,,,False
+6,50,Alternative / instead,,,,False
+6,50,Again / retry,-0.62890625, retries,6.0,True
+6,50,Previous / last,,,,False
+6,50,Another,0.74609375,another,1.0,True
+6,50,New / update,,,,False
+6,50,Same,,,,False
+6,51,Answer / response,0.66796875,Respond,4.0,True
+6,51,Incorrect / wrong,,,,False
+6,51,Failure / error,,,,False
+6,51,Replace / substitute,,,,False
+6,51,Alternative / instead,,,,False
+6,51,Again / retry,,,,False
+6,51,Previous / last,,,,False
+6,51,Another,,,,False
+6,51,New / update,,,,False
+6,51,Same,,,,False
+6,53,Answer / response,,,,False
+6,53,Incorrect / wrong,,,,False
+6,53,Failure / error,,,,False
+6,53,Replace / substitute,,,,False
+6,53,Alternative / instead,,,,False
+6,53,Again / retry,,,,False
+6,53,Previous / last,,,,False
+6,53,Another,,,,False
+6,53,New / update,,,,False
+6,53,Same,,,,False
+6,54,Answer / response,,,,False
+6,54,Incorrect / wrong,,,,False
+6,54,Failure / error,,,,False
+6,54,Replace / substitute,,,,False
+6,54,Alternative / instead,,,,False
+6,54,Again / retry,,,,False
+6,54,Previous / last,,,,False
+6,54,Another,,,,False
+6,54,New / update,,,,False
+6,54,Same,,,,False
+6,55,Answer / response,,,,False
+6,55,Incorrect / wrong,,,,False
+6,55,Failure / error,0.44921875, error,6.0,True
+6,55,Replace / substitute,,,,False
+6,55,Alternative / instead,,,,False
+6,55,Again / retry,,,,False
+6,55,Previous / last,,,,False
+6,55,Another,,,,False
+6,55,New / update,0.46875, existing,3.0,True
+6,55,Same,,,,False
+6,57,Answer / response,,,,False
+6,57,Incorrect / wrong,,,,False
+6,57,Failure / error,,,,False
+6,57,Replace / substitute,,,,False
+6,57,Alternative / instead,,,,False
+6,57,Again / retry,,,,False
+6,57,Previous / last,,,,False
+6,57,Another,,,,False
+6,57,New / update,,,,False
+6,57,Same,,,,False
+6,58,Answer / response,,,,False
+6,58,Incorrect / wrong,,,,False
+6,58,Failure / error,,,,False
+6,58,Replace / substitute,,,,False
+6,58,Alternative / instead,,,,False
+6,58,Again / retry,,,,False
+6,58,Previous / last,,,,False
+6,58,Another,,,,False
+6,58,New / update,,,,False
+6,58,Same,,,,False
+6,59,Answer / response,,,,False
+6,59,Incorrect / wrong,,,,False
+6,59,Failure / error,,,,False
+6,59,Replace / substitute,,,,False
+6,59,Alternative / instead,,,,False
+6,59,Again / retry,,,,False
+6,59,Previous / last,,,,False
+6,59,Another,,,,False
+6,59,New / update,,,,False
+6,59,Same,,,,False
+6,61,Answer / response,,,,False
+6,61,Incorrect / wrong,,,,False
+6,61,Failure / error,,,,False
+6,61,Replace / substitute,,,,False
+6,61,Alternative / instead,,,,False
+6,61,Again / retry,,,,False
+6,61,Previous / last,,,,False
+6,61,Another,,,,False
+6,61,New / update,,,,False
+6,61,Same,,,,False
+6,62,Answer / response,,,,False
+6,62,Incorrect / wrong,,,,False
+6,62,Failure / error,,,,False
+6,62,Replace / substitute,,,,False
+6,62,Alternative / instead,,,,False
+6,62,Again / retry,,,,False
+6,62,Previous / last,,,,False
+6,62,Another,,,,False
+6,62,New / update,,,,False
+6,62,Same,,,,False
+6,63,Answer / response,,,,False
+6,63,Incorrect / wrong,,,,False
+6,63,Failure / error,,,,False
+6,63,Replace / substitute,,,,False
+6,63,Alternative / instead,,,,False
+6,63,Again / retry,,,,False
+6,63,Previous / last,,,,False
+6,63,Another,,,,False
+6,63,New / update,,,,False
+6,63,Same,,,,False
+12,1,Answer / response,,,,False
+12,1,Incorrect / wrong,,,,False
+12,1,Failure / error,,,,False
+12,1,Replace / substitute,,,,False
+12,1,Alternative / instead,,,,False
+12,1,Again / retry,,,,False
+12,1,Previous / last,,,,False
+12,1,Another,,,,False
+12,1,New / update,,,,False
+12,1,Same,,,,False
+12,2,Answer / response,,,,False
+12,2,Incorrect / wrong,,,,False
+12,2,Failure / error,,,,False
+12,2,Replace / substitute,,,,False
+12,2,Alternative / instead,,,,False
+12,2,Again / retry,,,,False
+12,2,Previous / last,,,,False
+12,2,Another,,,,False
+12,2,New / update,,,,False
+12,2,Same,,,,False
+12,3,Answer / response,-0.0625,_reply,7.0,True
+12,3,Incorrect / wrong,,,,False
+12,3,Failure / error,,,,False
+12,3,Replace / substitute,,,,False
+12,3,Alternative / instead,,,,False
+12,3,Again / retry,,,,False
+12,3,Previous / last,,,,False
+12,3,Another,,,,False
+12,3,New / update,,,,False
+12,3,Same,,,,False
+12,5,Answer / response,,,,False
+12,5,Incorrect / wrong,,,,False
+12,5,Failure / error,,,,False
+12,5,Replace / substitute,,,,False
+12,5,Alternative / instead,,,,False
+12,5,Again / retry,,,,False
+12,5,Previous / last,,,,False
+12,5,Another,,,,False
+12,5,New / update,,,,False
+12,5,Same,,,,False
+12,6,Answer / response,,,,False
+12,6,Incorrect / wrong,,,,False
+12,6,Failure / error,,,,False
+12,6,Replace / substitute,,,,False
+12,6,Alternative / instead,,,,False
+12,6,Again / retry,,,,False
+12,6,Previous / last,,,,False
+12,6,Another,,,,False
+12,6,New / update,,,,False
+12,6,Same,,,,False
+12,7,Answer / response,,,,False
+12,7,Incorrect / wrong,,,,False
+12,7,Failure / error,,,,False
+12,7,Replace / substitute,,,,False
+12,7,Alternative / instead,,,,False
+12,7,Again / retry,,,,False
+12,7,Previous / last,,,,False
+12,7,Another,,,,False
+12,7,New / update,,,,False
+12,7,Same,,,,False
+12,9,Answer / response,,,,False
+12,9,Incorrect / wrong,,,,False
+12,9,Failure / error,,,,False
+12,9,Replace / substitute,,,,False
+12,9,Alternative / instead,,,,False
+12,9,Again / retry,,,,False
+12,9,Previous / last,,,,False
+12,9,Another,,,,False
+12,9,New / update,,,,False
+12,9,Same,,,,False
+12,10,Answer / response,,,,False
+12,10,Incorrect / wrong,,,,False
+12,10,Failure / error,,,,False
+12,10,Replace / substitute,,,,False
+12,10,Alternative / instead,,,,False
+12,10,Again / retry,,,,False
+12,10,Previous / last,,,,False
+12,10,Another,,,,False
+12,10,New / update,,,,False
+12,10,Same,,,,False
+12,11,Answer / response,,,,False
+12,11,Incorrect / wrong,,,,False
+12,11,Failure / error,,,,False
+12,11,Replace / substitute,,,,False
+12,11,Alternative / instead,,,,False
+12,11,Again / retry,,,,False
+12,11,Previous / last,,,,False
+12,11,Another,,,,False
+12,11,New / update,,,,False
+12,11,Same,,,,False
+12,13,Answer / response,,,,False
+12,13,Incorrect / wrong,,,,False
+12,13,Failure / error,,,,False
+12,13,Replace / substitute,,,,False
+12,13,Alternative / instead,,,,False
+12,13,Again / retry,,,,False
+12,13,Previous / last,,,,False
+12,13,Another,,,,False
+12,13,New / update,,,,False
+12,13,Same,,,,False
+12,14,Answer / response,,,,False
+12,14,Incorrect / wrong,,,,False
+12,14,Failure / error,,,,False
+12,14,Replace / substitute,,,,False
+12,14,Alternative / instead,,,,False
+12,14,Again / retry,,,,False
+12,14,Previous / last,,,,False
+12,14,Another,,,,False
+12,14,New / update,,,,False
+12,14,Same,,,,False
+12,15,Answer / response,,,,False
+12,15,Incorrect / wrong,,,,False
+12,15,Failure / error,,,,False
+12,15,Replace / substitute,,,,False
+12,15,Alternative / instead,,,,False
+12,15,Again / retry,,,,False
+12,15,Previous / last,,,,False
+12,15,Another,,,,False
+12,15,New / update,,,,False
+12,15,Same,,,,False
+12,17,Answer / response,,,,False
+12,17,Incorrect / wrong,,,,False
+12,17,Failure / error,,,,False
+12,17,Replace / substitute,,,,False
+12,17,Alternative / instead,,,,False
+12,17,Again / retry,,,,False
+12,17,Previous / last,,,,False
+12,17,Another,,,,False
+12,17,New / update,,,,False
+12,17,Same,,,,False
+12,18,Answer / response,,,,False
+12,18,Incorrect / wrong,,,,False
+12,18,Failure / error,,,,False
+12,18,Replace / substitute,,,,False
+12,18,Alternative / instead,,,,False
+12,18,Again / retry,,,,False
+12,18,Previous / last,,,,False
+12,18,Another,,,,False
+12,18,New / update,,,,False
+12,18,Same,,,,False
+12,19,Answer / response,,,,False
+12,19,Incorrect / wrong,,,,False
+12,19,Failure / error,,,,False
+12,19,Replace / substitute,,,,False
+12,19,Alternative / instead,,,,False
+12,19,Again / retry,,,,False
+12,19,Previous / last,,,,False
+12,19,Another,,,,False
+12,19,New / update,,,,False
+12,19,Same,,,,False
+12,21,Answer / response,,,,False
+12,21,Incorrect / wrong,,,,False
+12,21,Failure / error,,,,False
+12,21,Replace / substitute,,,,False
+12,21,Alternative / instead,,,,False
+12,21,Again / retry,,,,False
+12,21,Previous / last,,,,False
+12,21,Another,,,,False
+12,21,New / update,,,,False
+12,21,Same,,,,False
+12,22,Answer / response,,,,False
+12,22,Incorrect / wrong,,,,False
+12,22,Failure / error,,,,False
+12,22,Replace / substitute,,,,False
+12,22,Alternative / instead,,,,False
+12,22,Again / retry,,,,False
+12,22,Previous / last,,,,False
+12,22,Another,,,,False
+12,22,New / update,,,,False
+12,22,Same,,,,False
+12,23,Answer / response,,,,False
+12,23,Incorrect / wrong,,,,False
+12,23,Failure / error,,,,False
+12,23,Replace / substitute,,,,False
+12,23,Alternative / instead,,,,False
+12,23,Again / retry,,,,False
+12,23,Previous / last,,,,False
+12,23,Another,,,,False
+12,23,New / update,,,,False
+12,23,Same,,,,False
+12,25,Answer / response,,,,False
+12,25,Incorrect / wrong,,,,False
+12,25,Failure / error,,,,False
+12,25,Replace / substitute,,,,False
+12,25,Alternative / instead,,,,False
+12,25,Again / retry,,,,False
+12,25,Previous / last,,,,False
+12,25,Another,,,,False
+12,25,New / update,,,,False
+12,25,Same,,,,False
+12,26,Answer / response,,,,False
+12,26,Incorrect / wrong,,,,False
+12,26,Failure / error,,,,False
+12,26,Replace / substitute,,,,False
+12,26,Alternative / instead,,,,False
+12,26,Again / retry,,,,False
+12,26,Previous / last,,,,False
+12,26,Another,,,,False
+12,26,New / update,,,,False
+12,26,Same,,,,False
+12,27,Answer / response,,,,False
+12,27,Incorrect / wrong,,,,False
+12,27,Failure / error,,,,False
+12,27,Replace / substitute,,,,False
+12,27,Alternative / instead,,,,False
+12,27,Again / retry,0.265625, retries,3.0,True
+12,27,Previous / last,,,,False
+12,27,Another,,,,False
+12,27,New / update,,,,False
+12,27,Same,,,,False
+12,29,Answer / response,,,,False
+12,29,Incorrect / wrong,,,,False
+12,29,Failure / error,,,,False
+12,29,Replace / substitute,,,,False
+12,29,Alternative / instead,,,,False
+12,29,Again / retry,,,,False
+12,29,Previous / last,,,,False
+12,29,Another,,,,False
+12,29,New / update,,,,False
+12,29,Same,,,,False
+12,30,Answer / response,,,,False
+12,30,Incorrect / wrong,,,,False
+12,30,Failure / error,,,,False
+12,30,Replace / substitute,,,,False
+12,30,Alternative / instead,,,,False
+12,30,Again / retry,,,,False
+12,30,Previous / last,,,,False
+12,30,Another,,,,False
+12,30,New / update,,,,False
+12,30,Same,,,,False
+12,31,Answer / response,,,,False
+12,31,Incorrect / wrong,,,,False
+12,31,Failure / error,,,,False
+12,31,Replace / substitute,,,,False
+12,31,Alternative / instead,,,,False
+12,31,Again / retry,,,,False
+12,31,Previous / last,,,,False
+12,31,Another,,,,False
+12,31,New / update,,,,False
+12,31,Same,,,,False
+12,33,Answer / response,,,,False
+12,33,Incorrect / wrong,,,,False
+12,33,Failure / error,,,,False
+12,33,Replace / substitute,,,,False
+12,33,Alternative / instead,,,,False
+12,33,Again / retry,,,,False
+12,33,Previous / last,,,,False
+12,33,Another,,,,False
+12,33,New / update,,,,False
+12,33,Same,,,,False
+12,34,Answer / response,,,,False
+12,34,Incorrect / wrong,,,,False
+12,34,Failure / error,,,,False
+12,34,Replace / substitute,,,,False
+12,34,Alternative / instead,,,,False
+12,34,Again / retry,,,,False
+12,34,Previous / last,,,,False
+12,34,Another,,,,False
+12,34,New / update,,,,False
+12,34,Same,,,,False
+12,35,Answer / response,,,,False
+12,35,Incorrect / wrong,,,,False
+12,35,Failure / error,0.546875, failed,3.0,True
+12,35,Replace / substitute,,,,False
+12,35,Alternative / instead,,,,False
+12,35,Again / retry,,,,False
+12,35,Previous / last,,,,False
+12,35,Another,,,,False
+12,35,New / update,,,,False
+12,35,Same,,,,False
+12,37,Answer / response,,,,False
+12,37,Incorrect / wrong,,,,False
+12,37,Failure / error,,,,False
+12,37,Replace / substitute,,,,False
+12,37,Alternative / instead,,,,False
+12,37,Again / retry,,,,False
+12,37,Previous / last,,,,False
+12,37,Another,,,,False
+12,37,New / update,,,,False
+12,37,Same,,,,False
+12,38,Answer / response,,,,False
+12,38,Incorrect / wrong,,,,False
+12,38,Failure / error,,,,False
+12,38,Replace / substitute,,,,False
+12,38,Alternative / instead,,,,False
+12,38,Again / retry,,,,False
+12,38,Previous / last,,,,False
+12,38,Another,,,,False
+12,38,New / update,,,,False
+12,38,Same,,,,False
+12,39,Answer / response,0.3125, answer,1.0,True
+12,39,Incorrect / wrong,,,,False
+12,39,Failure / error,,,,False
+12,39,Replace / substitute,,,,False
+12,39,Alternative / instead,,,,False
+12,39,Again / retry,,,,False
+12,39,Previous / last,,,,False
+12,39,Another,,,,False
+12,39,New / update,,,,False
+12,39,Same,,,,False
+12,41,Answer / response,,,,False
+12,41,Incorrect / wrong,,,,False
+12,41,Failure / error,,,,False
+12,41,Replace / substitute,,,,False
+12,41,Alternative / instead,,,,False
+12,41,Again / retry,,,,False
+12,41,Previous / last,,,,False
+12,41,Another,,,,False
+12,41,New / update,,,,False
+12,41,Same,,,,False
+12,42,Answer / response,,,,False
+12,42,Incorrect / wrong,0.4375, incorrect,1.0,True
+12,42,Failure / error,,,,False
+12,42,Replace / substitute,-0.5703125, replacement,1.0,True
+12,42,Alternative / instead,,,,False
+12,42,Again / retry,,,,False
+12,42,Previous / last,,,,False
+12,42,Another,,,,False
+12,42,New / update,,,,False
+12,42,Same,,,,False
+12,43,Answer / response,,,,False
+12,43,Incorrect / wrong,,,,False
+12,43,Failure / error,,,,False
+12,43,Replace / substitute,0.296875, replace,2.0,True
+12,43,Alternative / instead,0.279296875, instead,4.0,True
+12,43,Again / retry,,,,False
+12,43,Previous / last,,,,False
+12,43,Another,,,,False
+12,43,New / update,,,,False
+12,43,Same,,,,False
+12,45,Answer / response,,,,False
+12,45,Incorrect / wrong,,,,False
+12,45,Failure / error,,,,False
+12,45,Replace / substitute,,,,False
+12,45,Alternative / instead,,,,False
+12,45,Again / retry,,,,False
+12,45,Previous / last,-0.390625, Last,3.0,True
+12,45,Another,,,,False
+12,45,New / update,,,,False
+12,45,Same,,,,False
+12,46,Answer / response,,,,False
+12,46,Incorrect / wrong,,,,False
+12,46,Failure / error,,,,False
+12,46,Replace / substitute,,,,False
+12,46,Alternative / instead,,,,False
+12,46,Again / retry,,,,False
+12,46,Previous / last,,,,False
+12,46,Another,,,,False
+12,46,New / update,,,,False
+12,46,Same,,,,False
+12,47,Answer / response,,,,False
+12,47,Incorrect / wrong,,,,False
+12,47,Failure / error,,,,False
+12,47,Replace / substitute,,,,False
+12,47,Alternative / instead,0.4296875,instead,11.0,True
+12,47,Again / retry,0.515625,again,1.0,True
+12,47,Previous / last,-0.46875, last,1.0,True
+12,47,Another,0.43359375,another,10.0,True
+12,47,New / update,,,,False
+12,47,Same,,,,False
+12,49,Answer / response,,,,False
+12,49,Incorrect / wrong,,,,False
+12,49,Failure / error,0.64453125, failure,2.0,True
+12,49,Replace / substitute,,,,False
+12,49,Alternative / instead,,,,False
+12,49,Again / retry,,,,False
+12,49,Previous / last,,,,False
+12,49,Another,,,,False
+12,49,New / update,0.69140625, new,1.0,True
+12,49,Same,-0.490234375,same,8.0,True
+12,50,Answer / response,,,,False
+12,50,Incorrect / wrong,,,,False
+12,50,Failure / error,-0.69140625, unsuccessful,2.0,True
+12,50,Replace / substitute,,,,False
+12,50,Alternative / instead,,,,False
+12,50,Again / retry,-0.62890625, retries,6.0,True
+12,50,Previous / last,,,,False
+12,50,Another,0.74609375,another,1.0,True
+12,50,New / update,,,,False
+12,50,Same,,,,False
+12,51,Answer / response,0.66796875,Respond,4.0,True
+12,51,Incorrect / wrong,,,,False
+12,51,Failure / error,,,,False
+12,51,Replace / substitute,,,,False
+12,51,Alternative / instead,,,,False
+12,51,Again / retry,,,,False
+12,51,Previous / last,,,,False
+12,51,Another,,,,False
+12,51,New / update,,,,False
+12,51,Same,,,,False
+12,53,Answer / response,,,,False
+12,53,Incorrect / wrong,,,,False
+12,53,Failure / error,,,,False
+12,53,Replace / substitute,,,,False
+12,53,Alternative / instead,,,,False
+12,53,Again / retry,,,,False
+12,53,Previous / last,,,,False
+12,53,Another,,,,False
+12,53,New / update,,,,False
+12,53,Same,,,,False
+12,54,Answer / response,,,,False
+12,54,Incorrect / wrong,,,,False
+12,54,Failure / error,,,,False
+12,54,Replace / substitute,,,,False
+12,54,Alternative / instead,,,,False
+12,54,Again / retry,,,,False
+12,54,Previous / last,,,,False
+12,54,Another,,,,False
+12,54,New / update,,,,False
+12,54,Same,,,,False
+12,55,Answer / response,,,,False
+12,55,Incorrect / wrong,,,,False
+12,55,Failure / error,0.44921875, error,6.0,True
+12,55,Replace / substitute,,,,False
+12,55,Alternative / instead,,,,False
+12,55,Again / retry,,,,False
+12,55,Previous / last,,,,False
+12,55,Another,,,,False
+12,55,New / update,0.46875, existing,3.0,True
+12,55,Same,,,,False
+12,57,Answer / response,,,,False
+12,57,Incorrect / wrong,,,,False
+12,57,Failure / error,,,,False
+12,57,Replace / substitute,,,,False
+12,57,Alternative / instead,,,,False
+12,57,Again / retry,,,,False
+12,57,Previous / last,,,,False
+12,57,Another,,,,False
+12,57,New / update,,,,False
+12,57,Same,,,,False
+12,58,Answer / response,,,,False
+12,58,Incorrect / wrong,,,,False
+12,58,Failure / error,,,,False
+12,58,Replace / substitute,,,,False
+12,58,Alternative / instead,,,,False
+12,58,Again / retry,,,,False
+12,58,Previous / last,,,,False
+12,58,Another,,,,False
+12,58,New / update,,,,False
+12,58,Same,,,,False
+12,59,Answer / response,,,,False
+12,59,Incorrect / wrong,,,,False
+12,59,Failure / error,,,,False
+12,59,Replace / substitute,,,,False
+12,59,Alternative / instead,,,,False
+12,59,Again / retry,,,,False
+12,59,Previous / last,,,,False
+12,59,Another,,,,False
+12,59,New / update,,,,False
+12,59,Same,,,,False
+12,61,Answer / response,,,,False
+12,61,Incorrect / wrong,,,,False
+12,61,Failure / error,,,,False
+12,61,Replace / substitute,,,,False
+12,61,Alternative / instead,,,,False
+12,61,Again / retry,,,,False
+12,61,Previous / last,,,,False
+12,61,Another,,,,False
+12,61,New / update,,,,False
+12,61,Same,,,,False
+12,62,Answer / response,,,,False
+12,62,Incorrect / wrong,,,,False
+12,62,Failure / error,,,,False
+12,62,Replace / substitute,,,,False
+12,62,Alternative / instead,,,,False
+12,62,Again / retry,,,,False
+12,62,Previous / last,,,,False
+12,62,Another,,,,False
+12,62,New / update,,,,False
+12,62,Same,,,,False
+12,63,Answer / response,,,,False
+12,63,Incorrect / wrong,,,,False
+12,63,Failure / error,,,,False
+12,63,Replace / substitute,,,,False
+12,63,Alternative / instead,,,,False
+12,63,Again / retry,,,,False
+12,63,Previous / last,,,,False
+12,63,Another,,,,False
+12,63,New / update,,,,False
+12,63,Same,,,,False
+24,1,Answer / response,,,,False
+24,1,Incorrect / wrong,,,,False
+24,1,Failure / error,,,,False
+24,1,Replace / substitute,,,,False
+24,1,Alternative / instead,,,,False
+24,1,Again / retry,,,,False
+24,1,Previous / last,,,,False
+24,1,Another,,,,False
+24,1,New / update,,,,False
+24,1,Same,,,,False
+24,2,Answer / response,,,,False
+24,2,Incorrect / wrong,,,,False
+24,2,Failure / error,,,,False
+24,2,Replace / substitute,,,,False
+24,2,Alternative / instead,,,,False
+24,2,Again / retry,,,,False
+24,2,Previous / last,,,,False
+24,2,Another,,,,False
+24,2,New / update,,,,False
+24,2,Same,,,,False
+24,3,Answer / response,-0.0625,_reply,7.0,True
+24,3,Incorrect / wrong,,,,False
+24,3,Failure / error,,,,False
+24,3,Replace / substitute,,,,False
+24,3,Alternative / instead,,,,False
+24,3,Again / retry,,,,False
+24,3,Previous / last,,,,False
+24,3,Another,,,,False
+24,3,New / update,,,,False
+24,3,Same,,,,False
+24,5,Answer / response,,,,False
+24,5,Incorrect / wrong,,,,False
+24,5,Failure / error,,,,False
+24,5,Replace / substitute,,,,False
+24,5,Alternative / instead,,,,False
+24,5,Again / retry,,,,False
+24,5,Previous / last,,,,False
+24,5,Another,,,,False
+24,5,New / update,,,,False
+24,5,Same,,,,False
+24,6,Answer / response,,,,False
+24,6,Incorrect / wrong,,,,False
+24,6,Failure / error,,,,False
+24,6,Replace / substitute,,,,False
+24,6,Alternative / instead,,,,False
+24,6,Again / retry,,,,False
+24,6,Previous / last,,,,False
+24,6,Another,,,,False
+24,6,New / update,,,,False
+24,6,Same,,,,False
+24,7,Answer / response,,,,False
+24,7,Incorrect / wrong,,,,False
+24,7,Failure / error,,,,False
+24,7,Replace / substitute,,,,False
+24,7,Alternative / instead,,,,False
+24,7,Again / retry,,,,False
+24,7,Previous / last,,,,False
+24,7,Another,,,,False
+24,7,New / update,,,,False
+24,7,Same,,,,False
+24,9,Answer / response,,,,False
+24,9,Incorrect / wrong,,,,False
+24,9,Failure / error,,,,False
+24,9,Replace / substitute,,,,False
+24,9,Alternative / instead,,,,False
+24,9,Again / retry,,,,False
+24,9,Previous / last,,,,False
+24,9,Another,,,,False
+24,9,New / update,,,,False
+24,9,Same,,,,False
+24,10,Answer / response,,,,False
+24,10,Incorrect / wrong,,,,False
+24,10,Failure / error,,,,False
+24,10,Replace / substitute,,,,False
+24,10,Alternative / instead,,,,False
+24,10,Again / retry,,,,False
+24,10,Previous / last,,,,False
+24,10,Another,,,,False
+24,10,New / update,,,,False
+24,10,Same,,,,False
+24,11,Answer / response,,,,False
+24,11,Incorrect / wrong,,,,False
+24,11,Failure / error,,,,False
+24,11,Replace / substitute,,,,False
+24,11,Alternative / instead,,,,False
+24,11,Again / retry,,,,False
+24,11,Previous / last,,,,False
+24,11,Another,,,,False
+24,11,New / update,,,,False
+24,11,Same,,,,False
+24,13,Answer / response,,,,False
+24,13,Incorrect / wrong,,,,False
+24,13,Failure / error,,,,False
+24,13,Replace / substitute,,,,False
+24,13,Alternative / instead,,,,False
+24,13,Again / retry,,,,False
+24,13,Previous / last,,,,False
+24,13,Another,,,,False
+24,13,New / update,,,,False
+24,13,Same,,,,False
+24,14,Answer / response,,,,False
+24,14,Incorrect / wrong,,,,False
+24,14,Failure / error,,,,False
+24,14,Replace / substitute,,,,False
+24,14,Alternative / instead,,,,False
+24,14,Again / retry,,,,False
+24,14,Previous / last,,,,False
+24,14,Another,,,,False
+24,14,New / update,,,,False
+24,14,Same,,,,False
+24,15,Answer / response,,,,False
+24,15,Incorrect / wrong,,,,False
+24,15,Failure / error,,,,False
+24,15,Replace / substitute,,,,False
+24,15,Alternative / instead,,,,False
+24,15,Again / retry,,,,False
+24,15,Previous / last,,,,False
+24,15,Another,,,,False
+24,15,New / update,,,,False
+24,15,Same,,,,False
+24,17,Answer / response,,,,False
+24,17,Incorrect / wrong,,,,False
+24,17,Failure / error,,,,False
+24,17,Replace / substitute,,,,False
+24,17,Alternative / instead,,,,False
+24,17,Again / retry,,,,False
+24,17,Previous / last,,,,False
+24,17,Another,,,,False
+24,17,New / update,,,,False
+24,17,Same,,,,False
+24,18,Answer / response,,,,False
+24,18,Incorrect / wrong,,,,False
+24,18,Failure / error,,,,False
+24,18,Replace / substitute,,,,False
+24,18,Alternative / instead,,,,False
+24,18,Again / retry,,,,False
+24,18,Previous / last,,,,False
+24,18,Another,,,,False
+24,18,New / update,,,,False
+24,18,Same,,,,False
+24,19,Answer / response,,,,False
+24,19,Incorrect / wrong,,,,False
+24,19,Failure / error,,,,False
+24,19,Replace / substitute,,,,False
+24,19,Alternative / instead,,,,False
+24,19,Again / retry,,,,False
+24,19,Previous / last,,,,False
+24,19,Another,,,,False
+24,19,New / update,,,,False
+24,19,Same,,,,False
+24,21,Answer / response,,,,False
+24,21,Incorrect / wrong,,,,False
+24,21,Failure / error,,,,False
+24,21,Replace / substitute,,,,False
+24,21,Alternative / instead,,,,False
+24,21,Again / retry,,,,False
+24,21,Previous / last,,,,False
+24,21,Another,,,,False
+24,21,New / update,,,,False
+24,21,Same,,,,False
+24,22,Answer / response,,,,False
+24,22,Incorrect / wrong,,,,False
+24,22,Failure / error,,,,False
+24,22,Replace / substitute,,,,False
+24,22,Alternative / instead,,,,False
+24,22,Again / retry,,,,False
+24,22,Previous / last,,,,False
+24,22,Another,,,,False
+24,22,New / update,,,,False
+24,22,Same,,,,False
+24,23,Answer / response,,,,False
+24,23,Incorrect / wrong,,,,False
+24,23,Failure / error,,,,False
+24,23,Replace / substitute,,,,False
+24,23,Alternative / instead,,,,False
+24,23,Again / retry,,,,False
+24,23,Previous / last,,,,False
+24,23,Another,,,,False
+24,23,New / update,,,,False
+24,23,Same,,,,False
+24,25,Answer / response,,,,False
+24,25,Incorrect / wrong,0.1875, wrongly,13.0,True
+24,25,Failure / error,,,,False
+24,25,Replace / substitute,,,,False
+24,25,Alternative / instead,,,,False
+24,25,Again / retry,,,,False
+24,25,Previous / last,,,,False
+24,25,Another,,,,False
+24,25,New / update,,,,False
+24,25,Same,,,,False
+24,26,Answer / response,,,,False
+24,26,Incorrect / wrong,,,,False
+24,26,Failure / error,,,,False
+24,26,Replace / substitute,,,,False
+24,26,Alternative / instead,,,,False
+24,26,Again / retry,,,,False
+24,26,Previous / last,,,,False
+24,26,Another,,,,False
+24,26,New / update,,,,False
+24,26,Same,,,,False
+24,27,Answer / response,,,,False
+24,27,Incorrect / wrong,,,,False
+24,27,Failure / error,,,,False
+24,27,Replace / substitute,,,,False
+24,27,Alternative / instead,,,,False
+24,27,Again / retry,0.265625, retries,3.0,True
+24,27,Previous / last,,,,False
+24,27,Another,,,,False
+24,27,New / update,,,,False
+24,27,Same,,,,False
+24,29,Answer / response,,,,False
+24,29,Incorrect / wrong,,,,False
+24,29,Failure / error,,,,False
+24,29,Replace / substitute,,,,False
+24,29,Alternative / instead,,,,False
+24,29,Again / retry,,,,False
+24,29,Previous / last,,,,False
+24,29,Another,,,,False
+24,29,New / update,,,,False
+24,29,Same,,,,False
+24,30,Answer / response,,,,False
+24,30,Incorrect / wrong,,,,False
+24,30,Failure / error,,,,False
+24,30,Replace / substitute,,,,False
+24,30,Alternative / instead,,,,False
+24,30,Again / retry,,,,False
+24,30,Previous / last,,,,False
+24,30,Another,,,,False
+24,30,New / update,,,,False
+24,30,Same,,,,False
+24,31,Answer / response,,,,False
+24,31,Incorrect / wrong,,,,False
+24,31,Failure / error,,,,False
+24,31,Replace / substitute,,,,False
+24,31,Alternative / instead,,,,False
+24,31,Again / retry,,,,False
+24,31,Previous / last,,,,False
+24,31,Another,,,,False
+24,31,New / update,,,,False
+24,31,Same,,,,False
+24,33,Answer / response,,,,False
+24,33,Incorrect / wrong,,,,False
+24,33,Failure / error,,,,False
+24,33,Replace / substitute,,,,False
+24,33,Alternative / instead,,,,False
+24,33,Again / retry,,,,False
+24,33,Previous / last,,,,False
+24,33,Another,,,,False
+24,33,New / update,,,,False
+24,33,Same,,,,False
+24,34,Answer / response,,,,False
+24,34,Incorrect / wrong,,,,False
+24,34,Failure / error,,,,False
+24,34,Replace / substitute,,,,False
+24,34,Alternative / instead,,,,False
+24,34,Again / retry,,,,False
+24,34,Previous / last,-0.48046875, Previous,21.0,True
+24,34,Another,,,,False
+24,34,New / update,,,,False
+24,34,Same,,,,False
+24,35,Answer / response,,,,False
+24,35,Incorrect / wrong,,,,False
+24,35,Failure / error,0.546875, failed,3.0,True
+24,35,Replace / substitute,,,,False
+24,35,Alternative / instead,,,,False
+24,35,Again / retry,0.453125, retry,19.0,True
+24,35,Previous / last,,,,False
+24,35,Another,,,,False
+24,35,New / update,,,,False
+24,35,Same,,,,False
+24,37,Answer / response,,,,False
+24,37,Incorrect / wrong,,,,False
+24,37,Failure / error,,,,False
+24,37,Replace / substitute,,,,False
+24,37,Alternative / instead,,,,False
+24,37,Again / retry,,,,False
+24,37,Previous / last,,,,False
+24,37,Another,,,,False
+24,37,New / update,,,,False
+24,37,Same,,,,False
+24,38,Answer / response,,,,False
+24,38,Incorrect / wrong,,,,False
+24,38,Failure / error,,,,False
+24,38,Replace / substitute,,,,False
+24,38,Alternative / instead,,,,False
+24,38,Again / retry,,,,False
+24,38,Previous / last,,,,False
+24,38,Another,,,,False
+24,38,New / update,,,,False
+24,38,Same,,,,False
+24,39,Answer / response,0.3125, answer,1.0,True
+24,39,Incorrect / wrong,,,,False
+24,39,Failure / error,,,,False
+24,39,Replace / substitute,,,,False
+24,39,Alternative / instead,,,,False
+24,39,Again / retry,,,,False
+24,39,Previous / last,,,,False
+24,39,Another,,,,False
+24,39,New / update,-0.21875,.update,18.0,True
+24,39,Same,,,,False
+24,41,Answer / response,,,,False
+24,41,Incorrect / wrong,,,,False
+24,41,Failure / error,,,,False
+24,41,Replace / substitute,,,,False
+24,41,Alternative / instead,,,,False
+24,41,Again / retry,,,,False
+24,41,Previous / last,,,,False
+24,41,Another,,,,False
+24,41,New / update,,,,False
+24,41,Same,,,,False
+24,42,Answer / response,,,,False
+24,42,Incorrect / wrong,0.4375, incorrect,1.0,True
+24,42,Failure / error,,,,False
+24,42,Replace / substitute,-0.5703125, replacement,1.0,True
+24,42,Alternative / instead,,,,False
+24,42,Again / retry,,,,False
+24,42,Previous / last,,,,False
+24,42,Another,,,,False
+24,42,New / update,-0.375,Existing,19.0,True
+24,42,Same,,,,False
+24,43,Answer / response,,,,False
+24,43,Incorrect / wrong,,,,False
+24,43,Failure / error,,,,False
+24,43,Replace / substitute,0.296875, replace,2.0,True
+24,43,Alternative / instead,0.279296875, instead,4.0,True
+24,43,Again / retry,,,,False
+24,43,Previous / last,,,,False
+24,43,Another,,,,False
+24,43,New / update,,,,False
+24,43,Same,,,,False
+24,45,Answer / response,,,,False
+24,45,Incorrect / wrong,,,,False
+24,45,Failure / error,,,,False
+24,45,Replace / substitute,,,,False
+24,45,Alternative / instead,,,,False
+24,45,Again / retry,,,,False
+24,45,Previous / last,-0.390625, Last,3.0,True
+24,45,Another,,,,False
+24,45,New / update,,,,False
+24,45,Same,,,,False
+24,46,Answer / response,,,,False
+24,46,Incorrect / wrong,,,,False
+24,46,Failure / error,,,,False
+24,46,Replace / substitute,,,,False
+24,46,Alternative / instead,,,,False
+24,46,Again / retry,,,,False
+24,46,Previous / last,,,,False
+24,46,Another,,,,False
+24,46,New / update,,,,False
+24,46,Same,,,,False
+24,47,Answer / response,,,,False
+24,47,Incorrect / wrong,,,,False
+24,47,Failure / error,,,,False
+24,47,Replace / substitute,,,,False
+24,47,Alternative / instead,0.4296875,instead,11.0,True
+24,47,Again / retry,0.515625,again,1.0,True
+24,47,Previous / last,-0.46875, last,1.0,True
+24,47,Another,0.43359375,another,10.0,True
+24,47,New / update,,,,False
+24,47,Same,,,,False
+24,49,Answer / response,,,,False
+24,49,Incorrect / wrong,,,,False
+24,49,Failure / error,0.64453125, failure,2.0,True
+24,49,Replace / substitute,,,,False
+24,49,Alternative / instead,,,,False
+24,49,Again / retry,0.4921875,_retry,14.0,True
+24,49,Previous / last,,,,False
+24,49,Another,,,,False
+24,49,New / update,0.69140625, new,1.0,True
+24,49,Same,-0.490234375,same,8.0,True
+24,50,Answer / response,,,,False
+24,50,Incorrect / wrong,,,,False
+24,50,Failure / error,-0.69140625, unsuccessful,2.0,True
+24,50,Replace / substitute,,,,False
+24,50,Alternative / instead,,,,False
+24,50,Again / retry,-0.62890625, retries,6.0,True
+24,50,Previous / last,,,,False
+24,50,Another,0.74609375,another,1.0,True
+24,50,New / update,,,,False
+24,50,Same,,,,False
+24,51,Answer / response,0.66796875,Respond,4.0,True
+24,51,Incorrect / wrong,,,,False
+24,51,Failure / error,,,,False
+24,51,Replace / substitute,,,,False
+24,51,Alternative / instead,,,,False
+24,51,Again / retry,,,,False
+24,51,Previous / last,,,,False
+24,51,Another,,,,False
+24,51,New / update,,,,False
+24,51,Same,,,,False
+24,53,Answer / response,,,,False
+24,53,Incorrect / wrong,,,,False
+24,53,Failure / error,,,,False
+24,53,Replace / substitute,,,,False
+24,53,Alternative / instead,,,,False
+24,53,Again / retry,,,,False
+24,53,Previous / last,,,,False
+24,53,Another,,,,False
+24,53,New / update,,,,False
+24,53,Same,,,,False
+24,54,Answer / response,,,,False
+24,54,Incorrect / wrong,,,,False
+24,54,Failure / error,,,,False
+24,54,Replace / substitute,,,,False
+24,54,Alternative / instead,,,,False
+24,54,Again / retry,,,,False
+24,54,Previous / last,,,,False
+24,54,Another,,,,False
+24,54,New / update,,,,False
+24,54,Same,,,,False
+24,55,Answer / response,0.375, response,24.0,True
+24,55,Incorrect / wrong,0.3984375, Wrong,17.0,True
+24,55,Failure / error,0.44921875, error,6.0,True
+24,55,Replace / substitute,,,,False
+24,55,Alternative / instead,,,,False
+24,55,Again / retry,,,,False
+24,55,Previous / last,,,,False
+24,55,Another,,,,False
+24,55,New / update,0.46875, existing,3.0,True
+24,55,Same,,,,False
+24,57,Answer / response,,,,False
+24,57,Incorrect / wrong,,,,False
+24,57,Failure / error,,,,False
+24,57,Replace / substitute,,,,False
+24,57,Alternative / instead,,,,False
+24,57,Again / retry,,,,False
+24,57,Previous / last,,,,False
+24,57,Another,,,,False
+24,57,New / update,,,,False
+24,57,Same,,,,False
+24,58,Answer / response,,,,False
+24,58,Incorrect / wrong,,,,False
+24,58,Failure / error,,,,False
+24,58,Replace / substitute,,,,False
+24,58,Alternative / instead,,,,False
+24,58,Again / retry,,,,False
+24,58,Previous / last,,,,False
+24,58,Another,,,,False
+24,58,New / update,,,,False
+24,58,Same,,,,False
+24,59,Answer / response,,,,False
+24,59,Incorrect / wrong,,,,False
+24,59,Failure / error,,,,False
+24,59,Replace / substitute,,,,False
+24,59,Alternative / instead,,,,False
+24,59,Again / retry,,,,False
+24,59,Previous / last,,,,False
+24,59,Another,,,,False
+24,59,New / update,,,,False
+24,59,Same,,,,False
+24,61,Answer / response,,,,False
+24,61,Incorrect / wrong,,,,False
+24,61,Failure / error,,,,False
+24,61,Replace / substitute,,,,False
+24,61,Alternative / instead,,,,False
+24,61,Again / retry,,,,False
+24,61,Previous / last,,,,False
+24,61,Another,,,,False
+24,61,New / update,,,,False
+24,61,Same,,,,False
+24,62,Answer / response,,,,False
+24,62,Incorrect / wrong,,,,False
+24,62,Failure / error,,,,False
+24,62,Replace / substitute,,,,False
+24,62,Alternative / instead,,,,False
+24,62,Again / retry,,,,False
+24,62,Previous / last,,,,False
+24,62,Another,,,,False
+24,62,New / update,,,,False
+24,62,Same,,,,False
+24,63,Answer / response,,,,False
+24,63,Incorrect / wrong,,,,False
+24,63,Failure / error,,,,False
+24,63,Replace / substitute,,,,False
+24,63,Alternative / instead,,,,False
+24,63,Again / retry,,,,False
+24,63,Previous / last,,,,False
+24,63,Another,,,,False
+24,63,New / update,,,,False
+24,63,Same,,,,False
